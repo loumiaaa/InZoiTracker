@@ -3,7 +3,9 @@ import { type Donnees, type Foyer, liste, nomComplet, normaliser, nouveauZoi, tr
 import { REFERENTIELS, type CleRef } from './referentiels'
 import { FicheZoi } from './components/FicheZoi'
 import { Avatar, Champ, Confirmer, DonneesCtx, Icone, Panneau, Photo, Selecteur, useCtx } from './components/ui'
-import { lireImage } from './donnees'
+import { importerImage, type Statut } from './donnees'
+import type { Session } from '@supabase/supabase-js'
+import { supabase } from './cloud'
 
 type Page = { nom: 'accueil' } | { nom: 'foyers' } | { nom: 'foyer'; id: string } | { nom: 'zois' } | { nom: 'zoi'; id: string; retour: Page } | { nom: 'referentiels' } | { nom: 'reglages' }
 
@@ -15,8 +17,15 @@ const NAV: { nom: Page['nom']; libelle: string; icone: string }[] = [
   { nom: 'reglages', libelle: 'Réglages', icone: '⚙️' },
 ]
 
+const LIBELLE_STATUT: Record<Statut, string> = {
+  local: '💾 Sur cet appareil',
+  synchro: '🔄 Synchronisation…',
+  ok: '☁️ Synchronisé',
+  erreur: '⚠️ Synchro en échec',
+}
+
 export default function App() {
-  const { donnees, maj, remplacer } = useDonnees()
+  const { donnees, maj, remplacer, session, statut } = useDonnees()
   const [page, setPage] = useState<Page>({ nom: 'accueil' })
   if (!donnees) return <div className="chargement">Chargement…</div>
 
@@ -47,6 +56,7 @@ export default function App() {
             ))}
           </nav>
           <button className="btn btn-accent" onClick={() => creerZoi()}>＋ Nouveau Zoi</button>
+          <button className={'synchro synchro-' + statut} onClick={() => setPage({ nom: 'reglages' })}>{LIBELLE_STATUT[statut]}</button>
         </aside>
         <main className="contenu">
           {page.nom === 'accueil' && <Accueil ouvrirZoi={ouvrirZoi} ouvrirFoyer={(id) => setPage({ nom: 'foyer', id })} creerFoyer={creerFoyer} creerZoi={creerZoi} />}
@@ -55,7 +65,7 @@ export default function App() {
           {page.nom === 'zois' && <Zois ouvrir={ouvrirZoi} />}
           {page.nom === 'zoi' && <FicheZoi key={page.id} id={page.id} ouvrir={ouvrirZoi} fermer={() => setPage(page.retour)} />}
           {page.nom === 'referentiels' && <Referentiels />}
-          {page.nom === 'reglages' && <Reglages remplacer={remplacer} />}
+          {page.nom === 'reglages' && <Reglages remplacer={remplacer} session={session} />}
         </main>
       </div>
     </DonneesCtx.Provider>
@@ -268,7 +278,7 @@ function Referentiels() {
                 <Icone el={e} taille={44} />
                 <input type="file" accept="image/*" hidden onChange={async (ev) => {
                   const fichier = ev.target.files?.[0]
-                  if (fichier) setPerso({ ...perso, icones: { ...perso.icones, [e.id]: await lireImage(fichier, 160) } })
+                  if (fichier) setPerso({ ...perso, icones: { ...perso.icones, [e.id]: await importerImage(fichier, 160) } })
                 }} />
               </label>
               <span>{e.nom}{e.fr_verifie === false && <sup> *</sup>}<small>{e.nom_en}</small></span>
@@ -287,7 +297,44 @@ function Referentiels() {
   )
 }
 
-function Reglages({ remplacer }: { remplacer: (d: Donnees) => void }) {
+function Compte({ session }: { session: Session | null }) {
+  const [email, setEmail] = useState('')
+  const [mdp, setMdp] = useState('')
+  const [message, setMessage] = useState('')
+  if (!supabase) return <p className="texte-doux">Synchronisation non configurée : les données restent sur cet appareil.</p>
+  if (session) {
+    return (
+      <div className="ligne-entre">
+        <p className="texte-doux">Connectée avec <b>{session.user.email}</b>. Tes données et tes photos sont synchronisées sur tous tes appareils.</p>
+        <button className="btn" onClick={() => supabase!.auth.signOut()}>Se déconnecter</button>
+      </div>
+    )
+  }
+  const agir = async (creation: boolean) => {
+    setMessage('')
+    const { error } = creation
+      ? await supabase!.auth.signUp({ email, password: mdp, options: { emailRedirectTo: location.href } })
+      : await supabase!.auth.signInWithPassword({ email, password: mdp })
+    if (error) setMessage(error.message === 'Invalid login credentials' ? 'E-mail ou mot de passe incorrect.' : error.message)
+    else if (creation) setMessage('Compte créé ✔ Confirme ton adresse via l’e-mail reçu, puis connecte-toi.')
+  }
+  return (
+    <form className="pile" onSubmit={(e) => { e.preventDefault(); agir(false) }}>
+      <p className="texte-doux">Connecte-toi pour retrouver tes familles et tes photos sur tous tes appareils.</p>
+      <div className="ligne">
+        <input className="input" type="email" autoComplete="email" placeholder="E-mail" value={email} onChange={(e) => setEmail(e.target.value)} required />
+        <input className="input" type="password" autoComplete="current-password" placeholder="Mot de passe" value={mdp} onChange={(e) => setMdp(e.target.value)} required minLength={6} />
+      </div>
+      <div className="actions">
+        <button type="button" className="btn" onClick={() => agir(true)}>Créer mon compte</button>
+        <button className="btn btn-accent">Se connecter</button>
+      </div>
+      {message && <p className="message">{message}</p>}
+    </form>
+  )
+}
+
+function Reglages({ remplacer, session }: { remplacer: (d: Donnees) => void; session: Session | null }) {
   const { d } = useCtx()
   const [message, setMessage] = useState('')
   const [reset, setReset] = useState(false)
@@ -308,8 +355,11 @@ function Reglages({ remplacer }: { remplacer: (d: Donnees) => void }) {
   return (
     <div className="pile">
       <h1 className="titre-page">Réglages</h1>
+      <Panneau titre="Compte & synchronisation">
+        <Compte session={session} />
+      </Panneau>
       <Panneau titre="Sauvegarde">
-        <p className="texte-doux">Tes données sont enregistrées automatiquement dans ce navigateur, sur cet appareil. Exporte-les régulièrement pour en garder une copie ou pour les transférer sur un autre appareil (Importer).</p>
+        <p className="texte-doux">Tes données sont enregistrées automatiquement dans ce navigateur (et dans ton compte si tu es connectée). Exporte-les de temps en temps pour garder une copie de secours.</p>
         <div className="actions">
           <button className="btn btn-accent" onClick={exporter}>Exporter mes données</button>
           <label className="btn">Importer une sauvegarde<input type="file" accept=".json" hidden onChange={async (e) => importer(await e.target.files?.[0]?.text() ?? null)} /></label>

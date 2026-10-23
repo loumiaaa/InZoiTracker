@@ -1,6 +1,6 @@
 import { createContext, useContext, useMemo, useRef, useState, type ReactNode } from 'react'
 import { createPortal } from 'react-dom'
-import { type Donnees, liste, lireImage, uid } from '../donnees'
+import { type Donnees, liste, importerImage, uid } from '../donnees'
 import { REFERENTIELS, type CleRef, type ElementRef } from '../referentiels'
 
 type Ctx = { d: Donnees; maj: (f: (d: Donnees) => Donnees) => void }
@@ -77,7 +77,7 @@ export function Photo({ src, onChange, ratio = '1', rond, libelle = 'Ajouter une
       {src && <button className="photo-retirer" onClick={() => onChange(undefined)} aria-label="Retirer la photo">✕</button>}
       <input ref={input} type="file" accept="image/*" hidden onChange={async (e) => {
         const f = e.target.files?.[0]
-        if (f) onChange(await lireImage(f, taille))
+        if (f) onChange(await importerImage(f, taille))
         e.target.value = ''
       }} />
     </div>

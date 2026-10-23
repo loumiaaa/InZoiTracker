@@ -214,3 +214,9 @@ input[type='range'] { accent-color: var(--color-accent-graphic); width: 100%; }
 .ref-icone:hover { background: var(--color-selection); }
 .notes-ref { font: var(--font-caption); color: var(--color-text-secondary); }
 sup { color: var(--color-warning-text); }
+
+/* Indicateur de synchronisation */
+.synchro { padding: var(--space-2) var(--space-3); border-radius: var(--radius-pill); font: var(--font-caption); color: var(--color-text-secondary); text-align: center; }
+.synchro:hover { background: var(--color-surface-card-hover); }
+.synchro-ok { color: var(--color-success-text); }
+.synchro-erreur { color: var(--color-danger-text); background: var(--color-danger-subtle); }

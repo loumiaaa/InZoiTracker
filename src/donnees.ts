@@ -1,6 +1,8 @@
 // Données de la joueuse : modèle, persistance locale (fichier via Electron, localStorage en navigateur).
 import { useEffect, useRef, useState } from 'react'
+import type { Session } from '@supabase/supabase-js'
 import { REFERENTIELS, type CleRef, type ElementRef, urlIconeFichier } from './referentiels'
+import { ecrireCloud, lireCloud, supabase, televerserImage } from './cloud'
 
 export type Souvenir = { id: string; jalon?: string; texte: string; date?: string; tonalite?: 'positif' | 'negatif' | 'neutre'; image?: string }
 export type AmbitionSuivie = { id: string; ambition: string; niveau: number; faits: string[] }
@@ -48,6 +50,8 @@ export type Donnees = {
   zois: Zoi[]
   relations: Relation[]
   refPerso: Partial<Record<CleRef, RefPerso>>
+  /** Horodatage de la dernière modification (arbitrage appareil / cloud). */
+  maj?: number
 }
 
 export const vide = (): Donnees => ({ version: 1, foyers: [], zois: [], relations: [], refPerso: {} })
@@ -119,21 +123,60 @@ async function sauver(d: Donnees) {
   try { await ecrireBase(JSON.stringify(d)) } catch (e) { console.error('Sauvegarde impossible', e) }
 }
 
-/** État global + sauvegarde automatique (débounce 400 ms). */
+export type Statut = 'local' | 'synchro' | 'ok' | 'erreur'
+
+/** État global + sauvegarde automatique : navigateur (400 ms) puis Supabase si connectée (1,5 s). */
 export function useDonnees() {
   const [donnees, setDonnees] = useState<Donnees | null>(null)
+  const [session, setSession] = useState<Session | null>(null)
+  const [statut, setStatut] = useState<Statut>('local')
   const minuteur = useRef<number>()
+  const minuteurCloud = useRef<number>()
+  const depuisCloud = useRef(false)
 
-  useEffect(() => { charger().then(setDonnees) }, [])
+  useEffect(() => {
+    charger().then(setDonnees)
+    if (!supabase) return
+    supabase.auth.getSession().then(({ data }) => setSession(data.session))
+    const { data } = supabase.auth.onAuthStateChange((_e, s) => setSession(s))
+    return () => data.subscription.unsubscribe()
+  }, [])
+
+  // À la connexion : on garde la version la plus récente (cloud ou appareil).
+  const userId = session?.user.id
+  useEffect(() => {
+    if (!userId || !donnees) return
+    setStatut('synchro')
+    lireCloud(userId)
+      .then((distant) => {
+        if (distant && distant.maj > (donnees.maj ?? 0)) {
+          depuisCloud.current = true
+          setDonnees(normaliser({ ...distant.contenu, maj: distant.maj }))
+          setStatut('ok')
+        } else {
+          return ecrireCloud(userId, donnees, donnees.maj ?? Date.now()).then(() => setStatut('ok'))
+        }
+      })
+      .catch(() => setStatut('erreur'))
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [userId, donnees === null])
 
   useEffect(() => {
     if (!donnees) return
     window.clearTimeout(minuteur.current)
     minuteur.current = window.setTimeout(() => sauver(donnees), 400)
-  }, [donnees])
+    if (!userId) return
+    if (depuisCloud.current) { depuisCloud.current = false; return }
+    window.clearTimeout(minuteurCloud.current)
+    minuteurCloud.current = window.setTimeout(() => {
+      setStatut('synchro')
+      ecrireCloud(userId, donnees, donnees.maj ?? Date.now()).then(() => setStatut('ok'), () => setStatut('erreur'))
+    }, 1500)
+  }, [donnees, userId])
 
-  const maj = (f: (d: Donnees) => Donnees) => setDonnees((d) => (d ? f(d) : d))
-  return { donnees, maj, remplacer: setDonnees }
+  const maj = (f: (d: Donnees) => Donnees) => setDonnees((d) => (d ? { ...f(d), maj: Date.now() } : d))
+  const remplacer = (d: Donnees) => setDonnees({ ...d, maj: Date.now() })
+  return { donnees, maj, remplacer, session, statut: userId ? statut : 'local' as Statut }
 }
 
 /** Référentiel fusionné : éléments du jeu + ajouts de la joueuse, avec icône résolue. */
@@ -150,6 +193,11 @@ export function trouver(d: Donnees, cle: CleRef, id?: string) {
 }
 
 export const nomComplet = (z: Zoi) => [z.prenom, z.nom].filter(Boolean).join(' ') || 'Zoi sans nom'
+
+/** Réduit une image importée puis l'envoie dans le cloud si la joueuse est connectée. */
+export async function importerImage(fichier: File, taille = 640): Promise<string> {
+  return televerserImage(await lireImage(fichier, taille))
+}
 
 /** Réduit une image importée (max `taille` px) et la renvoie en data URL. */
 export function lireImage(fichier: File, taille = 640): Promise<string> {

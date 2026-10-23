@@ -15,10 +15,10 @@ Projet perso d'une graphiste / web designer. Langue de travail et de l'interface
 Ordre habituel : CEO (quoi / pourquoi) → UX (comment ça marche) + DA (à quoi ça ressemble) → Dev (on construit) → CEO valide.
 
 ## Stack
-Web app installable (PWA) : Vite + React + TypeScript + vite-plugin-pwa · données dans IndexedDB du navigateur · export / import JSON · déploiement statique (`dist/`).
+Web app installable (PWA) : Vite + React + TypeScript + vite-plugin-pwa · données dans IndexedDB, synchronisées avec Supabase si connectée (`src/cloud.ts`, `supabase/schema.sql`) · publiée sur GitHub Pages à chaque push (`.github/workflows/publier.yml`).
 
 ## Règles
-- 100 % hors ligne, données stockées localement, export / import JSON.
+- Utilisable hors ligne : données locales d'abord, synchro Supabase ensuite ; export / import JSON.
 - Les référentiels du jeu sont des données éditables (le jeu change à chaque patch).
 - Visuels Krafton : usage personnel, provenance notée dans `assets/CREDITS.md`.
 - Couleurs et typo uniquement via les design tokens.
