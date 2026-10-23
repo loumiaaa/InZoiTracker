@@ -1,0 +1,249 @@
+/* =====================================================================
+   inZOI Tracker — styles de base (reset léger + défauts globaux)
+   Charger APRÈS tokens.css. Aucune couleur, taille, rayon, ombre ou
+   espacement en dur : uniquement des tokens.
+
+   Police : chargée par le point d'entrée du renderer (embarquée, hors ligne)
+     import 'pretendard/dist/web/variable/pretendardvariable.css';
+   ===================================================================== */
+
+/* 1. Reset léger ---------------------------------------------------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+:where(ul, ol)[class] {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+img,
+picture,
+svg,
+video,
+canvas {
+  display: block;
+  max-width: 100%;
+}
+
+img,
+video {
+  height: auto;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+  letter-spacing: inherit;
+}
+
+button {
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
+button:disabled,
+[aria-disabled="true"] {
+  cursor: not-allowed;
+}
+
+textarea {
+  resize: vertical;
+}
+
+p,
+li,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+/* 2. Document ------------------------------------------------------- */
+
+body {
+  min-height: 100vh;
+  font: var(--font-body);
+  color: var(--color-text);
+  background: var(--gradient-app);
+  background-color: var(--color-bg-app);
+  background-attachment: fixed;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+  font: var(--font-page-title);
+  letter-spacing: var(--letter-spacing-tight);
+  text-wrap: balance;
+}
+
+h2 {
+  font: var(--font-section-title);
+  letter-spacing: var(--letter-spacing-tight);
+  text-wrap: balance;
+}
+
+h3 {
+  font: var(--font-card-title);
+  text-wrap: balance;
+}
+
+h4,
+h5,
+h6 {
+  font: var(--font-value);
+}
+
+p {
+  text-wrap: pretty;
+}
+
+small {
+  font-size: var(--font-size-sm);
+}
+
+strong,
+b {
+  font-weight: var(--font-weight-semibold);
+}
+
+a {
+  color: var(--color-text-link);
+  text-decoration-line: underline;
+  text-decoration-thickness: from-font;
+  text-underline-offset: var(--underline-offset);
+  transition: color var(--duration-fast) var(--ease-standard);
+}
+
+a:hover {
+  color: var(--color-text-link-hover);
+}
+
+/* Compteurs, niveaux, montants : chiffres alignés */
+data,
+time,
+output,
+meter,
+progress {
+  font-variant-numeric: tabular-nums;
+}
+
+::placeholder {
+  color: var(--color-text-placeholder);
+  opacity: 1;
+}
+
+::selection {
+  background-color: var(--color-selection);
+  color: var(--color-text);
+}
+
+/* 3. Focus visible -------------------------------------------------- */
+
+:focus-visible {
+  outline: var(--size-focus-ring) solid var(--color-focus-ring);
+  outline-offset: var(--size-focus-offset);
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* 4. Scrollbars discrètes ------------------------------------------- */
+/* Electron = Chromium : pseudo-éléments WebKit pour un pouce en pilule.
+   Ne PAS ajouter `scrollbar-color` / `scrollbar-width` : depuis Chromium 121
+   ils désactivent ces pseudo-éléments. */
+
+::-webkit-scrollbar {
+  width: var(--size-scrollbar);
+  height: var(--size-scrollbar);
+  background: transparent;
+}
+
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-scrollbar-thumb);
+  background-clip: padding-box;
+  border: var(--size-scrollbar-gutter) solid transparent;
+  border-radius: var(--radius-pill);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-scrollbar-thumb-hover);
+}
+
+::-webkit-scrollbar-button {
+  display: none;
+}
+
+/* 5. Mouvement réduit ----------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* 6. Utilitaire d'accessibilité ------------------------------------- */
+/* Libellés lus par les lecteurs d'écran (ex. « Aime » à côté d'un cœur) */
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip-path: inset(50%) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}

@@ -1,0 +1,403 @@
+/* =====================================================================
+   inZOI Tracker — design tokens (source de vérité)
+   Version 1.0 — 2026-10-23 — mode clair uniquement (V1)
+   Documentation : docs/direction-artistique.md
+
+   Deux niveaux :
+   1. Palette brute (--palette-*) : ne JAMAIS l'utiliser dans un composant.
+   2. Tokens sémantiques (--color-*, --font-*, --radius-*, --shadow-*,
+      --space-*, --size-*, …) : seuls autorisés dans les composants.
+   Le futur thème sombre ne redéfinira que le niveau 2.
+
+   Contrastes : ratios WCAG 2.x calculés sur les équivalents opaques
+   (-solid) ET sur le cas le plus défavorable (panneau verre posé sur une
+   capture noire sous le voile d'ambiance). Détail en section 13 de la DA.
+   ===================================================================== */
+
+:root {
+  color-scheme: light;
+
+  /* -------------------------------------------------------------------
+     1. PALETTE BRUTE
+     R = relevé sur les captures du jeu (estimation à l'œil, ±6/canal)
+     I = interprété (ajusté pour l'AA ou ajouté par la DA)
+     ------------------------------------------------------------------- */
+
+  /* Perle — neutres froids */
+  --palette-perle-0: #FFFFFF;   /* R éléments interactifs blancs */
+  --palette-perle-25: #F7F7F9;  /* I blanc cassé */
+  --palette-perle-50: #F1F1F4;  /* I carte (équivalent opaque) */
+  --palette-perle-100: #ECECF0; /* I fond appli uni */
+  --palette-perle-150: #E4E4E9; /* I panneau (équivalent opaque) */
+  --palette-perle-200: #E0E0E5; /* I bloc interne (équivalent opaque) */
+  --palette-perle-300: #CDCDD3; /* I piste de jauge */
+  --palette-perle-400: #A8A8B0; /* I pictos décoratifs (états vides) */
+  --palette-perle-500: #84848E; /* I bordure de champ (≥ 3:1) */
+  --palette-perle-600: #6B6B74; /* I placeholder (sur champ blanc) */
+  --palette-perle-700: #595962; /* I texte secondaire (relevé ≈ #6E6E73, assombri AA) */
+  --palette-perle-800: #3A3A43; /* I pictos d'action */
+  --palette-perle-900: #1E1E24; /* R texte principal ≈ #1E1E1E */
+
+  /* Ciel — accent d'interaction */
+  --palette-ciel-50: #EEF6FE;   /* R bloc objectif */
+  --palette-ciel-100: #DCEBFA;  /* I dégradé d'ambiance */
+  --palette-ciel-200: #A9D2F7;  /* R pastille loupe, barre d'objectif */
+  --palette-ciel-300: #7DBBF5;  /* R onglet actif */
+  --palette-ciel-350: #6AB0F2;  /* I survol */
+  --palette-ciel-400: #5EA8F2;  /* R « Étape 1 » active (décoratif seulement) */
+  --palette-ciel-500: #2A7DD6;  /* I jauges et pictos (relevé #3A8EE6, assombri 3:1) */
+  --palette-ciel-600: #1A5DA8;  /* I texte accent (relevé « Niv.1 » ≈ #1F5FAE) */
+  --palette-nuit-800: #0E3A6B;  /* I texte sur fond ciel (relevé picto loupe ≈ #1C2B3D) */
+
+  /* Pastels d'ambiance (interprétation, brief DA) */
+  --palette-lavande-50: #ECEAF6;
+  --palette-lavande-100: #E7E1F6;
+  --palette-rose-100: #F6E1EA;
+  --palette-rose-200: #EBD0D3;  /* R souvenir négatif */
+  --palette-peche-100: #FBE6DA;
+  --palette-lagon-100: #D6F1EC;
+  --palette-sauge-100: #CFE3D2; /* R souvenir positif */
+  --palette-sauge-400: #8FA67C; /* R liseré d'avatar */
+  --palette-cyan-300: #7FE3EE;  /* R pastille « nouveau » */
+
+  /* Préférences */
+  --palette-or-50: #FFF2D9;
+  --palette-or-400: #F5A524;    /* R cœur doré */
+  --palette-or-600: #B86E00;    /* I contour du cœur */
+  --palette-or-800: #7A5000;    /* I texte « Aime » */
+  --palette-violet-nuit-700: #3E3A6E; /* R cœur brisé */
+
+  /* États */
+  --palette-vert-50: #DDF0E2;
+  --palette-vert-500: #3E9B5F;
+  --palette-vert-700: #22693A;
+  --palette-rouge-50: #FBE4E7;
+  --palette-rouge-500: #C62F43;
+  --palette-rouge-600: #B42335;
+
+  /* -------------------------------------------------------------------
+     2. COULEURS SÉMANTIQUES — surfaces
+     Hiérarchie du jeu : panneau verre > carte (voile blanc) > bloc interne
+     (voile sombre). Les éléments interactifs sont blancs (surface-raised).
+     ------------------------------------------------------------------- */
+  --color-bg-app: var(--palette-perle-100);
+  --color-surface-panel: var(--palette-perle-150);           /* panneau opaque */
+  --color-surface-glass: rgba(230, 230, 236, 0.62);          /* panneau verre */
+  --color-surface-glass-strong: rgba(242, 242, 246, 0.86);   /* menus, modales */
+  --color-surface-card: rgba(255, 255, 255, 0.5);            /* carte */
+  --color-surface-card-hover: rgba(255, 255, 255, 0.68);
+  --color-surface-inset: rgba(28, 28, 52, 0.07);             /* bloc interne */
+  --color-surface-raised: var(--palette-perle-0);            /* bouton, tag, tuile, champ */
+  --color-surface-tab: rgba(255, 255, 255, 0.6);             /* onglet inactif */
+  --color-surface-overlay: rgba(30, 30, 48, 0.28);           /* fond de modale */
+  --color-veil-ambiance: rgba(244, 244, 247, 0.78);          /* voile sur capture de fond */
+
+  /* Équivalents opaques : repli sans transparence + référence de contraste */
+  --color-surface-glass-solid: var(--palette-perle-150);
+  --color-surface-glass-strong-solid: var(--palette-perle-25);
+  --color-surface-card-solid: var(--palette-perle-50);
+  --color-surface-inset-solid: var(--palette-perle-200);
+
+  /* -------------------------------------------------------------------
+     3. COULEURS SÉMANTIQUES — texte
+     Ratios : carte solide / bloc interne solide / pire cas panneau
+     ------------------------------------------------------------------- */
+  --color-text: var(--palette-perle-900);              /* 14,7 / 12,6 / 11,5 */
+  --color-text-secondary: var(--palette-perle-700);    /* 6,15 / 5,27 / 4,83 */
+  --color-text-placeholder: var(--palette-perle-600);  /* 5,28 sur champ blanc uniquement */
+  --color-text-disabled: var(--palette-perle-500);     /* 3,28 — états désactivés seulement (exemptés) */
+  --color-text-accent: var(--palette-ciel-600);        /* 5,87 / 5,03 / 4,61 ; 6,06 sur ciel-50 */
+  --color-text-on-accent: var(--palette-nuit-800);     /* 5,61 sur accent ; 7,21 sur accent-soft */
+  --color-text-inverse: var(--palette-perle-0);        /* sur voile d'image, sur danger */
+  --color-text-link: var(--palette-ciel-600);
+  --color-text-link-hover: var(--palette-nuit-800);
+
+  /* -------------------------------------------------------------------
+     4. COULEURS SÉMANTIQUES — accent (bleu ciel, seule couleur d'action)
+     ------------------------------------------------------------------- */
+  --color-accent: var(--palette-ciel-300);             /* onglet actif, bouton principal */
+  --color-accent-hover: var(--palette-ciel-350);       /* texte nuit 4,96 */
+  --color-accent-soft: var(--palette-ciel-200);        /* bouton loupe, barre d'objectif */
+  --color-accent-subtle: var(--palette-ciel-50);       /* bloc objectif, sélection douce */
+  --color-accent-graphic: var(--palette-ciel-500);     /* jauges, pictos, « + » : 3,72 carte / 4,20 blanc */
+  --color-accent-graphic-light: var(--palette-ciel-400); /* fin de dégradé d'anneau, décoratif */
+
+  /* -------------------------------------------------------------------
+     5. COULEURS SÉMANTIQUES — préférences, souvenirs, états
+     ------------------------------------------------------------------- */
+  --color-like: var(--palette-or-400);                 /* cœur doré (remplissage) */
+  --color-like-stroke: var(--palette-or-600);          /* contour 1,5 px : 3,99 sur blanc */
+  --color-like-text: var(--palette-or-800);            /* 6,26 carte / 6,37 like-subtle */
+  --color-like-subtle: var(--palette-or-50);
+  --color-dislike: var(--palette-violet-nuit-700);     /* cœur brisé + texte : 9,15 carte */
+  --color-dislike-subtle: var(--palette-lavande-50);   /* texte dislike 8,68 */
+
+  --color-memory-positive: var(--palette-sauge-100);   /* texte 12,3 / secondaire 5,14 */
+  --color-memory-negative: var(--palette-rose-200);    /* texte 11,4 / secondaire 4,78 */
+
+  --color-success: var(--palette-vert-500);            /* pictos : 3,47 blanc / 3,07 carte */
+  --color-success-text: var(--palette-vert-700);       /* 5,91 carte / 4,64 pire cas */
+  --color-success-subtle: var(--palette-vert-50);      /* success-text 5,60 */
+  --color-danger: var(--palette-rouge-500);            /* fond bouton : texte blanc 5,40 */
+  --color-danger-hover: var(--palette-rouge-600);      /* texte blanc 6,50 */
+  --color-danger-text: var(--palette-rouge-600);       /* 5,76 carte / 4,52 pire cas */
+  --color-danger-subtle: var(--palette-rouge-50);      /* danger-text 5,37 */
+  --color-warning-text: var(--palette-or-800);
+  --color-warning-subtle: var(--palette-or-50);
+
+  /* Avatars et indicateurs */
+  --color-avatar-ring: var(--palette-sauge-400);       /* décoratif */
+  --color-badge-new: var(--palette-cyan-300);          /* décoratif, toujours doublé d'un libellé */
+
+  /* Pictos */
+  --color-icon: var(--palette-perle-800);              /* 7,8 pire cas */
+  --color-icon-muted: var(--palette-perle-400);        /* décoratif uniquement */
+  --color-icon-on-accent: var(--palette-nuit-800);
+
+  /* -------------------------------------------------------------------
+     6. BORDURES, FOCUS, SÉLECTION, SCROLLBARS
+     ------------------------------------------------------------------- */
+  --color-border-glass: rgba(255, 255, 255, 0.6);      /* liseré lumineux verre / carte */
+  --color-border-subtle: rgba(28, 28, 52, 0.1);        /* séparateurs */
+  --color-border-control: var(--palette-perle-500);    /* champs : 3,70 blanc / 3,28 carte */
+  --color-border-accent: var(--palette-ciel-200);      /* étape verrouillée, sélection douce */
+  --color-focus-ring: var(--palette-ciel-600);         /* 5,87 carte / 3,24 sur accent */
+  --color-selection: var(--palette-ciel-200);          /* texte 10,5 */
+  --color-track: var(--palette-perle-300);             /* piste de jauge / d'anneau */
+  --color-scrollbar-thumb: rgba(28, 28, 52, 0.22);
+  --color-scrollbar-thumb-hover: rgba(28, 28, 52, 0.38);
+
+  /* -------------------------------------------------------------------
+     7. DÉGRADÉS
+     ------------------------------------------------------------------- */
+  /* Fond d'ambiance : lavande / bleu ciel / pêche / rose poudré (I) */
+  --gradient-app:
+    radial-gradient(70% 60% at 0% 0%, var(--palette-lavande-100) 0%, transparent 100%),
+    radial-gradient(60% 55% at 100% 0%, var(--palette-ciel-100) 0%, transparent 100%),
+    radial-gradient(60% 60% at 100% 100%, var(--palette-peche-100) 0%, transparent 100%),
+    radial-gradient(55% 55% at 0% 100%, var(--palette-rose-100) 0%, transparent 100%),
+    var(--palette-perle-100);
+
+  /* Emplacements photo vides et avatars sans portrait (I) */
+  --gradient-placeholder: linear-gradient(135deg, var(--palette-lavande-100) 0%, var(--palette-ciel-100) 100%);
+  --gradient-placeholder-warm: linear-gradient(135deg, var(--palette-peche-100) 0%, var(--palette-rose-100) 100%);
+
+  /* Teintes de ville pour bannières sans capture (I) */
+  --gradient-ville-dowon: linear-gradient(135deg, var(--palette-ciel-100) 0%, var(--palette-lavande-100) 100%);
+  --gradient-ville-bliss-bay: linear-gradient(135deg, var(--palette-peche-100) 0%, var(--palette-rose-100) 100%);
+  --gradient-ville-cahaya: linear-gradient(135deg, var(--palette-lagon-100) 0%, var(--palette-ciel-100) 100%);
+
+  /* Relevés (R) */
+  --gradient-avatar-active: linear-gradient(135deg, #8CE9E4 0%, #6DB9F4 100%);
+  --gradient-icon-tile: linear-gradient(135deg, #8C6FF2 0%, #5A7FF6 100%); /* picto blanc ≥ 3,6 */
+  --gradient-progress: linear-gradient(90deg, var(--palette-ciel-600) 0%, var(--palette-ciel-500) 100%);
+
+  /* Voile de lisibilité sur photo : le texte blanc reste dans les 35 % bas
+     (opacité ≥ 0,60 → 4,95:1 minimum même sur une image blanche) */
+  --scrim-image: linear-gradient(
+    to top,
+    rgba(16, 16, 28, 0.72) 0%,
+    rgba(16, 16, 28, 0.6) 35%,
+    rgba(16, 16, 28, 0) 75%
+  );
+
+  /* Harmonisation optionnelle des captures de la joueuse (I, désactivée par défaut) */
+  --filter-photo-soft: saturate(0.92) contrast(0.96) brightness(1.03);
+
+  /* -------------------------------------------------------------------
+     8. TYPOGRAPHIE — Pretendard Variable (OFL 1.1, paquet npm `pretendard`)
+     Racine 16 px : 1rem = 16px.
+     ------------------------------------------------------------------- */
+  --font-family-sans: "Pretendard Variable", "Pretendard", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", system-ui, "Helvetica Neue", Arial, sans-serif;
+  --font-family-emoji: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji";
+  --font-family-base: var(--font-family-sans), var(--font-family-emoji);
+
+  --font-size-2xs: 0.6875rem; /* 11px — compteurs de pastille */
+  --font-size-xs: 0.75rem;    /* 12px — légendes, métadonnées */
+  --font-size-sm: 0.8125rem;  /* 13px — libellés de champ */
+  --font-size-md: 0.9375rem;  /* 15px — corps, valeurs */
+  --font-size-lg: 1.0625rem;  /* 17px — titres de carte */
+  --font-size-xl: 1.25rem;    /* 20px — titres de section */
+  --font-size-2xl: 1.5rem;    /* 24px — titre de bloc fort (ambition) */
+  --font-size-3xl: 1.875rem;  /* 30px — nom du Zoi, titre d'écran */
+  --font-size-4xl: 2.375rem;  /* 38px — nom de famille sur bannière */
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  --line-height-none: 1;
+  --line-height-tight: 1.2;
+  --line-height-snug: 1.35;
+  --line-height-normal: 1.5;
+
+  --letter-spacing-tight: -0.015em; /* à partir de 20px */
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 0.02em;    /* 11-12px en gras */
+
+  --underline-offset: 0.18em;
+
+  /* Rôles typographiques (shorthand `font`) */
+  --font-badge: var(--font-weight-bold) var(--font-size-2xs) / var(--line-height-none) var(--font-family-base);
+  --font-caption: var(--font-weight-regular) var(--font-size-xs) / var(--line-height-snug) var(--font-family-base);
+  --font-label: var(--font-weight-regular) var(--font-size-sm) / var(--line-height-snug) var(--font-family-base);
+  --font-body: var(--font-weight-regular) var(--font-size-md) / var(--line-height-normal) var(--font-family-base);
+  --font-value: var(--font-weight-semibold) var(--font-size-md) / var(--line-height-snug) var(--font-family-base);
+  --font-tab: var(--font-weight-semibold) var(--font-size-md) / var(--line-height-tight) var(--font-family-base);
+  --font-card-title: var(--font-weight-semibold) var(--font-size-lg) / var(--line-height-snug) var(--font-family-base);
+  --font-section-title: var(--font-weight-semibold) var(--font-size-xl) / var(--line-height-tight) var(--font-family-base);
+  --font-title: var(--font-weight-bold) var(--font-size-2xl) / var(--line-height-tight) var(--font-family-base);
+  --font-page-title: var(--font-weight-bold) var(--font-size-3xl) / var(--line-height-tight) var(--font-family-base);
+  --font-display: var(--font-weight-bold) var(--font-size-4xl) / var(--line-height-tight) var(--font-family-base);
+
+  /* -------------------------------------------------------------------
+     9. RAYONS (relevé ×1,1 à ×1,3 vers « très arrondi »)
+     ------------------------------------------------------------------- */
+  --radius-xs: 4px;     /* tags de caractéristique */
+  --radius-sm: 8px;     /* blocs internes, objectifs, champs, tuiles 48 */
+  --radius-md: 12px;    /* vignettes photo, tuiles 64, menus */
+  --radius-lg: 16px;    /* cartes */
+  --radius-xl: 24px;    /* panneaux, modales, conteneur d'ambition */
+  --radius-pill: 999px; /* onglets, boutons, recherche, segments */
+  --radius-round: 50%;  /* avatars */
+
+  /* -------------------------------------------------------------------
+     10. OMBRES ET ÉLÉVATION (teinte nuit #1C1C34, jamais de noir pur)
+     ------------------------------------------------------------------- */
+  --shadow-xs: 0 1px 2px rgba(28, 28, 52, 0.06);
+  --shadow-sm: 0 1px 2px rgba(28, 28, 52, 0.05), 0 2px 8px rgba(28, 28, 52, 0.06);
+  --shadow-md: 0 2px 6px rgba(28, 28, 52, 0.05), 0 10px 28px rgba(28, 28, 52, 0.08);
+  --shadow-lg: 0 4px 12px rgba(28, 28, 52, 0.06), 0 24px 56px rgba(28, 28, 52, 0.14);
+  --shadow-highlight: inset 0 1px 0 rgba(255, 255, 255, 0.75);
+  --shadow-inset: inset 0 1px 2px rgba(28, 28, 52, 0.06);
+  --shadow-glass: var(--shadow-highlight), var(--shadow-md);
+  --shadow-card: var(--shadow-highlight), var(--shadow-xs);
+  --shadow-avatar-active: 0 0 0 3px rgba(140, 233, 228, 0.35), 0 0 18px rgba(109, 185, 244, 0.55);
+
+  /* -------------------------------------------------------------------
+     11. VERRE DÉPOLI (backdrop-filter)
+     ------------------------------------------------------------------- */
+  --blur-glass: 24px;
+  --blur-glass-strong: 40px;
+  --blur-ambiance: 64px; /* filter: blur() sur la capture de fond */
+  --blur-overlay: 6px;
+  --backdrop-glass: blur(var(--blur-glass)) saturate(140%);
+  --backdrop-glass-strong: blur(var(--blur-glass-strong)) saturate(150%);
+  --backdrop-overlay: blur(var(--blur-overlay));
+
+  /* -------------------------------------------------------------------
+     12. ESPACEMENTS — grille de 4 px
+     ------------------------------------------------------------------- */
+  --space-0: 0;
+  --space-0-5: 2px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+
+  --space-card-padding: var(--space-4);
+  --space-card-gap: var(--space-3);
+  --space-panel-padding: var(--space-5);
+  --space-stack-label: var(--space-1);  /* libellé → valeur */
+  --space-section: var(--space-8);
+
+  /* -------------------------------------------------------------------
+     13. TAILLES
+     ------------------------------------------------------------------- */
+  --size-icon-xs: 14px;
+  --size-icon-sm: 16px;
+  --size-icon-md: 20px;
+  --size-icon-lg: 24px;
+  --size-icon-xl: 32px;
+  --size-icon-empty: 48px;   /* picto d'état vide */
+
+  --size-emoji-sm: 20px;
+  --size-emoji-md: 26px;     /* dans une tuile 48 */
+  --size-emoji-lg: 36px;     /* dans une tuile 64 */
+
+  --size-avatar-xs: 24px;    /* mentions dans le texte */
+  --size-avatar-sm: 32px;
+  --size-avatar-md: 40px;    /* souvenirs, listes (relevé ≈ 40) */
+  --size-avatar-lg: 48px;
+  --size-avatar-xl: 64px;    /* rangée du foyer (relevé ≈ 62) */
+  --size-avatar-2xl: 96px;
+  --size-avatar-3xl: 144px;  /* en-tête de fiche */
+  --size-avatar-ring: 3px;
+
+  --size-tile-sm: 48px;
+  --size-tile-md: 64px;      /* tuile de préférence (relevé) */
+  --size-heart-badge: 20px;
+
+  --size-control-sm: 32px;
+  --size-control-md: 40px;
+  --size-control-lg: 48px;
+
+  --size-badge-dot: 8px;
+  --size-accent-bar: 4px;    /* barre gauche des objectifs */
+  --size-progress: 6px;      /* épaisseur jauge linéaire */
+  --size-ring: 5px;          /* épaisseur anneau de compétence */
+  --size-skill-ring: 56px;   /* diamètre anneau de compétence (relevé) */
+  --size-focus-ring: 2px;
+  --size-focus-offset: 2px;
+  --size-scrollbar: 10px;
+  --size-scrollbar-gutter: 2px;
+  --size-border: 1px;
+
+  /* -------------------------------------------------------------------
+     14. MOUVEMENT
+     ------------------------------------------------------------------- */
+  --duration-fast: 120ms;
+  --duration-base: 200ms;
+  --duration-slow: 320ms;
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+
+  /* -------------------------------------------------------------------
+     15. DIVERS
+     ------------------------------------------------------------------- */
+  --opacity-disabled: 0.45;
+
+  --z-base: 0;
+  --z-sticky: 10;
+  --z-dropdown: 100;
+  --z-overlay: 200;
+  --z-modal: 300;
+  --z-toast: 400;
+  --z-tooltip: 500;
+}
+
+/* Transparence réduite (Windows « Effets de transparence » désactivés,
+   macOS « Réduire la transparence ») : verre remplacé par des aplats. */
+@media (prefers-reduced-transparency: reduce) {
+  :root {
+    --color-surface-glass: var(--color-surface-glass-solid);
+    --color-surface-glass-strong: var(--color-surface-glass-strong-solid);
+    --color-surface-card: var(--color-surface-card-solid);
+    --color-surface-inset: var(--color-surface-inset-solid);
+    --backdrop-glass: none;
+    --backdrop-glass-strong: none;
+    --backdrop-overlay: none;
+  }
+}
+
+/* Contraste renforcé demandé par le système */
+@media (prefers-contrast: more) {
+  :root {
+    --color-text-secondary: var(--palette-perle-800);
+    --color-text-placeholder: var(--palette-perle-700);
+    --color-border-subtle: rgba(28, 28, 52, 0.24);
+    --color-border-glass: rgba(28, 28, 52, 0.16);
+    --color-surface-glass: var(--color-surface-glass-solid);
+    --color-surface-card: var(--color-surface-card-solid);
+    --color-surface-inset: var(--color-surface-inset-solid);
+  }
+}
