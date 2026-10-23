@@ -14,8 +14,8 @@ Projet perso d'une graphiste / web designer. Langue de travail et de l'interface
 
 Ordre habituel : CEO (quoi / pourquoi) → UX (comment ça marche) + DA (à quoi ça ressemble) → Dev (on construit) → CEO valide.
 
-## Stack proposée (à valider)
-Electron + Vite + React + TypeScript · SQLite local · electron-builder (.exe / .dmg) · Vitest + Playwright.
+## Stack
+Electron + Vite + React + TypeScript · données locales en JSON (`userData/zoi-tracker.json`, copie `.bak`) · electron-builder (.exe / .dmg) via GitHub Actions (`.github/workflows/build.yml`).
 
 ## Règles
 - 100 % hors ligne, données stockées localement, export / import JSON.
