@@ -1,0 +1,261 @@
+{
+  "referentiel": "entreprises",
+  "titre": "Types d'affaires",
+  "maj": "2026-10-23",
+  "version_jeu": "v0.11.1 (20 oct. 2026) — système de travail refondu en v0.8.0 (29 avr. 2026)",
+  "sources": [
+    "https://inzoi.fandom.com/wiki/Business",
+    "https://playinzoi.com/fr/news/9533",
+    "https://playinzoi.com/fr/news/9824",
+    "https://playinzoi.com/fr/news/9960",
+    "https://playinzoi.com/fr/news/10165",
+    "https://playinzoi.com/fr/news/10849",
+    "https://playinzoi.com/fr/news/11172",
+    "https://playinzoi.com/fr/guide/cheats"
+  ],
+  "notes": "Affaires ajoutées en v0.5.0 ; depuis v0.8.0 l'Affaire est une catégorie indépendante de la carrière (bloc « Affaires » de la Carte Zoi, « Vous n'avez pas d'entreprise »). Liste des préréglages = onglet « Business Type » selon le wiki fandom + ajouts des patchs. Libellés FR vérifiés quand le mot figure dans les notes de patch FR ; Centre de fitness, Cybercafé, Boîte de nuit, Lounge, Paramètres personnalisés = propositions (appuyées sur des noms de terrains FR). « Bar » cité dans les notes v0.5.0 mais absent de la liste wiki (probablement Lounge/Club). Trous : niveaux d'entreprise, rangs de salaire des employés.",
+  "categories": [
+    {
+      "id": "type",
+      "nom": "Type d'affaire",
+      "nom_en": "Business type",
+      "icone": "🏪"
+    }
+  ],
+  "elements": [
+    {
+      "id": "parametres-personnalises",
+      "nom": "Paramètres personnalisés",
+      "nom_en": "Custom Settings",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "type",
+      "description": "Configurer soi-même activités clients, horaires et recettes.",
+      "icone": "⚙️",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/f/f3/Business_Basic.png",
+      "nom_fichier_wiki": "Business_Basic.png",
+      "icone_fichier": "assets/icones/entreprises/Business_Basic.png",
+      "details": {
+        "type": "préréglage",
+        "ajoute_en": "v0.5.0"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Business"
+    },
+    {
+      "id": "boulangerie",
+      "nom": "Boulangerie",
+      "nom_en": "Bakery",
+      "fr_verifie": true,
+      "source_fr": "notes de patch FR officielles (https://playinzoi.com/fr/news/9533)",
+      "categorie": "type",
+      "description": "Vente de pâtisseries (ex. Boulangerie Gozne, L'air du pain, Boulangerie Pagi Manis).",
+      "icone": "🥐",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "type": "préréglage",
+        "ajoute_en": "v0.5.0"
+      },
+      "source": "https://playinzoi.com/fr/news/9533"
+    },
+    {
+      "id": "cafe",
+      "nom": "Café",
+      "nom_en": "Cafe",
+      "fr_verifie": true,
+      "source_fr": "notes de patch FR officielles (https://playinzoi.com/fr/news/9533)",
+      "categorie": "type",
+      "description": "Boire un café, manger, lire.",
+      "icone": "☕",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "type": "préréglage",
+        "ajoute_en": "v0.5.0"
+      },
+      "source": "https://playinzoi.com/fr/news/9533"
+    },
+    {
+      "id": "centre-de-fitness",
+      "nom": "Centre de fitness",
+      "nom_en": "Fitness Center",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "type",
+      "description": "Salle de sport (ex. Fitplace Dowon). Activités massage/yoga ajoutées en v0.7.0.",
+      "icone": "🏋️",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "type": "préréglage",
+        "ajoute_en": null
+      },
+      "source": "https://inzoi.fandom.com/wiki/Business"
+    },
+    {
+      "id": "cybercafe",
+      "nom": "Cybercafé",
+      "nom_en": "Gaming Cafe",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "type",
+      "description": "Café gaming (terrain FR « Cybercafé Plesio »).",
+      "icone": "🕹️",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "type": "préréglage",
+        "ajoute_en": null
+      },
+      "source": "https://inzoi.fandom.com/wiki/Business"
+    },
+    {
+      "id": "restaurant",
+      "nom": "Restaurant",
+      "nom_en": "Restaurant",
+      "fr_verifie": true,
+      "source_fr": "notes de patch FR officielles (https://playinzoi.com/fr/news/9533)",
+      "categorie": "type",
+      "description": "Commander, manger ; service à table complet depuis v0.10.0.",
+      "icone": "🍽️",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "type": "préréglage",
+        "ajoute_en": "v0.5.0"
+      },
+      "source": "https://playinzoi.com/fr/news/9533"
+    },
+    {
+      "id": "restaurant-haut-de-gamme",
+      "nom": "Restaurant haut de gamme",
+      "nom_en": "Premium Restaurant",
+      "fr_verifie": true,
+      "source_fr": "notes de patch FR officielles (https://playinzoi.com/fr/news/11172)",
+      "categorie": "type",
+      "description": "Modèle avec rôles auto-attribués (v0.11.0) ; mobilier requis obligatoire. v0.10.0 FR dit « restaurant de luxe ».",
+      "icone": "🥂",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "type": "préréglage",
+        "ajoute_en": "v0.10.0"
+      },
+      "source": "https://playinzoi.com/fr/news/11172"
+    },
+    {
+      "id": "boite-de-nuit",
+      "nom": "Boîte de nuit",
+      "nom_en": "Club",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "type",
+      "description": "Club / discothèque (terrains FR « Boîte de nuit Danchum », « Pulselight »).",
+      "icone": "🪩",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "type": "préréglage",
+        "ajoute_en": null
+      },
+      "source": "https://inzoi.fandom.com/wiki/Business"
+    },
+    {
+      "id": "lounge",
+      "nom": "Lounge",
+      "nom_en": "Lounge",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "type",
+      "description": "Bar lounge (terrain FR « Lounge Gongmyeong »). Les notes v0.5.0 parlent de « bar ».",
+      "icone": "🍸",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "type": "préréglage",
+        "ajoute_en": null
+      },
+      "source": "https://inzoi.fandom.com/wiki/Business"
+    },
+    {
+      "id": "fleuriste",
+      "nom": "Fleuriste",
+      "nom_en": "Flower Shop",
+      "fr_verifie": true,
+      "source_fr": "notes de patch FR officielles (https://playinzoi.com/fr/news/9824)",
+      "categorie": "type",
+      "description": "Bouquets et paniers de fleurs ; effets spéciaux selon Jardinage.",
+      "icone": "💐",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "type": "préréglage",
+        "ajoute_en": "v0.7.0"
+      },
+      "source": "https://playinzoi.com/fr/news/9824"
+    },
+    {
+      "id": "salon-de-coiffure",
+      "nom": "Salon de coiffure",
+      "nom_en": "Hair Salon",
+      "fr_verifie": true,
+      "source_fr": "notes de patch FR officielles (https://playinzoi.com/fr/news/9960)",
+      "categorie": "type",
+      "description": "Fauteuils de coiffure pour changer la coiffure des Zois ; remboursement si coupe ratée (v0.9.0).",
+      "icone": "💇",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "type": "préréglage",
+        "ajoute_en": "v0.8.0"
+      },
+      "source": "https://playinzoi.com/fr/news/9960"
+    },
+    {
+      "id": "boutique-de-vetements",
+      "nom": "Boutique de vêtements",
+      "nom_en": "Clothing Store",
+      "fr_verifie": true,
+      "source_fr": "notes de patch FR officielles (https://playinzoi.com/fr/news/10165)",
+      "categorie": "type",
+      "description": "Mannequins pour vendre des tenues ; 7 tenues exclusives.",
+      "icone": "👗",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "type": "préréglage",
+        "ajoute_en": "v0.9.0"
+      },
+      "source": "https://playinzoi.com/fr/news/10165"
+    },
+    {
+      "id": "cinema",
+      "nom": "Cinéma",
+      "nom_en": "Movie Theater",
+      "fr_verifie": true,
+      "source_fr": "notes de patch FR officielles (https://playinzoi.com/fr/news/9824)",
+      "categorie": "type",
+      "description": "Exploitable en plaçant un écran et une machine à pop-corn sur une propriété commerciale (pas un préréglage listé).",
+      "icone": "🎬",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "type": "activité",
+        "ajoute_en": "v0.7.0"
+      },
+      "source": "https://playinzoi.com/fr/news/9824"
+    }
+  ]
+}

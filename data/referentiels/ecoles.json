@@ -1,0 +1,305 @@
+{
+  "referentiel": "ecoles",
+  "titre": "Établissements scolaires",
+  "maj": "2026-10-23",
+  "version_jeu": "v0.11.1 (20 oct. 2026) — système de travail refondu en v0.8.0 (29 avr. 2026)",
+  "sources": [
+    "https://inzoi.fandom.com/wiki/Career",
+    "https://inzoi.fandom.com/wiki/High_School",
+    "https://playinzoi.com/fr/guide/cheats",
+    "https://playinzoi.com/fr/news/10165",
+    "https://playinzoi.com/fr/news/10849",
+    "https://thegameswiki.com/inzoi/wiki/schools",
+    "https://thegameswiki.com/inzoi/wiki/university",
+    "docs/references/jeu-fiche-carriere.png"
+  ],
+  "notes": "Chaque ville a 2 lycées (un actif depuis v0.9.0, un hors écran pour le trop-plein) ; transfert possible via l'appli école (notes conservées). Noms FR vérifiés : École publique de Bliss Bay (capture + guide de triche), Académie Yeongseong et École Cahaya Harmony (noms de terrains du guide officiel de triche FR). Les écoles hors écran (Seha Academy, Sunridge School, Citra School) n'ont pas de nom FR connu. Les universités sont le point le plus incertain (nom affiché pour un étudiant inconnu). Une même école hors écran est découpée en un élément par type (primaire / lycée / université). Type « autre » = Académie de natation. Icônes d'écoles non téléchargées dans assets/icones (icone_fichier = null).",
+  "categories": [
+    {
+      "id": "primaire",
+      "nom": "Primaire",
+      "nom_en": "Elementary",
+      "icone": "🎒"
+    },
+    {
+      "id": "college-lycee",
+      "nom": "Collège-lycée",
+      "nom_en": "High School",
+      "icone": "🏫"
+    },
+    {
+      "id": "universite",
+      "nom": "Université",
+      "nom_en": "University",
+      "icone": "🎓"
+    },
+    {
+      "id": "autre",
+      "nom": "Autre",
+      "nom_en": "Other",
+      "icone": "📘"
+    }
+  ],
+  "elements": [
+    {
+      "id": "academie-yeongseong",
+      "nom": "Académie Yeongseong",
+      "nom_en": "Youngsung School (Youngsung High School)",
+      "fr_verifie": true,
+      "source_fr": "guide officiel des codes de triche FR (playinzoi.com/fr/guide/cheats)",
+      "categorie": "college-lycee",
+      "description": "Lycée actif depuis v0.9.0 (bâtiment principal, annexe, cour). Avant v0.9.0 les guides la donnaient pour tous les niveaux, du primaire à l'université.",
+      "icone": "🏫",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/0/04/High_School_Dowon.png",
+      "nom_fichier_wiki": "High_School_Dowon.png",
+      "icone_fichier": null,
+      "details": {
+        "type": "collège-lycée",
+        "ville": "Dowon",
+        "gameplay": "actif (v0.9.0)",
+        "horaires": "8h–16h · 5 j/sem."
+      },
+      "source": "https://inzoi.fandom.com/wiki/Youngsung_School"
+    },
+    {
+      "id": "dowon-academie-seha-primaire",
+      "nom": "Académie Seha",
+      "nom_en": "Seha Academy",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "primaire",
+      "description": "École hors écran (élèves de primaire) selon le wiki fandom 2026.",
+      "icone": "🎒",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "type": "primaire",
+        "ville": "Dowon",
+        "gameplay": "hors écran",
+        "horaires": "9h–14h · 5 j/sem."
+      },
+      "source": "https://inzoi.fandom.com/wiki/Career"
+    },
+    {
+      "id": "dowon-academie-seha-lycee",
+      "nom": "Académie Seha",
+      "nom_en": "Seha Academy",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "college-lycee",
+      "description": "2e lycée de Dowon, hors écran (accueille les élèves quand le lycée actif est plein).",
+      "icone": "🏫",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "type": "collège-lycée",
+        "ville": "Dowon",
+        "gameplay": "hors écran",
+        "horaires": "9h–17h · 5 j/sem."
+      },
+      "source": "https://inzoi.fandom.com/wiki/Career"
+    },
+    {
+      "id": "dowon-universite",
+      "nom": "Académie Seha (université)",
+      "nom_en": "Seha Academy — University",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "universite",
+      "description": "Le wiki 2026 range les 3 filières universitaires sous « Seha Academy » ; l'employeur des professeurs s'appelle University of Youngsung et des guides 2025 parlent de Youngsung School : nom à vérifier en jeu.",
+      "icone": "🎓",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/1/14/Career_University_of_Youngsung.png",
+      "nom_fichier_wiki": "Career_University_of_Youngsung.png",
+      "icone_fichier": null,
+      "details": {
+        "type": "université",
+        "ville": "Dowon",
+        "gameplay": "hors écran",
+        "horaires": "10h–17h · 3 j/sem.",
+        "filieres": [
+          "Administration des affaires",
+          "Informatique",
+          "Arts multimédias"
+        ],
+        "filieres_en": [
+          "Business Administration",
+          "Computer Science",
+          "Multimedia Arts"
+        ]
+      },
+      "source": "https://inzoi.fandom.com/wiki/Career"
+    },
+    {
+      "id": "ecole-publique-de-bliss-bay",
+      "nom": "École publique de Bliss Bay",
+      "nom_en": "Bliss Bay Public School",
+      "fr_verifie": true,
+      "source_fr": "capture du jeu en FR + guide officiel des codes de triche FR (playinzoi.com/fr/guide/cheats)",
+      "categorie": "college-lycee",
+      "description": "Lycée actif depuis v0.9.0 (bâtiment principal, annexe, terrain de sport). Vu sur la capture (bloc École).",
+      "icone": "🏫",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/e/e5/High_School_Bliss_Bay.png",
+      "nom_fichier_wiki": "High_School_Bliss_Bay.png",
+      "icone_fichier": null,
+      "details": {
+        "type": "collège-lycée",
+        "ville": "Bliss Bay",
+        "gameplay": "actif (v0.9.0)",
+        "horaires": "8h–16h · 5 j/sem."
+      },
+      "source": "https://inzoi.fandom.com/wiki/Bliss_Bay_Public_School"
+    },
+    {
+      "id": "bliss-bay-ecole-sunridge-primaire",
+      "nom": "École Sunridge",
+      "nom_en": "Sunridge School",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "primaire",
+      "description": "École hors écran (primaire) selon le wiki fandom 2026.",
+      "icone": "🎒",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "type": "primaire",
+        "ville": "Bliss Bay",
+        "gameplay": "hors écran",
+        "horaires": "9h–14h · 5 j/sem."
+      },
+      "source": "https://inzoi.fandom.com/wiki/Career"
+    },
+    {
+      "id": "bliss-bay-ecole-sunridge-lycee",
+      "nom": "École Sunridge",
+      "nom_en": "Sunridge School",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "college-lycee",
+      "description": "2e lycée de Bliss Bay, hors écran.",
+      "icone": "🏫",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "type": "collège-lycée",
+        "ville": "Bliss Bay",
+        "gameplay": "hors écran",
+        "horaires": "9h–17h · 5 j/sem."
+      },
+      "source": "https://inzoi.fandom.com/wiki/Career"
+    },
+    {
+      "id": "bliss-bay-universite",
+      "nom": "École Sunridge (université)",
+      "nom_en": "Sunridge School — University",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "universite",
+      "description": "Le wiki 2026 range les filières universitaires sous « Sunridge School » ; l'employeur des professeurs s'appelle Bliss Bay University : nom à vérifier.",
+      "icone": "🎓",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/7/7d/Career_Bliss_Bay_University.png",
+      "nom_fichier_wiki": "Career_Bliss_Bay_University.png",
+      "icone_fichier": null,
+      "details": {
+        "type": "université",
+        "ville": "Bliss Bay",
+        "gameplay": "hors écran",
+        "horaires": "10h–17h · 3 j/sem.",
+        "filieres": [
+          "Administration des affaires",
+          "Informatique",
+          "Arts multimédias"
+        ],
+        "filieres_en": [
+          "Business Administration",
+          "Computer Science",
+          "Multimedia Arts"
+        ]
+      },
+      "source": "https://inzoi.fandom.com/wiki/Career"
+    },
+    {
+      "id": "ecole-cahaya-harmony",
+      "nom": "École Cahaya Harmony",
+      "nom_en": "Cahaya Harmony School (Harmony High School)",
+      "fr_verifie": true,
+      "source_fr": "guide officiel des codes de triche FR (playinzoi.com/fr/guide/cheats)",
+      "categorie": "college-lycee",
+      "description": "Lycée actif depuis v0.9.0 (bâtiment principal, annexe, cantine, terrain de sport). Avant v0.9.0, centre d'apprentissage de la natation hors carte.",
+      "icone": "🏫",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/e/eb/High_School_Cahaya.png",
+      "nom_fichier_wiki": "High_School_Cahaya.png",
+      "icone_fichier": null,
+      "details": {
+        "type": "collège-lycée",
+        "ville": "Cahaya",
+        "gameplay": "actif (v0.9.0)",
+        "horaires": "8h–16h · 5 j/sem."
+      },
+      "source": "https://inzoi.fandom.com/wiki/Cahaya_Harmony_School"
+    },
+    {
+      "id": "cahaya-ecole-citra-primaire",
+      "nom": "École Citra",
+      "nom_en": "Citra School",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "primaire",
+      "description": "École hors écran (primaire).",
+      "icone": "🎒",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "type": "primaire",
+        "ville": "Cahaya",
+        "gameplay": "hors écran",
+        "horaires": "9h–14h · 5 j/sem."
+      },
+      "source": "https://inzoi.fandom.com/wiki/Career"
+    },
+    {
+      "id": "cahaya-ecole-citra-lycee",
+      "nom": "École Citra",
+      "nom_en": "Citra School",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "college-lycee",
+      "description": "2e lycée de Cahaya, hors écran. Pas d'université à Cahaya.",
+      "icone": "🏫",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "type": "collège-lycée",
+        "ville": "Cahaya",
+        "gameplay": "hors écran",
+        "horaires": "9h–17h · 5 j/sem."
+      },
+      "source": "https://inzoi.fandom.com/wiki/Career"
+    },
+    {
+      "id": "cahaya-academie-de-natation",
+      "nom": "Académie de natation",
+      "nom_en": "Swim Academy",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "autre",
+      "description": "Cours de natation (adolescent et +), rattachés à l'École Citra ; fait progresser Nager.",
+      "icone": "🏊",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "type": "autre",
+        "ville": "Cahaya",
+        "gameplay": "hors écran",
+        "horaires": "9h–12h · 5 j/sem."
+      },
+      "source": "https://inzoi.fandom.com/wiki/Career"
+    }
+  ]
+}

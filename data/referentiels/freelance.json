@@ -1,0 +1,291 @@
+{
+  "referentiel": "freelance",
+  "titre": "Freelance",
+  "maj": "2026-10-23",
+  "version_jeu": "v0.11.1 (20 oct. 2026) — système de travail refondu en v0.8.0 (29 avr. 2026)",
+  "sources": [
+    "https://inzoi.fandom.com/wiki/Freelancer",
+    "https://playinzoi.com/fr/news/9960",
+    "https://playinzoi.com/en/news/9960",
+    "https://forum.playinzoi.com/t/topic/16052",
+    "docs/references/jeu-fiche-carriere.png"
+  ],
+  "notes": "Système ajouté en v0.8.0 : obtenir une licence sur l'ordinateur, puis prendre des missions dans l'appli freelance du téléphone. Le rang d'une licence dépend de la réputation et du nombre de missions réussies ; rang plus haut = missions plus dures et mieux payées. Possible après la retraite. Les notes de patch FR disent « certification » mais le jeu affiche « Licences » (capture). Types de travail : libellés FR officiels (notes v0.8.0). Noms FR des 5 licences = propositions (non vérifiés). Trous : noms et nombre des rangs de licence, barème de rémunération, pénalités exactes ; une source ne compte que 3 types de licence.",
+  "categories": [
+    {
+      "id": "type-de-travail",
+      "nom": "Type de travail",
+      "nom_en": "Job type",
+      "icone": "🧰"
+    },
+    {
+      "id": "licence",
+      "nom": "Licence",
+      "nom_en": "License",
+      "icone": "🪪"
+    },
+    {
+      "id": "indicateur",
+      "nom": "Indicateur (Carte Zoi)",
+      "nom_en": "Zoi card stat",
+      "icone": "📊"
+    }
+  ],
+  "elements": [
+    {
+      "id": "livraison",
+      "nom": "Livraison",
+      "nom_en": "Delivery",
+      "fr_verifie": true,
+      "source_fr": "notes de patch FR officielles v0.8.0",
+      "categorie": "type-de-travail",
+      "description": "Récupérer un objet chez le client et le livrer avant l'échéance (pénalité en cas de retard).",
+      "icone": "📦",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "licences": [
+          "licence-livraison"
+        ]
+      },
+      "source": "https://playinzoi.com/fr/news/9960"
+    },
+    {
+      "id": "creatif",
+      "nom": "Créatif",
+      "nom_en": "Creative",
+      "fr_verifie": true,
+      "source_fr": "notes de patch FR officielles v0.8.0",
+      "categorie": "type-de-travail",
+      "description": "Produire textes, musique, programmes ou médias à la demande d'un client (pourboire possible).",
+      "icone": "✍️",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "licences": [
+          "licence-ecrivain",
+          "licence-compositeur",
+          "licence-programmation",
+          "licence-production-media"
+        ]
+      },
+      "source": "https://playinzoi.com/fr/news/9960"
+    },
+    {
+      "id": "publication",
+      "nom": "Publication",
+      "nom_en": "Publishing",
+      "fr_verifie": true,
+      "source_fr": "notes de patch FR officielles v0.8.0",
+      "categorie": "type-de-travail",
+      "description": "Publier une création sur l'ordinateur pour toucher des revenus périodiques selon ses performances.",
+      "icone": "📢",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "licences": []
+      },
+      "source": "https://playinzoi.com/fr/news/9960"
+    },
+    {
+      "id": "marche-en-ligne",
+      "nom": "Marché en ligne",
+      "nom_en": "Sell Online",
+      "fr_verifie": true,
+      "source_fr": "notes de patch FR officielles v0.8.0",
+      "categorie": "type-de-travail",
+      "description": "Vendre ses créations sur l'ordinateur, bien moins cher qu'en commande ou en publication.",
+      "icone": "🛍️",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "licences": []
+      },
+      "source": "https://playinzoi.com/fr/news/9960"
+    },
+    {
+      "id": "licence-ecrivain",
+      "nom": "Écrivain",
+      "nom_en": "Writer",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "licence",
+      "description": "Rédiger textes et documents pour des clients.",
+      "icone": "📝",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/d/d8/License_Writer.png",
+      "nom_fichier_wiki": "License_Writer.png",
+      "icone_fichier": "assets/icones/freelance/License_Writer.png",
+      "details": {
+        "licences": null,
+        "prerequis": {
+          "competence": "pensee-critique",
+          "niveau": 3
+        },
+        "age": "Adolescent et +",
+        "type_de_travail": "creatif"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Freelancer"
+    },
+    {
+      "id": "licence-compositeur",
+      "nom": "Compositeur",
+      "nom_en": "Composer",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "licence",
+      "description": "Composer de la musique et la livrer.",
+      "icone": "🎼",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/f/ff/License_Composer.png",
+      "nom_fichier_wiki": "License_Composer.png",
+      "icone_fichier": "assets/icones/freelance/License_Composer.png",
+      "details": {
+        "licences": null,
+        "prerequis": {
+          "competence": "instruments",
+          "niveau": 3
+        },
+        "age": "Adolescent et +",
+        "type_de_travail": "creatif"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Freelancer"
+    },
+    {
+      "id": "licence-programmation",
+      "nom": "Programmation",
+      "nom_en": "Programming",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "licence",
+      "description": "Créer programmes et produits numériques.",
+      "icone": "💾",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/7/7f/License_Programming.png",
+      "nom_fichier_wiki": "License_Programming.png",
+      "icone_fichier": "assets/icones/freelance/License_Programming.png",
+      "details": {
+        "licences": null,
+        "prerequis": {
+          "competence": "programmation",
+          "niveau": 3
+        },
+        "age": "Adolescent et +",
+        "type_de_travail": "creatif"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Freelancer"
+    },
+    {
+      "id": "licence-production-media",
+      "nom": "Production média",
+      "nom_en": "Media Production",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "licence",
+      "description": "Créer et livrer vidéos et contenus médias.",
+      "icone": "🎥",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/2/20/License_Media.png",
+      "nom_fichier_wiki": "License_Media.png",
+      "icone_fichier": "assets/icones/freelance/License_Media.png",
+      "details": {
+        "licences": null,
+        "prerequis": {
+          "competence": "production-media",
+          "niveau": 3
+        },
+        "age": "Adolescent et +",
+        "type_de_travail": "creatif"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Freelancer"
+    },
+    {
+      "id": "licence-livraison",
+      "nom": "Livraison",
+      "nom_en": "Delivery",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "licence",
+      "description": "Effectuer des missions de livraison.",
+      "icone": "🚚",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/0/0d/License_Delivery.png",
+      "nom_fichier_wiki": "License_Delivery.png",
+      "icone_fichier": "assets/icones/freelance/License_Delivery.png",
+      "details": {
+        "licences": null,
+        "prerequis": null,
+        "age": "Adolescent et +",
+        "type_de_travail": "livraison"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Freelancer"
+    },
+    {
+      "id": "note",
+      "nom": "Note",
+      "nom_en": "Rating",
+      "fr_verifie": true,
+      "source_fr": "capture du jeu en FR (bloc Freelance)",
+      "categorie": "indicateur",
+      "description": "Note de freelance affichée sur la Carte Zoi.",
+      "icone": "⭐",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "licences": null
+      },
+      "source": "docs/references/jeu-fiche-carriere.png"
+    },
+    {
+      "id": "gains-totaux",
+      "nom": "Gains totaux",
+      "nom_en": "Total earnings",
+      "fr_verifie": true,
+      "source_fr": "capture du jeu en FR (bloc Freelance)",
+      "categorie": "indicateur",
+      "description": "Total gagné en freelance (₥).",
+      "icone": "💰",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "licences": null
+      },
+      "source": "docs/references/jeu-fiche-carriere.png"
+    },
+    {
+      "id": "licences-possedees",
+      "nom": "Licences possédées",
+      "nom_en": "Licenses owned",
+      "fr_verifie": true,
+      "source_fr": "capture du jeu en FR (bloc Freelance)",
+      "categorie": "indicateur",
+      "description": "Nombre de licences obtenues.",
+      "icone": "🪪",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "licences": null
+      },
+      "source": "docs/references/jeu-fiche-carriere.png"
+    },
+    {
+      "id": "contrats-termines",
+      "nom": "Contrats terminés",
+      "nom_en": "Completed contracts",
+      "fr_verifie": true,
+      "source_fr": "capture du jeu en FR (bloc Freelance)",
+      "categorie": "indicateur",
+      "description": "Nombre de missions terminées.",
+      "icone": "✅",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "licences": null
+      },
+      "source": "docs/references/jeu-fiche-carriere.png"
+    }
+  ]
+}

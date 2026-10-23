@@ -1,0 +1,288 @@
+{
+  "referentiel": "niveaux-etudes",
+  "titre": "Niveaux d'études et notes",
+  "maj": "2026-10-23",
+  "version_jeu": "v0.11.1 (20 oct. 2026) — système de travail refondu en v0.8.0 (29 avr. 2026)",
+  "sources": [
+    "docs/references/jeu-fiche-carriere.png",
+    "docs/references/jeu-fiche-profil.png",
+    "https://inzoi.fandom.com/wiki/High_School",
+    "https://playinzoi.com/fr/news/10165",
+    "https://thegameswiki.com/inzoi/wiki/schools",
+    "https://thegameswiki.com/inzoi/wiki/university",
+    "https://www.playnews.gg/guides/inzoi-le-guide-complet-du-lycee-cours-examens-clubs-bal-de-promo-et-diplome-2026"
+  ],
+  "notes": "Libellés vérifiés sur capture : « Plus haut niveau d'études », « Diplôme obtenu », « Lycée » (profil : « Lycée Diplôme obtenu »), « Moyenne finale : B ». L'échelle de notes A–F est supposée : seule B est confirmée ; existence de E, de +/- ou d'un « aucun diplôme » inconnue. TheGamesWiki affirmait (avant v0.9.0) qu'il n'y avait pas de notes en lettres. Lycée (v0.9.0) : examens le jeudi, note = examens + comportement, avertissements/renvoi possibles, clubs (Pom-pom girls, Athlétisme, Informatique, Cuisine — noms FR non vérifiés), bal de promo le samedi. Statut « En cours », libellés des filières et « Diplômé avec mention » = traductions proposées.",
+  "categories": [
+    {
+      "id": "niveau",
+      "nom": "Niveau d'études",
+      "nom_en": "Education level",
+      "icone": "🎓"
+    },
+    {
+      "id": "statut",
+      "nom": "Statut",
+      "nom_en": "Status",
+      "icone": "📜"
+    },
+    {
+      "id": "note",
+      "nom": "Moyenne finale",
+      "nom_en": "Final grade",
+      "icone": "📝"
+    },
+    {
+      "id": "filiere",
+      "nom": "Filière universitaire",
+      "nom_en": "Major",
+      "icone": "📚"
+    },
+    {
+      "id": "distinction",
+      "nom": "Distinction",
+      "nom_en": "Honor",
+      "icone": "🏅"
+    }
+  ],
+  "elements": [
+    {
+      "id": "ecole-primaire",
+      "nom": "École primaire",
+      "nom_en": "Elementary School",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "niveau",
+      "description": "Niveau des enfants (école hors écran).",
+      "icone": "🎒",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "ordre": 1
+      },
+      "source": "https://inzoi.fandom.com/wiki/Career"
+    },
+    {
+      "id": "lycee",
+      "nom": "Lycée",
+      "nom_en": "High School",
+      "fr_verifie": true,
+      "source_fr": "capture du jeu en FR (« Lycée Diplôme obtenu »)",
+      "categorie": "niveau",
+      "description": "Adolescents ; diplôme à la cérémonie de remise des diplômes, passage en jeune adulte.",
+      "icone": "🏫",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "ordre": 2
+      },
+      "source": "docs/references/jeu-fiche-profil.png"
+    },
+    {
+      "id": "universite",
+      "nom": "Université",
+      "nom_en": "University",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "niveau",
+      "description": "Jeunes adultes, 3 filières ; diplôme affiché sur le profil.",
+      "icone": "🎓",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "ordre": 3
+      },
+      "source": "https://thegameswiki.com/inzoi/wiki/university"
+    },
+    {
+      "id": "en-cours",
+      "nom": "En cours",
+      "nom_en": "Enrolled",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "statut",
+      "description": "Scolarité en cours (libellé non vu en jeu).",
+      "icone": "📖",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "ordre": 1
+      },
+      "source": "https://inzoi.fandom.com/wiki/High_School"
+    },
+    {
+      "id": "diplome-obtenu",
+      "nom": "Diplôme obtenu",
+      "nom_en": "Graduated",
+      "fr_verifie": true,
+      "source_fr": "capture du jeu en FR",
+      "categorie": "statut",
+      "description": "Vu dans « Plus haut niveau d'études : Diplôme obtenu ».",
+      "icone": "📜",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "ordre": 2
+      },
+      "source": "docs/references/jeu-fiche-carriere.png"
+    },
+    {
+      "id": "note-a",
+      "nom": "A",
+      "nom_en": "A",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "note",
+      "description": "Moyenne finale A (échelle A–F supposée, non confirmée).",
+      "icone": "🅰️",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "ordre": 1
+      },
+      "source": "docs/references/jeu-fiche-carriere.png"
+    },
+    {
+      "id": "note-b",
+      "nom": "B",
+      "nom_en": "B",
+      "fr_verifie": true,
+      "source_fr": "capture du jeu en FR (« Moyenne finale : B »)",
+      "categorie": "note",
+      "description": "Moyenne finale B (vue sur la capture).",
+      "icone": "📝",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "ordre": 2
+      },
+      "source": "docs/references/jeu-fiche-carriere.png"
+    },
+    {
+      "id": "note-c",
+      "nom": "C",
+      "nom_en": "C",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "note",
+      "description": "Moyenne finale C (échelle A–F supposée, non confirmée).",
+      "icone": "📝",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "ordre": 3
+      },
+      "source": "docs/references/jeu-fiche-carriere.png"
+    },
+    {
+      "id": "note-d",
+      "nom": "D",
+      "nom_en": "D",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "note",
+      "description": "Moyenne finale D (échelle A–F supposée, non confirmée).",
+      "icone": "📝",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "ordre": 4
+      },
+      "source": "docs/references/jeu-fiche-carriere.png"
+    },
+    {
+      "id": "note-f",
+      "nom": "F",
+      "nom_en": "F",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "note",
+      "description": "Moyenne finale F (échelle A–F supposée, non confirmée).",
+      "icone": "📝",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "ordre": 5
+      },
+      "source": "docs/references/jeu-fiche-carriere.png"
+    },
+    {
+      "id": "filiere-administration-des-affaires",
+      "nom": "Administration des affaires",
+      "nom_en": "Business Administration",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "filiere",
+      "description": "Filière universitaire (Business Administration).",
+      "icone": "📊",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "ordre": 1
+      },
+      "source": "https://thegameswiki.com/inzoi/wiki/university"
+    },
+    {
+      "id": "filiere-informatique",
+      "nom": "Informatique",
+      "nom_en": "Computer Science",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "filiere",
+      "description": "Filière universitaire (Computer Science).",
+      "icone": "💻",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "ordre": 2
+      },
+      "source": "https://thegameswiki.com/inzoi/wiki/university"
+    },
+    {
+      "id": "filiere-arts-multimedias",
+      "nom": "Arts multimédias",
+      "nom_en": "Multimedia Arts",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "filiere",
+      "description": "Filière universitaire (Multimedia Arts).",
+      "icone": "🎞️",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "ordre": 3
+      },
+      "source": "https://thegameswiki.com/inzoi/wiki/university"
+    },
+    {
+      "id": "diplome-avec-mention",
+      "nom": "Diplômé avec mention",
+      "nom_en": "Honor graduate",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "distinction",
+      "description": "Bonnes notes au lycée → peut être désigné diplômé d'honneur ; bonus aux entretiens d'embauche.",
+      "icone": "🏅",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "ordre": 1
+      },
+      "source": "https://inzoi.fandom.com/wiki/High_School"
+    }
+  ]
+}

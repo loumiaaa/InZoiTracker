@@ -1,0 +1,644 @@
+{
+  "referentiel": "competences",
+  "titre": "Compétences",
+  "maj": "2026-10-23",
+  "version_jeu": "v0.11.1 (20 oct. 2026) — système de travail refondu en v0.8.0 (29 avr. 2026)",
+  "sources": [
+    "https://playinzoi.com/fr/guide/cheats",
+    "https://playinzoi.com/en/guide/cheats",
+    "https://inzoi.fandom.com/wiki/Skill",
+    "https://playinzoi.com/fr/news/9079",
+    "https://playinzoi.com/fr/news/9533",
+    "https://playinzoi.com/fr/news/9960",
+    "https://playinzoi.com/fr/news/10849",
+    "https://thegameswiki.com/inzoi/wiki/skills",
+    "docs/references/jeu-fiche-profil.png",
+    "docs/references/jeu-fiche-ambitions.png",
+    "https://www.millenium.org/guide/423206.html",
+    "https://www.moyens.net/gaming/guide/maitriser-competences-inzoi-guide-complet-montee-en-niveau/"
+  ],
+  "notes": "Liste complète des 31 ID de compétence du guide officiel des codes de triche FR (4 tout-petit, 6 enfant, 21 adolescent+), libellés FR repris tels quels ; Cuisine, Tâches ménagères, Rhétorique, Pensée critique confirmés par la capture du profil. Divergences de libellé dans les notes de patch FR : Pêche/Pêcher, natation/Nager, performance/Spectacle, Criminalité/Crime. Niveaux max : 10 pour adolescent+ (wiki/TheGamesWiki), 5 pour enfant (TheGamesWiki), Crime 5 (notes v0.5.0) ; tout-petit et Jeu vidéo inconnus (null). Trous : compétences spéciales de fantôme (v0.4.0) non nommées par les sources ; pas d'icône wiki pour Pâtisserie, Préparation de boissons, Crime, Jeu vidéo. Depuis v0.10.0 les compétences sont conservées au passage d'âge.",
+  "categories": [
+    {
+      "id": "tout-petit",
+      "nom": "Tout-petit",
+      "nom_en": "Toddler",
+      "icone": "🧸"
+    },
+    {
+      "id": "enfant",
+      "nom": "Enfant",
+      "nom_en": "Child",
+      "icone": "🧒"
+    },
+    {
+      "id": "adolescent-et-plus",
+      "nom": "Adolescent ou personne plus âgée",
+      "nom_en": "Teenager or Older",
+      "icone": "🧑"
+    }
+  ],
+  "elements": [
+    {
+      "id": "developpement-emotionnel",
+      "nom": "Développement émotionnel",
+      "nom_en": "Emotional Development",
+      "fr_verifie": true,
+      "source_fr": "guide officiel des codes de triche FR (playinzoi.com/fr/guide/cheats)",
+      "categorie": "tout-petit",
+      "description": "Créer des liens avec les autres (saluer, s'attacher).",
+      "icone": "💞",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/2/27/Skill_Emotional_Development.png",
+      "nom_fichier_wiki": "Skill_Emotional_Development.png",
+      "icone_fichier": "assets/icones/competences/Skill_Emotional_Development.png",
+      "details": {
+        "niveau_max": null,
+        "id_triche": "DevEmotion",
+        "ajoute_en": null
+      },
+      "source": "https://inzoi.fandom.com/wiki/Skill"
+    },
+    {
+      "id": "langage",
+      "nom": "Langage",
+      "nom_en": "Language Development",
+      "fr_verifie": true,
+      "source_fr": "guide officiel des codes de triche FR (playinzoi.com/fr/guide/cheats)",
+      "categorie": "tout-petit",
+      "description": "S'exprimer et communiquer (parler, gestes).",
+      "icone": "🗣️",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/1/10/Skill_Language_Development.png",
+      "nom_fichier_wiki": "Skill_Language_Development.png",
+      "icone_fichier": "assets/icones/competences/Skill_Language_Development.png",
+      "details": {
+        "niveau_max": null,
+        "id_triche": "DevLanguage",
+        "ajoute_en": null
+      },
+      "source": "https://inzoi.fandom.com/wiki/Skill"
+    },
+    {
+      "id": "cognition",
+      "nom": "Cognition",
+      "nom_en": "Cognitive Development",
+      "fr_verifie": true,
+      "source_fr": "guide officiel des codes de triche FR (playinzoi.com/fr/guide/cheats)",
+      "categorie": "tout-petit",
+      "description": "Explorer et comprendre les objets (toucher, jouets, musique).",
+      "icone": "🧩",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/5/54/Skill_Cognitive_Development.png",
+      "nom_fichier_wiki": "Skill_Cognitive_Development.png",
+      "icone_fichier": "assets/icones/competences/Skill_Cognitive_Development.png",
+      "details": {
+        "niveau_max": null,
+        "id_triche": "DevPerception",
+        "ajoute_en": null
+      },
+      "source": "https://inzoi.fandom.com/wiki/Skill"
+    },
+    {
+      "id": "mobilite",
+      "nom": "Mobilité",
+      "nom_en": "Physical Development",
+      "fr_verifie": true,
+      "source_fr": "guide officiel des codes de triche FR (playinzoi.com/fr/guide/cheats)",
+      "categorie": "tout-petit",
+      "description": "Contrôler son corps et garder l'équilibre (marcher, jouer).",
+      "icone": "🚶",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/b/bd/Skill_Physical_Development.png",
+      "nom_fichier_wiki": "Skill_Physical_Development.png",
+      "icone_fichier": "assets/icones/competences/Skill_Physical_Development.png",
+      "details": {
+        "niveau_max": null,
+        "id_triche": "DevPhysical",
+        "ajoute_en": null
+      },
+      "source": "https://inzoi.fandom.com/wiki/Skill"
+    },
+    {
+      "id": "sociabilite",
+      "nom": "Sociabilité",
+      "nom_en": "Social",
+      "fr_verifie": true,
+      "source_fr": "guide officiel des codes de triche FR (playinzoi.com/fr/guide/cheats)",
+      "categorie": "enfant",
+      "description": "Communiquer et nouer des relations ; évolue vers Charme et Rhétorique.",
+      "icone": "🤝",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/6/6f/Skill_Social.png",
+      "nom_fichier_wiki": "Skill_Social.png",
+      "icone_fichier": "assets/icones/competences/Skill_Social.png",
+      "details": {
+        "niveau_max": 5,
+        "id_triche": "DevSociety",
+        "ajoute_en": null
+      },
+      "source": "https://inzoi.fandom.com/wiki/Skill"
+    },
+    {
+      "id": "creativite",
+      "nom": "Créativité",
+      "nom_en": "Creativity",
+      "fr_verifie": true,
+      "source_fr": "guide officiel des codes de triche FR (playinzoi.com/fr/guide/cheats)",
+      "categorie": "enfant",
+      "description": "Imagination (instruments, jeux, gribouillages, peinture) ; se ramifie en plusieurs compétences adultes.",
+      "icone": "🖍️",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/8/81/Skill_Creativity.png",
+      "nom_fichier_wiki": "Skill_Creativity.png",
+      "icone_fichier": "assets/icones/competences/Skill_Creativity.png",
+      "details": {
+        "niveau_max": 5,
+        "id_triche": "DevImagine",
+        "ajoute_en": null
+      },
+      "source": "https://inzoi.fandom.com/wiki/Skill"
+    },
+    {
+      "id": "motricite",
+      "nom": "Motricité",
+      "nom_en": "Motor Development",
+      "fr_verifie": true,
+      "source_fr": "guide officiel des codes de triche FR (playinzoi.com/fr/guide/cheats)",
+      "categorie": "enfant",
+      "description": "Bouger librement (tapis de course, yoga, ballon).",
+      "icone": "🤸",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/2/2c/Skill_Motor_Development.png",
+      "nom_fichier_wiki": "Skill_Motor_Development.png",
+      "icone_fichier": "assets/icones/competences/Skill_Motor_Development.png",
+      "details": {
+        "niveau_max": 5,
+        "id_triche": "DevExercise",
+        "ajoute_en": null
+      },
+      "source": "https://inzoi.fandom.com/wiki/Skill"
+    },
+    {
+      "id": "responsabilite",
+      "nom": "Responsabilité",
+      "nom_en": "Responsibility",
+      "fr_verifie": true,
+      "source_fr": "guide officiel des codes de triche FR (playinzoi.com/fr/guide/cheats)",
+      "categorie": "enfant",
+      "description": "Planifier et agir seul (ménage, journal intime).",
+      "icone": "🧹",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/f/f7/Skill_Responsibility.png",
+      "nom_fichier_wiki": "Skill_Responsibility.png",
+      "icone_fichier": "assets/icones/competences/Skill_Responsibility.png",
+      "details": {
+        "niveau_max": 5,
+        "id_triche": "DevResponsibility",
+        "ajoute_en": null,
+        "remarques": "Évolution adulte divergente selon les sources (Tâches ménagères + Pensée critique ou + Cuisine)."
+      },
+      "source": "https://inzoi.fandom.com/wiki/Skill"
+    },
+    {
+      "id": "esprit-curieux",
+      "nom": "Esprit curieux",
+      "nom_en": "Curious Mind",
+      "fr_verifie": true,
+      "source_fr": "guide officiel des codes de triche FR (playinzoi.com/fr/guide/cheats)",
+      "categorie": "enfant",
+      "description": "Observer le monde avec curiosité ; progresse en pêchant ou en minant.",
+      "icone": "🔍",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/d/d5/Skill_Curious_Mind.png",
+      "nom_fichier_wiki": "Skill_Curious_Mind.png",
+      "icone_fichier": "assets/icones/competences/Skill_Curious_Mind.png",
+      "details": {
+        "niveau_max": 5,
+        "id_triche": "DevExploration",
+        "ajoute_en": "v0.3.0 (DLC)"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Skill"
+    },
+    {
+      "id": "adaptabilite-aquatique",
+      "nom": "Adaptabilité aquatique",
+      "nom_en": "Aquatic Adaptability",
+      "fr_verifie": true,
+      "source_fr": "guide officiel des codes de triche FR (playinzoi.com/fr/guide/cheats)",
+      "categorie": "enfant",
+      "description": "Se déplacer dans l'eau ; devient Nager à l'adolescence.",
+      "icone": "🐠",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/8/8e/Skill_Aquatic_Adaptability.png",
+      "nom_fichier_wiki": "Skill_Aquatic_Adaptability.png",
+      "icone_fichier": "assets/icones/competences/Skill_Aquatic_Adaptability.png",
+      "details": {
+        "niveau_max": 5,
+        "id_triche": "DevSwimChild",
+        "ajoute_en": "v0.3.0 (DLC)"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Skill"
+    },
+    {
+      "id": "charme",
+      "nom": "Charme",
+      "nom_en": "Charm",
+      "fr_verifie": true,
+      "source_fr": "guide officiel des codes de triche FR (playinzoi.com/fr/guide/cheats)",
+      "categorie": "adolescent-et-plus",
+      "description": "Séduire (conversations romantiques, livres de discours).",
+      "icone": "💘",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/b/bf/Skill_Charm.png",
+      "nom_fichier_wiki": "Skill_Charm.png",
+      "icone_fichier": "assets/icones/competences/Skill_Charm.png",
+      "details": {
+        "niveau_max": 10,
+        "id_triche": "Charisma",
+        "ajoute_en": null
+      },
+      "source": "https://inzoi.fandom.com/wiki/Skill"
+    },
+    {
+      "id": "pensee-critique",
+      "nom": "Pensée critique",
+      "nom_en": "Critical Thinking",
+      "fr_verifie": true,
+      "source_fr": "guide officiel des codes de triche FR (playinzoi.com/fr/guide/cheats)",
+      "categorie": "adolescent-et-plus",
+      "description": "Écrire et publier des livres, logique, certifications.",
+      "icone": "🧠",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/1/17/Skill_Critical_Thinking.png",
+      "nom_fichier_wiki": "Skill_Critical_Thinking.png",
+      "icone_fichier": "assets/icones/competences/Skill_Critical_Thinking.png",
+      "details": {
+        "niveau_max": 10,
+        "id_triche": "Logic",
+        "ajoute_en": null,
+        "remarques": "Aussi vu sur la capture du profil. Une note de patch FR parle d'une compétence « Écriture » (EN « Writing ») : probablement la même."
+      },
+      "source": "https://inzoi.fandom.com/wiki/Skill"
+    },
+    {
+      "id": "programmation",
+      "nom": "Programmation",
+      "nom_en": "Programming",
+      "fr_verifie": true,
+      "source_fr": "guide officiel des codes de triche FR (playinzoi.com/fr/guide/cheats)",
+      "categorie": "adolescent-et-plus",
+      "description": "Développer et vendre des programmes (ordinateur, jeux).",
+      "icone": "👨‍💻",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/a/ab/Skill_Programming.png",
+      "nom_fichier_wiki": "Skill_Programming.png",
+      "icone_fichier": "assets/icones/competences/Skill_Programming.png",
+      "details": {
+        "niveau_max": 10,
+        "id_triche": "Programming",
+        "ajoute_en": null
+      },
+      "source": "https://inzoi.fandom.com/wiki/Skill"
+    },
+    {
+      "id": "condition-physique",
+      "nom": "Condition physique",
+      "nom_en": "Fitness",
+      "fr_verifie": true,
+      "source_fr": "guide officiel des codes de triche FR (playinzoi.com/fr/guide/cheats)",
+      "categorie": "adolescent-et-plus",
+      "description": "Santé et forme (tapis, yoga, machines).",
+      "icone": "🏋️",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/e/ef/Skill_Fitness.png",
+      "nom_fichier_wiki": "Skill_Fitness.png",
+      "icone_fichier": "assets/icones/competences/Skill_Fitness.png",
+      "details": {
+        "niveau_max": 10,
+        "id_triche": "Exercise",
+        "ajoute_en": null
+      },
+      "source": "https://inzoi.fandom.com/wiki/Skill"
+    },
+    {
+      "id": "art",
+      "nom": "Art",
+      "nom_en": "Art",
+      "fr_verifie": true,
+      "source_fr": "guide officiel des codes de triche FR (playinzoi.com/fr/guide/cheats)",
+      "categorie": "adolescent-et-plus",
+      "description": "Peindre (chevalet, fresques) et vendre ses toiles.",
+      "icone": "🎨",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/a/ab/Skill_Art.png",
+      "nom_fichier_wiki": "Skill_Art.png",
+      "icone_fichier": "assets/icones/competences/Skill_Art.png",
+      "details": {
+        "niveau_max": 10,
+        "id_triche": "Art",
+        "ajoute_en": null
+      },
+      "source": "https://inzoi.fandom.com/wiki/Skill"
+    },
+    {
+      "id": "production-media",
+      "nom": "Production média",
+      "nom_en": "Media Production",
+      "fr_verifie": true,
+      "source_fr": "guide officiel des codes de triche FR (playinzoi.com/fr/guide/cheats)",
+      "categorie": "adolescent-et-plus",
+      "description": "Créer, monter et vendre des vidéos ; photos.",
+      "icone": "🎬",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/1/1c/Skill_Media_Production.png",
+      "nom_fichier_wiki": "Skill_Media_Production.png",
+      "icone_fichier": "assets/icones/competences/Skill_Media_Production.png",
+      "details": {
+        "niveau_max": 10,
+        "id_triche": "Filming",
+        "ajoute_en": null
+      },
+      "source": "https://inzoi.fandom.com/wiki/Skill"
+    },
+    {
+      "id": "instruments",
+      "nom": "Instruments",
+      "nom_en": "Instrument",
+      "fr_verifie": true,
+      "source_fr": "guide officiel des codes de triche FR (playinzoi.com/fr/guide/cheats)",
+      "categorie": "adolescent-et-plus",
+      "description": "Jouer d'instruments et vendre des compositions.",
+      "icone": "🎹",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/4/49/Skill_Instrument.png",
+      "nom_fichier_wiki": "Skill_Instrument.png",
+      "icone_fichier": "assets/icones/competences/Skill_Instrument.png",
+      "details": {
+        "niveau_max": 10,
+        "id_triche": "Instruments",
+        "ajoute_en": null
+      },
+      "source": "https://inzoi.fandom.com/wiki/Skill"
+    },
+    {
+      "id": "cuisine",
+      "nom": "Cuisine",
+      "nom_en": "Cooking",
+      "fr_verifie": true,
+      "source_fr": "guide officiel des codes de triche FR (playinzoi.com/fr/guide/cheats)",
+      "categorie": "adolescent-et-plus",
+      "description": "Cuisiner et débloquer des recettes.",
+      "icone": "🍳",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/7/71/Skill_Cooking.png",
+      "nom_fichier_wiki": "Skill_Cooking.png",
+      "icone_fichier": "assets/icones/competences/Skill_Cooking.png",
+      "details": {
+        "niveau_max": 10,
+        "id_triche": "Cooking",
+        "ajoute_en": null,
+        "remarques": "Aussi vu sur la capture du profil."
+      },
+      "source": "https://inzoi.fandom.com/wiki/Skill"
+    },
+    {
+      "id": "taches-menageres",
+      "nom": "Tâches ménagères",
+      "nom_en": "Housework",
+      "fr_verifie": true,
+      "source_fr": "guide officiel des codes de triche FR (playinzoi.com/fr/guide/cheats)",
+      "categorie": "adolescent-et-plus",
+      "description": "Nettoyer, réparer, rénover, fabriquer des meubles.",
+      "icone": "🧽",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/a/aa/Skill_Housework.png",
+      "nom_fichier_wiki": "Skill_Housework.png",
+      "icone_fichier": "assets/icones/competences/Skill_Housework.png",
+      "details": {
+        "niveau_max": 10,
+        "id_triche": "Housework",
+        "ajoute_en": null,
+        "remarques": "Aussi vu sur la capture du profil."
+      },
+      "source": "https://inzoi.fandom.com/wiki/Skill"
+    },
+    {
+      "id": "jardinage",
+      "nom": "Jardinage",
+      "nom_en": "Gardening",
+      "fr_verifie": true,
+      "source_fr": "guide officiel des codes de triche FR (playinzoi.com/fr/guide/cheats)",
+      "categorie": "adolescent-et-plus",
+      "description": "Cultiver, récolter, tailler des bonsaïs ; effets spéciaux des fleurs (v0.7.0).",
+      "icone": "🪴",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/f/f6/Skill_Gardening.png",
+      "nom_fichier_wiki": "Skill_Gardening.png",
+      "icone_fichier": "assets/icones/competences/Skill_Gardening.png",
+      "details": {
+        "niveau_max": 10,
+        "id_triche": "Gardening",
+        "ajoute_en": null
+      },
+      "source": "https://inzoi.fandom.com/wiki/Skill"
+    },
+    {
+      "id": "rhetorique",
+      "nom": "Rhétorique",
+      "nom_en": "Rhetoric",
+      "fr_verifie": true,
+      "source_fr": "guide officiel des codes de triche FR (playinzoi.com/fr/guide/cheats)",
+      "categorie": "adolescent-et-plus",
+      "description": "Converser efficacement et persuader.",
+      "icone": "💬",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/2/22/Skill_Rhetoric.png",
+      "nom_fichier_wiki": "Skill_Rhetoric.png",
+      "icone_fichier": "assets/icones/competences/Skill_Rhetoric.png",
+      "details": {
+        "niveau_max": 10,
+        "id_triche": "Speaking",
+        "ajoute_en": null,
+        "remarques": "Aussi vu sur la capture du profil."
+      },
+      "source": "https://inzoi.fandom.com/wiki/Skill"
+    },
+    {
+      "id": "spectacle",
+      "nom": "Spectacle",
+      "nom_en": "Performance",
+      "fr_verifie": true,
+      "source_fr": "guide officiel des codes de triche FR (playinzoi.com/fr/guide/cheats)",
+      "categorie": "adolescent-et-plus",
+      "description": "Activités de scène : chant, stand-up, humour.",
+      "icone": "🎭",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/8/80/Skill_Performance.png",
+      "nom_fichier_wiki": "Skill_Performance.png",
+      "icone_fichier": "assets/icones/competences/Skill_Performance.png",
+      "details": {
+        "niveau_max": 10,
+        "id_triche": "Performance",
+        "ajoute_en": null,
+        "remarques": "Les notes de patch FR v0.8.0 écrivent « compétence de performance »."
+      },
+      "source": "https://inzoi.fandom.com/wiki/Skill"
+    },
+    {
+      "id": "fabrication-de-cafe",
+      "nom": "Fabrication de café",
+      "nom_en": "Coffee Craft",
+      "fr_verifie": true,
+      "source_fr": "guide officiel des codes de triche FR (playinzoi.com/fr/guide/cheats)",
+      "categorie": "adolescent-et-plus",
+      "description": "Préparer des cafés (moulin + machine expresso) et débloquer des recettes.",
+      "icone": "☕",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/1/1d/Skill_Coffee_Craft.png",
+      "nom_fichier_wiki": "Skill_Coffee_Craft.png",
+      "icone_fichier": "assets/icones/competences/Skill_Coffee_Craft.png",
+      "details": {
+        "niveau_max": 10,
+        "id_triche": "CoffeeArt",
+        "ajoute_en": null,
+        "remarques": "Guides FR tiers : « Création de café » (Millenium), « Art du café » (Moyens.net)."
+      },
+      "source": "https://inzoi.fandom.com/wiki/Skill"
+    },
+    {
+      "id": "collectionner",
+      "nom": "Collectionner",
+      "nom_en": "Collecting",
+      "fr_verifie": true,
+      "source_fr": "guide officiel des codes de triche FR (playinzoi.com/fr/guide/cheats)",
+      "categorie": "adolescent-et-plus",
+      "description": "Récolte de ressources et minage de gemmes.",
+      "icone": "💎",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/2/22/Skill_Collecting.png",
+      "nom_fichier_wiki": "Skill_Collecting.png",
+      "icone_fichier": "assets/icones/competences/Skill_Collecting.png",
+      "details": {
+        "niveau_max": 10,
+        "id_triche": "Pickaxe",
+        "ajoute_en": "v0.3.0 (DLC)"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Skill"
+    },
+    {
+      "id": "pecher",
+      "nom": "Pêcher",
+      "nom_en": "Fishing",
+      "fr_verifie": true,
+      "source_fr": "guide officiel des codes de triche FR (playinzoi.com/fr/guide/cheats)",
+      "categorie": "adolescent-et-plus",
+      "description": "Pêcher en rivière et en mer.",
+      "icone": "🎣",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/c/c5/Skill_Fishing.png",
+      "nom_fichier_wiki": "Skill_Fishing.png",
+      "icone_fichier": "assets/icones/competences/Skill_Fishing.png",
+      "details": {
+        "niveau_max": 10,
+        "id_triche": "Fishing",
+        "ajoute_en": "v0.3.0 (DLC)",
+        "remarques": "Les notes de patch FR v0.3.0 écrivent « Pêche »."
+      },
+      "source": "https://inzoi.fandom.com/wiki/Skill"
+    },
+    {
+      "id": "nager",
+      "nom": "Nager",
+      "nom_en": "Swimming",
+      "fr_verifie": true,
+      "source_fr": "guide officiel des codes de triche FR (playinzoi.com/fr/guide/cheats)",
+      "categorie": "adolescent-et-plus",
+      "description": "Rester plus longtemps dans l'eau, éviter les dangers ; plongée.",
+      "icone": "🏊",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/5/5e/Skill_Swimming.png",
+      "nom_fichier_wiki": "Skill_Swimming.png",
+      "icone_fichier": "assets/icones/competences/Skill_Swimming.png",
+      "details": {
+        "niveau_max": 10,
+        "id_triche": "Swimming",
+        "ajoute_en": "v0.3.0 (DLC)",
+        "remarques": "Les notes de patch FR v0.3.0 écrivent « compétence de natation »."
+      },
+      "source": "https://inzoi.fandom.com/wiki/Skill"
+    },
+    {
+      "id": "travail-manuel",
+      "nom": "Travail manuel",
+      "nom_en": "Handiwork",
+      "fr_verifie": true,
+      "source_fr": "guide officiel des codes de triche FR (playinzoi.com/fr/guide/cheats)",
+      "categorie": "adolescent-et-plus",
+      "description": "Fabriquer outils et bijoux à la table de fabrication.",
+      "icone": "🔨",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/6/60/Skill_Handiwork.png",
+      "nom_fichier_wiki": "Skill_Handiwork.png",
+      "icone_fichier": "assets/icones/competences/Skill_Handiwork.png",
+      "details": {
+        "niveau_max": 10,
+        "id_triche": "HandCraft",
+        "ajoute_en": "v0.3.0 (DLC)"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Skill"
+    },
+    {
+      "id": "patisserie",
+      "nom": "Pâtisserie",
+      "nom_en": "Baking",
+      "fr_verifie": true,
+      "source_fr": "guide officiel des codes de triche FR (playinzoi.com/fr/guide/cheats)",
+      "categorie": "adolescent-et-plus",
+      "description": "Desserts au four, des biscuits aux gâteaux (séparée de Cuisine).",
+      "icone": "🧁",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "niveau_max": 10,
+        "id_triche": "BakingPastry",
+        "ajoute_en": "v0.5.0"
+      },
+      "source": "https://playinzoi.com/fr/news/9533"
+    },
+    {
+      "id": "preparation-de-boissons",
+      "nom": "Préparation de boissons",
+      "nom_en": "Drink Mixing",
+      "fr_verifie": true,
+      "source_fr": "guide officiel des codes de triche FR (playinzoi.com/fr/guide/cheats)",
+      "categorie": "adolescent-et-plus",
+      "description": "Jus et cocktails au mixeur / distributeur (sans alcool pour les ados).",
+      "icone": "🍹",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "niveau_max": 10,
+        "id_triche": "BeverageCraft",
+        "ajoute_en": "v0.5.0",
+        "remarques": "Aussi dans l'ambition « Maître de la préparation de boissons » (capture)."
+      },
+      "source": "https://playinzoi.com/fr/news/9533"
+    },
+    {
+      "id": "crime",
+      "nom": "Crime",
+      "nom_en": "Crime",
+      "fr_verifie": true,
+      "source_fr": "guide officiel des codes de triche FR (playinzoi.com/fr/guide/cheats)",
+      "categorie": "adolescent-et-plus",
+      "description": "Vol et escroquerie ; plafonnée au niveau 5 (en développement). Jeunes adultes et + uniquement.",
+      "icone": "🦹",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "niveau_max": 5,
+        "id_triche": "Crime",
+        "ajoute_en": "v0.5.0",
+        "remarques": "La section codes de triche des notes FR v0.5.0 l'appelle « Criminalité »."
+      },
+      "source": "https://playinzoi.com/fr/news/9533"
+    },
+    {
+      "id": "jeu-video",
+      "nom": "Jeu vidéo",
+      "nom_en": "Video Game",
+      "fr_verifie": true,
+      "source_fr": "guide officiel des codes de triche FR (playinzoi.com/fr/guide/cheats)",
+      "categorie": "adolescent-et-plus",
+      "description": "Nouvelle compétence de v0.10.0 (section Mentalité des notes de patch).",
+      "icone": "🎮",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "niveau_max": null,
+        "id_triche": "Gaming",
+        "ajoute_en": "v0.10.0",
+        "remarques": "Niveau max et tranche d'âge exacte non confirmés ; absente du guide de triche EN (présente en FR)."
+      },
+      "source": "https://playinzoi.com/fr/news/10849"
+    }
+  ]
+}
