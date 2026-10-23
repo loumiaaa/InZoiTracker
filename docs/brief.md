@@ -30,6 +30,10 @@ Le carnet de bord de mes Zois : ouvrir l'app à côté du jeu, retrouver en 2 se
 - Carte des relations
 - Recherche globale (Ctrl/Cmd+K)
 
+## Décisions
+- **Saisie manuelle d'abord.** La liaison avec le jeu (portraits du dossier SaveGames, lecture des sauvegardes, mod Lua d'export) est reportée ; le modèle de données reste compatible avec un futur module « Import depuis le jeu ».
+- Les référentiels du jeu seront remplis à partir des informations collectées par la joueuse en jeu.
+
 ## MVP proposé
 1. Créer / modifier familles et Zois avec portrait (import de capture)
 2. Fiche Zoi complète (identité, trait, Vie désirée, goûts, carrière / école)
