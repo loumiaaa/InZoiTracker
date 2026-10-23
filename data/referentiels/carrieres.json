@@ -1,0 +1,2780 @@
+{
+  "referentiel": "carrieres",
+  "titre": "Carrières et employeurs",
+  "maj": "2026-10-23",
+  "version_jeu": "v0.11.1 (20 oct. 2026) — système de travail refondu en v0.8.0 (29 avr. 2026)",
+  "sources": [
+    "https://inzoi.fandom.com/wiki/Career",
+    "https://playinzoi.com/fr/guide/cheats",
+    "https://playinzoi.com/fr/news/9960",
+    "https://playinzoi.com/en/news/9960",
+    "https://playinzoi.com/fr/news/8812",
+    "https://playinzoi.com/fr/news/9533",
+    "https://playinzoi.com/fr/news/9824",
+    "https://www.gfinityesports.com/article/inzoi-complete-guide-to-careers",
+    "https://thegameswiki.com/inzoi/wiki/jobs-and-careers",
+    "https://thegameswiki.com/inzoi/wiki/career-salary-guide",
+    "https://thegameswiki.com/inzoi/wiki/cahaya-careers",
+    "https://forum.playinzoi.com/t/topic/15789",
+    "https://forum.playinzoi.com/t/topic/16844",
+    "https://www.playnews.gg/en/guides/inzoi-the-2026-work-and-money-guide-careers-job-interviews-freelancing-and-retirement",
+    "docs/references/jeu-fiche-profil.png",
+    "docs/references/jeu-fiche-carriere.png"
+  ],
+  "notes": "Un élément = une filière chez un employeur dans une ville (les employeurs présents dans 2 villes sont dupliqués). Décompte 2026 (wiki fandom « Career », à jour de v0.8.0+) : Dowon 15 employeurs plein temps + 2 temps partiel = 17 (18 filières, Adam Entertainment en a 2) ; Bliss Bay 15 + 2 = 17 ; Cahaya 10. Les chiffres « Dowon 13 / Bliss Bay 12 / Cahaya 9 » correspondent à la situation avant v0.8.0 (+5 employeurs à Dowon et Bliss Bay : Beat Code, Neo Chemi, Sync Up, The Press, Unit Plan ; +1 à Cahaya : Map-Point). Salaires en Meow (₥) par jour travaillé (paie quotidienne depuis v0.8.0), d'après le wiki fandom ; plusieurs sites 2025 donnent d'autres montants (voir remarques). Horaires = wiki fandom 2026 ; « jours_signales » = jours de travail relevés par Gfinity (avril 2025) ou par le guide forum des carrières actives (avril 2026), à confirmer en jeu. Télétravail : v0.8.0 permet de demander congés payés, congé maladie et télétravail depuis l'ordinateur, et le nombre de jours de congé dépend du poste ; aucune source ne précise quelles carrières acceptent le télétravail → teletravail = null (à renseigner en jeu). Entretien d'embauche obligatoire uniquement pour les 6 carrières ajoutées en v0.8.0 (entretien_embauche = true). fr_verifie porte sur le nom de la filière (nom). Filières FR vérifiées (notes de patch FR officielles v0.8.0) : Spécialiste de la recherche, Développeur IT, Expert en construction, Producteur de musique, Journaliste, Agent de voyages ; « Sans emploi » vient de la capture. Postes FR vérifiés : PDG (Adam Entertainment) et Avocat débutant (notes de patch FR). Employeurs FR vérifiés (employeur_fr_verifie = true) grâce aux noms de terrains du guide officiel des codes de triche FR (playinzoi.com/fr/guide/cheats) : Adam Entertainment, Caserne de pompiers de Dowon, Supérette AZ, Traiteur de Dowon, Beat Code, Neo Chemi, Sync Up, The Press, Unit Plan, Map-Point, Parc d'attractions de Bliss Bay, Magasin de mobilier Mackenzie, Magasin de surf de Posey, Burger de la Pomme d'or. Les employeurs hors écran n'ont pas de terrain : leurs noms FR (Cabinet d'avocats Justitia, Marine, Université Yeongseong…) sont des propositions ; les noms de marque (DW Soft, Blue Moon Soft, Plutus Financial…) sont supposés inchangés. Tous les autres libellés (filières, postes) sont des traductions proposées. Exclus faute de source 2026 : « Doweon All Resolved » (Rescue Team Member 252 / HR Team Lead 405 / CEO 1 080 ₥), listé par des guides de l'accès anticipé 2025 mais absent du wiki 2026. Le DLC de Cahaya s'appelle « Paradis Tropical » en FR (Island Getaway). Kjun's Letter (juin 2025) annonçait Cahaya sans emploi : les carrières hors écran ci-dessus ont pourtant été ajoutées avec le DLC (v0.3.0) selon le wiki. Icônes : nom_fichier_wiki = fichier du wiki fandom ; certaines sont partagées par le wiki (Aramir Group → icône Plutus, Dowon Solutions → Westside Hustler, Mirror of the Times → Bliss Bay Times, cabinets d'avocats → Career_Law_Firm).",
+  "categories": [
+    {
+      "id": "divertissement",
+      "nom": "Divertissement",
+      "nom_en": "Entertainment",
+      "icone": "🎤"
+    },
+    {
+      "id": "musique",
+      "nom": "Musique",
+      "nom_en": "Music",
+      "icone": "🎧"
+    },
+    {
+      "id": "bureau-finance",
+      "nom": "Bureau & finance",
+      "nom_en": "Office & finance",
+      "icone": "💼"
+    },
+    {
+      "id": "technologie",
+      "nom": "Technologie",
+      "nom_en": "Technology",
+      "icone": "💻"
+    },
+    {
+      "id": "droit",
+      "nom": "Droit",
+      "nom_en": "Law",
+      "icone": "⚖️"
+    },
+    {
+      "id": "secours",
+      "nom": "Secours",
+      "nom_en": "Emergency services",
+      "icone": "🚒"
+    },
+    {
+      "id": "armee",
+      "nom": "Armée",
+      "nom_en": "Military",
+      "icone": "🎖️"
+    },
+    {
+      "id": "medias",
+      "nom": "Médias & presse",
+      "nom_en": "Media & press",
+      "icone": "📰"
+    },
+    {
+      "id": "recherche",
+      "nom": "Recherche",
+      "nom_en": "Research",
+      "icone": "🔬"
+    },
+    {
+      "id": "architecture",
+      "nom": "Architecture",
+      "nom_en": "Architecture",
+      "icone": "📐"
+    },
+    {
+      "id": "education",
+      "nom": "Enseignement",
+      "nom_en": "Education",
+      "icone": "🎓"
+    },
+    {
+      "id": "crime",
+      "nom": "Crime",
+      "nom_en": "Crime",
+      "icone": "🕶️"
+    },
+    {
+      "id": "sport",
+      "nom": "Sport & e-sport",
+      "nom_en": "Sports & esports",
+      "icone": "🏆"
+    },
+    {
+      "id": "commerce",
+      "nom": "Commerce & vente",
+      "nom_en": "Retail & sales",
+      "icone": "🛒"
+    },
+    {
+      "id": "tourisme",
+      "nom": "Tourisme",
+      "nom_en": "Tourism",
+      "icone": "🧳"
+    },
+    {
+      "id": "transport",
+      "nom": "Transport",
+      "nom_en": "Transport",
+      "icone": "🛵"
+    },
+    {
+      "id": "ressources",
+      "nom": "Ressources naturelles",
+      "nom_en": "Natural resources",
+      "icone": "🌾"
+    },
+    {
+      "id": "environnement",
+      "nom": "Environnement",
+      "nom_en": "Environment",
+      "icone": "🐢"
+    },
+    {
+      "id": "bien-etre",
+      "nom": "Bien-être",
+      "nom_en": "Wellness",
+      "icone": "🧘"
+    },
+    {
+      "id": "statut",
+      "nom": "Statut (sans employeur)",
+      "nom_en": "Status",
+      "icone": "🏷️"
+    }
+  ],
+  "elements": [
+    {
+      "id": "dowon-adam-entertainment-stagiaire-idole",
+      "nom": "Stagiaire idole",
+      "nom_en": "Idol Trainee",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "divertissement",
+      "description": "Filière idole K-pop chez Adam Entertainment : entraînement chant/danse avec tâches quotidiennes sur le lieu de travail.",
+      "icone": "🎤",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/8/89/Career_Adam_Entertainment.png",
+      "nom_fichier_wiki": "Career_Adam_Entertainment.png",
+      "icone_fichier": "assets/icones/carrieres/Career_Adam_Entertainment.png",
+      "details": {
+        "ville": "Dowon",
+        "employeur": "Adam Entertainment",
+        "employeur_en": "Adam Entertainment",
+        "employeur_fr_verifie": true,
+        "secteur": "Divertissement",
+        "postes": [
+          {
+            "niveau": 1,
+            "nom": "Stagiaire débutant",
+            "nom_en": "Rookie Trainee",
+            "fr_verifie": false,
+            "salaire": 136,
+            "horaires": "10h–18h · 5 j/sem."
+          },
+          {
+            "niveau": 2,
+            "nom": "Stagiaire junior",
+            "nom_en": "Junior Trainee",
+            "fr_verifie": false,
+            "salaire": 400,
+            "horaires": "10h–18h · 5 j/sem."
+          },
+          {
+            "niveau": 3,
+            "nom": "Stagiaire senior",
+            "nom_en": "Senior Trainee",
+            "fr_verifie": false,
+            "salaire": 600,
+            "horaires": "10h–18h · 5 j/sem."
+          }
+        ],
+        "teletravail": null,
+        "gameplay": "actif",
+        "temps": "plein temps",
+        "age": "Jeune adulte uniquement",
+        "jours_signales": "lun.–ven.",
+        "entretien_embauche": false,
+        "ajoute_en": null,
+        "remarques": "La filière s'arrête à Stagiaire senior (pas de rang « idole débutée »). 3 places par rang selon TheGamesWiki. Ancien barème EA (jeuxvideo.com, 2025) : 104 / 280 ₥."
+      },
+      "source": "https://inzoi.fandom.com/wiki/Career"
+    },
+    {
+      "id": "dowon-adam-entertainment-planification",
+      "nom": "Équipe de planification du divertissement",
+      "nom_en": "Entertainment Planning",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "divertissement",
+      "description": "Filière bureau d'Adam Entertainment (stratégie / planification des artistes).",
+      "icone": "📋",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/8/89/Career_Adam_Entertainment.png",
+      "nom_fichier_wiki": "Career_Adam_Entertainment.png",
+      "icone_fichier": "assets/icones/carrieres/Career_Adam_Entertainment.png",
+      "details": {
+        "ville": "Dowon",
+        "employeur": "Adam Entertainment",
+        "employeur_en": "Adam Entertainment",
+        "employeur_fr_verifie": true,
+        "secteur": "Divertissement",
+        "postes": [
+          {
+            "niveau": 1,
+            "nom": "Employé",
+            "nom_en": "Employee",
+            "fr_verifie": false,
+            "salaire": 198,
+            "horaires": "9h–18h · 5 j/sem."
+          },
+          {
+            "niveau": 2,
+            "nom": "Chef d'équipe",
+            "nom_en": "Team Lead",
+            "fr_verifie": false,
+            "salaire": 450,
+            "horaires": "9h–18h · 5 j/sem."
+          },
+          {
+            "niveau": 3,
+            "nom": "PDG",
+            "nom_en": "CEO",
+            "fr_verifie": true,
+            "salaire": 1296,
+            "horaires": "9h–18h · 5 j/sem."
+          }
+        ],
+        "teletravail": null,
+        "gameplay": "actif",
+        "temps": "plein temps",
+        "age": "Jeune adulte et +",
+        "jours_signales": "lun.–ven.",
+        "entretien_embauche": false,
+        "ajoute_en": null,
+        "remarques": "« PDG d'Adam Entertainment » figure tel quel dans les notes de patch FR officielles (v0.4.x). 1 seule place de PDG."
+      },
+      "source": "https://inzoi.fandom.com/wiki/Career"
+    },
+    {
+      "id": "dowon-beat-code-producteur-de-musique",
+      "nom": "Producteur de musique",
+      "nom_en": "Music Producer",
+      "fr_verifie": true,
+      "source_fr": "notes de patch FR officielles v0.8.0 (playinzoi.com/fr/news/9960)",
+      "categorie": "musique",
+      "description": "Maison de disques (nouvelle carrière v0.8.0) : produire de la musique avec des artistes. Embauche sur entretien.",
+      "icone": "🎧",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/a/ad/Career_Beat_Code.png",
+      "nom_fichier_wiki": "Career_Beat_Code.png",
+      "icone_fichier": "assets/icones/carrieres/Career_Beat_Code.png",
+      "details": {
+        "ville": "Dowon",
+        "employeur": "Beat Code",
+        "employeur_en": "Beat Code",
+        "employeur_fr_verifie": true,
+        "secteur": "Musique",
+        "postes": [
+          {
+            "niveau": 1,
+            "nom": "Assistant",
+            "nom_en": "Assistant",
+            "fr_verifie": false,
+            "salaire": 300,
+            "horaires": "10h–17h · 5 j/sem."
+          },
+          {
+            "niveau": 2,
+            "nom": "Producteur assistant",
+            "nom_en": "Assistant Producer",
+            "fr_verifie": false,
+            "salaire": 600,
+            "horaires": "10h–17h · 5 j/sem."
+          },
+          {
+            "niveau": 3,
+            "nom": "Producteur principal",
+            "nom_en": "Lead Producer",
+            "fr_verifie": false,
+            "salaire": 1200,
+            "horaires": "10h–17h · 5 j/sem."
+          },
+          {
+            "niveau": 4,
+            "nom": "Producteur exécutif",
+            "nom_en": "Executive Producer",
+            "fr_verifie": false,
+            "salaire": 1500,
+            "horaires": "10h–17h · 5 j/sem."
+          }
+        ],
+        "teletravail": null,
+        "gameplay": "actif",
+        "temps": "plein temps",
+        "age": "Jeune adulte et +",
+        "jours_signales": "lun.–ven.",
+        "entretien_embauche": true,
+        "ajoute_en": "v0.8.0",
+        "remarques": "Libellé FR « producteur de Musique » repris des notes de patch FR officielles v0.8.0. Intitulé de filière EN sur le wiki : « Record Producer »."
+      },
+      "source": "https://inzoi.fandom.com/wiki/Career"
+    },
+    {
+      "id": "dowon-aramir-group-employe-de-bureau",
+      "nom": "Employé de bureau",
+      "nom_en": "Office Worker",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "bureau-finance",
+      "description": "Carrière de bureau en entreprise (Aramir Group).",
+      "icone": "🗂️",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/1/11/Career_Plutus_Financial.png",
+      "nom_fichier_wiki": "Career_Plutus_Financial.png",
+      "icone_fichier": "assets/icones/carrieres/Career_Plutus_Financial.png",
+      "details": {
+        "ville": "Dowon",
+        "employeur": "Aramir Group",
+        "employeur_en": "Aramir Group",
+        "employeur_fr_verifie": false,
+        "secteur": "Bureau",
+        "postes": [
+          {
+            "niveau": 1,
+            "nom": "Secrétaire",
+            "nom_en": "Secretary",
+            "fr_verifie": false,
+            "salaire": 378,
+            "horaires": "9h–18h · 3 j/sem."
+          },
+          {
+            "niveau": 2,
+            "nom": "Secrétaire en chef",
+            "nom_en": "Chief Secretary",
+            "fr_verifie": false,
+            "salaire": 900,
+            "horaires": "9h–18h · 3 j/sem."
+          },
+          {
+            "niveau": 3,
+            "nom": "Directeur",
+            "nom_en": "Director",
+            "fr_verifie": false,
+            "salaire": 1881,
+            "horaires": "9h–18h · 3 j/sem."
+          }
+        ],
+        "teletravail": null,
+        "gameplay": "hors écran",
+        "temps": "plein temps",
+        "age": "Jeune adulte et +",
+        "jours_signales": null,
+        "entretien_embauche": false,
+        "ajoute_en": null,
+        "remarques": "Le wiki réutilise l'icône de Plutus Financial. The Escapist (2025) donne 270 / 495 / 1 080 ₥ et un 3e rang différent."
+      },
+      "source": "https://inzoi.fandom.com/wiki/Career"
+    },
+    {
+      "id": "dowon-dg-esports-joueur-pro",
+      "nom": "Joueur professionnel",
+      "nom_en": "Pro Gamer",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "sport",
+      "description": "Joueur d'e-sport dans l'équipe DG Esports.",
+      "icone": "🎮",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/5/59/Career_DG_Esports.png",
+      "nom_fichier_wiki": "Career_DG_Esports.png",
+      "icone_fichier": "assets/icones/carrieres/Career_DG_Esports.png",
+      "details": {
+        "ville": "Dowon",
+        "employeur": "DG Esports",
+        "employeur_en": "DG Esports",
+        "employeur_fr_verifie": false,
+        "secteur": "E-sport",
+        "postes": [
+          {
+            "niveau": 1,
+            "nom": "Joueur amateur",
+            "nom_en": "Amateur Gamer",
+            "fr_verifie": false,
+            "salaire": 264,
+            "horaires": "9h–18h · 3 j/sem."
+          },
+          {
+            "niveau": 2,
+            "nom": "Joueur professionnel",
+            "nom_en": "Pro Gamer",
+            "fr_verifie": false,
+            "salaire": 864,
+            "horaires": "9h–18h · 3 j/sem."
+          },
+          {
+            "niveau": 3,
+            "nom": "Joueur légendaire",
+            "nom_en": "Legendary Gamer",
+            "fr_verifie": false,
+            "salaire": 1998,
+            "horaires": "9h–18h · 3 j/sem."
+          }
+        ],
+        "teletravail": null,
+        "gameplay": "hors écran",
+        "temps": "plein temps",
+        "age": "Jeune adulte et +",
+        "jours_signales": "mar.–jeu.",
+        "entretien_embauche": false,
+        "ajoute_en": null,
+        "remarques": "Deltia's Gaming (2025) donne d'autres montants (ex. 240 ₥ pour Pro Gamer)."
+      },
+      "source": "https://inzoi.fandom.com/wiki/Career"
+    },
+    {
+      "id": "dowon-caserne-de-pompiers-pompier",
+      "nom": "Pompier",
+      "nom_en": "Firefighter",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "secours",
+      "description": "Pompier à la caserne de Dowon : interventions et tâches actives sur place.",
+      "icone": "🚒",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/4/4b/Career_Dowon_Fire_Station.png",
+      "nom_fichier_wiki": "Career_Dowon_Fire_Station.png",
+      "icone_fichier": "assets/icones/carrieres/Career_Dowon_Fire_Station.png",
+      "details": {
+        "ville": "Dowon",
+        "employeur": "Caserne de pompiers de Dowon",
+        "employeur_en": "Dowon Fire Station",
+        "employeur_fr_verifie": true,
+        "secteur": "Secours",
+        "postes": [
+          {
+            "niveau": 1,
+            "nom": "Stagiaire",
+            "nom_en": "Trainee",
+            "fr_verifie": false,
+            "salaire": 297,
+            "horaires": "9h–18h · 4 j/sem."
+          },
+          {
+            "niveau": 2,
+            "nom": "Lieutenant",
+            "nom_en": "Lieutenant",
+            "fr_verifie": false,
+            "salaire": 594,
+            "horaires": "9h–18h · 4 j/sem."
+          },
+          {
+            "niveau": 3,
+            "nom": "Capitaine",
+            "nom_en": "Captain",
+            "fr_verifie": false,
+            "salaire": 693,
+            "horaires": "9h–18h · 4 j/sem."
+          },
+          {
+            "niveau": 4,
+            "nom": "Chef de bataillon",
+            "nom_en": "Battalion Chief",
+            "fr_verifie": false,
+            "salaire": 1197,
+            "horaires": "9h–18h · 4 j/sem."
+          },
+          {
+            "niveau": 5,
+            "nom": "Chef adjoint",
+            "nom_en": "Assistant Chief",
+            "fr_verifie": false,
+            "salaire": 1395,
+            "horaires": "9h–18h · 4 j/sem."
+          }
+        ],
+        "teletravail": null,
+        "gameplay": "actif",
+        "temps": "plein temps",
+        "age": "Jeune adulte et +",
+        "jours_signales": "lun., mar., jeu., ven.",
+        "entretien_embauche": false,
+        "ajoute_en": null,
+        "remarques": "Nom d'employeur FR « Caserne de pompiers de Dowon » présent dans les notes de patch FR officielles v0.7.0. Destructoid (2025) indiquait 600 ₥ pour Stagiaire (obsolète)."
+      },
+      "source": "https://inzoi.fandom.com/wiki/Career"
+    },
+    {
+      "id": "dowon-dowon-solutions-soldat-de-rue",
+      "nom": "Soldat de rue",
+      "nom_en": "Street Soldier",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "crime",
+      "description": "Carrière criminelle à Dowon (équivalent de Westside Hustler à Bliss Bay).",
+      "icone": "🕶️",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/9/95/Career_Westside_Hustler.png",
+      "nom_fichier_wiki": "Career_Westside_Hustler.png",
+      "icone_fichier": "assets/icones/carrieres/Career_Westside_Hustler.png",
+      "details": {
+        "ville": "Dowon",
+        "employeur": "Dowon Solutions",
+        "employeur_en": "Dowon Solutions",
+        "employeur_fr_verifie": false,
+        "secteur": "Crime",
+        "postes": [
+          {
+            "niveau": 1,
+            "nom": "Gros bras",
+            "nom_en": "Muscle",
+            "fr_verifie": false,
+            "salaire": 360,
+            "horaires": "9h–18h · 3 j/sem."
+          },
+          {
+            "niveau": 2,
+            "nom": "Chef d'équipe",
+            "nom_en": "Crew Manager",
+            "fr_verifie": false,
+            "salaire": 666,
+            "horaires": "9h–18h · 3 j/sem."
+          },
+          {
+            "niveau": 3,
+            "nom": "Boss",
+            "nom_en": "Boss",
+            "fr_verifie": false,
+            "salaire": 2169,
+            "horaires": "9h–18h · 3 j/sem."
+          }
+        ],
+        "teletravail": null,
+        "gameplay": "hors écran",
+        "temps": "plein temps",
+        "age": "Jeune adulte et +",
+        "jours_signales": "mar.–jeu.",
+        "entretien_embauche": false,
+        "ajoute_en": null,
+        "karma": "négatif",
+        "remarques": "Le wiki réutilise l'icône de Westside Hustler. Boss = salaire le plus élevé de Dowon (2 169 ₥)."
+      },
+      "source": "https://inzoi.fandom.com/wiki/Career"
+    },
+    {
+      "id": "dowon-dw-soft-developpeur",
+      "nom": "Développeur",
+      "nom_en": "Developer",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "technologie",
+      "description": "Développeur logiciel chez DW Soft.",
+      "icone": "💻",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/2/25/Career_DW_Soft.png",
+      "nom_fichier_wiki": "Career_DW_Soft.png",
+      "icone_fichier": "assets/icones/carrieres/Career_DW_Soft.png",
+      "details": {
+        "ville": "Dowon",
+        "employeur": "DW Soft",
+        "employeur_en": "DW Soft",
+        "employeur_fr_verifie": false,
+        "secteur": "Technologie",
+        "postes": [
+          {
+            "niveau": 1,
+            "nom": "Développeur junior",
+            "nom_en": "Junior Developer",
+            "fr_verifie": false,
+            "salaire": 414,
+            "horaires": "9h–18h · 3 j/sem."
+          },
+          {
+            "niveau": 2,
+            "nom": "Développeur senior",
+            "nom_en": "Senior Developer",
+            "fr_verifie": false,
+            "salaire": 999,
+            "horaires": "9h–18h · 3 j/sem."
+          },
+          {
+            "niveau": 3,
+            "nom": "Développeur principal",
+            "nom_en": "Lead Developer",
+            "fr_verifie": false,
+            "salaire": 1845,
+            "horaires": "9h–18h · 3 j/sem."
+          }
+        ],
+        "teletravail": null,
+        "gameplay": "hors écran",
+        "temps": "plein temps",
+        "age": "Jeune adulte et +",
+        "jours_signales": "mar.–jeu.",
+        "entretien_embauche": false,
+        "ajoute_en": null,
+        "remarques": "The Escapist (2025) : 360 / 495 / 675 ₥."
+      },
+      "source": "https://inzoi.fandom.com/wiki/Career"
+    },
+    {
+      "id": "dowon-justitia-avocat",
+      "nom": "Avocat",
+      "nom_en": "Lawyer",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "droit",
+      "description": "Avocat au cabinet Justitia.",
+      "icone": "⚖️",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/c/c1/Career_Law_Firm.png",
+      "nom_fichier_wiki": "Career_Law_Firm.png",
+      "icone_fichier": "assets/icones/carrieres/Career_Law_Firm.png",
+      "details": {
+        "ville": "Dowon",
+        "employeur": "Cabinet d'avocats Justitia",
+        "employeur_en": "Justitia Law Firm",
+        "employeur_fr_verifie": false,
+        "secteur": "Droit",
+        "postes": [
+          {
+            "niveau": 1,
+            "nom": "Avocat débutant",
+            "nom_en": "Junior Lawyer",
+            "fr_verifie": true,
+            "salaire": 450,
+            "horaires": "9h–15h · 3 j/sem."
+          },
+          {
+            "niveau": 2,
+            "nom": "Avocat senior",
+            "nom_en": "Senior Lawyer",
+            "fr_verifie": false,
+            "salaire": 1164,
+            "horaires": "9h–15h · 3 j/sem."
+          },
+          {
+            "niveau": 3,
+            "nom": "Avocat associé",
+            "nom_en": "Partner Lawyer",
+            "fr_verifie": false,
+            "salaire": 2040,
+            "horaires": "9h–15h · 3 j/sem."
+          }
+        ],
+        "teletravail": null,
+        "gameplay": "hors écran",
+        "temps": "plein temps",
+        "age": "Jeune adulte et +",
+        "jours_signales": "mar.–jeu.",
+        "entretien_embauche": false,
+        "ajoute_en": null,
+        "remarques": "« avocat débutant » figure dans les notes de patch FR officielles v0.2.0 (ajustement de son salaire). Divergence : TheGamesWiki donne 300 ₥ en entrée chez Justitia (450 ailleurs), le wiki fandom 450. Orthographe « Ustitia » chez une source."
+      },
+      "source": "https://inzoi.fandom.com/wiki/Career"
+    },
+    {
+      "id": "dowon-administration-militaire-soldat",
+      "nom": "Soldat",
+      "nom_en": "Soldier",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "armee",
+      "description": "Service militaire à Dowon (Military Manpower Admin).",
+      "icone": "🎖️",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/8/89/Career_Military_Manpower_Admin.png",
+      "nom_fichier_wiki": "Career_Military_Manpower_Admin.png",
+      "icone_fichier": "assets/icones/carrieres/Career_Military_Manpower_Admin.png",
+      "details": {
+        "ville": "Dowon",
+        "employeur": "Administration des effectifs militaires",
+        "employeur_en": "Military Manpower Admin",
+        "employeur_fr_verifie": false,
+        "secteur": "Armée",
+        "postes": [
+          {
+            "niveau": 1,
+            "nom": "Recrue",
+            "nom_en": "Trainee",
+            "fr_verifie": false,
+            "salaire": 279,
+            "horaires": "9h–18h · 3 j/sem."
+          },
+          {
+            "niveau": 2,
+            "nom": "Officier",
+            "nom_en": "Officer",
+            "fr_verifie": false,
+            "salaire": 675,
+            "horaires": "9h–18h · 3 j/sem."
+          },
+          {
+            "niveau": 3,
+            "nom": "Général",
+            "nom_en": "General",
+            "fr_verifie": false,
+            "salaire": 1827,
+            "horaires": "9h–18h · 3 j/sem."
+          }
+        ],
+        "teletravail": null,
+        "gameplay": "hors écran",
+        "temps": "plein temps",
+        "age": "Jeune adulte et +",
+        "jours_signales": "lun., mer., ven.",
+        "entretien_embauche": false,
+        "ajoute_en": null,
+        "remarques": "Bug signalé en v0.10.3 sur le forum officiel : la carrière Soldat de Dowon ne démarre pas (la Marine de Bliss Bay fonctionne). Une source nomme les rangs Trainee/Corporal, Officer/Captain, General/Colonel."
+      },
+      "source": "https://inzoi.fandom.com/wiki/Career"
+    },
+    {
+      "id": "dowon-mirror-of-the-times-reporter",
+      "nom": "Reporter",
+      "nom_en": "Reporter",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "medias",
+      "description": "Journaliste hors écran pour le journal Mirror of the Times (ancienne filière presse, distincte de « Journaliste » v0.8.0).",
+      "icone": "🗞️",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/0/08/Career_Bliss_Bay_Times.png",
+      "nom_fichier_wiki": "Career_Bliss_Bay_Times.png",
+      "icone_fichier": "assets/icones/carrieres/Career_Bliss_Bay_Times.png",
+      "details": {
+        "ville": "Dowon",
+        "employeur": "Mirror of the Times",
+        "employeur_en": "Mirror of the Times",
+        "employeur_fr_verifie": false,
+        "secteur": "Presse",
+        "postes": [
+          {
+            "niveau": 1,
+            "nom": "Reporter",
+            "nom_en": "Reporter",
+            "fr_verifie": false,
+            "salaire": 405,
+            "horaires": "9h–18h · 3 j/sem."
+          },
+          {
+            "niveau": 2,
+            "nom": "Rédacteur",
+            "nom_en": "Editor",
+            "fr_verifie": false,
+            "salaire": 765,
+            "horaires": "9h–18h · 3 j/sem."
+          },
+          {
+            "niveau": 3,
+            "nom": "Rédacteur en chef",
+            "nom_en": "Editor-in-Chief",
+            "fr_verifie": false,
+            "salaire": 1665,
+            "horaires": "9h–18h · 3 j/sem."
+          }
+        ],
+        "teletravail": null,
+        "gameplay": "hors écran",
+        "temps": "plein temps",
+        "age": "Jeune adulte et +",
+        "jours_signales": "lun., mer., ven.",
+        "entretien_embauche": false,
+        "ajoute_en": null,
+        "remarques": "Le wiki réutilise l'icône du Bliss Bay Times. Une source liste 315 / 405 / 675 ₥ ; une table la classe en carrière active."
+      },
+      "source": "https://inzoi.fandom.com/wiki/Career"
+    },
+    {
+      "id": "dowon-neo-chemi-specialiste-de-la-recherche",
+      "nom": "Spécialiste de la recherche",
+      "nom_en": "Researcher",
+      "fr_verifie": true,
+      "source_fr": "notes de patch FR officielles v0.8.0 (playinzoi.com/fr/news/9960)",
+      "categorie": "recherche",
+      "description": "Laboratoire de recherche (nouvelle carrière v0.8.0). Embauche sur entretien.",
+      "icone": "🔬",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/0/05/Career_Neo_Chemi.png",
+      "nom_fichier_wiki": "Career_Neo_Chemi.png",
+      "icone_fichier": "assets/icones/carrieres/Career_Neo_Chemi.png",
+      "details": {
+        "ville": "Dowon",
+        "employeur": "Neo Chemi",
+        "employeur_en": "Neo Chemi",
+        "employeur_fr_verifie": true,
+        "secteur": "Recherche",
+        "postes": [
+          {
+            "niveau": 1,
+            "nom": "Assistant de recherche",
+            "nom_en": "Research Assistant",
+            "fr_verifie": false,
+            "salaire": 300,
+            "horaires": "10h–17h · 5 j/sem."
+          },
+          {
+            "niveau": 2,
+            "nom": "Chercheur senior",
+            "nom_en": "Senior Researcher",
+            "fr_verifie": false,
+            "salaire": 600,
+            "horaires": "10h–17h · 5 j/sem."
+          },
+          {
+            "niveau": 3,
+            "nom": "Chercheur principal",
+            "nom_en": "Principal Researcher",
+            "fr_verifie": false,
+            "salaire": 1200,
+            "horaires": "10h–17h · 5 j/sem."
+          },
+          {
+            "niveau": 4,
+            "nom": "Directeur de recherche",
+            "nom_en": "Research Director",
+            "fr_verifie": false,
+            "salaire": 1500,
+            "horaires": "10h–17h · 5 j/sem."
+          }
+        ],
+        "teletravail": null,
+        "gameplay": "actif",
+        "temps": "plein temps",
+        "age": "Jeune adulte et +",
+        "jours_signales": "lun.–ven.",
+        "entretien_embauche": true,
+        "ajoute_en": "v0.8.0",
+        "remarques": "Libellé FR « Spécialiste de la recherche » repris des notes de patch FR officielles v0.8.0 (lieu : « laboratoire de recherche »)."
+      },
+      "source": "https://inzoi.fandom.com/wiki/Career"
+    },
+    {
+      "id": "dowon-sync-up-developpeur-it",
+      "nom": "Développeur IT",
+      "nom_en": "IT Developer",
+      "fr_verifie": true,
+      "source_fr": "notes de patch FR officielles v0.8.0 (playinzoi.com/fr/news/9960)",
+      "categorie": "technologie",
+      "description": "Entreprise informatique (nouvelle carrière v0.8.0). Embauche sur entretien.",
+      "icone": "🖥️",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/a/ab/Career_Sync_Up.png",
+      "nom_fichier_wiki": "Career_Sync_Up.png",
+      "icone_fichier": "assets/icones/carrieres/Career_Sync_Up.png",
+      "details": {
+        "ville": "Dowon",
+        "employeur": "Sync Up",
+        "employeur_en": "Sync Up",
+        "employeur_fr_verifie": true,
+        "secteur": "Technologie",
+        "postes": [
+          {
+            "niveau": 1,
+            "nom": "Développeur junior",
+            "nom_en": "Junior Developer",
+            "fr_verifie": false,
+            "salaire": 300,
+            "horaires": "10h–17h · 5 j/sem."
+          },
+          {
+            "niveau": 2,
+            "nom": "Développeur senior",
+            "nom_en": "Senior Developer",
+            "fr_verifie": false,
+            "salaire": 600,
+            "horaires": "10h–17h · 5 j/sem."
+          },
+          {
+            "niveau": 3,
+            "nom": "Développeur principal",
+            "nom_en": "Lead Developer",
+            "fr_verifie": false,
+            "salaire": 1200,
+            "horaires": "10h–17h · 5 j/sem."
+          },
+          {
+            "niveau": 4,
+            "nom": "Directeur",
+            "nom_en": "Director",
+            "fr_verifie": false,
+            "salaire": 1500,
+            "horaires": "10h–17h · 5 j/sem."
+          }
+        ],
+        "teletravail": null,
+        "gameplay": "actif",
+        "temps": "plein temps",
+        "age": "Jeune adulte et +",
+        "jours_signales": "lun.–ven.",
+        "entretien_embauche": true,
+        "ajoute_en": "v0.8.0",
+        "remarques": "Libellé FR « développeur IT » repris des notes de patch FR officielles v0.8.0 (lieu : « entreprise informatique »)."
+      },
+      "source": "https://inzoi.fandom.com/wiki/Career"
+    },
+    {
+      "id": "dowon-the-press-journaliste",
+      "nom": "Journaliste",
+      "nom_en": "Journalist",
+      "fr_verifie": true,
+      "source_fr": "notes de patch FR officielles v0.8.0 (playinzoi.com/fr/news/9960)",
+      "categorie": "medias",
+      "description": "Journal (nouvelle carrière v0.8.0), gameplay actif sur place. Embauche sur entretien.",
+      "icone": "📰",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/2/29/Career_The_Press.png",
+      "nom_fichier_wiki": "Career_The_Press.png",
+      "icone_fichier": "assets/icones/carrieres/Career_The_Press.png",
+      "details": {
+        "ville": "Dowon",
+        "employeur": "The Press",
+        "employeur_en": "The Press",
+        "employeur_fr_verifie": true,
+        "secteur": "Presse",
+        "postes": [
+          {
+            "niveau": 1,
+            "nom": "Reporter stagiaire",
+            "nom_en": "Trainee Reporter",
+            "fr_verifie": false,
+            "salaire": 300,
+            "horaires": "10h–17h · 5 j/sem."
+          },
+          {
+            "niveau": 2,
+            "nom": "Reporter",
+            "nom_en": "Reporter",
+            "fr_verifie": false,
+            "salaire": 600,
+            "horaires": "10h–17h · 5 j/sem."
+          },
+          {
+            "niveau": 3,
+            "nom": "Reporter titulaire",
+            "nom_en": "Staff Reporter",
+            "fr_verifie": false,
+            "salaire": 1200,
+            "horaires": "10h–17h · 5 j/sem."
+          },
+          {
+            "niveau": 4,
+            "nom": "Rédacteur en chef",
+            "nom_en": "Editor-in-Chief",
+            "fr_verifie": false,
+            "salaire": 1500,
+            "horaires": "10h–17h · 5 j/sem."
+          }
+        ],
+        "teletravail": null,
+        "gameplay": "actif",
+        "temps": "plein temps",
+        "age": "Jeune adulte et +",
+        "jours_signales": "lun.–ven.",
+        "entretien_embauche": true,
+        "ajoute_en": "v0.8.0",
+        "remarques": "Libellé FR « journaliste » repris des notes de patch FR officielles v0.8.0. Intitulé de filière EN sur le wiki : « Newspaper Reporter »."
+      },
+      "source": "https://inzoi.fandom.com/wiki/Career"
+    },
+    {
+      "id": "dowon-unit-plan-expert-en-construction",
+      "nom": "Expert en construction",
+      "nom_en": "Architect",
+      "fr_verifie": true,
+      "source_fr": "notes de patch FR officielles v0.8.0 (playinzoi.com/fr/news/9960)",
+      "categorie": "architecture",
+      "description": "Cabinet d'architecture (nouvelle carrière v0.8.0). Embauche sur entretien.",
+      "icone": "📐",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/9/92/Career_Unit_Plan.png",
+      "nom_fichier_wiki": "Career_Unit_Plan.png",
+      "icone_fichier": "assets/icones/carrieres/Career_Unit_Plan.png",
+      "details": {
+        "ville": "Dowon",
+        "employeur": "Unit Plan",
+        "employeur_en": "Unit Plan",
+        "employeur_fr_verifie": true,
+        "secteur": "Architecture",
+        "postes": [
+          {
+            "niveau": 1,
+            "nom": "Architecte junior",
+            "nom_en": "Junior Architect",
+            "fr_verifie": false,
+            "salaire": 300,
+            "horaires": "10h–17h · 5 j/sem."
+          },
+          {
+            "niveau": 2,
+            "nom": "Architecte senior",
+            "nom_en": "Senior Architect",
+            "fr_verifie": false,
+            "salaire": 600,
+            "horaires": "10h–17h · 5 j/sem."
+          },
+          {
+            "niveau": 3,
+            "nom": "Architecte principal",
+            "nom_en": "Lead Architect",
+            "fr_verifie": false,
+            "salaire": 1200,
+            "horaires": "10h–17h · 5 j/sem."
+          },
+          {
+            "niveau": 4,
+            "nom": "Architecte en chef",
+            "nom_en": "Chief Architect",
+            "fr_verifie": false,
+            "salaire": 1500,
+            "horaires": "10h–17h · 5 j/sem."
+          }
+        ],
+        "teletravail": null,
+        "gameplay": "actif",
+        "temps": "plein temps",
+        "age": "Jeune adulte et +",
+        "jours_signales": "lun.–ven.",
+        "entretien_embauche": true,
+        "ajoute_en": "v0.8.0",
+        "remarques": "Les notes FR officielles v0.8.0 disent « expert en construction » (EN : Architect ; filière wiki : « Architectural Designer »). Le libellé en jeu pourrait être « Architecte » : à vérifier."
+      },
+      "source": "https://inzoi.fandom.com/wiki/Career"
+    },
+    {
+      "id": "dowon-universite-youngsung-professeur",
+      "nom": "Professeur",
+      "nom_en": "Professor",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "education",
+      "description": "Enseignant à l'université de Youngsung (Dowon).",
+      "icone": "👩‍🏫",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/1/14/Career_University_of_Youngsung.png",
+      "nom_fichier_wiki": "Career_University_of_Youngsung.png",
+      "icone_fichier": "assets/icones/carrieres/Career_University_of_Youngsung.png",
+      "details": {
+        "ville": "Dowon",
+        "employeur": "Université Yeongseong",
+        "employeur_en": "University of Youngsung",
+        "employeur_fr_verifie": false,
+        "secteur": "Enseignement",
+        "postes": [
+          {
+            "niveau": 1,
+            "nom": "Professeur assistant",
+            "nom_en": "Assistant Professor",
+            "fr_verifie": false,
+            "salaire": 342,
+            "horaires": "9h–15h · 3 j/sem."
+          },
+          {
+            "niveau": 2,
+            "nom": "Professeur titulaire",
+            "nom_en": "Full Professor",
+            "fr_verifie": false,
+            "salaire": 930,
+            "horaires": "9h–15h · 3 j/sem."
+          },
+          {
+            "niveau": 3,
+            "nom": "Professeur émérite",
+            "nom_en": "Distinguished Professor",
+            "fr_verifie": false,
+            "salaire": 1920,
+            "horaires": "9h–15h · 3 j/sem."
+          }
+        ],
+        "teletravail": null,
+        "gameplay": "hors écran",
+        "temps": "plein temps",
+        "age": "Jeune adulte et +",
+        "jours_signales": "mar.–jeu.",
+        "entretien_embauche": false,
+        "ajoute_en": null,
+        "remarques": "En FR, Youngsung est transcrit « Yeongseong » (lot « Académie Yeongseong » dans le guide officiel des codes de triche) : nom d'employeur FR proposé par analogie. Deltia's Gaming (2025) indique 168 ₥ pour Assistant Professor (ancien barème)."
+      },
+      "source": "https://inzoi.fandom.com/wiki/Career"
+    },
+    {
+      "id": "dowon-superette-az-employe",
+      "nom": "Employé de supérette",
+      "nom_en": "Convenience Store",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "commerce",
+      "description": "Job à temps partiel dans la supérette AZ (caisse, mise en rayon).",
+      "icone": "🏪",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/2/25/Career_AZ_Convenience_Store.png",
+      "nom_fichier_wiki": "Career_AZ_Convenience_Store.png",
+      "icone_fichier": "assets/icones/carrieres/Career_AZ_Convenience_Store.png",
+      "details": {
+        "ville": "Dowon",
+        "employeur": "Supérette AZ",
+        "employeur_en": "AZ Convenience Store",
+        "employeur_fr_verifie": true,
+        "secteur": "Commerce",
+        "postes": [
+          {
+            "niveau": 1,
+            "nom": "Caissier",
+            "nom_en": "Cashier",
+            "fr_verifie": false,
+            "salaire": 360,
+            "horaires": "9h–18h · 3 j/sem."
+          },
+          {
+            "niveau": 2,
+            "nom": "Gérant",
+            "nom_en": "Manager",
+            "fr_verifie": false,
+            "salaire": 918,
+            "horaires": "9h–18h · 3 j/sem."
+          }
+        ],
+        "teletravail": null,
+        "gameplay": "actif",
+        "temps": "temps partiel",
+        "age": "Jeune adulte et +",
+        "jours_signales": "lun., mer., jeu.",
+        "entretien_embauche": false,
+        "ajoute_en": null
+      },
+      "source": "https://inzoi.fandom.com/wiki/Career"
+    },
+    {
+      "id": "dowon-dowon-deli-employe",
+      "nom": "Employé de traiteur",
+      "nom_en": "Deli Employee",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "commerce",
+      "description": "Job à temps partiel au Traiteur de Dowon (Dowon Deli).",
+      "icone": "🥪",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/5/54/Career_Dowon_Deli.png",
+      "nom_fichier_wiki": "Career_Dowon_Deli.png",
+      "icone_fichier": "assets/icones/carrieres/Career_Dowon_Deli.png",
+      "details": {
+        "ville": "Dowon",
+        "employeur": "Traiteur de Dowon",
+        "employeur_en": "Dowon Deli",
+        "employeur_fr_verifie": true,
+        "secteur": "Commerce",
+        "postes": [
+          {
+            "niveau": 1,
+            "nom": "Caissier",
+            "nom_en": "Cashier",
+            "fr_verifie": false,
+            "salaire": 400,
+            "horaires": "9h–19h · 3 j/sem."
+          }
+        ],
+        "teletravail": null,
+        "gameplay": "actif",
+        "temps": "temps partiel",
+        "age": "Jeune adulte et +",
+        "jours_signales": "mer.–ven.",
+        "entretien_embauche": false,
+        "ajoute_en": null,
+        "remarques": "Gfinity (2025) : 540 ₥/jour et 9h–18h."
+      },
+      "source": "https://inzoi.fandom.com/wiki/Career"
+    },
+    {
+      "id": "bliss-bay-beat-code-producteur-de-musique",
+      "nom": "Producteur de musique",
+      "nom_en": "Music Producer",
+      "fr_verifie": true,
+      "source_fr": "notes de patch FR officielles v0.8.0 (playinzoi.com/fr/news/9960)",
+      "categorie": "musique",
+      "description": "Maison de disques (nouvelle carrière v0.8.0). Embauche sur entretien.",
+      "icone": "🎧",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/a/ad/Career_Beat_Code.png",
+      "nom_fichier_wiki": "Career_Beat_Code.png",
+      "icone_fichier": "assets/icones/carrieres/Career_Beat_Code.png",
+      "details": {
+        "ville": "Bliss Bay",
+        "employeur": "Beat Code",
+        "employeur_en": "Beat Code",
+        "employeur_fr_verifie": true,
+        "secteur": "Musique",
+        "postes": [
+          {
+            "niveau": 1,
+            "nom": "Assistant",
+            "nom_en": "Assistant",
+            "fr_verifie": false,
+            "salaire": 300,
+            "horaires": "10h–17h · 5 j/sem."
+          },
+          {
+            "niveau": 2,
+            "nom": "Producteur assistant",
+            "nom_en": "Assistant Producer",
+            "fr_verifie": false,
+            "salaire": 600,
+            "horaires": "10h–17h · 5 j/sem."
+          },
+          {
+            "niveau": 3,
+            "nom": "Producteur principal",
+            "nom_en": "Lead Producer",
+            "fr_verifie": false,
+            "salaire": 1200,
+            "horaires": "10h–17h · 5 j/sem."
+          },
+          {
+            "niveau": 4,
+            "nom": "Producteur exécutif",
+            "nom_en": "Executive Producer",
+            "fr_verifie": false,
+            "salaire": 1500,
+            "horaires": "10h–17h · 5 j/sem."
+          }
+        ],
+        "teletravail": null,
+        "gameplay": "actif",
+        "temps": "plein temps",
+        "age": "Jeune adulte et +",
+        "jours_signales": "lun.–ven.",
+        "entretien_embauche": true,
+        "ajoute_en": "v0.8.0",
+        "remarques": "Libellé FR repris des notes de patch FR officielles v0.8.0."
+      },
+      "source": "https://inzoi.fandom.com/wiki/Career"
+    },
+    {
+      "id": "bliss-bay-parc-d-attractions-employe",
+      "nom": "Employé du parc d'attractions",
+      "nom_en": "Amusement Park Store",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "commerce",
+      "description": "Parc d'attractions de Bliss Bay : boutique, terrain ou bureau.",
+      "icone": "🎢",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/6/6b/Career_Bliss_Bay_Amusement_Park.png",
+      "nom_fichier_wiki": "Career_Bliss_Bay_Amusement_Park.png",
+      "icone_fichier": "assets/icones/carrieres/Career_Bliss_Bay_Amusement_Park.png",
+      "details": {
+        "ville": "Bliss Bay",
+        "employeur": "Parc d'attractions de Bliss Bay",
+        "employeur_en": "Bliss Bay Amusement Park",
+        "employeur_fr_verifie": true,
+        "secteur": "Loisirs",
+        "postes": [
+          {
+            "niveau": 1,
+            "nom": "Caissier",
+            "nom_en": "Cashier",
+            "fr_verifie": false,
+            "salaire": 310,
+            "horaires": "10h–20h · 3 j/sem."
+          },
+          {
+            "niveau": 2,
+            "nom": "Employé administratif",
+            "nom_en": "Administrative Clerk",
+            "fr_verifie": false,
+            "salaire": 380,
+            "horaires": "10h–20h · 3 j/sem."
+          },
+          {
+            "niveau": 3,
+            "nom": "Chef d'équipe administrative",
+            "nom_en": "Office Team Lead",
+            "fr_verifie": false,
+            "salaire": 1550,
+            "horaires": "10h–20h · 3 j/sem."
+          },
+          {
+            "niveau": 4,
+            "nom": "Agent de terrain",
+            "nom_en": "Field Worker",
+            "fr_verifie": false,
+            "salaire": 760,
+            "horaires": "10h–20h · 3 j/sem."
+          }
+        ],
+        "teletravail": null,
+        "gameplay": "actif",
+        "temps": "plein temps",
+        "age": "Jeune adulte et +",
+        "jours_signales": "lun., mer., ven.",
+        "entretien_embauche": false,
+        "ajoute_en": null,
+        "remarques": "Les 4 postes correspondent à plusieurs branches (boutique / bureau / terrain) : l'ordre « niveau » suit le tableau du wiki, pas forcément une progression. Les notes FR officielles v0.5.0 parlent d'un « poste de terrain dans un parc d'attractions ». Deltia's Gaming (2025) : 600 ₥ en entrée."
+      },
+      "source": "https://inzoi.fandom.com/wiki/Career"
+    },
+    {
+      "id": "bliss-bay-nautilus-joueur-de-football",
+      "nom": "Joueur de football américain",
+      "nom_en": "Football Player",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "sport",
+      "description": "Joueur de l'équipe de football américain Bliss Bay Nautilus.",
+      "icone": "🏈",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/8/83/Career_Bliss_Bay_Nautilus.png",
+      "nom_fichier_wiki": "Career_Bliss_Bay_Nautilus.png",
+      "icone_fichier": "assets/icones/carrieres/Career_Bliss_Bay_Nautilus.png",
+      "details": {
+        "ville": "Bliss Bay",
+        "employeur": "Bliss Bay Nautilus",
+        "employeur_en": "Bliss Bay Nautilus",
+        "employeur_fr_verifie": false,
+        "secteur": "Sport",
+        "postes": [
+          {
+            "niveau": 1,
+            "nom": "Remplaçant",
+            "nom_en": "Backup Player",
+            "fr_verifie": false,
+            "salaire": 264,
+            "horaires": "9h–15h · 3 j/sem."
+          },
+          {
+            "niveau": 2,
+            "nom": "Titulaire",
+            "nom_en": "Starting Player",
+            "fr_verifie": false,
+            "salaire": 864,
+            "horaires": "9h–15h · 3 j/sem."
+          },
+          {
+            "niveau": 3,
+            "nom": "Joueur All-Star",
+            "nom_en": "All-Star Player",
+            "fr_verifie": false,
+            "salaire": 1998,
+            "horaires": "9h–15h · 3 j/sem."
+          }
+        ],
+        "teletravail": null,
+        "gameplay": "hors écran",
+        "temps": "plein temps",
+        "age": "Jeune adulte et +",
+        "jours_signales": "mar.–jeu.",
+        "entretien_embauche": false,
+        "ajoute_en": null
+      },
+      "source": "https://inzoi.fandom.com/wiki/Career"
+    },
+    {
+      "id": "bliss-bay-times-reporter",
+      "nom": "Reporter",
+      "nom_en": "Reporter",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "medias",
+      "description": "Journaliste hors écran pour le Bliss Bay Times (ancienne filière presse, distincte de « Journaliste » v0.8.0).",
+      "icone": "🗞️",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/0/08/Career_Bliss_Bay_Times.png",
+      "nom_fichier_wiki": "Career_Bliss_Bay_Times.png",
+      "icone_fichier": "assets/icones/carrieres/Career_Bliss_Bay_Times.png",
+      "details": {
+        "ville": "Bliss Bay",
+        "employeur": "Bliss Bay Times",
+        "employeur_en": "Bliss Bay Times",
+        "employeur_fr_verifie": false,
+        "secteur": "Presse",
+        "postes": [
+          {
+            "niveau": 1,
+            "nom": "Reporter",
+            "nom_en": "Reporter",
+            "fr_verifie": false,
+            "salaire": 405,
+            "horaires": "9h–18h · 3 j/sem."
+          },
+          {
+            "niveau": 2,
+            "nom": "Rédacteur",
+            "nom_en": "Editor",
+            "fr_verifie": false,
+            "salaire": 765,
+            "horaires": "9h–18h · 3 j/sem."
+          },
+          {
+            "niveau": 3,
+            "nom": "Rédacteur en chef",
+            "nom_en": "Editor-in-Chief",
+            "fr_verifie": false,
+            "salaire": 1665,
+            "horaires": "9h–18h · 3 j/sem."
+          }
+        ],
+        "teletravail": null,
+        "gameplay": "hors écran",
+        "temps": "plein temps",
+        "age": "Jeune adulte et +",
+        "jours_signales": "lun., mer., ven.",
+        "entretien_embauche": false,
+        "ajoute_en": null,
+        "remarques": "Game8 : 315 / 405 / 675 ₥ (ancien). Une table la classe en carrière active."
+      },
+      "source": "https://inzoi.fandom.com/wiki/Career"
+    },
+    {
+      "id": "bliss-bay-universite-professeur",
+      "nom": "Professeur",
+      "nom_en": "Professor",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "education",
+      "description": "Enseignant à l'université de Bliss Bay.",
+      "icone": "👩‍🏫",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/7/7d/Career_Bliss_Bay_University.png",
+      "nom_fichier_wiki": "Career_Bliss_Bay_University.png",
+      "icone_fichier": "assets/icones/carrieres/Career_Bliss_Bay_University.png",
+      "details": {
+        "ville": "Bliss Bay",
+        "employeur": "Université de Bliss Bay",
+        "employeur_en": "Bliss Bay University",
+        "employeur_fr_verifie": false,
+        "secteur": "Enseignement",
+        "postes": [
+          {
+            "niveau": 1,
+            "nom": "Professeur assistant",
+            "nom_en": "Assistant Professor",
+            "fr_verifie": false,
+            "salaire": 342,
+            "horaires": "9h–15h · 3 j/sem."
+          },
+          {
+            "niveau": 2,
+            "nom": "Professeur titulaire",
+            "nom_en": "Full Professor",
+            "fr_verifie": false,
+            "salaire": 930,
+            "horaires": "9h–15h · 3 j/sem."
+          },
+          {
+            "niveau": 3,
+            "nom": "Professeur émérite",
+            "nom_en": "Distinguished Professor",
+            "fr_verifie": false,
+            "salaire": 1920,
+            "horaires": "9h–15h · 3 j/sem."
+          }
+        ],
+        "teletravail": null,
+        "gameplay": "hors écran",
+        "temps": "plein temps",
+        "age": "Jeune adulte et +",
+        "jours_signales": "mar.–jeu.",
+        "entretien_embauche": false,
+        "ajoute_en": null,
+        "remarques": "Deltia's Gaming (2025) : 168 ₥/jour pour Assistant Professor."
+      },
+      "source": "https://inzoi.fandom.com/wiki/Career"
+    },
+    {
+      "id": "bliss-bay-blue-moon-soft-developpeur",
+      "nom": "Développeur",
+      "nom_en": "Developer",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "technologie",
+      "description": "Développeur logiciel chez Blue Moon Soft.",
+      "icone": "💻",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/b/ba/Career_Blue_Moon_Soft.png",
+      "nom_fichier_wiki": "Career_Blue_Moon_Soft.png",
+      "icone_fichier": "assets/icones/carrieres/Career_Blue_Moon_Soft.png",
+      "details": {
+        "ville": "Bliss Bay",
+        "employeur": "Blue Moon Soft",
+        "employeur_en": "Blue Moon Soft",
+        "employeur_fr_verifie": false,
+        "secteur": "Technologie",
+        "postes": [
+          {
+            "niveau": 1,
+            "nom": "Développeur junior",
+            "nom_en": "Junior Developer",
+            "fr_verifie": false,
+            "salaire": 414,
+            "horaires": "9h–18h · 3 j/sem."
+          },
+          {
+            "niveau": 2,
+            "nom": "Développeur senior",
+            "nom_en": "Senior Developer",
+            "fr_verifie": false,
+            "salaire": 999,
+            "horaires": "9h–18h · 3 j/sem."
+          },
+          {
+            "niveau": 3,
+            "nom": "Développeur principal",
+            "nom_en": "Lead Developer",
+            "fr_verifie": false,
+            "salaire": 1845,
+            "horaires": "9h–18h · 3 j/sem."
+          }
+        ],
+        "teletravail": null,
+        "gameplay": "hors écran",
+        "temps": "plein temps",
+        "age": "Jeune adulte et +",
+        "jours_signales": "mar.–jeu.",
+        "entretien_embauche": false,
+        "ajoute_en": null
+      },
+      "source": "https://inzoi.fandom.com/wiki/Career"
+    },
+    {
+      "id": "bliss-bay-mackenzie-employe",
+      "nom": "Employé du magasin de mobilier",
+      "nom_en": "Furniture Store",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "commerce",
+      "description": "Vente au Magasin de mobilier Mackenzie.",
+      "icone": "🛋️",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/d/dc/Career_Mackenzie_Furniture_Store.png",
+      "nom_fichier_wiki": "Career_Mackenzie_Furniture_Store.png",
+      "icone_fichier": "assets/icones/carrieres/Career_Mackenzie_Furniture_Store.png",
+      "details": {
+        "ville": "Bliss Bay",
+        "employeur": "Magasin de mobilier Mackenzie",
+        "employeur_en": "Mackenzie Furniture Store",
+        "employeur_fr_verifie": true,
+        "secteur": "Commerce",
+        "postes": [
+          {
+            "niveau": 1,
+            "nom": "Caissier",
+            "nom_en": "Cashier",
+            "fr_verifie": false,
+            "salaire": 360,
+            "horaires": "9h–18h · 3 j/sem."
+          },
+          {
+            "niveau": 2,
+            "nom": "Gérant",
+            "nom_en": "Manager",
+            "fr_verifie": false,
+            "salaire": 918,
+            "horaires": "9h–18h · 3 j/sem."
+          }
+        ],
+        "teletravail": null,
+        "gameplay": "actif",
+        "temps": "plein temps",
+        "age": "Jeune adulte et +",
+        "jours_signales": "mar., jeu., ven.",
+        "entretien_embauche": false,
+        "ajoute_en": null,
+        "remarques": "Orthographe « McKenzie » chez TheGamesWiki. Classé plein temps par le wiki fandom, temps partiel ailleurs."
+      },
+      "source": "https://inzoi.fandom.com/wiki/Career"
+    },
+    {
+      "id": "bliss-bay-marine-soldat",
+      "nom": "Soldat",
+      "nom_en": "Soldier",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "armee",
+      "description": "Service dans la Marine (équivalent militaire de Bliss Bay).",
+      "icone": "⚓",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/1/1d/Career_Navy.png",
+      "nom_fichier_wiki": "Career_Navy.png",
+      "icone_fichier": "assets/icones/carrieres/Career_Navy.png",
+      "details": {
+        "ville": "Bliss Bay",
+        "employeur": "Marine",
+        "employeur_en": "Navy",
+        "employeur_fr_verifie": false,
+        "secteur": "Armée",
+        "postes": [
+          {
+            "niveau": 1,
+            "nom": "Caporal",
+            "nom_en": "Corporal",
+            "fr_verifie": false,
+            "salaire": 279,
+            "horaires": "9h–18h · 3 j/sem."
+          },
+          {
+            "niveau": 2,
+            "nom": "Capitaine",
+            "nom_en": "Captain",
+            "fr_verifie": false,
+            "salaire": 675,
+            "horaires": "9h–18h · 3 j/sem."
+          },
+          {
+            "niveau": 3,
+            "nom": "Colonel",
+            "nom_en": "Colonel",
+            "fr_verifie": false,
+            "salaire": 1827,
+            "horaires": "9h–18h · 3 j/sem."
+          }
+        ],
+        "teletravail": null,
+        "gameplay": "hors écran",
+        "temps": "plein temps",
+        "age": "Jeune adulte et +",
+        "jours_signales": "lun., mer., ven.",
+        "entretien_embauche": false,
+        "ajoute_en": null,
+        "remarques": "The Escapist (2025) : 207 ₥ en entrée."
+      },
+      "source": "https://inzoi.fandom.com/wiki/Career"
+    },
+    {
+      "id": "bliss-bay-neo-chemi-specialiste-de-la-recherche",
+      "nom": "Spécialiste de la recherche",
+      "nom_en": "Researcher",
+      "fr_verifie": true,
+      "source_fr": "notes de patch FR officielles v0.8.0 (playinzoi.com/fr/news/9960)",
+      "categorie": "recherche",
+      "description": "Laboratoire de recherche (nouvelle carrière v0.8.0). Embauche sur entretien.",
+      "icone": "🔬",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/0/05/Career_Neo_Chemi.png",
+      "nom_fichier_wiki": "Career_Neo_Chemi.png",
+      "icone_fichier": "assets/icones/carrieres/Career_Neo_Chemi.png",
+      "details": {
+        "ville": "Bliss Bay",
+        "employeur": "Neo Chemi",
+        "employeur_en": "Neo Chemi",
+        "employeur_fr_verifie": true,
+        "secteur": "Recherche",
+        "postes": [
+          {
+            "niveau": 1,
+            "nom": "Assistant de recherche",
+            "nom_en": "Research Assistant",
+            "fr_verifie": false,
+            "salaire": 300,
+            "horaires": "10h–17h · 5 j/sem."
+          },
+          {
+            "niveau": 2,
+            "nom": "Chercheur senior",
+            "nom_en": "Senior Researcher",
+            "fr_verifie": false,
+            "salaire": 600,
+            "horaires": "10h–17h · 5 j/sem."
+          },
+          {
+            "niveau": 3,
+            "nom": "Chercheur principal",
+            "nom_en": "Principal Researcher",
+            "fr_verifie": false,
+            "salaire": 1200,
+            "horaires": "10h–17h · 5 j/sem."
+          },
+          {
+            "niveau": 4,
+            "nom": "Directeur de recherche",
+            "nom_en": "Research Director",
+            "fr_verifie": false,
+            "salaire": 1500,
+            "horaires": "10h–17h · 5 j/sem."
+          }
+        ],
+        "teletravail": null,
+        "gameplay": "actif",
+        "temps": "plein temps",
+        "age": "Jeune adulte et +",
+        "jours_signales": "lun.–ven.",
+        "entretien_embauche": true,
+        "ajoute_en": "v0.8.0"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Career"
+    },
+    {
+      "id": "bliss-bay-plutus-financial-employe-de-bureau",
+      "nom": "Employé de bureau",
+      "nom_en": "Office Worker",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "bureau-finance",
+      "description": "Carrière dans la finance chez Plutus Financial.",
+      "icone": "📈",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/1/11/Career_Plutus_Financial.png",
+      "nom_fichier_wiki": "Career_Plutus_Financial.png",
+      "icone_fichier": "assets/icones/carrieres/Career_Plutus_Financial.png",
+      "details": {
+        "ville": "Bliss Bay",
+        "employeur": "Plutus Financial",
+        "employeur_en": "Plutus Financial",
+        "employeur_fr_verifie": false,
+        "secteur": "Finance",
+        "postes": [
+          {
+            "niveau": 1,
+            "nom": "Stagiaire",
+            "nom_en": "Intern",
+            "fr_verifie": false,
+            "salaire": 378,
+            "horaires": "9h–15h · 3 j/sem."
+          },
+          {
+            "niveau": 2,
+            "nom": "Analyste",
+            "nom_en": "Analyst",
+            "fr_verifie": false,
+            "salaire": 900,
+            "horaires": "9h–15h · 3 j/sem."
+          },
+          {
+            "niveau": 3,
+            "nom": "Gestionnaire de portefeuille",
+            "nom_en": "Portfolio Manager",
+            "fr_verifie": false,
+            "salaire": 1881,
+            "horaires": "9h–15h · 3 j/sem."
+          }
+        ],
+        "teletravail": null,
+        "gameplay": "hors écran",
+        "temps": "plein temps",
+        "age": "Jeune adulte et +",
+        "jours_signales": "mar.–jeu.",
+        "entretien_embauche": false,
+        "ajoute_en": null,
+        "remarques": "The Escapist (2025) : 270 ₥ pour Intern ; y est orthographié « Flutus Securities »."
+      },
+      "source": "https://inzoi.fandom.com/wiki/Career"
+    },
+    {
+      "id": "bliss-bay-sync-up-developpeur-it",
+      "nom": "Développeur IT",
+      "nom_en": "IT Developer",
+      "fr_verifie": true,
+      "source_fr": "notes de patch FR officielles v0.8.0 (playinzoi.com/fr/news/9960)",
+      "categorie": "technologie",
+      "description": "Entreprise informatique (nouvelle carrière v0.8.0). Embauche sur entretien.",
+      "icone": "🖥️",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/a/ab/Career_Sync_Up.png",
+      "nom_fichier_wiki": "Career_Sync_Up.png",
+      "icone_fichier": "assets/icones/carrieres/Career_Sync_Up.png",
+      "details": {
+        "ville": "Bliss Bay",
+        "employeur": "Sync Up",
+        "employeur_en": "Sync Up",
+        "employeur_fr_verifie": true,
+        "secteur": "Technologie",
+        "postes": [
+          {
+            "niveau": 1,
+            "nom": "Développeur junior",
+            "nom_en": "Junior Developer",
+            "fr_verifie": false,
+            "salaire": 300,
+            "horaires": "10h–17h · 5 j/sem."
+          },
+          {
+            "niveau": 2,
+            "nom": "Développeur senior",
+            "nom_en": "Senior Developer",
+            "fr_verifie": false,
+            "salaire": 600,
+            "horaires": "10h–17h · 5 j/sem."
+          },
+          {
+            "niveau": 3,
+            "nom": "Développeur principal",
+            "nom_en": "Lead Developer",
+            "fr_verifie": false,
+            "salaire": 1200,
+            "horaires": "10h–17h · 5 j/sem."
+          },
+          {
+            "niveau": 4,
+            "nom": "Directeur",
+            "nom_en": "Director",
+            "fr_verifie": false,
+            "salaire": 1500,
+            "horaires": "10h–17h · 5 j/sem."
+          }
+        ],
+        "teletravail": null,
+        "gameplay": "actif",
+        "temps": "plein temps",
+        "age": "Jeune adulte et +",
+        "jours_signales": "lun.–ven.",
+        "entretien_embauche": true,
+        "ajoute_en": "v0.8.0"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Career"
+    },
+    {
+      "id": "bliss-bay-themis-jones-avocat",
+      "nom": "Avocat",
+      "nom_en": "Lawyer",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "droit",
+      "description": "Avocat au cabinet Themis & Jones.",
+      "icone": "⚖️",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/c/c1/Career_Law_Firm.png",
+      "nom_fichier_wiki": "Career_Law_Firm.png",
+      "icone_fichier": "assets/icones/carrieres/Career_Law_Firm.png",
+      "details": {
+        "ville": "Bliss Bay",
+        "employeur": "Cabinet d'avocats Themis & Jones",
+        "employeur_en": "Themis & Jones Law Firm",
+        "employeur_fr_verifie": false,
+        "secteur": "Droit",
+        "postes": [
+          {
+            "niveau": 1,
+            "nom": "Avocat débutant",
+            "nom_en": "Junior Lawyer",
+            "fr_verifie": true,
+            "salaire": 450,
+            "horaires": "9h–15h · 3 j/sem."
+          },
+          {
+            "niveau": 2,
+            "nom": "Avocat senior",
+            "nom_en": "Senior Lawyer",
+            "fr_verifie": false,
+            "salaire": 1164,
+            "horaires": "9h–15h · 3 j/sem."
+          },
+          {
+            "niveau": 3,
+            "nom": "Avocat associé",
+            "nom_en": "Partner Lawyer",
+            "fr_verifie": false,
+            "salaire": 2040,
+            "horaires": "9h–15h · 3 j/sem."
+          }
+        ],
+        "teletravail": null,
+        "gameplay": "hors écran",
+        "temps": "plein temps",
+        "age": "Jeune adulte et +",
+        "jours_signales": "mar.–jeu.",
+        "entretien_embauche": false,
+        "ajoute_en": null
+      },
+      "source": "https://inzoi.fandom.com/wiki/Career"
+    },
+    {
+      "id": "bliss-bay-the-press-journaliste",
+      "nom": "Journaliste",
+      "nom_en": "Journalist",
+      "fr_verifie": true,
+      "source_fr": "notes de patch FR officielles v0.8.0 (playinzoi.com/fr/news/9960)",
+      "categorie": "medias",
+      "description": "Journal (nouvelle carrière v0.8.0), gameplay actif. Embauche sur entretien.",
+      "icone": "📰",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/2/29/Career_The_Press.png",
+      "nom_fichier_wiki": "Career_The_Press.png",
+      "icone_fichier": "assets/icones/carrieres/Career_The_Press.png",
+      "details": {
+        "ville": "Bliss Bay",
+        "employeur": "The Press",
+        "employeur_en": "The Press",
+        "employeur_fr_verifie": true,
+        "secteur": "Presse",
+        "postes": [
+          {
+            "niveau": 1,
+            "nom": "Reporter stagiaire",
+            "nom_en": "Trainee Reporter",
+            "fr_verifie": false,
+            "salaire": 300,
+            "horaires": "10h–17h · 5 j/sem."
+          },
+          {
+            "niveau": 2,
+            "nom": "Reporter",
+            "nom_en": "Reporter",
+            "fr_verifie": false,
+            "salaire": 600,
+            "horaires": "10h–17h · 5 j/sem."
+          },
+          {
+            "niveau": 3,
+            "nom": "Reporter titulaire",
+            "nom_en": "Staff Reporter",
+            "fr_verifie": false,
+            "salaire": 1200,
+            "horaires": "10h–17h · 5 j/sem."
+          },
+          {
+            "niveau": 4,
+            "nom": "Rédacteur en chef",
+            "nom_en": "Editor-in-Chief",
+            "fr_verifie": false,
+            "salaire": 1500,
+            "horaires": "10h–17h · 5 j/sem."
+          }
+        ],
+        "teletravail": null,
+        "gameplay": "actif",
+        "temps": "plein temps",
+        "age": "Jeune adulte et +",
+        "jours_signales": "lun.–ven.",
+        "entretien_embauche": true,
+        "ajoute_en": "v0.8.0"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Career"
+    },
+    {
+      "id": "bliss-bay-unit-plan-expert-en-construction",
+      "nom": "Expert en construction",
+      "nom_en": "Architect",
+      "fr_verifie": true,
+      "source_fr": "notes de patch FR officielles v0.8.0 (playinzoi.com/fr/news/9960)",
+      "categorie": "architecture",
+      "description": "Cabinet d'architecture (nouvelle carrière v0.8.0). Embauche sur entretien.",
+      "icone": "📐",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/9/92/Career_Unit_Plan.png",
+      "nom_fichier_wiki": "Career_Unit_Plan.png",
+      "icone_fichier": "assets/icones/carrieres/Career_Unit_Plan.png",
+      "details": {
+        "ville": "Bliss Bay",
+        "employeur": "Unit Plan",
+        "employeur_en": "Unit Plan",
+        "employeur_fr_verifie": true,
+        "secteur": "Architecture",
+        "postes": [
+          {
+            "niveau": 1,
+            "nom": "Architecte junior",
+            "nom_en": "Junior Architect",
+            "fr_verifie": false,
+            "salaire": 300,
+            "horaires": "10h–17h · 5 j/sem."
+          },
+          {
+            "niveau": 2,
+            "nom": "Architecte senior",
+            "nom_en": "Senior Architect",
+            "fr_verifie": false,
+            "salaire": 600,
+            "horaires": "10h–17h · 5 j/sem."
+          },
+          {
+            "niveau": 3,
+            "nom": "Architecte principal",
+            "nom_en": "Lead Architect",
+            "fr_verifie": false,
+            "salaire": 1200,
+            "horaires": "10h–17h · 5 j/sem."
+          },
+          {
+            "niveau": 4,
+            "nom": "Architecte en chef",
+            "nom_en": "Chief Architect",
+            "fr_verifie": false,
+            "salaire": 1500,
+            "horaires": "10h–17h · 5 j/sem."
+          }
+        ],
+        "teletravail": null,
+        "gameplay": "actif",
+        "temps": "plein temps",
+        "age": "Jeune adulte et +",
+        "jours_signales": "lun.–ven.",
+        "entretien_embauche": true,
+        "ajoute_en": "v0.8.0",
+        "remarques": "Voir la remarque sur « Expert en construction » / « Architecte » (Dowon)."
+      },
+      "source": "https://inzoi.fandom.com/wiki/Career"
+    },
+    {
+      "id": "bliss-bay-westside-hustler-gangster",
+      "nom": "Gangster",
+      "nom_en": "Gangster",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "crime",
+      "description": "Carrière criminelle au sein du gang Westside Hustler.",
+      "icone": "🕶️",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/9/95/Career_Westside_Hustler.png",
+      "nom_fichier_wiki": "Career_Westside_Hustler.png",
+      "icone_fichier": "assets/icones/carrieres/Career_Westside_Hustler.png",
+      "details": {
+        "ville": "Bliss Bay",
+        "employeur": "Westside Hustler",
+        "employeur_en": "Westside Hustler",
+        "employeur_fr_verifie": false,
+        "secteur": "Crime",
+        "postes": [
+          {
+            "niveau": 1,
+            "nom": "Recrue",
+            "nom_en": "Rookie",
+            "fr_verifie": false,
+            "salaire": 360,
+            "horaires": "9h–18h · 3 j/sem."
+          },
+          {
+            "niveau": 2,
+            "nom": "Sous-chef",
+            "nom_en": "Underboss",
+            "fr_verifie": false,
+            "salaire": 666,
+            "horaires": "9h–18h · 3 j/sem."
+          },
+          {
+            "niveau": 3,
+            "nom": "Boss",
+            "nom_en": "Boss",
+            "fr_verifie": false,
+            "salaire": 2169,
+            "horaires": "9h–18h · 3 j/sem."
+          }
+        ],
+        "teletravail": null,
+        "gameplay": "hors écran",
+        "temps": "plein temps",
+        "age": "Jeune adulte et +",
+        "jours_signales": "mar.–jeu.",
+        "entretien_embauche": false,
+        "ajoute_en": null,
+        "karma": "négatif"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Career"
+    },
+    {
+      "id": "bliss-bay-golden-apple-burger-employe",
+      "nom": "Employé de fast-food",
+      "nom_en": "Fast Food",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "commerce",
+      "description": "Job à temps partiel au fast-food Burger de la Pomme d'or (Golden Apple Burger).",
+      "icone": "🍔",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/a/a8/Career_Golden_Apple_Burger.png",
+      "nom_fichier_wiki": "Career_Golden_Apple_Burger.png",
+      "icone_fichier": "assets/icones/carrieres/Career_Golden_Apple_Burger.png",
+      "details": {
+        "ville": "Bliss Bay",
+        "employeur": "Burger de la Pomme d'or",
+        "employeur_en": "Golden Apple Burger",
+        "employeur_fr_verifie": true,
+        "secteur": "Restauration rapide",
+        "postes": [
+          {
+            "niveau": 1,
+            "nom": "Caissier",
+            "nom_en": "Cashier",
+            "fr_verifie": false,
+            "salaire": 270,
+            "horaires": "9h–19h · 3 j/sem."
+          }
+        ],
+        "teletravail": null,
+        "gameplay": "actif",
+        "temps": "temps partiel",
+        "age": "Jeune adulte et +",
+        "jours_signales": null,
+        "entretien_embauche": false,
+        "ajoute_en": null,
+        "remarques": "Gfinity (2025) liste 2 postes : Cashier 200 ₥ et Cook 300 ₥ ; le wiki fandom 2026 n'a plus qu'un poste."
+      },
+      "source": "https://inzoi.fandom.com/wiki/Career"
+    },
+    {
+      "id": "bliss-bay-posey-surf-shop-employe",
+      "nom": "Employé du magasin de surf",
+      "nom_en": "Surf Shop",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "commerce",
+      "description": "Job à temps partiel au Magasin de surf de Posey (aussi magasin d'articles de pêche).",
+      "icone": "🏄",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/1/15/Career_Posey%27s_Surf_Shop.png",
+      "nom_fichier_wiki": "Career_Posey's_Surf_Shop.png",
+      "icone_fichier": "assets/icones/carrieres/Career_Posey's_Surf_Shop.png",
+      "details": {
+        "ville": "Bliss Bay",
+        "employeur": "Magasin de surf de Posey",
+        "employeur_en": "Posey's Surf Shop",
+        "employeur_fr_verifie": true,
+        "secteur": "Commerce",
+        "postes": [
+          {
+            "niveau": 1,
+            "nom": "Caissier",
+            "nom_en": "Cashier",
+            "fr_verifie": false,
+            "salaire": 360,
+            "horaires": "9h–18h · 3 j/sem."
+          },
+          {
+            "niveau": 2,
+            "nom": "Gérant",
+            "nom_en": "Manager",
+            "fr_verifie": false,
+            "salaire": 918,
+            "horaires": "9h–18h · 3 j/sem."
+          }
+        ],
+        "teletravail": null,
+        "gameplay": "actif",
+        "temps": "temps partiel",
+        "age": "Jeune adulte et +",
+        "jours_signales": null,
+        "entretien_embauche": false,
+        "ajoute_en": null,
+        "remarques": "Gfinity (2025) : Sales Associate 210 ₥ / Manager 315 ₥."
+      },
+      "source": "https://inzoi.fandom.com/wiki/Career"
+    },
+    {
+      "id": "cahaya-map-point-agent-de-voyages",
+      "nom": "Agent de voyages",
+      "nom_en": "Travel Agent",
+      "fr_verifie": true,
+      "source_fr": "notes de patch FR officielles v0.8.0 (playinzoi.com/fr/news/9960)",
+      "categorie": "tourisme",
+      "description": "Agence de voyages (nouvelle carrière v0.8.0, seule carrière active de Cahaya). Embauche sur entretien.",
+      "icone": "🧳",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/c/ce/Career_Map_Point.png",
+      "nom_fichier_wiki": "Career_Map_Point.png",
+      "icone_fichier": "assets/icones/carrieres/Career_Map_Point.png",
+      "details": {
+        "ville": "Cahaya",
+        "employeur": "Map-Point",
+        "employeur_en": "Map-Point",
+        "employeur_fr_verifie": true,
+        "secteur": "Tourisme",
+        "postes": [
+          {
+            "niveau": 1,
+            "nom": "Représentant commercial",
+            "nom_en": "Sales Representative",
+            "fr_verifie": false,
+            "salaire": 300,
+            "horaires": "10h–17h · 5 j/sem."
+          },
+          {
+            "niveau": 2,
+            "nom": "Chargé de marketing",
+            "nom_en": "Marketing Representative",
+            "fr_verifie": false,
+            "salaire": 500,
+            "horaires": "10h–17h · 5 j/sem."
+          },
+          {
+            "niveau": 3,
+            "nom": "Concepteur de produits de voyage",
+            "nom_en": "Travel Product Planner",
+            "fr_verifie": false,
+            "salaire": 800,
+            "horaires": "10h–17h · 5 j/sem."
+          },
+          {
+            "niveau": 4,
+            "nom": "Responsable des opérations",
+            "nom_en": "Operations Manager",
+            "fr_verifie": false,
+            "salaire": 1100,
+            "horaires": "10h–17h · 5 j/sem."
+          }
+        ],
+        "teletravail": null,
+        "gameplay": "actif",
+        "temps": "plein temps",
+        "age": "Jeune adulte et +",
+        "jours_signales": "lun.–ven.",
+        "entretien_embauche": true,
+        "ajoute_en": "v0.8.0",
+        "remarques": "Libellé FR « Agent de voyages » repris des notes de patch FR officielles v0.8.0 (lieu : « agence de voyage »). Filière EN sur le wiki : « Travel Agency Office Staff »."
+      },
+      "source": "https://inzoi.fandom.com/wiki/Career"
+    },
+    {
+      "id": "cahaya-travail-aux-champs-fermier",
+      "nom": "Fermier",
+      "nom_en": "Farmer",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "ressources",
+      "description": "Travail agricole hors écran (rang unique, sans promotion).",
+      "icone": "🌾",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/6/67/Career_Farming.png",
+      "nom_fichier_wiki": "Career_Farming.png",
+      "icone_fichier": "assets/icones/carrieres/Career_Farming.png",
+      "details": {
+        "ville": "Cahaya",
+        "employeur": "Travail aux champs",
+        "employeur_en": "Field Work",
+        "employeur_fr_verifie": false,
+        "secteur": "Agriculture",
+        "postes": [
+          {
+            "niveau": 1,
+            "nom": "Fermier",
+            "nom_en": "Farmer",
+            "fr_verifie": false,
+            "salaire": 120,
+            "horaires": "7h–11h · 7 j/sem."
+          }
+        ],
+        "teletravail": null,
+        "gameplay": "hors écran",
+        "temps": "plein temps",
+        "age": "Jeune adulte et +",
+        "jours_signales": null,
+        "entretien_embauche": false,
+        "ajoute_en": "v0.3.0 (DLC)"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Career"
+    },
+    {
+      "id": "cahaya-travail-aux-champs-fermier-temps-partiel",
+      "nom": "Fermier (temps partiel)",
+      "nom_en": "Farmer (part-time)",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "ressources",
+      "description": "Travail agricole à temps partiel, accessible dès l'adolescence (2 créneaux possibles).",
+      "icone": "🌱",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/6/67/Career_Farming.png",
+      "nom_fichier_wiki": "Career_Farming.png",
+      "icone_fichier": "assets/icones/carrieres/Career_Farming.png",
+      "details": {
+        "ville": "Cahaya",
+        "employeur": "Travail aux champs",
+        "employeur_en": "Field Work",
+        "employeur_fr_verifie": false,
+        "secteur": "Agriculture",
+        "postes": [
+          {
+            "niveau": 1,
+            "nom": "Fermier",
+            "nom_en": "Farmer",
+            "fr_verifie": false,
+            "salaire": 120,
+            "horaires": "6h–10h ou 9h–16h · 2 j/sem."
+          }
+        ],
+        "teletravail": null,
+        "gameplay": "hors écran",
+        "temps": "temps partiel",
+        "age": "Adolescent et +",
+        "jours_signales": null,
+        "entretien_embauche": false,
+        "ajoute_en": "v0.3.0 (DLC)",
+        "remarques": "Le wiki indique « 6 AM – 10 PM » pour le premier créneau (probablement 6h–10h) et 9h–16h pour le second, 120 ₥ dans les deux cas."
+      },
+      "source": "https://inzoi.fandom.com/wiki/Career"
+    },
+    {
+      "id": "cahaya-harihari-guide-touristique",
+      "nom": "Guide touristique",
+      "nom_en": "Tour Guide",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "tourisme",
+      "description": "Guide pour l'agence de voyages Harihari (hors écran).",
+      "icone": "🗺️",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/8/86/Career_Travel_Agency.png",
+      "nom_fichier_wiki": "Career_Travel_Agency.png",
+      "icone_fichier": "assets/icones/carrieres/Career_Travel_Agency.png",
+      "details": {
+        "ville": "Cahaya",
+        "employeur": "Agence de voyages Harihari",
+        "employeur_en": "Harihari Travel Agency",
+        "employeur_fr_verifie": false,
+        "secteur": "Tourisme",
+        "postes": [
+          {
+            "niveau": 1,
+            "nom": "Guide stagiaire",
+            "nom_en": "Tour Guide Trainee",
+            "fr_verifie": false,
+            "salaire": 300,
+            "horaires": "8h–16h · 4 j/sem."
+          },
+          {
+            "niveau": 2,
+            "nom": "Guide officiel",
+            "nom_en": "Formal Guide",
+            "fr_verifie": false,
+            "salaire": 600,
+            "horaires": "8h–16h · 4 j/sem."
+          },
+          {
+            "niveau": 3,
+            "nom": "Guide professionnel",
+            "nom_en": "Professional Guide",
+            "fr_verifie": false,
+            "salaire": 1100,
+            "horaires": "8h–16h · 4 j/sem."
+          }
+        ],
+        "teletravail": null,
+        "gameplay": "hors écran",
+        "temps": "plein temps",
+        "age": "Jeune adulte et +",
+        "jours_signales": null,
+        "entretien_embauche": false,
+        "ajoute_en": "v0.3.0 (DLC)",
+        "remarques": "Une autre page wiki nomme la carrière « Travel Guide »."
+      },
+      "source": "https://inzoi.fandom.com/wiki/Career"
+    },
+    {
+      "id": "cahaya-jallan-network-chauffeur-moto-taxi",
+      "nom": "Chauffeur de moto-taxi",
+      "nom_en": "Motorcycle Taxi Driver",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "transport",
+      "description": "Chauffeur de moto-taxi pour Jallan Network (traversées entre îles).",
+      "icone": "🛵",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/3/34/Career_Jallan_Network.png",
+      "nom_fichier_wiki": "Career_Jallan_Network.png",
+      "icone_fichier": "assets/icones/carrieres/Career_Jallan_Network.png",
+      "details": {
+        "ville": "Cahaya",
+        "employeur": "Jallan Network",
+        "employeur_en": "Jallan Network",
+        "employeur_fr_verifie": false,
+        "secteur": "Transport",
+        "postes": [
+          {
+            "niveau": 1,
+            "nom": "Chauffeur débutant",
+            "nom_en": "Rookie Driver",
+            "fr_verifie": false,
+            "salaire": 270,
+            "horaires": "7h–13h · 6 j/sem."
+          },
+          {
+            "niveau": 2,
+            "nom": "Chauffeur de taxi fiable",
+            "nom_en": "Reliable Taxi Driver",
+            "fr_verifie": false,
+            "salaire": 540,
+            "horaires": "7h–13h · 6 j/sem."
+          },
+          {
+            "niveau": 3,
+            "nom": "Chauffeur de taxi premium",
+            "nom_en": "Premium Taxi Driver",
+            "fr_verifie": false,
+            "salaire": 950,
+            "horaires": "7h–13h · 6 j/sem."
+          }
+        ],
+        "teletravail": null,
+        "gameplay": "hors écran",
+        "temps": "plein temps",
+        "age": "Jeune adulte et +",
+        "jours_signales": null,
+        "entretien_embauche": false,
+        "ajoute_en": "v0.3.0 (DLC)",
+        "remarques": "Intitulés de rangs légèrement différents selon les sites."
+      },
+      "source": "https://inzoi.fandom.com/wiki/Career"
+    },
+    {
+      "id": "cahaya-syndicat-minier-mineur",
+      "nom": "Mineur",
+      "nom_en": "Miner",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "ressources",
+      "description": "Travail à la mine (rang unique, sans promotion).",
+      "icone": "⛏️",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/9/9f/Career_Mining_Union.png",
+      "nom_fichier_wiki": "Career_Mining_Union.png",
+      "icone_fichier": "assets/icones/carrieres/Career_Mining_Union.png",
+      "details": {
+        "ville": "Cahaya",
+        "employeur": "Syndicat minier",
+        "employeur_en": "Mining Union",
+        "employeur_fr_verifie": false,
+        "secteur": "Mines",
+        "postes": [
+          {
+            "niveau": 1,
+            "nom": "Mineur",
+            "nom_en": "Miner",
+            "fr_verifie": false,
+            "salaire": 120,
+            "horaires": "13h–17h · 7 j/sem."
+          }
+        ],
+        "teletravail": null,
+        "gameplay": "hors écran",
+        "temps": "plein temps",
+        "age": "Jeune adulte et +",
+        "jours_signales": null,
+        "entretien_embauche": false,
+        "ajoute_en": "v0.3.0 (DLC)"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Career"
+    },
+    {
+      "id": "cahaya-napas-yoga-professeur-de-yoga",
+      "nom": "Professeur de yoga",
+      "nom_en": "Yoga Instructor",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "bien-etre",
+      "description": "Carrière bien-être au studio Napas Yoga.",
+      "icone": "🧘",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/2/20/Career_Napas_Yoga.png",
+      "nom_fichier_wiki": "Career_Napas_Yoga.png",
+      "icone_fichier": "assets/icones/carrieres/Career_Napas_Yoga.png",
+      "details": {
+        "ville": "Cahaya",
+        "employeur": "Napas Yoga",
+        "employeur_en": "Napas Yoga",
+        "employeur_fr_verifie": false,
+        "secteur": "Bien-être",
+        "postes": [
+          {
+            "niveau": 1,
+            "nom": "Assistant de l'espace Lotus",
+            "nom_en": "Lotus Space Assistant",
+            "fr_verifie": false,
+            "salaire": 260,
+            "horaires": "10h–16h · 3 j/sem."
+          },
+          {
+            "niveau": 2,
+            "nom": "Guide de méditation",
+            "nom_en": "Meditation Leader",
+            "fr_verifie": false,
+            "salaire": 520,
+            "horaires": "10h–16h · 3 j/sem."
+          },
+          {
+            "niveau": 3,
+            "nom": "Chercheur en philosophie du yoga Chahara",
+            "nom_en": "Chahara Yoga Philosophy Researcher",
+            "fr_verifie": false,
+            "salaire": 900,
+            "horaires": "10h–16h · 3 j/sem."
+          }
+        ],
+        "teletravail": null,
+        "gameplay": "hors écran",
+        "temps": "plein temps",
+        "age": "Jeune adulte et +",
+        "jours_signales": null,
+        "entretien_embauche": false,
+        "ajoute_en": "v0.3.0 (DLC)"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Career"
+    },
+    {
+      "id": "cahaya-natap-chercheur-journal-de-collection",
+      "nom": "Chercheur du journal de collection",
+      "nom_en": "Collection Log Researcher",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "recherche",
+      "description": "Recherche pour l'Association de l'encyclopédie Natap (collections : poissons, gemmes…). Carrière la moins payée de Cahaya.",
+      "icone": "📚",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/2/2e/Career_Natap_Encyclopedia.png",
+      "nom_fichier_wiki": "Career_Natap_Encyclopedia.png",
+      "icone_fichier": "assets/icones/carrieres/Career_Natap_Encyclopedia.png",
+      "details": {
+        "ville": "Cahaya",
+        "employeur": "Association de l'encyclopédie Natap",
+        "employeur_en": "Natap Encyclopedia Association",
+        "employeur_fr_verifie": false,
+        "secteur": "Recherche",
+        "postes": [
+          {
+            "niveau": 1,
+            "nom": "Enquêteur",
+            "nom_en": "Investigator",
+            "fr_verifie": false,
+            "salaire": 110,
+            "horaires": "9h–17h · 3 j/sem."
+          },
+          {
+            "niveau": 2,
+            "nom": "Chercheur principal",
+            "nom_en": "Principal Researcher",
+            "fr_verifie": false,
+            "salaire": 350,
+            "horaires": "9h–17h · 3 j/sem."
+          },
+          {
+            "niveau": 3,
+            "nom": "Responsable de l'association des souvenirs",
+            "nom_en": "Memorabilia Association Manager",
+            "fr_verifie": false,
+            "salaire": 600,
+            "horaires": "9h–17h · 3 j/sem."
+          }
+        ],
+        "teletravail": null,
+        "gameplay": "hors écran",
+        "temps": "plein temps",
+        "age": "Jeune adulte et +",
+        "jours_signales": null,
+        "entretien_embauche": false,
+        "ajoute_en": "v0.3.0 (DLC)",
+        "remarques": "À ne pas confondre avec « Spécialiste de la recherche » (Neo Chemi, Dowon/Bliss Bay)."
+      },
+      "source": "https://inzoi.fandom.com/wiki/Career"
+    },
+    {
+      "id": "cahaya-red-bone-tissue-gangster",
+      "nom": "Gangster",
+      "nom_en": "Gangster",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "crime",
+      "description": "Carrière criminelle au sein du gang Red Bone Tissue.",
+      "icone": "🕶️",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/c/c8/Career_Red_Bones.png",
+      "nom_fichier_wiki": "Career_Red_Bones.png",
+      "icone_fichier": "assets/icones/carrieres/Career_Red_Bones.png",
+      "details": {
+        "ville": "Cahaya",
+        "employeur": "Red Bone Tissue",
+        "employeur_en": "Red Bone Tissue",
+        "employeur_fr_verifie": false,
+        "secteur": "Crime",
+        "postes": [
+          {
+            "niveau": 1,
+            "nom": "Recrue",
+            "nom_en": "Rookie",
+            "fr_verifie": false,
+            "salaire": 360,
+            "horaires": "9h–18h · 3 j/sem."
+          },
+          {
+            "niveau": 2,
+            "nom": "Sous-chef",
+            "nom_en": "Underboss",
+            "fr_verifie": false,
+            "salaire": 666,
+            "horaires": "9h–18h · 3 j/sem."
+          },
+          {
+            "niveau": 3,
+            "nom": "Boss",
+            "nom_en": "Boss",
+            "fr_verifie": false,
+            "salaire": 2169,
+            "horaires": "9h–18h · 3 j/sem."
+          }
+        ],
+        "teletravail": null,
+        "gameplay": "hors écran",
+        "temps": "plein temps",
+        "age": "Jeune adulte et +",
+        "jours_signales": null,
+        "entretien_embauche": false,
+        "ajoute_en": "v0.3.0 (DLC)",
+        "karma": "négatif",
+        "remarques": "Boss = poste le mieux payé de Cahaya."
+      },
+      "source": "https://inzoi.fandom.com/wiki/Career"
+    },
+    {
+      "id": "cahaya-sawara-avocat",
+      "nom": "Avocat",
+      "nom_en": "Lawyer",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "droit",
+      "description": "Avocat au cabinet Sawara.",
+      "icone": "⚖️",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/c/c1/Career_Law_Firm.png",
+      "nom_fichier_wiki": "Career_Law_Firm.png",
+      "icone_fichier": "assets/icones/carrieres/Career_Law_Firm.png",
+      "details": {
+        "ville": "Cahaya",
+        "employeur": "Cabinet d'avocats Sawara",
+        "employeur_en": "Sawara Law Firm",
+        "employeur_fr_verifie": false,
+        "secteur": "Droit",
+        "postes": [
+          {
+            "niveau": 1,
+            "nom": "Avocat débutant",
+            "nom_en": "Junior Lawyer",
+            "fr_verifie": true,
+            "salaire": 450,
+            "horaires": "9h–18h · 3 j/sem."
+          },
+          {
+            "niveau": 2,
+            "nom": "Avocat senior",
+            "nom_en": "Senior Lawyer",
+            "fr_verifie": false,
+            "salaire": 1164,
+            "horaires": "9h–18h · 3 j/sem."
+          },
+          {
+            "niveau": 3,
+            "nom": "Avocat associé",
+            "nom_en": "Partner Lawyer",
+            "fr_verifie": false,
+            "salaire": 2040,
+            "horaires": "9h–18h · 3 j/sem."
+          }
+        ],
+        "teletravail": null,
+        "gameplay": "hors écran",
+        "temps": "plein temps",
+        "age": "Jeune adulte et +",
+        "jours_signales": null,
+        "entretien_embauche": false,
+        "ajoute_en": "v0.3.0 (DLC)",
+        "remarques": "Horaires 9h–18h selon le wiki fandom (9h–15h pour les autres cabinets)."
+      },
+      "source": "https://inzoi.fandom.com/wiki/Career"
+    },
+    {
+      "id": "cahaya-protection-des-tortues-marines",
+      "nom": "Protecteur des tortues marines",
+      "nom_en": "Sea Turtle Protection Activist",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "environnement",
+      "description": "Bénévolat / protection des tortues marines au sanctuaire de Cahaya.",
+      "icone": "🐢",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/1/19/Career_Sea_Turtle.png",
+      "nom_fichier_wiki": "Career_Sea_Turtle.png",
+      "icone_fichier": "assets/icones/carrieres/Career_Sea_Turtle.png",
+      "details": {
+        "ville": "Cahaya",
+        "employeur": "Conservation des tortues marines",
+        "employeur_en": "Sea Turtle Conservation",
+        "employeur_fr_verifie": false,
+        "secteur": "Environnement",
+        "postes": [
+          {
+            "niveau": 1,
+            "nom": "Gardien de nids",
+            "nom_en": "Nestwatcher",
+            "fr_verifie": false,
+            "salaire": 280,
+            "horaires": "10h–18h · 4 j/sem."
+          },
+          {
+            "niveau": 2,
+            "nom": "Bénévole d'aide à l'éclosion",
+            "nom_en": "Hatching Support Volunteer",
+            "fr_verifie": false,
+            "salaire": 560,
+            "horaires": "10h–18h · 4 j/sem."
+          },
+          {
+            "niveau": 3,
+            "nom": "Gardien de l'écologie marine",
+            "nom_en": "Marine Ecology Guardian",
+            "fr_verifie": false,
+            "salaire": 1000,
+            "horaires": "10h–18h · 4 j/sem."
+          }
+        ],
+        "teletravail": null,
+        "gameplay": "hors écran",
+        "temps": "plein temps",
+        "age": "Jeune adulte et +",
+        "jours_signales": null,
+        "entretien_embauche": false,
+        "ajoute_en": "v0.3.0 (DLC)",
+        "remarques": "Lieu : « Sanctuaire des tortues » (nom FR officiel du terrain, guide des codes de triche) ; le nom FR de l'employeur reste une proposition."
+      },
+      "source": "https://inzoi.fandom.com/wiki/Career"
+    },
+    {
+      "id": "cahaya-protection-des-tortues-marines-temps-partiel",
+      "nom": "Protecteur des tortues marines (temps partiel)",
+      "nom_en": "Sea Turtle Protection Activist (part-time)",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "environnement",
+      "description": "Version temps partiel, dès l'adolescence. Créneau soir (18h–22h) : 140 / 280 / 500 ₥ ; créneau jour (9h–16h) : 490 / 875 / 875 ₥.",
+      "icone": "🐢",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/1/19/Career_Sea_Turtle.png",
+      "nom_fichier_wiki": "Career_Sea_Turtle.png",
+      "icone_fichier": "assets/icones/carrieres/Career_Sea_Turtle.png",
+      "details": {
+        "ville": "Cahaya",
+        "employeur": "Conservation des tortues marines",
+        "employeur_en": "Sea Turtle Conservation",
+        "employeur_fr_verifie": false,
+        "secteur": "Environnement",
+        "postes": [
+          {
+            "niveau": 1,
+            "nom": "Gardien de nids",
+            "nom_en": "Nestwatcher",
+            "fr_verifie": false,
+            "salaire": 140,
+            "horaires": "18h–22h (ou 9h–16h) · 2 j/sem."
+          },
+          {
+            "niveau": 2,
+            "nom": "Bénévole d'aide à l'éclosion",
+            "nom_en": "Hatching Support Volunteer",
+            "fr_verifie": false,
+            "salaire": 280,
+            "horaires": "18h–22h (ou 9h–16h) · 2 j/sem."
+          },
+          {
+            "niveau": 3,
+            "nom": "Gardien de l'écologie marine",
+            "nom_en": "Marine Ecology Guardian",
+            "fr_verifie": false,
+            "salaire": 500,
+            "horaires": "18h–22h (ou 9h–16h) · 2 j/sem."
+          }
+        ],
+        "teletravail": null,
+        "gameplay": "hors écran",
+        "temps": "temps partiel",
+        "age": "Adolescent et +",
+        "jours_signales": null,
+        "entretien_embauche": false,
+        "ajoute_en": "v0.3.0 (DLC)",
+        "remarques": "Salaires des postes = créneau du soir. Créneau de jour selon le wiki : 490 / 875 / 875 ₥ (le dernier montant identique semble être une erreur du wiki)."
+      },
+      "source": "https://inzoi.fandom.com/wiki/Career"
+    },
+    {
+      "id": "sans-emploi",
+      "nom": "Sans emploi",
+      "nom_en": "Unemployed",
+      "fr_verifie": true,
+      "source_fr": "capture du jeu en FR (jeu-fiche-profil.png)",
+      "categorie": "statut",
+      "description": "Libellé affiché sur la Carte Zoi (Profil > Carrière) quand le Zoi n'a pas de carrière.",
+      "icone": "🏷️",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "ville": null,
+        "employeur": null,
+        "employeur_en": null,
+        "employeur_fr_verifie": null,
+        "secteur": null,
+        "postes": [],
+        "teletravail": null
+      },
+      "source": "docs/references/jeu-fiche-profil.png"
+    },
+    {
+      "id": "retraite",
+      "nom": "Retraité",
+      "nom_en": "Retired",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "statut",
+      "description": "Depuis v0.8.0, un Zoi peut prendre sa retraite après la durée de service requise : cérémonie de départ, puis pension ; indemnités de départ en cas de licenciement, démission ou retraite. Le freelance reste possible.",
+      "icone": "🏖️",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "ville": null,
+        "employeur": null,
+        "employeur_en": null,
+        "employeur_fr_verifie": null,
+        "secteur": null,
+        "postes": [],
+        "teletravail": null
+      },
+      "source": "https://playinzoi.com/fr/news/9960"
+    }
+  ]
+}

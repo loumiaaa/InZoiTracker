@@ -1,0 +1,779 @@
+{
+  "referentiel": "desirs",
+  "titre": "Désirs",
+  "maj": "2026-10-23",
+  "version_jeu": "v0.11.x (patch v0.11.1 du 20/10/2026)",
+  "sources": [
+    "https://inzoi.fandom.com/wiki/Urge",
+    "https://playinzoi.com/fr/news/9533",
+    "https://playinzoi.com/fr/news/9309",
+    "https://playinzoi.com/fr/news/9824"
+  ],
+  "notes": "Désirs (EN « Urges ») : objectifs à court terme (4 max. affichés dans le bloc Désir du profil), limités dans le temps, qui rapportent des pièces Ronron et une émotion. Le jeu compte des centaines de désirs (+140 nouveaux en v0.4.0, +77 situationnels en v0.5.0) : LISTE TRÈS INCOMPLÈTE, seuls les 38 exemples du wiki fandom + 1 des notes FR sont repris. Les « types » de désirs sont dans `categories` : selon leur cause (quotidien, trait, caractéristique, préférence, valeur, ambition, vie désirée, compétence, ville) d'après la colonne Cause du wiki, plus les types nommés par les notes de patch FR v0.5.0 (« Désirs spéciaux » : relation interdite / fin de relation ; « Désirs liés à la peur » : carrière, événements marquants, préoccupations des jeunes ; « Désirs liés à la situation »), v0.7.0 (bébés/enfants, conflits parents-enfants, promotion commerciale) et fantômes. Seuls ces 3 libellés de type sont vérifiés. Libellés FR des désirs : traductions proposées au format « Veut … » du jeu (seul « Veut s'asseoir et se reposer » est vérifié).",
+  "categories": [
+    {
+      "id": "quotidien",
+      "nom": "Désirs du quotidien",
+      "nom_en": "Daily life",
+      "icone": "☕",
+      "fr_verifie": false
+    },
+    {
+      "id": "trait",
+      "nom": "Désirs liés au trait de caractère",
+      "nom_en": "Trait",
+      "icone": "🎭",
+      "fr_verifie": false
+    },
+    {
+      "id": "caracteristique",
+      "nom": "Désirs liés aux caractéristiques",
+      "nom_en": "Characteristic",
+      "icone": "🧠",
+      "fr_verifie": false
+    },
+    {
+      "id": "preference",
+      "nom": "Désirs liés aux préférences",
+      "nom_en": "Preference",
+      "icone": "❤️",
+      "fr_verifie": false
+    },
+    {
+      "id": "valeur",
+      "nom": "Désirs liés aux valeurs",
+      "nom_en": "Value",
+      "icone": "🧭",
+      "fr_verifie": false
+    },
+    {
+      "id": "ambition",
+      "nom": "Désirs liés à l'ambition",
+      "nom_en": "Ambition",
+      "icone": "🏆",
+      "fr_verifie": false
+    },
+    {
+      "id": "vie-desiree",
+      "nom": "Désirs liés à la vie désirée",
+      "nom_en": "Desired Life",
+      "icone": "🌈",
+      "fr_verifie": false
+    },
+    {
+      "id": "competence",
+      "nom": "Désirs liés aux compétences",
+      "nom_en": "Skill",
+      "icone": "📘",
+      "fr_verifie": false
+    },
+    {
+      "id": "ville",
+      "nom": "Désirs liés à la ville",
+      "nom_en": "City",
+      "icone": "🏙️",
+      "fr_verifie": false
+    },
+    {
+      "id": "speciaux",
+      "nom": "Désirs spéciaux",
+      "nom_en": "Special Urges",
+      "icone": "💥",
+      "fr_verifie": true
+    },
+    {
+      "id": "peur",
+      "nom": "Désirs liés à la peur",
+      "nom_en": "Fear-Based Urges",
+      "icone": "😨",
+      "fr_verifie": true
+    },
+    {
+      "id": "situation",
+      "nom": "Désirs liés à la situation",
+      "nom_en": "Situation-Based Urges",
+      "icone": "📍",
+      "fr_verifie": true
+    },
+    {
+      "id": "bebe-enfant",
+      "nom": "Désirs des nourrissons, enfants en bas âge et enfants",
+      "nom_en": "Newborn/Toddler/Child Urges",
+      "icone": "🍼",
+      "fr_verifie": false
+    },
+    {
+      "id": "fantome",
+      "nom": "Désirs de fantôme",
+      "nom_en": "Ghost Urges",
+      "icone": "👻",
+      "fr_verifie": false
+    }
+  ],
+  "elements": [
+    {
+      "id": "veut-soigner-son-apparence",
+      "nom": "Veut soigner son apparence",
+      "nom_en": "I want to take care of my appearance.",
+      "fr_verifie": false,
+      "categorie": "quotidien",
+      "description": "Se rendre présentable ou se regarder dans un miroir.",
+      "icone": "🪞",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/9/91/Urge_Mirrow.png/revision/latest?cb=20251107145016",
+      "nom_fichier_wiki": "Urge_Mirrow.png",
+      "icone_fichier": "assets/icones/desirs/Urge_Mirrow.png",
+      "details": {
+        "cause_en": "Daily life",
+        "effet_en": "Confident, Meow Coins"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Urge"
+    },
+    {
+      "id": "veut-gribouiller-dans-un-carnet",
+      "nom": "Veut gribouiller dans un carnet",
+      "nom_en": "I want to doodle in the notebook.",
+      "fr_verifie": false,
+      "categorie": "caracteristique",
+      "description": "Gribouiller dans un carnet (bibliothèque). Lié à Puéril.",
+      "icone": "✏️",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/1/15/Urge_Doodle.png/revision/latest?cb=20251107145419",
+      "nom_fichier_wiki": "Urge_Doodle.png",
+      "icone_fichier": "assets/icones/desirs/Urge_Doodle.png",
+      "details": {
+        "cause_en": "Childish characteristic",
+        "effet_en": "Purr Coins, Amused"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Urge"
+    },
+    {
+      "id": "veut-faire-de-la-musculation",
+      "nom": "Veut faire de la musculation",
+      "nom_en": "Wants to Do Strength Training",
+      "fr_verifie": false,
+      "categorie": "trait",
+      "description": "Pompes, squats, barre de traction… Lié à Autoritaire.",
+      "icone": "💪",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/7/72/Urge_Training.png/revision/latest?cb=20251107145825",
+      "nom_fichier_wiki": "Urge_Training.png",
+      "icone_fichier": "assets/icones/desirs/Urge_Training.png",
+      "details": {
+        "cause_en": "Authoritarian trait",
+        "effet_en": "Purr Coins, Confident"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Urge"
+    },
+    {
+      "id": "veut-se-changer",
+      "nom": "Veut se changer",
+      "nom_en": "I want to change clothes.",
+      "fr_verifie": false,
+      "categorie": "quotidien",
+      "description": "Changer de tenue via la penderie.",
+      "icone": "👕",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/0/01/Urge_Clothes.png/revision/latest?cb=20251107150253",
+      "nom_fichier_wiki": "Urge_Clothes.png",
+      "icone_fichier": "assets/icones/desirs/Urge_Clothes.png",
+      "details": {
+        "cause_en": "Daily life",
+        "effet_en": "Confident, Meow Coins"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Urge"
+    },
+    {
+      "id": "veut-boire-de-l-eau",
+      "nom": "Veut boire de l'eau",
+      "nom_en": "I want to drink water",
+      "fr_verifie": false,
+      "categorie": "quotidien",
+      "description": "Boire au purificateur d'eau ou à une fontaine.",
+      "icone": "💧",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/3/34/Urge_Water.png/revision/latest?cb=20251107150702",
+      "nom_fichier_wiki": "Urge_Water.png",
+      "icone_fichier": "assets/icones/desirs/Urge_Water.png",
+      "details": {
+        "cause_en": "Daily life",
+        "effet_en": "—"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Urge"
+    },
+    {
+      "id": "veut-une-moto-ou-un-scooter",
+      "nom": "Veut une moto ou un scooter",
+      "nom_en": "Wants a Motorcycle or Scooter",
+      "fr_verifie": false,
+      "categorie": "valeur",
+      "description": "Acheter un deux-roues (Smartphone > Dream Car). Lié à la valeur Impulsivité.",
+      "icone": "🛵",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/2/2c/Urge_Scooter.png/revision/latest?cb=20251107152940",
+      "nom_fichier_wiki": "Urge_Scooter.png",
+      "icone_fichier": "assets/icones/desirs/Urge_Scooter.png",
+      "details": {
+        "cause_en": "Impulse value",
+        "effet_en": "Purr Coins, Moved"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Urge"
+    },
+    {
+      "id": "veut-se-brosser-les-dents",
+      "nom": "Veut se brosser les dents",
+      "nom_en": "Wants to Brush Their Teeth",
+      "fr_verifie": false,
+      "categorie": "trait",
+      "description": "Se brosser les dents au lavabo. Lié à Perfectionniste.",
+      "icone": "🪥",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/0/00/Urge_Teeth.png/revision/latest?cb=20251107153545",
+      "nom_fichier_wiki": "Urge_Teeth.png",
+      "icone_fichier": "assets/icones/desirs/Urge_Teeth.png",
+      "details": {
+        "cause_en": "Perfectionist trait",
+        "effet_en": "Purr Coins, Hygiene, Content"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Urge"
+    },
+    {
+      "id": "veut-aller-a-la-salle-d-arcade",
+      "nom": "Veut aller à la salle d'arcade",
+      "nom_en": "I want to go to an arcade.",
+      "fr_verifie": false,
+      "categorie": "caracteristique",
+      "description": "Aller à l'arcade de Dowon ou au resort de Cahaya. Lié à Puéril.",
+      "icone": "🕹️",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/d/d5/Urge_Arcade.png/revision/latest?cb=20251107153939",
+      "nom_fichier_wiki": "Urge_Arcade.png",
+      "icone_fichier": "assets/icones/desirs/Urge_Arcade.png",
+      "details": {
+        "cause_en": "Childish characteristic",
+        "effet_en": "Purr Coins, Excited"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Urge"
+    },
+    {
+      "id": "veut-faire-une-blague",
+      "nom": "Veut faire une petite blague",
+      "nom_en": "I want to crack a light joke.",
+      "fr_verifie": false,
+      "categorie": "caracteristique",
+      "description": "Conversation catégorie Humour. Lié à Puéril.",
+      "icone": "🤡",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/9/9c/Urge_Joke.png/revision/latest?cb=20251107154254",
+      "nom_fichier_wiki": "Urge_Joke.png",
+      "icone_fichier": "assets/icones/desirs/Urge_Joke.png",
+      "details": {
+        "cause_en": "Childish characteristic",
+        "effet_en": "Purr Coins, Amused"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Urge"
+    },
+    {
+      "id": "veut-qu-on-cuisine-pour-lui",
+      "nom": "Veut que quelqu'un d'autre cuisine",
+      "nom_en": "I'd like to ask someone else to cook.",
+      "fr_verifie": false,
+      "categorie": "caracteristique",
+      "description": "Demander un repas via le réfrigérateur. Lié à Tire-au-flanc.",
+      "icone": "🍳",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/5/57/Urge_Cook.png/revision/latest?cb=20251107154617",
+      "nom_fichier_wiki": "Urge_Cook.png",
+      "icone_fichier": "assets/icones/desirs/Urge_Cook.png",
+      "details": {
+        "cause_en": "Slacker characteristic",
+        "effet_en": "Purr Coins, Content"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Urge"
+    },
+    {
+      "id": "veut-taper-dans-un-sac-de-frappe",
+      "nom": "Veut s'entraîner au sac de frappe",
+      "nom_en": "Wants to work out with a Punching Bag",
+      "fr_verifie": false,
+      "categorie": "trait",
+      "description": "Utiliser un sac de frappe. Lié à Leader.",
+      "icone": "🥊",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/a/a7/Urge_Punching.png/revision/latest?cb=20251107154932",
+      "nom_fichier_wiki": "Urge_Punching.png",
+      "icone_fichier": "assets/icones/desirs/Urge_Punching.png",
+      "details": {
+        "cause_en": "Leader trait",
+        "effet_en": "Purr Coins, Confident"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Urge"
+    },
+    {
+      "id": "veut-jouer-avec-le-feu",
+      "nom": "Veut jouer avec le feu",
+      "nom_en": "Wants to Play with Fire",
+      "fr_verifie": false,
+      "categorie": "caracteristique",
+      "description": "Feu de camp, cierges magiques… Lié à Puéril.",
+      "icone": "🔥",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/d/df/Urge_Fire.png/revision/latest?cb=20251107155244",
+      "nom_fichier_wiki": "Urge_Fire.png",
+      "icone_fichier": "assets/icones/desirs/Urge_Fire.png",
+      "details": {
+        "cause_en": "Childish characteristic",
+        "effet_en": "Purr Coins, Amused"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Urge"
+    },
+    {
+      "id": "veut-nettoyer-la-baignoire",
+      "nom": "Veut nettoyer la baignoire",
+      "nom_en": "Wants to Clean the Bathtub",
+      "fr_verifie": false,
+      "categorie": "caracteristique",
+      "description": "Nettoyer ou frotter la baignoire. Lié à Fou de la propreté.",
+      "icone": "🛁",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/5/55/Urge_Bathtub.png/revision/latest?cb=20251107155609",
+      "nom_fichier_wiki": "Urge_Bathtub.png",
+      "icone_fichier": "assets/icones/desirs/Urge_Bathtub.png",
+      "details": {
+        "cause_en": "Neat Freak characteristic",
+        "effet_en": "Purr Coins, Content"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Urge"
+    },
+    {
+      "id": "veut-trouver-un-emploi",
+      "nom": "Veut trouver un emploi",
+      "nom_en": "Wants to Get a Job",
+      "fr_verifie": false,
+      "categorie": "trait",
+      "description": "Postuler via l'appli Carrière. Lié à Ambitieux.",
+      "icone": "💼",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/c/ce/Urge_Job.png/revision/latest?cb=20251107155916",
+      "nom_fichier_wiki": "Urge_Job.png",
+      "icone_fichier": "assets/icones/desirs/Urge_Job.png",
+      "details": {
+        "cause_en": "Go-Getter trait",
+        "effet_en": "Purr Coins, Content"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Urge"
+    },
+    {
+      "id": "veut-regarder-son-smartphone",
+      "nom": "Veut regarder son smartphone",
+      "nom_en": "Looking at a smartphone is pretty interesting.",
+      "fr_verifie": false,
+      "categorie": "quotidien",
+      "description": "Consulter son smartphone.",
+      "icone": "📱",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/a/a5/Urge_Smartphone.png/revision/latest?cb=20251107160549",
+      "nom_fichier_wiki": "Urge_Smartphone.png",
+      "icone_fichier": "assets/icones/desirs/Urge_Smartphone.png",
+      "details": {
+        "cause_en": "Daily life",
+        "effet_en": "Fun, Meow Coins"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Urge"
+    },
+    {
+      "id": "veut-pecher-un-poisson",
+      "nom": "Veut pêcher un poisson",
+      "nom_en": "I want to catch a fish",
+      "fr_verifie": false,
+      "categorie": "trait",
+      "description": "Pêcher à un spot de pêche. Lié à Ambitieux.",
+      "icone": "🎣",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/d/d2/Urge_Fish.png/revision/latest?cb=20251107160855",
+      "nom_fichier_wiki": "Urge_Fish.png",
+      "icone_fichier": "assets/icones/desirs/Urge_Fish.png",
+      "details": {
+        "cause_en": "Go-Getter trait",
+        "effet_en": "Purr Coins, Recognition, Excited"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Urge"
+    },
+    {
+      "id": "veut-prendre-des-photos",
+      "nom": "Veut prendre des photos",
+      "nom_en": "Wants to Take Photos",
+      "fr_verifie": false,
+      "categorie": "preference",
+      "description": "Selfie au miroir puis publication. Lié à la préférence Prise de photos.",
+      "icone": "📸",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/7/75/Urge_Photo.png/revision/latest?cb=20251107161809",
+      "nom_fichier_wiki": "Urge_Photo.png",
+      "icone_fichier": "assets/icones/desirs/Urge_Photo.png",
+      "details": {
+        "cause_en": "Taking Photos preference",
+        "effet_en": "Purr Coins, Amused"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Urge"
+    },
+    {
+      "id": "veut-ecouter-de-la-musique",
+      "nom": "Veut écouter de la musique",
+      "nom_en": "Wants to Listen to Music",
+      "fr_verifie": false,
+      "categorie": "quotidien",
+      "description": "Écouter de la musique sur une enceinte.",
+      "icone": "🎧",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/c/cd/Urge_Music.png/revision/latest?cb=20251107162008",
+      "nom_fichier_wiki": "Urge_Music.png",
+      "icone_fichier": "assets/icones/desirs/Urge_Music.png",
+      "details": {
+        "cause_en": "Daily life",
+        "effet_en": "Purr Coins, Excited"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Urge"
+    },
+    {
+      "id": "veut-lire-un-livre-sur-la-peche",
+      "nom": "Veut lire « When a Fish Talks to You »",
+      "nom_en": "Wants to Read \"When a Fish Talks to You\"",
+      "fr_verifie": false,
+      "categorie": "caracteristique",
+      "description": "Lire ce livre sur la pêche. Lié à Littéraire.",
+      "icone": "📖",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/1/1d/Urge_Read.png/revision/latest?cb=20251107162256",
+      "nom_fichier_wiki": "Urge_Read.png",
+      "icone_fichier": "assets/icones/desirs/Urge_Read.png",
+      "details": {
+        "cause_en": "Bookworm characteristic",
+        "effet_en": "Purr Coins, Amused"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Urge"
+    },
+    {
+      "id": "veut-lire-un-livre-de-logique",
+      "nom": "Veut lire un livre de logique",
+      "nom_en": "Wants to Read Logic Book",
+      "fr_verifie": false,
+      "categorie": "caracteristique",
+      "description": "Lire un livre de logique. Lié à Génie.",
+      "icone": "🧩",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/3/31/Urge_Logic.png/revision/latest?cb=20251107162928",
+      "nom_fichier_wiki": "Urge_Logic.png",
+      "icone_fichier": "assets/icones/desirs/Urge_Logic.png",
+      "details": {
+        "cause_en": "Genius characteristic",
+        "effet_en": "Purr Coins, Content"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Urge"
+    },
+    {
+      "id": "veut-jouer-aux-echecs",
+      "nom": "Veut jouer aux échecs",
+      "nom_en": "I want to compete in chess with another person",
+      "fr_verifie": false,
+      "categorie": "caracteristique",
+      "description": "Jouer aux échecs avec quelqu'un. Lié à Génie.",
+      "icone": "♟️",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/e/ee/Urge_Chees.png/revision/latest?cb=20251107165151",
+      "nom_fichier_wiki": "Urge_Chees.png",
+      "icone_fichier": "assets/icones/desirs/Urge_Chees.png",
+      "details": {
+        "cause_en": "Genius characteristic",
+        "effet_en": "Purr Coins, Focused"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Urge"
+    },
+    {
+      "id": "veut-faire-le-menage",
+      "nom": "Veut faire le ménage",
+      "nom_en": "Wants to Clean",
+      "fr_verifie": false,
+      "categorie": "preference",
+      "description": "Jeter les déchets ou passer l'aspirateur. Lié à la préférence Nettoyage.",
+      "icone": "🧹",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/8/8f/Urge_Clean.png/revision/latest?cb=20251107165516",
+      "nom_fichier_wiki": "Urge_Clean.png",
+      "icone_fichier": "assets/icones/desirs/Urge_Clean.png",
+      "details": {
+        "cause_en": "Cleaning preference",
+        "effet_en": "Purr Coins, Content"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Urge"
+    },
+    {
+      "id": "veut-montrer-le-pouvoir-de-l-amour",
+      "nom": "Veut montrer le Pouvoir de l'amour",
+      "nom_en": "Wants to Show Power of Love!",
+      "fr_verifie": false,
+      "categorie": "trait",
+      "description": "Interaction « Power of Love! » avec l'être aimé. Lié à Charmeur.",
+      "icone": "💘",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/3/37/Urge_Love.png/revision/latest?cb=20251107170014",
+      "nom_fichier_wiki": "Urge_Love.png",
+      "icone_fichier": "assets/icones/desirs/Urge_Love.png",
+      "details": {
+        "cause_en": "Charmer trait",
+        "effet_en": "Purr Coins, Aflutter"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Urge"
+    },
+    {
+      "id": "veut-aller-dans-un-resort",
+      "nom": "Veut aller dans un resort",
+      "nom_en": "Wants to Go to a Resort",
+      "fr_verifie": false,
+      "categorie": "ville",
+      "description": "Aller au resort de Cahaya par le quai.",
+      "icone": "🏝️",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/1/11/Urge_Resort.png/revision/latest?cb=20251107170107",
+      "nom_fichier_wiki": "Urge_Resort.png",
+      "icone_fichier": "assets/icones/desirs/Urge_Resort.png",
+      "details": {
+        "cause_en": "Cahaya city",
+        "effet_en": "Purr Coins, Confident"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Urge"
+    },
+    {
+      "id": "veut-lire-un-livre-sur-la-sante",
+      "nom": "Veut lire un livre sur la santé",
+      "nom_en": "Wants to Read a Health Book",
+      "fr_verifie": false,
+      "categorie": "ambition",
+      "description": "Lire un livre sur la santé. Lié à l'ambition Expert de la condition physique.",
+      "icone": "📗",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/c/c5/Urge_Health.png/revision/latest?cb=20251107170538",
+      "nom_fichier_wiki": "Urge_Health.png",
+      "icone_fichier": "assets/icones/desirs/Urge_Health.png",
+      "details": {
+        "cause_en": "Fitness Master ambition",
+        "effet_en": "Purr Coins, Focused"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Urge"
+    },
+    {
+      "id": "veut-chanter-dans-la-rue",
+      "nom": "Veut chanter dans la rue",
+      "nom_en": "Wants to Busk by Singing",
+      "fr_verifie": false,
+      "categorie": "caracteristique",
+      "description": "Chanter en public (parc, place, plage). Lié à Énergique.",
+      "icone": "🎤",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/4/46/Urge_Singing.png/revision/latest?cb=20251107170913",
+      "nom_fichier_wiki": "Urge_Singing.png",
+      "icone_fichier": "assets/icones/desirs/Urge_Singing.png",
+      "details": {
+        "cause_en": "Lively characteristic",
+        "effet_en": "Purr Coins, Recognition, Excited"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Urge"
+    },
+    {
+      "id": "veut-se-faire-plus-d-amis",
+      "nom": "Veut se faire plus d'amis",
+      "nom_en": "Wants to Make More Friends",
+      "fr_verifie": false,
+      "categorie": "caracteristique",
+      "description": "Se faire 3 amis ou plus. Lié à Sociable.",
+      "icone": "🤝",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/6/6f/Urge_Friends.png/revision/latest?cb=20251107171201",
+      "nom_fichier_wiki": "Urge_Friends.png",
+      "icone_fichier": "assets/icones/desirs/Urge_Friends.png",
+      "details": {
+        "cause_en": "Extroverted characteristic",
+        "effet_en": "Purr Coins, Recognition, Excited"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Urge"
+    },
+    {
+      "id": "veut-lire-le-journal",
+      "nom": "Veut lire le journal",
+      "nom_en": "Sit and read the newspaper",
+      "fr_verifie": false,
+      "categorie": "quotidien",
+      "description": "Lire le journal ou sur tablette.",
+      "icone": "📰",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/d/dd/Urge_Newspaper.png/revision/latest?cb=20251107171520",
+      "nom_fichier_wiki": "Urge_Newspaper.png",
+      "icone_fichier": "assets/icones/desirs/Urge_Newspaper.png",
+      "details": {
+        "cause_en": "Daily life",
+        "effet_en": "Focused, Meow Coins"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Urge"
+    },
+    {
+      "id": "veut-noter-ses-pensees",
+      "nom": "Veut noter ses pensées dans un carnet",
+      "nom_en": "I want to doodle in my notebook.",
+      "fr_verifie": false,
+      "categorie": "quotidien",
+      "description": "Écrire ses pensées dans un carnet.",
+      "icone": "📓",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/2/2a/Urge_Doodle2.png/revision/latest?cb=20251107171921",
+      "nom_fichier_wiki": "Urge_Doodle2.png",
+      "icone_fichier": "assets/icones/desirs/Urge_Doodle2.png",
+      "details": {
+        "cause_en": "Daily life",
+        "effet_en": "Fun, Meow Coins"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Urge"
+    },
+    {
+      "id": "veut-pecher-pour-cuisiner",
+      "nom": "Veut pêcher un poisson pour le cuisiner",
+      "nom_en": "Wants to Catch a Fish for Cooking",
+      "fr_verifie": false,
+      "categorie": "vie-desiree",
+      "description": "Pêcher. Lié à la Vie de liberté.",
+      "icone": "🐟",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/2/21/Urge_Catch.png/revision/latest?cb=20251107172251",
+      "nom_fichier_wiki": "Urge_Catch.png",
+      "icone_fichier": "assets/icones/desirs/Urge_Catch.png",
+      "details": {
+        "cause_en": "Life of Freedom",
+        "effet_en": "Purr Coins, Excited"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Urge"
+    },
+    {
+      "id": "veut-jouer-aux-jeux-video",
+      "nom": "Veut jouer aux jeux vidéo",
+      "nom_en": "Wants to Play Video Games",
+      "fr_verifie": false,
+      "categorie": "vie-desiree",
+      "description": "Jouer sur ordinateur. Lié à la Vie de liberté.",
+      "icone": "🎮",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/9/90/Urge_Games.png/revision/latest?cb=20251107172607",
+      "nom_fichier_wiki": "Urge_Games.png",
+      "icone_fichier": "assets/icones/desirs/Urge_Games.png",
+      "details": {
+        "cause_en": "Life of Freedom",
+        "effet_en": "Purr Coins, Amused"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Urge"
+    },
+    {
+      "id": "veut-parfumer-son-lit",
+      "nom": "Veut vaporiser du désodorisant sur son lit",
+      "nom_en": "I want to spray the fabric refresher on my bed.",
+      "fr_verifie": false,
+      "categorie": "quotidien",
+      "description": "Vaporiser du désodorisant textile sur le lit.",
+      "icone": "🛏️",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/5/5f/Urge_Refresher.png/revision/latest?cb=20251107172953",
+      "nom_fichier_wiki": "Urge_Refresher.png",
+      "icone_fichier": "assets/icones/desirs/Urge_Refresher.png",
+      "details": {
+        "cause_en": "Daily life",
+        "effet_en": "Happiness, Meow Coins"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Urge"
+    },
+    {
+      "id": "veut-se-laver",
+      "nom": "Veut se laver",
+      "nom_en": "Wants to Wash Up.",
+      "fr_verifie": false,
+      "categorie": "caracteristique",
+      "description": "Douche ou bain. Lié à Fou de la propreté.",
+      "icone": "🚿",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/4/47/Urge_Wash.png/revision/latest?cb=20251107173310",
+      "nom_fichier_wiki": "Urge_Wash.png",
+      "icone_fichier": "assets/icones/desirs/Urge_Wash.png",
+      "details": {
+        "cause_en": "Neat Freak characteristic",
+        "effet_en": "Purr Coins, Hygiene, Content"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Urge"
+    },
+    {
+      "id": "veut-faire-un-achat-impulsif",
+      "nom": "Veut faire un achat impulsif",
+      "nom_en": "I want to make a spontaneous purchase",
+      "fr_verifie": false,
+      "categorie": "valeur",
+      "description": "Trop dépenser sur l'ordinateur. Lié à la valeur Impulsivité.",
+      "icone": "🛒",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/9/9d/Urge_Purchase.png/revision/latest?cb=20251107173615",
+      "nom_fichier_wiki": "Urge_Purchase.png",
+      "icone_fichier": "assets/icones/desirs/Urge_Purchase.png",
+      "details": {
+        "cause_en": "Impulse value",
+        "effet_en": "Purr Coins, Excited"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Urge"
+    },
+    {
+      "id": "veut-manger-un-bibimbap",
+      "nom": "Veut manger un bibimbap",
+      "nom_en": "Wants to Eat Bibimbap",
+      "fr_verifie": false,
+      "categorie": "preference",
+      "description": "Préparer un bibimbap. Lié à la préférence Légumes.",
+      "icone": "🥗",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/c/c1/Urge_Bibimbap.png/revision/latest?cb=20251107173954",
+      "nom_fichier_wiki": "Urge_Bibimbap.png",
+      "icone_fichier": "assets/icones/desirs/Urge_Bibimbap.png",
+      "details": {
+        "cause_en": "Vegetables preference",
+        "effet_en": "Purr Coins, Focused"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Urge"
+    },
+    {
+      "id": "veut-se-reposer-sans-rien-faire",
+      "nom": "Veut se reposer sans rien faire",
+      "nom_en": "I want to rest and do nothing.",
+      "fr_verifie": false,
+      "categorie": "caracteristique",
+      "description": "Faire la sieste sur une chaise ou un canapé. Lié à Morose.",
+      "icone": "😮‍💨",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/3/36/Urge_Rest.png/revision/latest?cb=20251107174249",
+      "nom_fichier_wiki": "Urge_Rest.png",
+      "icone_fichier": "assets/icones/desirs/Urge_Rest.png",
+      "details": {
+        "cause_en": "Depressed characteristic",
+        "effet_en": "Purr Coins, Content"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Urge"
+    },
+    {
+      "id": "veut-apprendre-a-peindre",
+      "nom": "Veut apprendre à peindre",
+      "nom_en": "Wants to Learn to Paint",
+      "fr_verifie": false,
+      "categorie": "competence",
+      "description": "Monter la compétence Art au niveau 5 (chevalet).",
+      "icone": "🖼️",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/4/43/Urge_Paint.png/revision/latest?cb=20251107174604",
+      "nom_fichier_wiki": "Urge_Paint.png",
+      "icone_fichier": "assets/icones/desirs/Urge_Paint.png",
+      "details": {
+        "cause_en": "Low-level skill",
+        "effet_en": "Purr Coins, Content"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Urge"
+    },
+    {
+      "id": "veut-s-etirer",
+      "nom": "Veut s'étirer",
+      "nom_en": "I want to stretch.",
+      "fr_verifie": false,
+      "categorie": "quotidien",
+      "description": "S'étirer.",
+      "icone": "🧘",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/2/20/Urge_Stretch.png/revision/latest?cb=20251107174916",
+      "nom_fichier_wiki": "Urge_Stretch.png",
+      "icone_fichier": "assets/icones/desirs/Urge_Stretch.png",
+      "details": {
+        "cause_en": "Daily life",
+        "effet_en": "Meow Coins"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Urge"
+    },
+    {
+      "id": "veut-s-asseoir-et-se-reposer",
+      "nom": "Veut s'asseoir et se reposer",
+      "nom_en": "Wants to Sit and Rest",
+      "fr_verifie": true,
+      "categorie": "quotidien",
+      "description": "S'asseoir et se reposer.",
+      "icone": "🪑",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "cause_en": "?",
+        "effet_en": "?"
+      },
+      "source": "https://playinzoi.com/fr/news/9533",
+      "fr_source": "notes de patch FR v0.5.0 (https://playinzoi.com/fr/news/9533)"
+    }
+  ]
+}

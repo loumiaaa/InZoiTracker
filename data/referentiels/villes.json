@@ -1,0 +1,464 @@
+{
+  "referentiel": "villes",
+  "titre": "Villes",
+  "maj": "2026-10-23",
+  "version_jeu": "v0.11.1 (accès anticipé, patch du 20/10/2026)",
+  "sources": [
+    "https://playinzoi.com/fr/guide/cheats",
+    "https://playinzoi.com/en/guide/cheats",
+    "https://playinzoi.com/fr/news/9079",
+    "https://playinzoi.com/fr/news/9533",
+    "https://playinzoi.com/fr/news/10849",
+    "https://inzoi.fandom.com/wiki/Cities",
+    "https://inzoi.fandom.com/wiki/Dowon",
+    "https://inzoi.fandom.com/wiki/Bliss_Bay",
+    "https://inzoi.fandom.com/wiki/Cahaya",
+    "https://inzoi.fandom.com/wiki/City_Travel",
+    "https://store.steampowered.com/app/3887680/inZOI__Escapade_tropicale/?l=french",
+    "https://game8.co/games/inZOI/archives/503193",
+    "https://thegameswiki.com/inzoi/wiki/cities",
+    "https://thegameswiki.com/inzoi/wiki/2026-roadmap",
+    "https://simscommunity.info/2026/09/12/update-on-inzoi-canvastown/",
+    "https://simscommunity.info/2026/07/08/rumored-new-inzoi-world-coming-soon/"
+  ],
+  "categories": [
+    {
+      "id": "jouable",
+      "nom": "Jouable",
+      "nom_en": "Playable",
+      "icone": "✅"
+    },
+    {
+      "id": "annoncee",
+      "nom": "Annoncée (non sortie)",
+      "nom_en": "Announced",
+      "icone": "🕒"
+    },
+    {
+      "id": "non-sortie",
+      "nom": "Non sortie / rumeur",
+      "nom_en": "Unreleased",
+      "icone": "🗺️"
+    }
+  ],
+  "notes": "VILLES JOUABLES au 23/10/2026 (v0.11.1) : Dowon, Bliss Bay (jeu de base) et Cahaya (DLC gratuit). Aucune nouvelle ville jouable en 2026 : Canvastown est annoncée mais pas sortie ; les autres noms (Winiber, Haegang, Recalleta, Brusimo, Goldenfield, Evermont, Lavender City) ne sont pas jouables. Ils sont listés à part (catégories « annoncee » / « non-sortie ») pour pouvoir être masqués dans l'app.\nQUARTIERS : le jeu ne découpe PAS Dowon et Bliss Bay en quartiers nommés. `quartiers` contient donc les grandes zones / lieux publics repères (parcs, plages, places, temples) tels que nommés dans le guide officiel FR des codes de triche (playinzoi.com/fr/guide/cheats). Pour Cahaya, les trois îles sont de vraies zones : « Île principale », « Centre balnéaire de Sri Lestari » (l'île du complexe hôtelier, appelée « Resort Island » par la communauté) et « Île déserte » (d'après les noms officiels « Quai de l'île principale », « Quai du Centre balnéaire », « Quai de l'île déserte »). Le wiki précise que « Main Island » n'est pas un nom de lieu affiché en jeu. `quartiers_details` donne pour chaque zone le nom EN et la vérification FR.\nDLC : nom FR divergent. Les notes de patch FR officielles disent « inZOI : Paradis Tropical » (et le guide des triches aussi), alors que la page Steam FR dit « inZOI : Escapade tropicale ». C'est « Paradis Tropical » qui est retenu. Date de sortie : 20/08/2025 06:00 UTC (19/08 selon le fuseau américain).\nNOMBRES DE TERRAINS : ils viennent des infobox du wiki fandom (Dowon 12 / 37 / 10 / 10, Bliss Bay 14 / 33 / 9 / 9, Cahaya 11 / 41 / 2 / 6). Game8 et thegameswiki donnent 25 terrains communautaires pour Dowon (comptage antérieur aux ajouts des v0.3 à v0.10). Les catégories du wiki listent 36 terrains communautaires pour Dowon (contre 37 dans l'infobox).\nVOYAGES : depuis la v0.3.0, on peut changer de ville (« Voyager dans une autre ville ») et, depuis la v0.10.0, partir en vacances dans une autre ville (hébergements : voir logements.json).\nICÔNES : il n'y a pas d'icône dédiée par ville sur le wiki. Pour Dowon, City_Dowon.png est l'illustration du menu de choix de ville. Pour Bliss Bay et Cahaya, les images utilisées sont l'image promo et la vignette de carte du wiki. Les cartes complètes sont indiquées dans `details.carte_wiki`.",
+  "elements": [
+    {
+      "id": "dowon",
+      "nom": "Dowon",
+      "nom_en": "Dowon",
+      "fr_verifie": true,
+      "categorie": "jouable",
+      "description": "Ville inspirée du quartier de Gangnam à Séoul (Corée du Sud) : gratte-ciel, temples, parc au bord de la rivière Harang, métro et quatre saisons. Disponible dans le jeu de base.",
+      "icone": "🏙️",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/8/8b/City_Dowon.png/revision/latest?cb=20251128175110",
+      "nom_fichier_wiki": "City_Dowon.png",
+      "icone_fichier": "assets/icones/villes/City_Dowon.png",
+      "details": {
+        "quartiers": [
+          "Parc central",
+          "Parc de la rivière Harang",
+          "Place Nuri",
+          "Temple d'Ullim",
+          "Parc Narim"
+        ],
+        "quartiers_details": [
+          {
+            "nom": "Parc central",
+            "nom_en": "Central Park",
+            "fr_verifie": true,
+            "type": "parc",
+            "source": "https://playinzoi.com/fr/guide/cheats"
+          },
+          {
+            "nom": "Parc de la rivière Harang",
+            "nom_en": "Harang River Park",
+            "fr_verifie": true,
+            "type": "parc",
+            "source": "https://playinzoi.com/fr/guide/cheats"
+          },
+          {
+            "nom": "Place Nuri",
+            "nom_en": "Nuri Plaza",
+            "fr_verifie": true,
+            "type": "place",
+            "source": "https://playinzoi.com/fr/guide/cheats"
+          },
+          {
+            "nom": "Temple d'Ullim",
+            "nom_en": "Ullim Temple",
+            "fr_verifie": true,
+            "type": "temple",
+            "source": "https://playinzoi.com/fr/guide/cheats"
+          },
+          {
+            "nom": "Parc Narim",
+            "nom_en": "Narim Park",
+            "fr_verifie": false,
+            "type": "parc",
+            "source": "https://inzoi.fandom.com/wiki/Narim_Park"
+          }
+        ],
+        "dlc": null,
+        "dlc_nom": "Jeu de base",
+        "disponible_depuis": "v0.1.0 (accès anticipé, 28/03/2025)",
+        "inspiration": "Gangnam, Séoul (Corée du Sud)",
+        "statut": "jouable",
+        "terrains": {
+          "residentiels": 12,
+          "communautaires": 37,
+          "carriere": 10,
+          "commerciaux": 10
+        },
+        "carte_wiki": "Map_Dowon.png"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Dowon"
+    },
+    {
+      "id": "bliss-bay",
+      "nom": "Bliss Bay",
+      "nom_en": "Bliss Bay",
+      "fr_verifie": true,
+      "categorie": "jouable",
+      "description": "Ville côtière inspirée de Santa Monica (Californie, États-Unis) : plages, surf, jetée avec parc d'attractions, climat chaud. Disponible dans le jeu de base.",
+      "icone": "🏖️",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/7/79/InZOI_Bliss_Bay_5.jpeg/revision/latest?cb=20250515091056",
+      "nom_fichier_wiki": "InZOI_Bliss_Bay_5.jpeg",
+      "icone_fichier": null,
+      "details": {
+        "quartiers": [
+          "Place de la Liberté",
+          "Parc du Trèfle",
+          "Plage nord",
+          "Plage centrale",
+          "Plage sud",
+          "Muscle Beach",
+          "Parc d'attractions de Bliss Bay",
+          "Sunset Bay"
+        ],
+        "quartiers_details": [
+          {
+            "nom": "Place de la Liberté",
+            "nom_en": "Liberty Square",
+            "fr_verifie": true,
+            "type": "place",
+            "source": "https://playinzoi.com/fr/guide/cheats"
+          },
+          {
+            "nom": "Parc du Trèfle",
+            "nom_en": "Clover Park",
+            "fr_verifie": true,
+            "type": "parc",
+            "source": "https://playinzoi.com/fr/guide/cheats"
+          },
+          {
+            "nom": "Plage nord",
+            "nom_en": "North Beach",
+            "fr_verifie": true,
+            "type": "plage",
+            "source": "https://playinzoi.com/fr/guide/cheats"
+          },
+          {
+            "nom": "Plage centrale",
+            "nom_en": "Central Beach",
+            "fr_verifie": true,
+            "type": "plage",
+            "source": "https://playinzoi.com/fr/guide/cheats"
+          },
+          {
+            "nom": "Plage sud",
+            "nom_en": "South Beach",
+            "fr_verifie": true,
+            "type": "plage",
+            "source": "https://playinzoi.com/fr/guide/cheats"
+          },
+          {
+            "nom": "Muscle Beach",
+            "nom_en": "Muscle Beach",
+            "fr_verifie": true,
+            "type": "plage",
+            "source": "https://playinzoi.com/fr/guide/cheats"
+          },
+          {
+            "nom": "Parc d'attractions de Bliss Bay",
+            "nom_en": "Bliss Bay Amusement Park",
+            "fr_verifie": true,
+            "type": "loisirs",
+            "source": "https://playinzoi.com/fr/guide/cheats"
+          },
+          {
+            "nom": "Sunset Bay",
+            "nom_en": "Sunset Bay",
+            "fr_verifie": false,
+            "type": "baie",
+            "source": "https://inzoi.fandom.com/wiki/Sunset_Bay"
+          }
+        ],
+        "dlc": null,
+        "dlc_nom": "Jeu de base",
+        "disponible_depuis": "v0.1.0 (accès anticipé, 28/03/2025)",
+        "inspiration": "Santa Monica, Californie (États-Unis)",
+        "statut": "jouable",
+        "terrains": {
+          "residentiels": 14,
+          "communautaires": 33,
+          "carriere": 9,
+          "commerciaux": 9
+        },
+        "carte_wiki": "Map_Bliss_Bay.png"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Bliss_Bay"
+    },
+    {
+      "id": "cahaya",
+      "nom": "Cahaya",
+      "nom_en": "Cahaya",
+      "fr_verifie": true,
+      "categorie": "jouable",
+      "description": "Archipel tropical inspiré de Bali, Lombok et Yogyakarta (Indonésie), réparti sur trois îles : l'île principale (vie quotidienne, agriculture, pêche, minage), le centre balnéaire de Sri Lestari (villas, spa, loisirs) et l'île déserte (exploration, ressources). Chats partout, plongée, bateaux. Annoncée d'abord sous le nom « Kucingku ». Nécessite le DLC gratuit.",
+      "icone": "🏝️",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/7/7f/Map_Cahaya.jpg/revision/latest?cb=20250824164554",
+      "nom_fichier_wiki": "Map_Cahaya.jpg",
+      "icone_fichier": null,
+      "details": {
+        "quartiers": [
+          "Île principale",
+          "Centre balnéaire de Sri Lestari",
+          "Île déserte",
+          "Plage Barat",
+          "Plage Serena",
+          "Temple Miatara",
+          "Sanctuaire des tortues",
+          "Parc Senang",
+          "Marché central"
+        ],
+        "quartiers_details": [
+          {
+            "nom": "Île principale",
+            "nom_en": "Main Island",
+            "fr_verifie": true,
+            "type": "île",
+            "source": "https://playinzoi.com/fr/news/9533"
+          },
+          {
+            "nom": "Centre balnéaire de Sri Lestari",
+            "nom_en": "Sri Lestari Resort (Resort Island)",
+            "fr_verifie": true,
+            "type": "île",
+            "source": "https://playinzoi.com/fr/guide/cheats"
+          },
+          {
+            "nom": "Île déserte",
+            "nom_en": "Deserted Island",
+            "fr_verifie": true,
+            "type": "île",
+            "source": "https://playinzoi.com/fr/guide/cheats"
+          },
+          {
+            "nom": "Plage Barat",
+            "nom_en": "Barat Beach",
+            "fr_verifie": true,
+            "type": "plage",
+            "source": "https://playinzoi.com/fr/guide/cheats"
+          },
+          {
+            "nom": "Plage Serena",
+            "nom_en": "Serena Beach",
+            "fr_verifie": true,
+            "type": "plage",
+            "source": "https://playinzoi.com/fr/guide/cheats"
+          },
+          {
+            "nom": "Temple Miatara",
+            "nom_en": "Miatara Temple",
+            "fr_verifie": true,
+            "type": "temple",
+            "source": "https://playinzoi.com/fr/guide/cheats"
+          },
+          {
+            "nom": "Sanctuaire des tortues",
+            "nom_en": "Turtle Sanctuary",
+            "fr_verifie": true,
+            "type": "nature",
+            "source": "https://playinzoi.com/fr/guide/cheats"
+          },
+          {
+            "nom": "Parc Senang",
+            "nom_en": "Senang Park",
+            "fr_verifie": true,
+            "type": "parc",
+            "source": "https://playinzoi.com/fr/guide/cheats"
+          },
+          {
+            "nom": "Marché central",
+            "nom_en": "Central Market",
+            "fr_verifie": true,
+            "type": "marché",
+            "source": "https://playinzoi.com/fr/guide/cheats"
+          }
+        ],
+        "dlc": "inzoi-paradis-tropical",
+        "dlc_nom": "inZOI : Paradis Tropical (DLC gratuit)",
+        "dlc_nom_en": "inZOI: Island Getaway",
+        "dlc_prix": "gratuit",
+        "disponible_depuis": "v0.3.0 (20/08/2025)",
+        "ancien_nom": "Kucingku",
+        "inspiration": "Bali, Lombok et Yogyakarta (Indonésie)",
+        "statut": "jouable",
+        "terrains": {
+          "residentiels": 11,
+          "communautaires": 41,
+          "carriere": 2,
+          "commerciaux": 6
+        },
+        "carte_wiki": "Cahaya_Map.png"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Cahaya"
+    },
+    {
+      "id": "canvastown",
+      "nom": "Canvastown",
+      "nom_en": "Canvastown",
+      "fr_verifie": false,
+      "categorie": "annoncee",
+      "description": "Nouveau « monde » annoncé dans la feuille de route 2026, construit par les joueurs (Canvastown #1 : petit village d'environ 40 terrains visé pour juin 2026 ; Canvastown #2 : extension rurale d'environ 50 terrains visée pour octobre 2026). L'aperçu développeur de septembre 2026 le présente surtout comme un mode multijoueur / jeu de rôle en développement. Aucune note de patch ne l'a encore livré au 20/10/2026 (v0.11.1).",
+      "icone": "🎨",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "quartiers": [],
+        "dlc": null,
+        "statut": "annoncée — non sortie au 23/10/2026",
+        "sortie_prevue": "Canvastown #1 : juin 2026 (reportée) ; Canvastown #2 : octobre 2026 (non confirmée)"
+      },
+      "source": "https://simscommunity.info/2026/09/12/update-on-inzoi-canvastown/"
+    },
+    {
+      "id": "winiber",
+      "nom": "Winiber",
+      "nom_en": "Winiber",
+      "fr_verifie": false,
+      "categorie": "non-sortie",
+      "description": "Ville non jouable listée parmi les villes à venir (carte du monde (Game8, wiki fandom)). Aucune date ni contenu officiel.",
+      "icone": "🗺️",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "quartiers": [],
+        "dlc": null,
+        "statut": "non sortie (à venir / rumeur)"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Cities"
+    },
+    {
+      "id": "haegang",
+      "nom": "Haegang",
+      "nom_en": "Haegang",
+      "fr_verifie": false,
+      "categorie": "non-sortie",
+      "description": "Ville non jouable listée parmi les villes à venir (carte du monde (Game8, wiki fandom)). Aucune date ni contenu officiel.",
+      "icone": "🗺️",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "quartiers": [],
+        "dlc": null,
+        "statut": "non sortie (à venir / rumeur)"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Cities"
+    },
+    {
+      "id": "recalleta",
+      "nom": "Recalleta",
+      "nom_en": "Recalleta",
+      "fr_verifie": false,
+      "categorie": "non-sortie",
+      "description": "Ville non jouable listée parmi les villes à venir (carte du monde (Game8, wiki fandom)). Aucune date ni contenu officiel.",
+      "icone": "🗺️",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "quartiers": [],
+        "dlc": null,
+        "statut": "non sortie (à venir / rumeur)"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Cities"
+    },
+    {
+      "id": "brusimo",
+      "nom": "Brusimo",
+      "nom_en": "Brusimo",
+      "fr_verifie": false,
+      "categorie": "non-sortie",
+      "description": "Ville non jouable listée parmi les villes à venir (carte du monde (Game8, wiki fandom)). Aucune date ni contenu officiel.",
+      "icone": "🗺️",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "quartiers": [],
+        "dlc": null,
+        "statut": "non sortie (à venir / rumeur)"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Cities"
+    },
+    {
+      "id": "goldenfield",
+      "nom": "Goldenfield",
+      "nom_en": "Goldenfield",
+      "fr_verifie": false,
+      "categorie": "non-sortie",
+      "description": "Ville non jouable listée parmi les villes à venir (carte du monde (Game8, wiki fandom, thegameswiki)). Aucune date ni contenu officiel.",
+      "icone": "🗺️",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "quartiers": [],
+        "dlc": null,
+        "statut": "non sortie (à venir / rumeur)"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Cities"
+    },
+    {
+      "id": "evermont",
+      "nom": "Evermont",
+      "nom_en": "Evermont",
+      "fr_verifie": false,
+      "categorie": "non-sortie",
+      "description": "Ville non jouable listée parmi les villes à venir (wiki fandom uniquement). Aucune date ni contenu officiel.",
+      "icone": "🗺️",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "quartiers": [],
+        "dlc": null,
+        "statut": "non sortie (à venir / rumeur)"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Cities"
+    },
+    {
+      "id": "lavender-city",
+      "nom": "Lavender City",
+      "nom_en": "Lavender City",
+      "fr_verifie": false,
+      "categorie": "non-sortie",
+      "description": "Ville d'inspiration française évoquée par une rumeur (juillet 2026) à partir d'entrées « E02 LavenderCity » / « PurpleCity » trouvées dans les fichiers ; Kjun a répondu par des émojis lavande. Rien d'officiel.",
+      "icone": "💜",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "quartiers": [],
+        "dlc": null,
+        "statut": "non sortie (à venir / rumeur)"
+      },
+      "source": "https://simscommunity.info/2026/07/08/rumored-new-inzoi-world-coming-soon/"
+    }
+  ]
+}

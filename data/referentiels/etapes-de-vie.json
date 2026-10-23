@@ -54,9 +54,9 @@
       "categorie": "bebe",
       "description": "Le tout nouveau membre de la famille. Stade obtenu par la naissance ; sélectionnable dans Créer un Zoi depuis la v0.10.0.",
       "icone": "🍼",
-      "icone_url": null,
-      "nom_fichier_wiki": null,
-      "icone_fichier": null,
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/4/4a/Age_zero.png/revision/latest?cb=20260111101123",
+      "nom_fichier_wiki": "Age_zero.png",
+      "icone_fichier": "assets/icones/etapes-de-vie-alt/Age_zero.png",
       "details": {
         "ordre": 1,
         "duree_jours": 3,
@@ -74,7 +74,7 @@
       },
       "source": "https://inzoi.fandom.com/wiki/Age_Group",
       "fr_source": "notes de patch FR v0.10.0 (https://playinzoi.com/fr/news/10849)",
-      "notes": "Pas d'icône dédiée sur le wiki (Age_zero.png est générique pour les bébés)."
+      "notes": "Pas d'icône dédiée sur le wiki : Age_zero.png est l'icône générique utilisée par le wiki pour les stades bébé."
     },
     {
       "id": "enfant-en-bas-age",

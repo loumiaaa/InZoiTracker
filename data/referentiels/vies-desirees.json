@@ -1,0 +1,851 @@
+{
+  "referentiel": "vies-desirees",
+  "titre": "Vies désirées",
+  "maj": "2026-10-23",
+  "version_jeu": "v0.11.x (patch v0.11.1 du 20/10/2026)",
+  "sources": [
+    "https://inzoi.fandom.com/wiki/Desired_Life",
+    "https://www.gfinityesports.com/article/inzoi-complete-guide-to-desired-lives",
+    "https://playinzoi.com/fr/news/8812",
+    "docs/references/jeu-fiche-profil.png",
+    "https://playinzoi.com/fr/guide/cheats"
+  ],
+  "notes": "16 Vies désirées (wiki fandom, à jour des noms de traits post-v0.4.0). La Vie désirée est facultative, modifiable à tout moment, et oriente traits, valeurs, ambitions, compétences et préférences recommandés. details : ambition = id de data/referentiels/ambitions.json ; preferences = ids de preferences.json ; valeurs = ids de valeurs.json ; traits = ids de traits.json ; competences = ids proposés (slug du libellé FR du guide officiel des codes de triche : Rhétorique, Pensée critique, Charme…) — à aligner avec competences.json quand il existera. Les champs *_en gardent les noms anglais pour faciliter ce rapprochement. DIVERGENCES : les associations ont changé depuis l'accès anticipé (guide Gfinity d'avril 2025 : autres traits, « Life of Perseverance » au lieu de « Life of Adventure », « Life of Self-Creation » au lieu de « Self-Discovery ») ; les données retenues sont celles du wiki fandom, plus récentes mais non datées précisément. L'ambition de « Vie de liberté » (Nation's Sweetheart, identique à « Vie de romance ») semble douteuse. La compétence « Parenting » citée pour 3 vies n'existe plus dans la liste actuelle des compétences. LIBELLÉS FR : seuls « Vie de simplicité » (capture du jeu) et « Vie de découverte de soi » (notes de patch FR v0.2.0, où la rubrique s'appelait « Vie souhaitée ») sont vérifiés ; les 14 autres suivent le modèle « Vie de … » et sont des propositions.",
+  "elements": [
+    {
+      "id": "vie-de-decouverte-de-soi",
+      "nom": "Vie de découverte de soi",
+      "nom_en": "Life of Self-Discovery",
+      "fr_verifie": true,
+      "categorie": null,
+      "description": "Devenir le véritable créateur de sa propre vie : se fixer ses propres objectifs, avancer librement, accueillir les découvertes inattendues et écrire une histoire unique. Aucun trait, valeur, ambition ni compétence imposés.",
+      "icone": "🧩",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/5/5f/Life_of_Self-Discovery.png/revision/latest?cb=20250511170920",
+      "nom_fichier_wiki": "Life_of_Self-Discovery.png",
+      "icone_fichier": "assets/icones/vies-desirees/Life_of_Self-Discovery.png",
+      "details": {
+        "ambition": null,
+        "valeurs": [],
+        "competences": [],
+        "preferences": [],
+        "traits": [],
+        "ambition_en": null,
+        "competences_en": [],
+        "preferences_en": []
+      },
+      "source": "https://inzoi.fandom.com/wiki/Desired_Life",
+      "fr_source": "notes de patch FR v0.2.0 (https://playinzoi.com/fr/news/8812)",
+      "notes": "Appelée « Life of Self-Creation » dans certains guides de l'accès anticipé."
+    },
+    {
+      "id": "vie-d-abondance",
+      "nom": "Vie d'abondance",
+      "nom_en": "Life of Abundance",
+      "fr_verifie": false,
+      "categorie": null,
+      "description": "Recherche stabilité économique et confort ; profite des expériences qu'offre l'aisance matérielle et partage les fruits de sa richesse avec famille et amis.",
+      "icone": "💰",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/8/8a/Life_of_Abundance.png/revision/latest?cb=20250510222739",
+      "nom_fichier_wiki": "Life_of_Abundance.png",
+      "icone_fichier": "assets/icones/vies-desirees/Life_of_Abundance.png",
+      "details": {
+        "ambition": "manoir-de-luxe",
+        "valeurs": [
+          "autorite",
+          "realisation"
+        ],
+        "competences": [
+          "rhetorique",
+          "pensee-critique",
+          "charme",
+          "programmation",
+          "taches-menageres"
+        ],
+        "preferences": [
+          "sports-de-ballon",
+          "cafe",
+          "viande",
+          "plantes",
+          "livres-de-developpement-personnel"
+        ],
+        "traits": [
+          "adepte-des-mondanites",
+          "ambitieux"
+        ],
+        "ambition_en": "Luxury Mansion",
+        "competences_en": [
+          "Rhetoric",
+          "Critical Thinking",
+          "Charm",
+          "Programming",
+          "Housework"
+        ],
+        "preferences_en": [
+          "Ball Sports",
+          "Coffee",
+          "Meat",
+          "Plants",
+          "Self-Help Books"
+        ]
+      },
+      "source": "https://inzoi.fandom.com/wiki/Desired_Life",
+      "notes": "Libellé FR proposé (un guide FR de l'accès anticipé semble l'appeler ainsi, non vérifié)."
+    },
+    {
+      "id": "vie-de-tranquillite",
+      "nom": "Vie de tranquillité",
+      "nom_en": "Life of Tranquility",
+      "fr_verifie": false,
+      "categorie": null,
+      "description": "Recherche la paix de l'esprit en se libérant du stress et des conflits ; vie stable et harmonieuse, partage la paix avec son entourage.",
+      "icone": "🍃",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/2/26/Life_of_Tranquility.png/revision/latest?cb=20250510224335",
+      "nom_fichier_wiki": "Life_of_Tranquility.png",
+      "icone_fichier": "assets/icones/vies-desirees/Life_of_Tranquility.png",
+      "details": {
+        "ambition": "esprit-tranquille",
+        "valeurs": [
+          "tradition",
+          "securite"
+        ],
+        "competences": [
+          "rhetorique",
+          "condition-physique",
+          "cuisine",
+          "taches-menageres",
+          "jardinage"
+        ],
+        "preferences": [
+          "yoga",
+          "legumes",
+          "plantes",
+          "livres-de-sante",
+          "piano"
+        ],
+        "traits": [
+          "pacifiste",
+          "prudent"
+        ],
+        "ambition_en": "Tranquil Mind",
+        "competences_en": [
+          "Rhetoric",
+          "Fitness",
+          "Cooking",
+          "Housework",
+          "Gardening"
+        ],
+        "preferences_en": [
+          "Yoga",
+          "Vegetables",
+          "Plants",
+          "Health Books",
+          "Piano"
+        ]
+      },
+      "source": "https://inzoi.fandom.com/wiki/Desired_Life",
+      "notes": "Accès anticipé (Gfinity) : traits Dreamer + Mediator (devenus Idéaliste / Pacifiste)."
+    },
+    {
+      "id": "vie-de-progression",
+      "nom": "Vie de progression",
+      "nom_en": "Life of Advancement",
+      "fr_verifie": false,
+      "categorie": null,
+      "description": "Recherche la croissance continue et l'amélioration de soi par l'apprentissage de nouvelles compétences ; s'épanouit dans la productivité et l'apprentissage tout au long de la vie.",
+      "icone": "📈",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/5/56/Life_of_Advancement.png/revision/latest?cb=20250510222952",
+      "nom_fichier_wiki": "Life_of_Advancement.png",
+      "icone_fichier": "assets/icones/vies-desirees/Life_of_Advancement.png",
+      "details": {
+        "ambition": "zoi-competent",
+        "valeurs": [
+          "defi",
+          "realisation"
+        ],
+        "competences": [
+          "rhetorique",
+          "pensee-critique",
+          "programmation",
+          "condition-physique",
+          "production-media"
+        ],
+        "preferences": [
+          "jogging",
+          "cafe",
+          "viande",
+          "livres-de-developpement-personnel",
+          "nettoyage"
+        ],
+        "traits": [
+          "perfectionniste",
+          "innovateur"
+        ],
+        "ambition_en": "Competent Talent",
+        "competences_en": [
+          "Rhetoric",
+          "Critical Thinking",
+          "Programming",
+          "Fitness",
+          "Media Production"
+        ],
+        "preferences_en": [
+          "Jogging",
+          "Coffee",
+          "Meat",
+          "Self-help Books",
+          "Cleaning"
+        ]
+      },
+      "source": "https://inzoi.fandom.com/wiki/Desired_Life",
+      "notes": "Accès anticipé (Gfinity) : traits Perfectionist + Explorer."
+    },
+    {
+      "id": "vie-de-liberte",
+      "nom": "Vie de liberté",
+      "nom_en": "Life of Freedom",
+      "fr_verifie": false,
+      "categorie": null,
+      "description": "Veut vivre sans contraintes extérieures ; tient à sa liberté et à son autonomie, trace sa propre voie loin des normes sociales et des attentes des autres.",
+      "icone": "🪁",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/f/f6/Life_of_Freedom.png/revision/latest?cb=20250510223722",
+      "nom_fichier_wiki": "Life_of_Freedom.png",
+      "icone_fichier": "assets/icones/vies-desirees/Life_of_Freedom.png",
+      "details": {
+        "ambition": "chouchou-de-la-nation",
+        "valeurs": [
+          "autonomie",
+          "plaisir"
+        ],
+        "competences": [
+          "charme",
+          "rhetorique",
+          "spectacle",
+          "art",
+          "instruments"
+        ],
+        "preferences": [
+          "yoga",
+          "gateau",
+          "peinture",
+          "jeux-video",
+          "guitare"
+        ],
+        "traits": [
+          "individualiste",
+          "aventurier",
+          "indocile"
+        ],
+        "ambition_en": "Nation's Sweetheart",
+        "competences_en": [
+          "Charm",
+          "Rhetoric",
+          "Performance",
+          "Art",
+          "Instrument"
+        ],
+        "preferences_en": [
+          "Yoga",
+          "Cake",
+          "Painting",
+          "Gaming",
+          "Guitar"
+        ]
+      },
+      "source": "https://inzoi.fandom.com/wiki/Desired_Life",
+      "notes": "Le wiki liste Individualist, Adventurer, Outlaw et Rulebreaker (Outlaw = ancien nom de Rulebreaker → « Indocile »). Divergence sur l'ambition : wiki = Nation's Sweetheart, Gfinity (accès anticipé) = « Explore » / Chief Explorer et traits Individualist + Authoritarian."
+    },
+    {
+      "id": "vie-d-aventure",
+      "nom": "Vie d'aventure",
+      "nom_en": "Life of Adventure",
+      "fr_verifie": false,
+      "categorie": null,
+      "description": "Relève sans peur de nouveaux défis et objectifs en repoussant ses limites ; ne renonce jamais et explore toutes les possibilités de la vie.",
+      "icone": "🏔️",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/6/6f/Life_of_Adventure.png/revision/latest?cb=20250511171202",
+      "nom_fichier_wiki": "Life_of_Adventure.png",
+      "icone_fichier": "assets/icones/vies-desirees/Life_of_Adventure.png",
+      "details": {
+        "ambition": "expert-de-la-condition-physique",
+        "valeurs": [
+          "defi",
+          "plaisir"
+        ],
+        "competences": [
+          "pensee-critique",
+          "condition-physique",
+          "production-media",
+          "cuisine",
+          "fabrication-de-cafe"
+        ],
+        "preferences": [
+          "boxe",
+          "cuisine-de-rue",
+          "animaux",
+          "danse",
+          "prise-de-photos"
+        ],
+        "traits": [
+          "aventurier",
+          "innovateur"
+        ],
+        "ambition_en": "Fitness Master",
+        "competences_en": [
+          "Critical Thinking",
+          "Fitness",
+          "Media Production",
+          "Cooking",
+          "Coffee Craft"
+        ],
+        "preferences_en": [
+          "Boxing",
+          "Street Food",
+          "Animals",
+          "Dancing",
+          "Taking Photos"
+        ]
+      },
+      "source": "https://inzoi.fandom.com/wiki/Desired_Life",
+      "notes": "Appelée « Life of Perseverance » dans un guide de l'accès anticipé (Gfinity : traits Adventurer + Entertainer, ambition « Neighborhood Walk »)."
+    },
+    {
+      "id": "vie-de-sagesse",
+      "nom": "Vie de sagesse",
+      "nom_en": "Life of Wisdom",
+      "fr_verifie": false,
+      "categorie": null,
+      "description": "Accumule la sagesse par l'expérience et l'apprentissage pour faire des choix avisés ; résout les défis de la vie avec réflexion et partage son savoir.",
+      "icone": "🦉",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/c/c6/Life_of_Wisdom.png/revision/latest?cb=20250510224408",
+      "nom_fichier_wiki": "Life_of_Wisdom.png",
+      "icone_fichier": "assets/icones/vies-desirees/Life_of_Wisdom.png",
+      "details": {
+        "ambition": "puits-de-connaissance",
+        "valeurs": [
+          "defi",
+          "respect-des-regles"
+        ],
+        "competences": [
+          "pensee-critique",
+          "programmation",
+          "cuisine",
+          "taches-menageres",
+          "jardinage"
+        ],
+        "preferences": [
+          "legumes",
+          "appreciation-de-l-art",
+          "livres-de-developpement-personnel",
+          "livres-d-art",
+          "reparation"
+        ],
+        "traits": [
+          "explorateur",
+          "intellectuel"
+        ],
+        "ambition_en": "Knowledge Seeker",
+        "competences_en": [
+          "Critical Thinking",
+          "Programming",
+          "Cooking",
+          "Housework",
+          "Gardening"
+        ],
+        "preferences_en": [
+          "Vegetables",
+          "Appreciating Art",
+          "Self-help Books",
+          "Art Books",
+          "Repair Work"
+        ]
+      },
+      "source": "https://inzoi.fandom.com/wiki/Desired_Life"
+    },
+    {
+      "id": "vie-de-creativite",
+      "nom": "Vie de créativité",
+      "nom_en": "Life of Creativity",
+      "fr_verifie": false,
+      "categorie": null,
+      "description": "Sort des sentiers battus par l'innovation et la créativité (art, science, technologie) ; vit la joie de s'exprimer et veut contribuer positivement au monde.",
+      "icone": "🎨",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/5/53/Life_of_Creativity.png/revision/latest?cb=20250510223351",
+      "nom_fichier_wiki": "Life_of_Creativity.png",
+      "icone_fichier": "assets/icones/vies-desirees/Life_of_Creativity.png",
+      "details": {
+        "ambition": "grand-peintre",
+        "valeurs": [
+          "autonomie",
+          "coexistence"
+        ],
+        "competences": [
+          "charme",
+          "spectacle",
+          "art",
+          "production-media",
+          "instruments"
+        ],
+        "preferences": [
+          "appreciation-de-l-art",
+          "peinture",
+          "jeux-video",
+          "livres-d-art",
+          "guitare"
+        ],
+        "traits": [
+          "artiste",
+          "idealiste"
+        ],
+        "ambition_en": "Great Painter",
+        "competences_en": [
+          "Charm",
+          "Performance",
+          "Art",
+          "Media Production",
+          "Instrument"
+        ],
+        "preferences_en": [
+          "Appreciating Art",
+          "Painting",
+          "Gaming",
+          "Art Books",
+          "Guitar"
+        ]
+      },
+      "source": "https://inzoi.fandom.com/wiki/Desired_Life"
+    },
+    {
+      "id": "vie-de-contribution",
+      "nom": "Vie de contribution",
+      "nom_en": "Life of Contribution",
+      "fr_verifie": false,
+      "categorie": null,
+      "description": "Veut avoir un impact positif sur les autres et contribuer à la société par le service et le partage, pour rendre le monde meilleur.",
+      "icone": "🤲",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/5/5c/Life_of_Contribution.png/revision/latest?cb=20250510223256",
+      "nom_fichier_wiki": "Life_of_Contribution.png",
+      "icone_fichier": "assets/icones/vies-desirees/Life_of_Contribution.png",
+      "details": {
+        "ambition": "voisin-enjoue",
+        "valeurs": [
+          "coexistence",
+          "amour"
+        ],
+        "competences": [
+          "condition-physique",
+          "spectacle",
+          "cuisine",
+          "taches-menageres",
+          "parentalite"
+        ],
+        "preferences": [
+          "sports-de-ballon",
+          "cuisine-de-rue",
+          "nettoyage",
+          "lessive",
+          "lavage-de-voitures"
+        ],
+        "traits": [
+          "pacifiste",
+          "leader"
+        ],
+        "ambition_en": "Cheerful Neighbor",
+        "competences_en": [
+          "Fitness",
+          "Performance",
+          "Cooking",
+          "Housework",
+          "Parenting"
+        ],
+        "preferences_en": [
+          "Ball Sports",
+          "Street Food",
+          "Cleaning",
+          "Laundry",
+          "Washing Cars"
+        ]
+      },
+      "source": "https://inzoi.fandom.com/wiki/Desired_Life",
+      "notes": "Accès anticipé (Gfinity) : traits Collaborator + Volunteer. La compétence « Parenting » n'existe plus dans la liste actuelle des compétences (guide des codes de triche) : à vérifier."
+    },
+    {
+      "id": "vie-de-simplicite",
+      "nom": "Vie de simplicité",
+      "nom_en": "Life of Simplicity",
+      "fr_verifie": true,
+      "categorie": null,
+      "description": "Recherche une vie minimaliste : réduit la consommation et le gaspillage, se contente de l'essentiel, préfère l'efficacité et la frugalité à l'opulence et trouve satisfaction dans les petites choses.",
+      "icone": "🪴",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/c/c2/Life_of_Simplicity.png/revision/latest?cb=20250510224243",
+      "nom_fichier_wiki": "Life_of_Simplicity.png",
+      "icone_fichier": "assets/icones/vies-desirees/Life_of_Simplicity.png",
+      "details": {
+        "ambition": "esprit-tranquille",
+        "valeurs": [
+          "coexistence",
+          "respect-des-regles"
+        ],
+        "competences": [
+          "pensee-critique",
+          "condition-physique",
+          "cuisine",
+          "fabrication-de-cafe",
+          "jardinage"
+        ],
+        "preferences": [
+          "jogging",
+          "appreciation-de-l-art",
+          "jeux-video",
+          "livres-de-sante",
+          "reparation"
+        ],
+        "traits": [
+          "solitaire",
+          "prudent"
+        ],
+        "ambition_en": "Tranquil Mind",
+        "competences_en": [
+          "Critical Thinking",
+          "Fitness",
+          "Cooking",
+          "Coffee Craft",
+          "Gardening"
+        ],
+        "preferences_en": [
+          "Jogging",
+          "Appreciating Art",
+          "Gaming",
+          "Health Books",
+          "Repair Work"
+        ]
+      },
+      "source": "https://inzoi.fandom.com/wiki/Desired_Life",
+      "fr_source": "capture du jeu FR (docs/references/jeu-fiche-profil.png)",
+      "notes": "Accès anticipé (Gfinity) : traits Perfectionist + Social Activist."
+    },
+    {
+      "id": "vie-d-harmonie",
+      "nom": "Vie d'harmonie",
+      "nom_en": "Life of Harmony",
+      "fr_verifie": false,
+      "categorie": null,
+      "description": "Vit en harmonie avec la nature, ami de la faune et de la flore ; recherche la sérénité du corps et de l'esprit par un mode de vie durable.",
+      "icone": "🌿",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/9/96/Life_of_Harmony.png/revision/latest?cb=20250510223746",
+      "nom_fichier_wiki": "Life_of_Harmony.png",
+      "icone_fichier": "assets/icones/vies-desirees/Life_of_Harmony.png",
+      "details": {
+        "ambition": "amateur-de-plantes",
+        "valeurs": [
+          "coexistence",
+          "amour"
+        ],
+        "competences": [
+          "art",
+          "production-media",
+          "cuisine",
+          "parentalite",
+          "jardinage"
+        ],
+        "preferences": [
+          "jogging",
+          "cafe",
+          "animaux",
+          "plantes",
+          "prise-de-photos"
+        ],
+        "traits": [
+          "solitaire",
+          "pacifiste"
+        ],
+        "ambition_en": "Plant Lover",
+        "competences_en": [
+          "Art",
+          "Media Production",
+          "Cooking",
+          "Parenting",
+          "Gardening"
+        ],
+        "preferences_en": [
+          "Jogging",
+          "Coffee",
+          "Animals",
+          "Plants",
+          "Taking Photos"
+        ]
+      },
+      "source": "https://inzoi.fandom.com/wiki/Desired_Life",
+      "notes": "Accès anticipé (Gfinity) : traits Social Activist + Volunteer."
+    },
+    {
+      "id": "vie-de-romance",
+      "nom": "Vie de romance",
+      "nom_en": "Life of Romance",
+      "fr_verifie": false,
+      "categorie": null,
+      "description": "Multiplie les relations avec différents Zois en restant fidèle à ses désirs, tout en se consacrant à son partenaire actuel malgré une approche en apparence légère.",
+      "icone": "💕",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/1/14/Life_of_Romance.png/revision/latest?cb=20250510224224",
+      "nom_fichier_wiki": "Life_of_Romance.png",
+      "icone_fichier": "assets/icones/vies-desirees/Life_of_Romance.png",
+      "details": {
+        "ambition": "chouchou-de-la-nation",
+        "valeurs": [
+          "defi",
+          "amour"
+        ],
+        "competences": [
+          "charme",
+          "rhetorique",
+          "spectacle",
+          "instruments",
+          "cuisine"
+        ],
+        "preferences": [
+          "yoga",
+          "legumes",
+          "animaux",
+          "chant",
+          "guitare"
+        ],
+        "traits": [
+          "charmeur",
+          "adepte-des-mondanites"
+        ],
+        "ambition_en": "Nation's Sweetheart",
+        "competences_en": [
+          "Charm",
+          "Rhetoric",
+          "Performance",
+          "Instrument",
+          "Cooking"
+        ],
+        "preferences_en": [
+          "Yoga",
+          "Vegetables",
+          "Animals",
+          "Singing",
+          "Guitar"
+        ]
+      },
+      "source": "https://inzoi.fandom.com/wiki/Desired_Life",
+      "notes": "Accès anticipé (Gfinity) : traits Charmer + Entertainer."
+    },
+    {
+      "id": "vie-de-devouement-familial",
+      "nom": "Vie de dévouement familial",
+      "nom_en": "Life of Familial Devotion",
+      "fr_verifie": false,
+      "categorie": null,
+      "description": "Veut fonder une grande famille aimante et se consacrer à une vie de famille heureuse ; chaque nouveau membre du foyer renforce son sentiment d'accomplissement.",
+      "icone": "🏡",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/e/e4/Life_of_Familial_Devotion.png/revision/latest?cb=20250510223502",
+      "nom_fichier_wiki": "Life_of_Familial_Devotion.png",
+      "icone_fichier": "assets/icones/vies-desirees/Life_of_Familial_Devotion.png",
+      "details": {
+        "ambition": "famille-aimante",
+        "valeurs": [
+          "coexistence",
+          "amour"
+        ],
+        "competences": [
+          "rhetorique",
+          "production-media",
+          "cuisine",
+          "taches-menageres",
+          "parentalite"
+        ],
+        "preferences": [
+          "sports-de-ballon",
+          "animaux",
+          "prise-de-photos",
+          "nettoyage",
+          "lavage-de-voitures"
+        ],
+        "traits": [
+          "charmeur",
+          "prudent"
+        ],
+        "ambition_en": "Loving Family",
+        "competences_en": [
+          "Rhetoric",
+          "Media Production",
+          "Cooking",
+          "Housework",
+          "Parenting"
+        ],
+        "preferences_en": [
+          "Ball Sports",
+          "Animals",
+          "Taking Photos",
+          "Cleaning",
+          "Washing Cars"
+        ]
+      },
+      "source": "https://inzoi.fandom.com/wiki/Desired_Life",
+      "notes": "Accès anticipé (Gfinity) : traits Volunteer + Collaborator."
+    },
+    {
+      "id": "vie-de-sensations-fortes",
+      "nom": "Vie de sensations fortes",
+      "nom_en": "Life of Excitement",
+      "fr_verifie": false,
+      "categorie": null,
+      "description": "Recherche les frissons des situations risquées et imprévisibles ; savoure l'excitation et la tension des nouveaux défis ou du danger, se sent vivant grâce à l'adrénaline.",
+      "icone": "⚡",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/8/88/Life_of_Excitement.png/revision/latest?cb=20250510223638",
+      "nom_fichier_wiki": "Life_of_Excitement.png",
+      "icone_fichier": "assets/icones/vies-desirees/Life_of_Excitement.png",
+      "details": {
+        "ambition": "hackers-celebres",
+        "valeurs": [
+          "defi",
+          "plaisir"
+        ],
+        "competences": [
+          "charme",
+          "condition-physique",
+          "production-media",
+          "instruments",
+          "fabrication-de-cafe"
+        ],
+        "preferences": [
+          "boxe",
+          "sports-de-ballon",
+          "plats-epices",
+          "prise-de-photos",
+          "batterie"
+        ],
+        "traits": [
+          "aventurier",
+          "trouble-fete",
+          "indocile"
+        ],
+        "ambition_en": "Famous Hacker",
+        "competences_en": [
+          "Charm",
+          "Fitness",
+          "Media Production",
+          "Instrument",
+          "Coffee Craft"
+        ],
+        "preferences_en": [
+          "Boxing",
+          "Ball Sports",
+          "Spicy Food",
+          "Taking Photos",
+          "Drums"
+        ]
+      },
+      "source": "https://inzoi.fandom.com/wiki/Desired_Life",
+      "notes": "Libellé FR proposé (traduction littérale possible : « Vie d'excitation »). Accès anticipé (Gfinity) : traits Adventurer + Entertainer, ambition Chief Explorer."
+    },
+    {
+      "id": "vie-de-respectabilite",
+      "nom": "Vie de respectabilité",
+      "nom_en": "Life of Respectability",
+      "fr_verifie": false,
+      "categorie": null,
+      "description": "Défend et concrétise ses convictions selon ses propres principes ; met sa volonté et ses compétences au service de réalisations dont il sera fier longtemps.",
+      "icone": "🎖️",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/e/e1/Life_of_Respectability.png/revision/latest?cb=20250510224146",
+      "nom_fichier_wiki": "Life_of_Respectability.png",
+      "icone_fichier": "assets/icones/vies-desirees/Life_of_Respectability.png",
+      "details": {
+        "ambition": "responsable-de-generation-suivante",
+        "valeurs": [
+          "autonomie",
+          "autorite"
+        ],
+        "competences": [
+          "rhetorique",
+          "pensee-critique",
+          "condition-physique",
+          "production-media",
+          "fabrication-de-cafe"
+        ],
+        "preferences": [
+          "jogging",
+          "cafe",
+          "viande",
+          "livres-de-developpement-personnel",
+          "lessive"
+        ],
+        "traits": [
+          "ambitieux",
+          "leader"
+        ],
+        "ambition_en": "Next Gen Leader",
+        "competences_en": [
+          "Rhetoric",
+          "Critical Thinking",
+          "Fitness",
+          "Media Production",
+          "Coffee Craft"
+        ],
+        "preferences_en": [
+          "Jogging",
+          "Coffee",
+          "Meat",
+          "Self-help Books",
+          "Laundry"
+        ]
+      },
+      "source": "https://inzoi.fandom.com/wiki/Desired_Life"
+    },
+    {
+      "id": "vie-de-stabilite",
+      "nom": "Vie de stabilité",
+      "nom_en": "Life of Stability",
+      "fr_verifie": false,
+      "categorie": null,
+      "description": "Suit les normes et conventions sociales sans faire de vagues ; choisit le chemin le plus fréquenté et privilégie la prévisibilité et la constance.",
+      "icone": "⚓",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/b/b9/Life_of_Stability.png/revision/latest?cb=20250510224315",
+      "nom_fichier_wiki": "Life_of_Stability.png",
+      "icone_fichier": "assets/icones/vies-desirees/Life_of_Stability.png",
+      "details": {
+        "ambition": "richesse",
+        "valeurs": [
+          "securite",
+          "respect-des-regles"
+        ],
+        "competences": [
+          "rhetorique",
+          "pensee-critique",
+          "cuisine",
+          "taches-menageres",
+          "jardinage"
+        ],
+        "preferences": [
+          "cafe",
+          "viande",
+          "jeux-video",
+          "nettoyage",
+          "lessive"
+        ],
+        "traits": [
+          "prudent",
+          "pacifiste"
+        ],
+        "ambition_en": "Wealth",
+        "competences_en": [
+          "Rhetoric",
+          "Critical Thinking",
+          "Cooking",
+          "Housework",
+          "Gardening"
+        ],
+        "preferences_en": [
+          "Coffee",
+          "Meat",
+          "Gaming",
+          "Cleaning",
+          "Laundry"
+        ]
+      },
+      "source": "https://inzoi.fandom.com/wiki/Desired_Life",
+      "notes": "Accès anticipé (Gfinity) : traits Sentinel + Mediator."
+    }
+  ]
+}

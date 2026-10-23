@@ -1,0 +1,376 @@
+{
+  "referentiel": "valeurs",
+  "titre": "Valeurs",
+  "maj": "2026-10-23",
+  "version_jeu": "v0.11.x (patch v0.11.1 du 20/10/2026)",
+  "sources": [
+    "https://inzoi.fandom.com/wiki/Value",
+    "https://static.wikia.nocookie.net/inzoi/images/4/49/Value.png",
+    "https://www.millenium.org/guide/423090.html",
+    "https://inzoi.fandom.com/wiki/Trait_-_v0.3.0",
+    "https://inzoi.fandom.com/wiki/Desired_Life"
+  ],
+  "notes": "Onglet « Valeur » du profil : chaque valeur est une jauge indépendante de 0 à 100 (capture EN du wiki). Au-delà de 60 points, une valeur débloque interactions, conversations et événements spécifiques ; la valeur la plus haute devient la valeur principale (« Core Value »). Les valeurs évoluent selon les expériences et les choix du Zoi. PAIRES OPPOSÉES : aucune source ne montre de paires opposées dans le jeu (les 10 jauges sont affichées séparément) → details.oppose = null partout. Le système s'inspire visiblement du modèle de Schwartz, mais aucune opposition n'est implémentée à notre connaissance. Deux jeux de 10 valeurs : enfant (Solidarity…Familiarity) et adolescent (EN Teenager) → senior (Coexistence…Traditionalist) ; le jeu utilisé par le préadolescent (EN Adolescent) n'est pas précisé par les sources. details.equivalent_adulte / equivalent_enfant : correspondance DÉDUITE de l'ordre d'affichage identique et des descriptions (non confirmée officiellement). Depuis v0.9.0 les bébés développent aussi des valeurs (selon les interactions des parents) qui peuvent leur faire hériter de traits — liste des valeurs bébé non trouvée (probablement les valeurs enfant). LIBELLÉS FR : aucune source FR complète trouvée. « Autorité » et « Réalisation » proviennent d'un guide FR Millenium de l'accès anticipé (lu via un extrait de moteur de recherche, page non accessible directement) ; tous les autres libellés sont des traductions proposées (fr_verifie false). Pas d'icône par valeur sur le wiki.",
+  "categories": [
+    {
+      "id": "ado-a-senior",
+      "nom": "Valeurs (adolescent à senior)",
+      "nom_en": "Values (Teenager - Senior)",
+      "icone": "🧭"
+    },
+    {
+      "id": "enfant",
+      "nom": "Valeurs d'enfant",
+      "nom_en": "Values (Child)",
+      "icone": "🧒"
+    }
+  ],
+  "elements": [
+    {
+      "id": "coexistence",
+      "nom": "Coexistence",
+      "nom_en": "Coexistence",
+      "fr_verifie": false,
+      "categorie": "ado-a-senior",
+      "description": "Met l'accent sur l'harmonie et l'interdépendance entre l'humanité et la nature : égalité, paix, justice sociale, protection de l'environnement.",
+      "icone": "🌍",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "oppose": null,
+        "equivalent_enfant": "solidarite"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Value"
+    },
+    {
+      "id": "autorite",
+      "nom": "Autorité",
+      "nom_en": "Authority",
+      "fr_verifie": true,
+      "categorie": "ado-a-senior",
+      "description": "Recherche le pouvoir social et le prestige, le contrôle des ressources et des personnes ; vise promotions, postes à responsabilité et relations influentes.",
+      "icone": "👑",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "oppose": null,
+        "equivalent_enfant": "grandeur"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Value",
+      "fr_source": "guide FR Millenium « Vie désirée inZOI » (accès anticipé), https://www.millenium.org/guide/423090.html — lu via un extrait de recherche"
+    },
+    {
+      "id": "securite",
+      "nom": "Sécurité",
+      "nom_en": "Safety",
+      "fr_verifie": false,
+      "categorie": "ado-a-senior",
+      "description": "Privilégie la stabilité sociale et émotionnelle, évite les risques ; santé, hygiène, liens familiaux proches, ordre social, placements peu risqués.",
+      "icone": "🛡️",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "oppose": null,
+        "equivalent_enfant": "interdependance"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Value"
+    },
+    {
+      "id": "defi",
+      "nom": "Défi",
+      "nom_en": "Challenger",
+      "fr_verifie": false,
+      "categorie": "ado-a-senior",
+      "description": "Recherche nouvelles expériences et aventures pour sortir de la routine : voyages, nouveaux loisirs, sports extrêmes.",
+      "icone": "🧗",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "oppose": null,
+        "equivalent_enfant": "courage"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Value",
+      "notes": "Nom EN « Challenger » (parfois « Challenge »). Libellé FR proposé."
+    },
+    {
+      "id": "realisation",
+      "nom": "Réalisation",
+      "nom_en": "Accomplishment",
+      "fr_verifie": true,
+      "categorie": "ado-a-senior",
+      "description": "Veut prouver ses capacités et réussir selon les critères de la société : objectifs, plans, formations, certifications, compétitions.",
+      "icone": "🏅",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "oppose": null,
+        "equivalent_enfant": "reconnaissance"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Value",
+      "fr_source": "guide FR Millenium « Vie désirée inZOI » (accès anticipé), https://www.millenium.org/guide/423090.html — lu via un extrait de recherche"
+    },
+    {
+      "id": "autonomie",
+      "nom": "Autonomie",
+      "nom_en": "Autonomy",
+      "fr_verifie": false,
+      "categorie": "ado-a-senior",
+      "description": "Privilégie la pensée, les actes et les choix indépendants ; liberté personnelle, création d'entreprise, voyages en solo, objectifs personnels.",
+      "icone": "🕊️",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "oppose": null,
+        "equivalent_enfant": "independance"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Value"
+    },
+    {
+      "id": "respect-des-regles",
+      "nom": "Respect des règles",
+      "nom_en": "Rule-Abiding",
+      "fr_verifie": false,
+      "categorie": "ado-a-senior",
+      "description": "Respecte strictement normes et attentes sociales, maîtrise ses impulsions ; respect des aînés, règlements, étiquette, politesse.",
+      "icone": "📜",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "oppose": null,
+        "equivalent_enfant": "ordre"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Value"
+    },
+    {
+      "id": "amour",
+      "nom": "Amour",
+      "nom_en": "Love",
+      "fr_verifie": false,
+      "categorie": "ado-a-senior",
+      "description": "Fait passer le bien-être et le bonheur de ses proches en premier : aide famille et amis, fête les dates importantes, recherche amitié sincère et amour mûr.",
+      "icone": "❤️",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "oppose": null,
+        "equivalent_enfant": "attachement"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Value"
+    },
+    {
+      "id": "plaisir",
+      "nom": "Plaisir",
+      "nom_en": "Pleasure",
+      "fr_verifie": false,
+      "categorie": "ado-a-senior",
+      "description": "Recherche la gratification immédiate et les plaisirs des sens : gastronomie, loisirs, concerts, cinéma, luxe et consommation.",
+      "icone": "🍰",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "oppose": null,
+        "equivalent_enfant": "impulsivite"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Value"
+    },
+    {
+      "id": "tradition",
+      "nom": "Tradition",
+      "nom_en": "Traditionalist",
+      "fr_verifie": false,
+      "categorie": "ado-a-senior",
+      "description": "Respecte et perpétue les coutumes de sa culture : fêtes traditionnelles, héritage culturel, humilité et dévouement à son rôle.",
+      "icone": "🏮",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "oppose": null,
+        "equivalent_enfant": "familiarite"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Value",
+      "notes": "Nom EN « Traditionalist ». Libellé FR proposé."
+    },
+    {
+      "id": "solidarite",
+      "nom": "Solidarité",
+      "nom_en": "Solidarity",
+      "fr_verifie": false,
+      "categorie": "enfant",
+      "description": "Considère la nature comme une amie à protéger ; croit qu'on rend le monde meilleur en agissant ensemble.",
+      "icone": "🤝",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "oppose": null,
+        "equivalent_adulte": "coexistence"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Value"
+    },
+    {
+      "id": "grandeur",
+      "nom": "Grandeur",
+      "nom_en": "Grandeur",
+      "fr_verifie": false,
+      "categorie": "enfant",
+      "description": "Désire statut et richesse : postes prestigieux, objets de luxe, attirer l'attention et être suivi par les autres.",
+      "icone": "💎",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "oppose": null,
+        "equivalent_adulte": "autorite"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Value"
+    },
+    {
+      "id": "interdependance",
+      "nom": "Interdépendance",
+      "nom_en": "Interdependency",
+      "fr_verifie": false,
+      "categorie": "enfant",
+      "description": "Veut un monde où tout le monde s'entend ; suit fidèlement les règles et rêve de vivre heureux avec sa famille et ses amis.",
+      "icone": "🫶",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "oppose": null,
+        "equivalent_adulte": "securite"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Value"
+    },
+    {
+      "id": "courage",
+      "nom": "Courage",
+      "nom_en": "Courage",
+      "fr_verifie": false,
+      "categorie": "enfant",
+      "description": "Part sans peur à la recherche de nouvelles aventures et expériences, et aime les partager.",
+      "icone": "🦸",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "oppose": null,
+        "equivalent_adulte": "defi"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Value"
+    },
+    {
+      "id": "reconnaissance",
+      "nom": "Reconnaissance",
+      "nom_en": "Recognition",
+      "fr_verifie": false,
+      "categorie": "enfant",
+      "description": "Désire être félicité pour ses réussites ; veut prouver ses capacités à l'école, en sport et ailleurs.",
+      "icone": "🌟",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "oppose": null,
+        "equivalent_adulte": "realisation"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Value"
+    },
+    {
+      "id": "independance",
+      "nom": "Indépendance",
+      "nom_en": "Independence",
+      "fr_verifie": false,
+      "categorie": "enfant",
+      "description": "Veut prendre ses propres décisions et réussir par ses propres efforts, sans ingérence.",
+      "icone": "🚲",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "oppose": null,
+        "equivalent_adulte": "autonomie"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Value"
+    },
+    {
+      "id": "ordre",
+      "nom": "Ordre",
+      "nom_en": "Order",
+      "fr_verifie": false,
+      "categorie": "enfant",
+      "description": "Suit les règles et normes établies, aime les routines structurées et résout les conflits par le dialogue.",
+      "icone": "📏",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "oppose": null,
+        "equivalent_adulte": "respect-des-regles"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Value"
+    },
+    {
+      "id": "attachement",
+      "nom": "Attachement",
+      "nom_en": "Kinship",
+      "fr_verifie": false,
+      "categorie": "enfant",
+      "description": "Accorde une grande importance à l'amour et aux liens humains ; heureux quand ses proches le sont.",
+      "icone": "👨‍👩‍👧",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "oppose": null,
+        "equivalent_adulte": "amour"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Value",
+      "notes": "Nom EN « Kinship ». Libellé FR proposé (autres options : « Liens », « Parenté »)."
+    },
+    {
+      "id": "impulsivite",
+      "nom": "Impulsivité",
+      "nom_en": "Impulse",
+      "fr_verifie": false,
+      "categorie": "enfant",
+      "description": "Très sensible aux plaisirs des sens qu'il veut satisfaire tout de suite : bonne nourriture, loisirs amusants, expériences excitantes.",
+      "icone": "🍭",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "oppose": null,
+        "equivalent_adulte": "plaisir"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Value",
+      "notes": "Nom EN « Impulse ». Libellé FR proposé."
+    },
+    {
+      "id": "familiarite",
+      "nom": "Familiarité",
+      "nom_en": "Familiarity",
+      "fr_verifie": false,
+      "categorie": "enfant",
+      "description": "À l'aise avec les traditions, l'ordre social et les coutumes ; aime les fêtes transmises de génération en génération, sans rejeter la nouveauté.",
+      "icone": "🎎",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "oppose": null,
+        "equivalent_adulte": "tradition"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Value"
+    }
+  ]
+}
