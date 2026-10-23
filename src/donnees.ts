@@ -19,6 +19,8 @@ export type Zoi = {
   etapeDeVie?: string
   genre?: string
   anniversaire?: string
+  decede?: boolean
+  deces?: { date?: string; cause?: string }
   vieDesiree?: string
   trait?: string
   caracteristiques: string[]

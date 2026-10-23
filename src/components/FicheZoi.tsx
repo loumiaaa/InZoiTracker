@@ -1,14 +1,15 @@
 import { useState } from 'react'
 import { type Zoi, type Relation, type Projet, liste, nomComplet, nouveauZoi, trouver, uid } from '../donnees'
 import { JAUGES, REFERENTIELS, inverseLien, urlIconeFichier } from '../referentiels'
-import { ArrowLeft, Heart, HeartBreak, Plus, Smiley, SmileyMeh, SmileySad, Trash, X } from '@phosphor-icons/react'
+import { ArrowLeft, FlowerLotus, Heart, TreeStructure, HeartBreak, Plus, Smiley, SmileyMeh, SmileySad, Trash, X } from '@phosphor-icons/react'
+import { Arbre } from './Arbre'
 import { Avatar, BoutonIcone, Champ, Confirmer, Icone, Modale, Onglets, Panneau, Photo, Selecteur, urlMarque, useCtx } from './ui'
 
-type Onglet = 'profil' | 'souvenirs' | 'ambitions' | 'preferences' | 'valeur' | 'carriere' | 'relations' | 'vie' | 'futur'
+type Onglet = 'profil' | 'souvenirs' | 'ambitions' | 'preferences' | 'valeur' | 'carriere' | 'relations' | 'arbre' | 'vie' | 'futur'
 const ONGLETS: { id: Onglet; nom: string }[] = [
   { id: 'profil', nom: 'Profil' }, { id: 'souvenirs', nom: 'Souvenirs' }, { id: 'ambitions', nom: 'Ambitions' },
   { id: 'preferences', nom: 'Préférences' }, { id: 'valeur', nom: 'Valeur' }, { id: 'carriere', nom: 'Carrière' },
-  { id: 'relations', nom: 'Relations' }, { id: 'vie', nom: 'Vie & possessions' }, { id: 'futur', nom: 'Futur' },
+  { id: 'relations', nom: 'Relations' }, { id: 'arbre', nom: 'Arbre' }, { id: 'vie', nom: 'Vie & possessions' }, { id: 'futur', nom: 'Futur' },
 ]
 
 export function FicheZoi({ id, ouvrir, fermer }: { id: string; ouvrir: (id: string) => void; fermer: () => void }) {
@@ -39,7 +40,7 @@ export function FicheZoi({ id, ouvrir, fermer }: { id: string; ouvrir: (id: stri
         <div className="fiche-membres">
           {membres.filter((m) => m.id !== id).map((m) => (
             <button key={m.id} className="btn-avatar" onClick={() => ouvrir(m.id)} title={nomComplet(m)}>
-              <Avatar src={m.portrait} nom={nomComplet(m)} taille={38} />
+              <Avatar src={m.portrait} nom={nomComplet(m)} taille={38} decede={m.decede} />
             </button>
           ))}
           <BoutonIcone label="Ajouter un membre au foyer" className="btn-icone-plein" onClick={ajouterMembre}><Plus size={16} weight="bold" /></BoutonIcone>
@@ -49,7 +50,8 @@ export function FicheZoi({ id, ouvrir, fermer }: { id: string; ouvrir: (id: stri
       <Heros z={z} />
       <Onglets onglets={ONGLETS} actif={onglet} onChange={setOnglet} />
       <div className="fiche-corps">
-        {onglet === 'profil' && <Profil z={z} set={set} />}
+        {onglet === 'profil' && <Profil z={z} set={set} voirArbre={() => setOnglet('arbre')} />}
+        {onglet === 'arbre' && <Arbre z={z} ouvrir={ouvrir} />}
         {onglet === 'souvenirs' && <Souvenirs z={z} set={set} />}
         {onglet === 'ambitions' && <Ambitions z={z} set={set} />}
         {onglet === 'preferences' && <Preferences z={z} set={set} />}
@@ -80,10 +82,11 @@ function Heros({ z }: { z: Zoi }) {
   ].filter(Boolean)
   return (
     <section className="heros">
-      <Avatar src={z.portrait} nom={nomComplet(z)} taille={96} actif />
+      <Avatar src={z.portrait} nom={nomComplet(z)} taille={96} actif={!z.decede} decede={z.decede} />
       <div className="heros-texte">
         <span className="heros-sur">{foyer ? `Famille ${foyer.nom}` : 'Sans foyer'}</span>
         <h1>{nomComplet(z)}</h1>
+        {z.decede && <span className="badge badge-deces"><FlowerLotus size={14} weight="fill" />Décédé·e{z.deces?.date ? ` · ${z.deces.date}` : ''}{z.deces?.cause ? ` · ${z.deces.cause}` : ''}</span>}
         <div className="heros-puces">
           {puces.map((e) => <span key={e!.id} className="puce puce-claire"><Icone el={e} taille={20} />{e!.nom}</span>)}
           {puces.length === 0 && <span className="texte-doux">Complète le profil pour voir ses informations ici.</span>}
@@ -93,7 +96,7 @@ function Heros({ z }: { z: Zoi }) {
   )
 }
 
-function Profil({ z, set }: P) {
+function Profil({ z, set, voirArbre }: P & { voirArbre: () => void }) {
   const { d } = useCtx()
   const vie = trouver(d, 'vies-desirees', z.vieDesiree)
   const trait = trouver(d, 'traits', z.trait)
@@ -120,6 +123,15 @@ function Profil({ z, set }: P) {
             <Champ label="Anniversaire"><input className="input" value={z.anniversaire ?? ''} onChange={(e) => set({ anniversaire: e.target.value })} placeholder="Jour en jeu" /></Champ>
             <Champ label="Carrière"><span className="valeur">{carriere?.nom ?? 'Sans emploi'}</span></Champ>
             <Champ label="Niveau d'études"><span className="valeur">{etudes?.nom ?? '—'}</span></Champ>
+            <label className={'interrupteur' + (z.decede ? ' interrupteur-actif' : '')}>
+              <input type="checkbox" checked={!!z.decede} onChange={(e) => set({ decede: e.target.checked })} />
+              <span className="interrupteur-piste" /><span>Décédé·e</span>
+            </label>
+            <button type="button" className="btn btn-doux" onClick={voirArbre}><TreeStructure size={16} weight="bold" />Arbre généalogique</button>
+            {z.decede && <>
+              <Champ label="Date du décès"><input className="input" value={z.deces?.date ?? ''} onChange={(e) => set({ deces: { ...z.deces, date: e.target.value } })} placeholder="Jour en jeu, saison…" /></Champ>
+              <Champ label="Cause"><input className="input" value={z.deces?.cause ?? ''} onChange={(e) => set({ deces: { ...z.deces, cause: e.target.value } })} placeholder="Vieillesse, accident…" /></Champ>
+            </>}
           </div>
         </div>
       </Panneau>

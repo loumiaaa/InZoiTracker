@@ -356,3 +356,35 @@ sup { color: var(--color-warning-text); }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
+
+/* ——— Décès ——— */
+.avatar-decede { filter: grayscale(1) opacity(0.75); }
+.badge-deces { align-self: flex-start; background: var(--color-surface-inset); color: var(--color-text-secondary); }
+.interrupteur { display: flex; align-items: center; gap: var(--space-3); font: var(--font-label); cursor: pointer; min-height: var(--size-control-md); }
+.interrupteur input { position: absolute; opacity: 0; pointer-events: none; }
+.interrupteur-piste { position: relative; width: 40px; height: 24px; border-radius: var(--radius-pill); background: var(--color-track); transition: background var(--duration-base); flex-shrink: 0; }
+.interrupteur-piste::after { content: ''; position: absolute; top: 3px; left: 3px; width: 18px; height: 18px; border-radius: var(--radius-round); background: var(--color-surface-raised); box-shadow: var(--shadow-xs); transition: transform var(--duration-base) var(--ease-out); }
+.interrupteur-actif .interrupteur-piste { background: var(--color-text-secondary); }
+.interrupteur-actif .interrupteur-piste::after { transform: translateX(16px); }
+.interrupteur input:focus-visible + .interrupteur-piste { box-shadow: 0 0 0 3px var(--color-accent-subtle); }
+
+/* ——— Arbre généalogique ——— */
+.arbre { display: flex; flex-direction: column; align-items: center; gap: var(--space-8); padding: var(--space-6) var(--space-4); border-radius: var(--radius-xl); background: var(--color-surface-glass); border: var(--size-border) solid var(--color-border-glass); box-shadow: var(--shadow-glass); }
+.generation { position: relative; display: flex; flex-direction: column; align-items: center; gap: var(--space-3); width: 100%; animation: apparition var(--duration-slow) var(--ease-out) both; }
+.generation + .generation::before { content: ''; position: absolute; top: calc(-1 * var(--space-8)); left: 50%; width: 2px; height: var(--space-6); background: var(--color-border-accent); border-radius: var(--radius-pill); opacity: 0.6; }
+.generation-titre { font: var(--font-caption); font-weight: var(--font-weight-bold); text-transform: uppercase; letter-spacing: var(--letter-spacing-wide); color: var(--color-text-secondary); }
+.generation-noeuds { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: var(--space-3); }
+.generation-centrale .generation-noeuds { padding: var(--space-4); border-radius: var(--radius-xl); background: var(--color-accent-subtle); }
+.couple { display: flex; align-items: center; gap: var(--space-2); }
+.couple-lien { display: flex; align-items: center; gap: var(--space-2); }
+.couple-lien > svg { color: var(--color-like); }
+.noeud { display: flex; flex-direction: column; align-items: center; gap: var(--space-1); width: 112px; padding: var(--space-3) var(--space-2); border-radius: var(--radius-lg); background: var(--color-surface-card); text-align: center; transition: transform var(--duration-base) var(--ease-out), box-shadow var(--duration-base); }
+.noeud:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+.noeud strong { font: var(--font-label); font-weight: var(--font-weight-semibold); }
+.noeud small { font: var(--font-caption); color: var(--color-text-secondary); }
+.noeud-centre { width: 132px; background: var(--color-surface-raised); box-shadow: var(--shadow-sm); cursor: default; }
+.noeud-centre:hover { transform: none; }
+.noeud-decede { opacity: 0.8; }
+.noeud-ajout { background: none; border: 2px dashed var(--color-border-subtle); color: var(--color-text-secondary); justify-content: center; min-height: 120px; }
+.noeud-ajout span { display: grid; place-items: center; width: 44px; height: 44px; border-radius: var(--radius-round); background: var(--color-accent-subtle); color: var(--color-accent-graphic); }
+.noeud-ajout:hover { border-color: var(--color-border-accent); color: var(--color-text-accent); box-shadow: none; }

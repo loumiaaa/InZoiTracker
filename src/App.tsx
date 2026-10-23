@@ -138,9 +138,9 @@ function CarteZoi({ id, ouvrir }: { id: string; ouvrir: (id: string) => void }) 
   const carriere = trouver(d, 'carrieres', z.carriere.carriere)
   return (
     <button className="carte-zoi" onClick={() => ouvrir(id)}>
-      <Avatar src={z.portrait} nom={nomComplet(z)} taille={84} />
+      <Avatar src={z.portrait} nom={nomComplet(z)} taille={84} decede={z.decede} />
       <strong>{nomComplet(z)}</strong>
-      <small>{[etape?.nom, trait?.nom].filter(Boolean).join(' · ') || 'Fiche à compléter'}</small>
+      <small>{z.decede ? 'Décédé·e' : [etape?.nom, trait?.nom].filter(Boolean).join(' · ') || 'Fiche à compléter'}</small>
       {carriere && <span className="badge"><Icone el={carriere} taille={16} />{carriere.nom}</span>}
     </button>
   )
@@ -228,7 +228,7 @@ function CarteFoyer({ f, ouvrir }: { f: Foyer; ouvrir: (id: string) => void }) {
           <small>{ville?.nom ?? 'Ville non renseignée'} · {membres.length} membre{membres.length > 1 ? 's' : ''}</small>
         </div>
         <span className="pile-avatars">
-          {membres.slice(0, 5).map((z) => <Avatar key={z.id} src={z.portrait} nom={nomComplet(z)} taille={30} />)}
+          {membres.slice(0, 5).map((z) => <Avatar key={z.id} src={z.portrait} nom={nomComplet(z)} taille={30} decede={z.decede} />)}
         </span>
       </div>
     </button>

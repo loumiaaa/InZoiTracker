@@ -248,9 +248,9 @@ export function Onglets<T extends string>({ onglets, actif, onChange }: { onglet
   )
 }
 
-export function Avatar({ src, nom, taille = 56, actif }: { src?: string; nom: string; taille?: number; actif?: boolean }) {
+export function Avatar({ src, nom, taille = 56, actif, decede }: { src?: string; nom: string; taille?: number; actif?: boolean; decede?: boolean }) {
   return (
-    <span className={'avatar' + (actif ? ' avatar-actif' : '')} style={{ width: taille, height: taille }} title={nom}>
+    <span className={'avatar' + (actif ? ' avatar-actif' : '') + (decede ? ' avatar-decede' : '')} style={{ width: taille, height: taille }} title={nom}>
       {src ? <img src={src} alt="" /> : <span className="avatar-initiale" style={{ fontSize: taille * 0.38 }}>{nom.slice(0, 1).toUpperCase() || '?'}</span>}
     </span>
   )
