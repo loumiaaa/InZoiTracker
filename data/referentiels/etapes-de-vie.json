@@ -12,7 +12,7 @@
     "https://playinzoi.com/fr/news/9679",
     "https://playinzoi.com/fr/news/8812"
   ],
-  "notes": "9 tranches d'âge d'après le wiki fandom (Newborn → Senior). duree_jours = durée par défaut (réglage « normal », en jours de jeu) ; duree_jours_options = les 5 crans de l'option Vitesse de vieillissement (wiki fandom). Ces valeurs datent d'après la v0.2.0 (jeune adulte allongé, âge moyen raccourci) ; à vérifier en jeu, la journée de jeu étant passée de 96 à 48 min en v0.4.0. age_equivalent_ans = âge « narratif » donné par plusieurs guides (dualshockers, sportskeeda), indicatif. ecole : primaire = enfant (école hors-champ) ; lycee = préado + ado (lycées actifs de chaque ville, inscription via l'appli École) ; universite = jeune adulte (hors-champ, Dowon). peut_travailler : true pour l'ado car il a accès à des petits boulots à temps partiel (voir travail_details). Libellés FR : « Nourrisson » et « Enfant en bas âge » viennent des notes de patch FR v0.10.0 ; le stade EN « Adolescent » n'a pas de libellé FR vérifié — « Préadolescent » est une proposition.",
+  "notes": "9 tranches d'âge d'après le wiki fandom (Newborn → Senior). duree_jours = durée par défaut (réglage « normal », en jours de jeu) ; duree_jours_options = les 5 crans de l'option Vitesse de vieillissement (wiki fandom). Ces valeurs datent d'après la v0.2.0 (jeune adulte allongé, âge moyen raccourci) ; à vérifier en jeu, la journée de jeu étant passée de 96 à 48 min en v0.4.0. age_equivalent_ans = âge « narratif » donné par plusieurs guides (dualshockers, sportskeeda), indicatif. ecole : primaire = enfant (école hors-champ) ; lycee = préado + ado (lycées actifs de chaque ville, inscription via l'appli École) ; universite = jeune adulte (hors-champ, Dowon). peut_travailler : true pour l'ado car il a accès à des petits boulots à temps partiel (voir travail_details). Libellés FR : « Nourrisson » et « Enfant en bas âge » viennent des notes de patch FR v0.10.0 ; le stade EN « Adolescent » n'a pas de libellé FR vérifié — « Préadolescent » est une proposition. Les visuels AgeGroup_* du wiki sont des captures d’écran, pas des icônes : non utilisés.",
   "categories": [
     {
       "id": "bebe",
@@ -56,7 +56,7 @@
       "icone": "🍼",
       "icone_url": "https://static.wikia.nocookie.net/inzoi/images/4/4a/Age_zero.png/revision/latest?cb=20260111101123",
       "nom_fichier_wiki": "Age_zero.png",
-      "icone_fichier": "assets/icones/etapes-de-vie-alt/Age_zero.png",
+      "icone_fichier": null,
       "details": {
         "ordre": 1,
         "duree_jours": 3,
@@ -86,7 +86,7 @@
       "icone": "🧸",
       "icone_url": "https://static.wikia.nocookie.net/inzoi/images/b/bf/AgeGroup_Toddler.png/revision/latest?cb=20251108114846",
       "nom_fichier_wiki": "AgeGroup_Toddler.png",
-      "icone_fichier": "assets/icones/etapes-de-vie/AgeGroup_Toddler.png",
+      "icone_fichier": null,
       "details": {
         "ordre": 2,
         "duree_jours": 6,
@@ -116,7 +116,7 @@
       "icone": "🧒",
       "icone_url": "https://static.wikia.nocookie.net/inzoi/images/7/7a/AgeGroup_Child.png/revision/latest?cb=20251108114709",
       "nom_fichier_wiki": "AgeGroup_Child.png",
-      "icone_fichier": "assets/icones/etapes-de-vie/AgeGroup_Child.png",
+      "icone_fichier": null,
       "details": {
         "ordre": 3,
         "duree_jours": 10,
@@ -146,7 +146,7 @@
       "icone": "🎒",
       "icone_url": "https://static.wikia.nocookie.net/inzoi/images/b/b7/AgeGroup_Adolescent.png/revision/latest?cb=20251108114509",
       "nom_fichier_wiki": "AgeGroup_Adolescent.png",
-      "icone_fichier": "assets/icones/etapes-de-vie/AgeGroup_Adolescent.png",
+      "icone_fichier": null,
       "details": {
         "ordre": 4,
         "duree_jours": 5,
@@ -175,7 +175,7 @@
       "icone": "🧑‍🎓",
       "icone_url": "https://static.wikia.nocookie.net/inzoi/images/9/9f/AgeGroup_Teenager.png/revision/latest?cb=20251108114819",
       "nom_fichier_wiki": "AgeGroup_Teenager.png",
-      "icone_fichier": "assets/icones/etapes-de-vie/AgeGroup_Teenager.png",
+      "icone_fichier": null,
       "details": {
         "ordre": 5,
         "duree_jours": 15,
@@ -204,7 +204,7 @@
       "icone": "🧑",
       "icone_url": "https://static.wikia.nocookie.net/inzoi/images/4/41/AgeGroup_Young_Adult.png/revision/latest?cb=20251108114908",
       "nom_fichier_wiki": "AgeGroup_Young_Adult.png",
-      "icone_fichier": "assets/icones/etapes-de-vie/AgeGroup_Young_Adult.png",
+      "icone_fichier": null,
       "details": {
         "ordre": 6,
         "duree_jours": 30,
@@ -234,7 +234,7 @@
       "icone": "🧑‍💼",
       "icone_url": "https://static.wikia.nocookie.net/inzoi/images/3/36/AgeGroup_Adult.png/revision/latest?cb=20251108114622",
       "nom_fichier_wiki": "AgeGroup_Adult.png",
-      "icone_fichier": "assets/icones/etapes-de-vie/AgeGroup_Adult.png",
+      "icone_fichier": null,
       "details": {
         "ordre": 7,
         "duree_jours": 10,
@@ -264,7 +264,7 @@
       "icone": "🧔",
       "icone_url": "https://static.wikia.nocookie.net/inzoi/images/d/d9/AgeGroup_Middle_Age.png/revision/latest?cb=20251108114733",
       "nom_fichier_wiki": "AgeGroup_Middle_Age.png",
-      "icone_fichier": "assets/icones/etapes-de-vie/AgeGroup_Middle_Age.png",
+      "icone_fichier": null,
       "details": {
         "ordre": 8,
         "duree_jours": 10,
@@ -294,7 +294,7 @@
       "icone": "👵",
       "icone_url": "https://static.wikia.nocookie.net/inzoi/images/b/bc/AgeGroup_Senior.png/revision/latest?cb=20251108114757",
       "nom_fichier_wiki": "AgeGroup_Senior.png",
-      "icone_fichier": "assets/icones/etapes-de-vie/AgeGroup_Senior.png",
+      "icone_fichier": null,
       "details": {
         "ordre": 9,
         "duree_jours": 10,

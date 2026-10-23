@@ -1,7 +1,8 @@
 import { useState } from 'react'
 import { type Zoi, type Relation, type Projet, liste, nomComplet, nouveauZoi, trouver, uid } from '../donnees'
 import { JAUGES, REFERENTIELS, inverseLien, urlIconeFichier } from '../referentiels'
-import { Avatar, Champ, Confirmer, Icone, Modale, Onglets, Panneau, Photo, Selecteur, useCtx } from './ui'
+import { ArrowLeft, Heart, HeartBreak, Plus, Smiley, SmileyMeh, SmileySad, Trash, X } from '@phosphor-icons/react'
+import { Avatar, BoutonIcone, Champ, Confirmer, Icone, Modale, Onglets, Panneau, Photo, Selecteur, urlMarque, useCtx } from './ui'
 
 type Onglet = 'profil' | 'souvenirs' | 'ambitions' | 'preferences' | 'valeur' | 'carriere' | 'relations' | 'vie' | 'futur'
 const ONGLETS: { id: Onglet; nom: string }[] = [
@@ -33,20 +34,19 @@ export function FicheZoi({ id, ouvrir, fermer }: { id: string; ouvrir: (id: stri
 
   return (
     <div className="fiche">
-      <header className="fiche-tete">
+      <div className="barre-retour">
+        <button className="btn btn-fantome" onClick={fermer}><ArrowLeft size={16} weight="bold" />Retour</button>
         <div className="fiche-membres">
-          {membres.map((m) => (
-            <button key={m.id} className="btn-avatar" onClick={() => ouvrir(m.id)}>
-              <Avatar src={m.portrait} nom={nomComplet(m)} actif={m.id === id} taille={m.id === id ? 68 : 56} />
+          {membres.filter((m) => m.id !== id).map((m) => (
+            <button key={m.id} className="btn-avatar" onClick={() => ouvrir(m.id)} title={nomComplet(m)}>
+              <Avatar src={m.portrait} nom={nomComplet(m)} taille={38} />
             </button>
           ))}
-          <button className="btn-plus" onClick={ajouterMembre} aria-label="Ajouter un membre au foyer" title="Ajouter un membre au foyer">＋</button>
+          <BoutonIcone label="Ajouter un membre au foyer" className="btn-icone-plein" onClick={ajouterMembre}><Plus size={16} weight="bold" /></BoutonIcone>
+          <BoutonIcone label="Supprimer ce Zoi" className="btn-icone-danger" onClick={() => setSuppression(true)}><Trash size={18} weight="bold" /></BoutonIcone>
         </div>
-        <div className="fiche-actions">
-          <button className="btn btn-danger-doux" onClick={() => setSuppression(true)}>Supprimer</button>
-          <button className="btn-icone" onClick={fermer} aria-label="Fermer la fiche">✕</button>
-        </div>
-      </header>
+      </div>
+      <Heros z={z} />
       <Onglets onglets={ONGLETS} actif={onglet} onChange={setOnglet} />
       <div className="fiche-corps">
         {onglet === 'profil' && <Profil z={z} set={set} />}
@@ -67,6 +67,31 @@ export function FicheZoi({ id, ouvrir, fermer }: { id: string; ouvrir: (id: stri
 }
 
 type P = { z: Zoi; set: (p: Partial<Zoi>) => void }
+
+/** En-tête de fiche : portrait, nom et étiquettes clés. */
+function Heros({ z }: { z: Zoi }) {
+  const { d } = useCtx()
+  const foyer = d.foyers.find((f) => f.id === z.foyerId)
+  const puces = [
+    trouver(d, 'etapes-de-vie', z.etapeDeVie),
+    trouver(d, 'traits', z.trait),
+    trouver(d, 'vies-desirees', z.vieDesiree),
+    trouver(d, 'carrieres', z.carriere.carriere),
+  ].filter(Boolean)
+  return (
+    <section className="heros">
+      <Avatar src={z.portrait} nom={nomComplet(z)} taille={96} actif />
+      <div className="heros-texte">
+        <span className="heros-sur">{foyer ? `Famille ${foyer.nom}` : 'Sans foyer'}</span>
+        <h1>{nomComplet(z)}</h1>
+        <div className="heros-puces">
+          {puces.map((e) => <span key={e!.id} className="puce puce-claire"><Icone el={e} taille={20} />{e!.nom}</span>)}
+          {puces.length === 0 && <span className="texte-doux">Complète le profil pour voir ses informations ici.</span>}
+        </div>
+      </div>
+    </section>
+  )
+}
 
 function Profil({ z, set }: P) {
   const { d } = useCtx()
@@ -101,7 +126,7 @@ function Profil({ z, set }: P) {
 
       <Panneau titre="Vie désirée">
         <div className="carte-illustree">
-          {vie?.url ? <img className="illus-vie" src={vie.url} alt="" /> : <div className="illus-vie illus-vide">🌸</div>}
+          {vie?.url ? <img className="illus-vie" src={vie.url} alt="" /> : <div className="illus-vie illus-vide"><img src={urlMarque('Kitty_Paw-Cut_Aquamarine.png')} alt="" /></div>}
           <div className="carte-illustree-corps">
             <Selecteur cle="vies-desirees" valeur={z.vieDesiree} onChange={(vieDesiree) => set({ vieDesiree })} placeholder="Choisir une Vie désirée" />
             {vie?.description && <p className="texte-doux">{vie.description}</p>}
@@ -111,7 +136,7 @@ function Profil({ z, set }: P) {
 
       <Panneau titre="Traits de caractère et caractéristiques">
         <div className="carte-illustree">
-          {trait?.url ? <img className="illus-trait" src={trait.url} alt="" /> : <div className="illus-trait illus-vide">✦</div>}
+          {trait?.url ? <img className="illus-trait" src={trait.url} alt="" /> : <div className="illus-trait illus-vide"><img src={urlMarque('Kitty_Paw-Cut_Aquamarine.png')} alt="" /></div>}
           <div className="carte-illustree-corps">
             <Selecteur cle="traits" valeur={z.trait} onChange={(t) => set({ trait: t })} placeholder="Choisir un trait" />
             <Selecteur cle="caracteristiques" multiple max={2} valeur={z.caracteristiques} onChange={(caracteristiques) => set({ caracteristiques })} placeholder="Caractéristiques (2)" />
@@ -124,7 +149,7 @@ function Profil({ z, set }: P) {
       </Panneau>
 
       <Panneau titre="Compétences" action={
-        <Selecteur cle="competences" multiple titre="Compétences suivies" valeur={Object.keys(z.competences)} placeholder="＋ Ajouter"
+        <Selecteur cle="competences" multiple titre="Compétences suivies" valeur={Object.keys(z.competences)} placeholder="Ajouter" compact
           onChange={(ids) => set({ competences: Object.fromEntries(ids.map((i) => [i, z.competences[i] ?? 1])) })} />
       }>
         <div className="competences">
@@ -161,7 +186,7 @@ function Souvenirs({ z, set }: P) {
   return (
     <div className="pile">
       <Panneau titre="Jalons" action={
-        <Selecteur cle="jalons" multiple titre="Jalons atteints" valeur={jalons.map((j) => j.jalon!)} placeholder="＋ Ajouter un jalon"
+        <Selecteur cle="jalons" multiple titre="Jalons atteints" valeur={jalons.map((j) => j.jalon!)} placeholder="Ajouter un jalon" compact
           onChange={(ids) => set({ souvenirs: [...recents, ...ids.map((j) => jalons.find((s) => s.jalon === j) ?? { id: uid(), jalon: j, texte: '' })] })} />
       }>
         <div className="jalons">
@@ -170,7 +195,7 @@ function Souvenirs({ z, set }: P) {
             return (
               <div key={s.id} className="jalon">
                 <Photo src={s.image} onChange={(image) => majSouvenir(s.id, { image })} ratio="4/3" libelle="Illustration" />
-                <div className="jalon-titre">{j?.icone} {j?.nom ?? s.jalon}</div>
+                <div className="jalon-titre">{j?.nom ?? s.jalon}</div>
                 <input className="input input-mini" placeholder="Date / détail" value={s.date ?? ''} onChange={(e) => majSouvenir(s.id, { date: e.target.value })} />
               </div>
             )
@@ -186,11 +211,11 @@ function Souvenirs({ z, set }: P) {
           set({ souvenirs: [...z.souvenirs, { id: uid(), texte: texte.trim(), tonalite: ton, date: new Date().toLocaleDateString('fr-FR') }] })
           setTexte('')
         }}>
-          <select className="input input-auto" value={ton} onChange={(e) => setTon(e.target.value as any)}>
-            <option value="positif">😊 Positif</option>
-            <option value="neutre">😐 Neutre</option>
-            <option value="negatif">😠 Négatif</option>
-          </select>
+          <div className="segment segment-icones">
+            {([['positif', Smiley, 'Positif'], ['neutre', SmileyMeh, 'Neutre'], ['negatif', SmileySad, 'Négatif']] as const).map(([t, I, l]) => (
+              <button type="button" key={t} className={ton === t ? 'actif ton-' + t : ''} onClick={() => setTon(t)} title={l} aria-label={l}><I size={20} weight={ton === t ? 'fill' : 'regular'} /></button>
+            ))}
+          </div>
           <input className="input" placeholder="Ce qui s'est passé…" value={texte} onChange={(e) => setTexte(e.target.value)} />
           <button className="btn btn-accent">Ajouter</button>
         </form>
@@ -199,7 +224,7 @@ function Souvenirs({ z, set }: P) {
             <div key={s.id} className={'souvenir souvenir-' + (s.tonalite ?? 'neutre')}>
               <span>{s.texte}</span>
               <small>{s.date}</small>
-              <button className="btn-icone" onClick={() => retirer(s.id)} aria-label="Supprimer">✕</button>
+              <BoutonIcone label="Supprimer" onClick={() => retirer(s.id)}><X size={14} weight="bold" /></BoutonIcone>
             </div>
           ))}
         </div>
@@ -218,7 +243,7 @@ function Ambitions({ z, set }: P) {
     <div className="pile">
       <div className="ligne-entre">
         <p className="texte-doux">Les objectifs ou grands rêves que ce Zoi souhaite réaliser. Coche les objectifs au fil de tes parties.</p>
-        <Selecteur cle="ambitions" valeur={undefined} placeholder="＋ Ajouter une ambition"
+        <Selecteur cle="ambitions" valeur={undefined} placeholder="Ajouter une ambition" compact
           onChange={(aid) => aid && set({ ambitions: [...z.ambitions, { id: uid(), ambition: aid, niveau: 1, faits: [] }] })} />
       </div>
       {z.ambitions.map((a) => {
@@ -229,13 +254,13 @@ function Ambitions({ z, set }: P) {
         return (
           <Panneau key={a.id} className="ambition">
             <div className="ambition-tete">
-              <span className="ambition-icone">{urlIconeFichier(cat?.icone_fichier) ? <img src={urlIconeFichier(cat?.icone_fichier)} alt="" /> : cat?.icone ?? ref?.icone}</span>
+              <span className="ambition-icone">{urlIconeFichier(cat?.icone_fichier) ? <img src={urlIconeFichier(cat?.icone_fichier)} alt="" /> : <Icone el={ref} taille={48} />}</span>
               <div>
                 <div className="texte-doux">{cat?.nom}</div>
                 <h3 className="ambition-nom">{ref?.nom ?? a.ambition}</h3>
                 <div className="texte-accent">Lv.{a.niveau}/{niveaux.length || 3}</div>
               </div>
-              <button className="btn-icone" onClick={() => set({ ambitions: z.ambitions.filter((x) => x.id !== a.id) })} aria-label="Retirer l'ambition">✕</button>
+              <BoutonIcone label="Retirer l'ambition" onClick={() => set({ ambitions: z.ambitions.filter((x) => x.id !== a.id) })}><X size={16} weight="bold" /></BoutonIcone>
             </div>
             <h4>Objectifs</h4>
             <div className="etapes">
@@ -269,7 +294,7 @@ function Preferences({ z, set }: P) {
     <div className="pile">
       <div className="ligne-entre">
         <p className="texte-doux">Ce que ce Zoi aime ou n'aime pas. Clique sur le cœur pour basculer.</p>
-        <Selecteur cle="preferences" multiple max={10} valeur={z.preferences.map((p) => p.id)} placeholder="＋ Ajouter des préférences"
+        <Selecteur cle="preferences" multiple max={10} valeur={z.preferences.map((p) => p.id)} placeholder="Ajouter des préférences" compact
           onChange={(ids) => set({ preferences: ids.map((i) => z.preferences.find((p) => p.id === i) ?? { id: i, aime: true }) })} />
       </div>
       <Panneau titre={`${z.preferences.length}/10`}>
@@ -281,7 +306,7 @@ function Preferences({ z, set }: P) {
                 <span className="tuile"><Icone el={el} taille={44} />
                   <button className={'coeur ' + (p.aime ? 'coeur-aime' : 'coeur-naime')} title={p.aime ? 'Aime' : "N'aime pas"}
                     onClick={() => set({ preferences: z.preferences.map((x) => (x.id === p.id ? { ...x, aime: !x.aime } : x)) })}>
-                    {p.aime ? '♥' : '💔'}
+                    {p.aime ? <Heart size={14} weight="fill" /> : <HeartBreak size={14} weight="fill" />}
                   </button>
                 </span>
                 <span className="preference-nom">{el?.nom ?? p.id}<small>{p.aime ? 'Aime' : "N'aime pas"}</small></span>
@@ -289,7 +314,7 @@ function Preferences({ z, set }: P) {
             )
           })}
           {Array.from({ length: Math.max(0, 10 - z.preferences.length) }).map((_, i) => (
-            <div key={'v' + i} className="preference preference-vide"><span className="tuile">♡</span><span>Aucune préférence</span></div>
+            <div key={'v' + i} className="preference preference-vide"><span className="tuile"><Heart size={18} /></span><span>Aucune préférence</span></div>
           ))}
         </div>
       </Panneau>
@@ -360,7 +385,7 @@ function Carriere({ z, set }: P) {
         </div>
       </Panneau>
 
-      <Panneau titre="Affaires" action={<button className="btn btn-petit" onClick={() => set({ affaires: [...z.affaires, { id: uid(), nom: '' }] })}>＋ Entreprise</button>}>
+      <Panneau titre="Affaires" action={<button className="btn btn-doux btn-petit" onClick={() => set({ affaires: [...z.affaires, { id: uid(), nom: '' }] })}><Plus size={14} weight="bold" />Entreprise</button>}>
         {z.affaires.map((a) => {
           const ma = (p: object) => set({ affaires: z.affaires.map((x) => (x.id === a.id ? { ...x, ...p } : x)) })
           return (
@@ -375,7 +400,7 @@ function Carriere({ z, set }: P) {
             </div>
           )
         })}
-        {z.affaires.length === 0 && <p className="vide">🏪 Vous n'avez pas d'entreprise.</p>}
+        {z.affaires.length === 0 && <p className="vide">Vous n'avez pas d'entreprise.</p>}
       </Panneau>
 
       <Panneau titre="Freelance">
@@ -402,7 +427,7 @@ function Relations({ z, ouvrir }: { z: Zoi; ouvrir: (id: string) => void }) {
     <div className="pile">
       <div className="ligne-entre">
         <p className="texte-doux">Les liens sont réciproques : si tu indiques un parent, l'autre Zoi verra automatiquement son enfant.</p>
-        <button className="btn btn-accent" onClick={() => setAjout(true)} disabled={d.zois.length < 2}>＋ Nouveau lien</button>
+        <button className="btn btn-accent" onClick={() => setAjout(true)} disabled={d.zois.length < 2}><Plus size={16} weight="bold" />Nouveau lien</button>
       </div>
       {rels.map((r) => {
         const autreId = r.a === z.id ? r.b : r.a
@@ -431,7 +456,7 @@ function Relations({ z, ouvrir }: { z: Zoi; ouvrir: (id: string) => void }) {
               </div>
               <input className="input" placeholder="Notes sur cette relation…" value={r.notes ?? ''} onChange={(e) => majRel(r.id, { notes: e.target.value })} />
             </div>
-            <button className="btn-icone" aria-label="Supprimer le lien" onClick={() => maj((d) => ({ ...d, relations: d.relations.filter((x) => x.id !== r.id) }))}>✕</button>
+            <BoutonIcone label="Supprimer le lien" onClick={() => maj((d) => ({ ...d, relations: d.relations.filter((x) => x.id !== r.id) }))}><X size={16} weight="bold" /></BoutonIcone>
           </Panneau>
         )
       })}
