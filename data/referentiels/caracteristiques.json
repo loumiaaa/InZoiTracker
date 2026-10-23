@@ -1,0 +1,587 @@
+{
+  "referentiel": "caracteristiques",
+  "titre": "Caractéristiques",
+  "maj": "2026-10-23",
+  "version_jeu": "v0.11.x (patch v0.11.1 du 20/10/2026)",
+  "sources": [
+    "https://inzoi.fandom.com/wiki/Characteristic",
+    "https://inzoi.fandom.com/wiki/Cheats/Fetch",
+    "https://playinzoi.com/fr/guide/cheats",
+    "https://playinzoi.com/en/guide/cheats",
+    "https://playinzoi.com/fr/news/9309",
+    "https://playinzoi.com/fr/news/9533",
+    "https://playinzoi.com/fr/news/10165",
+    "docs/references/jeu-fiche-profil.png"
+  ],
+  "notes": "Ce que c'est : depuis la v0.4.0 (30/10/2025), chaque Zoi (adolescent et plus) a 1 trait de caractère + jusqu'à 2 caractéristiques non incompatibles entre elles, choisies indépendamment du trait (bloc « Traits de caractère et caractéristiques » du profil). En anglais, le wiki les appelle « Characteristics » (parfois « Temperaments »), le patch EN v0.9.0 dit « traits ». 18 caractéristiques pour ado+ (15 en v0.4.0, Accro au travail en v0.5.0, Volage et Cœur fidèle en v0.9.0) + 4 caractéristiques de tout-petit ajoutées en v0.9.0 (guide des codes de triche : « Caractéristiques d'un enfant en bas âge »). LIBELLÉS FR : la capture du jeu et les notes de patch FR officielles concordent (« Sociable », « Génie ») ; le guide officiel des codes de triche FR utilise souvent d'autres mots (Extroverti, Maussade, Rat de bibliothèque, Paresseux, Malveillant, Séducteur, Fidèle…). Quand les deux existent, le libellé des notes de patch / capture est retenu et l'autre est dans details.noms_fr_alternatifs. Pour Joyeux, Puéril, Maladroit, Introverti, Énergique, Fou de la propreté, Matérialiste et les 4 caractéristiques de tout-petit, seul le guide des codes de triche donne un libellé FR : officiel mais à confirmer en jeu (fr_source l'indique). details.incompatibles / traits_incompatibles : d'après le guide officiel des codes de triche (et notes v0.5.0 pour Accro au travail ↔ Solitaire). Trous connus : descriptions des caractéristiques de tout-petit introuvables ; une caractéristique « liée aux plantes » est citée dans les notes v0.10.2 sans être nommée (peut-être un trait obtenu via une ambition, v0.10.0) ; pas d'icônes wiki pour les caractéristiques de tout-petit.",
+  "categories": [
+    {
+      "id": "ado-et-plus",
+      "nom": "Caractéristiques (adolescent et plus)",
+      "nom_en": "Characteristics (Teenager+)",
+      "icone": "🧠"
+    },
+    {
+      "id": "enfant-en-bas-age",
+      "nom": "Caractéristiques d'un enfant en bas âge",
+      "nom_en": "Toddler Traits",
+      "icone": "🧸"
+    }
+  ],
+  "elements": [
+    {
+      "id": "litteraire",
+      "nom": "Littéraire",
+      "nom_en": "Bookworm",
+      "fr_verifie": true,
+      "categorie": "ado-et-plus",
+      "description": "Aime lire et écrire ; trouve la paix dans les moments calmes, plongé dans les livres.",
+      "icone": "📖",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/2/2f/Characteristic_bookworm.png/revision/latest?cb=20251101095518",
+      "nom_fichier_wiki": "Characteristic_bookworm.png",
+      "icone_fichier": "assets/icones/caracteristiques/Characteristic_bookworm.png",
+      "details": {
+        "incompatibles": [],
+        "traits_incompatibles": [],
+        "id_triche": "Bookworm",
+        "age_min": "adolescent",
+        "ajoutee_en": "v0.4.0",
+        "noms_fr_alternatifs": [
+          "Rat de bibliothèque (guide des codes de triche FR)"
+        ]
+      },
+      "source": "https://inzoi.fandom.com/wiki/Characteristic",
+      "fr_source": "notes de patch FR v0.4.0 (https://playinzoi.com/fr/news/9309)"
+    },
+    {
+      "id": "joyeux",
+      "nom": "Joyeux/Joyeuse",
+      "nom_en": "Cheerful",
+      "fr_verifie": true,
+      "categorie": "ado-et-plus",
+      "description": "Trouve facilement Amusement et Satisfaction dans ses activités préférées et les conversations positives.",
+      "icone": "😄",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/9/95/Characteristic_Cheerful.png/revision/latest?cb=20251101095442",
+      "nom_fichier_wiki": "Characteristic_Cheerful.png",
+      "icone_fichier": "assets/icones/caracteristiques/Characteristic_Cheerful.png",
+      "details": {
+        "incompatibles": [
+          "morose"
+        ],
+        "traits_incompatibles": [],
+        "id_triche": "Cheerful",
+        "age_min": "adolescent",
+        "ajoutee_en": "v0.4.0"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Characteristic",
+      "fr_source": "guide officiel des codes de triche FR (https://playinzoi.com/fr/guide/cheats)"
+    },
+    {
+      "id": "pueril",
+      "nom": "Puéril",
+      "nom_en": "Childish",
+      "fr_verifie": true,
+      "categorie": "ado-et-plus",
+      "description": "Aime les conversations drôles et préfère les livres et émissions pour enfants. Un adulte puéril peut utiliser les objets pour enfants (v0.9.0).",
+      "icone": "🧃",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/8/84/Characteristic_Childish.png/revision/latest?cb=20251101095533",
+      "nom_fichier_wiki": "Characteristic_Childish.png",
+      "icone_fichier": "assets/icones/caracteristiques/Characteristic_Childish.png",
+      "details": {
+        "incompatibles": [],
+        "traits_incompatibles": [],
+        "id_triche": "Childish",
+        "age_min": "adolescent",
+        "ajoutee_en": "v0.4.0"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Characteristic",
+      "fr_source": "guide officiel des codes de triche FR (https://playinzoi.com/fr/guide/cheats)",
+      "notes": "Les notes FR v0.9.0 parlent de « traits enfantins » : le libellé en jeu pourrait être « Enfantin »."
+    },
+    {
+      "id": "maladroit",
+      "nom": "Maladroit",
+      "nom_en": "Clumsy",
+      "fr_verifie": true,
+      "categorie": "ado-et-plus",
+      "description": "Risque élevé de mettre en panne les objets touchés ; progresse lentement en Cuisine et Travail manuel.",
+      "icone": "🫨",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/f/fd/Characteristic_Clumsy.png/revision/latest?cb=20251101095602",
+      "nom_fichier_wiki": "Characteristic_Clumsy.png",
+      "icone_fichier": "assets/icones/caracteristiques/Characteristic_Clumsy.png",
+      "details": {
+        "incompatibles": [],
+        "traits_incompatibles": [
+          "perfectionniste"
+        ],
+        "id_triche": "Clumsy",
+        "age_min": "adolescent",
+        "ajoutee_en": "v0.4.0"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Characteristic",
+      "fr_source": "guide officiel des codes de triche FR (https://playinzoi.com/fr/guide/cheats)"
+    },
+    {
+      "id": "morose",
+      "nom": "Morose",
+      "nom_en": "Depressed",
+      "fr_verifie": true,
+      "categorie": "ado-et-plus",
+      "description": "Devient souvent triste après des conversations négatives ou des activités détestées ; triste, il s'immerge dans l'écriture ou la création artistique.",
+      "icone": "🌧️",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/4/41/Characteristic_Depressed.png/revision/latest?cb=20251101095620",
+      "nom_fichier_wiki": "Characteristic_Depressed.png",
+      "icone_fichier": "assets/icones/caracteristiques/Characteristic_Depressed.png",
+      "details": {
+        "incompatibles": [
+          "joyeux",
+          "energique",
+          "adepte-de-condition-physique"
+        ],
+        "traits_incompatibles": [],
+        "id_triche": "Gloomy",
+        "age_min": "adolescent",
+        "ajoutee_en": "v0.4.0",
+        "noms_fr_alternatifs": [
+          "Maussade (guide des codes de triche FR)"
+        ]
+      },
+      "source": "https://inzoi.fandom.com/wiki/Characteristic",
+      "fr_source": "notes de patch FR v0.4.0 (https://playinzoi.com/fr/news/9309)"
+    },
+    {
+      "id": "en-manque-d-affection",
+      "nom": "En manque d'affection",
+      "nom_en": "Emotionally Needy",
+      "fr_verifie": true,
+      "categorie": "ado-et-plus",
+      "description": "Anxieux ou triste quand ça va mal avec la famille ou l'amoureux ; vérifie souvent le compte de son amoureux par insécurité.",
+      "icone": "🥺",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/1/14/Characteristic_Emotionally_Needy.png/revision/latest?cb=20251101095636",
+      "nom_fichier_wiki": "Characteristic_Emotionally_Needy.png",
+      "icone_fichier": "assets/icones/caracteristiques/Characteristic_Emotionally_Needy.png",
+      "details": {
+        "incompatibles": [],
+        "traits_incompatibles": [
+          "solitaire",
+          "individualiste"
+        ],
+        "id_triche": "Needy",
+        "age_min": "adolescent",
+        "ajoutee_en": "v0.4.0",
+        "noms_fr_alternatifs": [
+          "En demande d'affection (guide des codes de triche FR)"
+        ]
+      },
+      "source": "https://inzoi.fandom.com/wiki/Characteristic",
+      "fr_source": "notes de patch FR v0.4.0 (https://playinzoi.com/fr/news/9309)"
+    },
+    {
+      "id": "sociable",
+      "nom": "Sociable",
+      "nom_en": "Extroverted",
+      "fr_verifie": true,
+      "categorie": "ado-et-plus",
+      "description": "Aime discuter avec les autres et se sent mal à l'aise s'il reste trop longtemps chez lui. Progresse vite en Spectacle.",
+      "icone": "🗣️",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/7/7e/Characteristic_Extroverted.png/revision/latest?cb=20251101095659",
+      "nom_fichier_wiki": "Characteristic_Extroverted.png",
+      "icone_fichier": "assets/icones/caracteristiques/Characteristic_Extroverted.png",
+      "details": {
+        "incompatibles": [
+          "introverti"
+        ],
+        "traits_incompatibles": [
+          "solitaire"
+        ],
+        "id_triche": "Extrovert",
+        "age_min": "adolescent",
+        "ajoutee_en": "v0.4.0",
+        "noms_fr_alternatifs": [
+          "Extroverti (guide des codes de triche FR)"
+        ]
+      },
+      "source": "https://inzoi.fandom.com/wiki/Characteristic",
+      "fr_source": "capture du jeu FR (docs/references/jeu-fiche-profil.png) + notes de patch FR v0.4.0 (https://playinzoi.com/fr/news/9309)",
+      "notes": "Correspondance Sociable = Extroverted confirmée par les notes de patch FR v0.4.0 (la liste FR « Sociable, Morose, Littéraire… » suit la liste EN « Extroverted, Depressed, Bookworm… »)."
+    },
+    {
+      "id": "adepte-de-condition-physique",
+      "nom": "Adepte de condition physique",
+      "nom_en": "Fitness Enthusiast",
+      "fr_verifie": true,
+      "categorie": "ado-et-plus",
+      "description": "Peut s'entraîner partout et devient léthargique sans activité physique ; ressent de l'Excitation en entrant dans une salle de sport.",
+      "icone": "🏋️",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/0/03/Characteristic_Fitness_Enthusiast.png/revision/latest?cb=20251101095715",
+      "nom_fichier_wiki": "Characteristic_Fitness_Enthusiast.png",
+      "icone_fichier": "assets/icones/caracteristiques/Characteristic_Fitness_Enthusiast.png",
+      "details": {
+        "incompatibles": [
+          "morose",
+          "tire-au-flanc"
+        ],
+        "traits_incompatibles": [],
+        "id_triche": "Active",
+        "age_min": "adolescent",
+        "ajoutee_en": "v0.4.0",
+        "noms_fr_alternatifs": [
+          "Fou de fitness (guide des codes de triche FR)"
+        ]
+      },
+      "source": "https://inzoi.fandom.com/wiki/Characteristic",
+      "fr_source": "notes de patch FR v0.4.0 (https://playinzoi.com/fr/news/9309)"
+    },
+    {
+      "id": "genie",
+      "nom": "Génie",
+      "nom_en": "Genius",
+      "fr_verifie": true,
+      "categorie": "ado-et-plus",
+      "description": "Progresse vite en Pensée critique et Programmation ; n'échoue jamais ses réparations ; activités créatives et progression plus rapides que la moyenne.",
+      "icone": "💡",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/c/c3/Characteristic_Genius.png/revision/latest?cb=20251101095730",
+      "nom_fichier_wiki": "Characteristic_Genius.png",
+      "icone_fichier": "assets/icones/caracteristiques/Characteristic_Genius.png",
+      "details": {
+        "incompatibles": [],
+        "traits_incompatibles": [],
+        "id_triche": "Genius",
+        "age_min": "adolescent",
+        "ajoutee_en": "v0.4.0"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Characteristic",
+      "fr_source": "capture du jeu FR (docs/references/jeu-fiche-profil.png) + guide des codes de triche FR"
+    },
+    {
+      "id": "introverti",
+      "nom": "Introverti",
+      "nom_en": "Introverted",
+      "fr_verifie": true,
+      "categorie": "ado-et-plus",
+      "description": "N'apprécie pas les conversations et se sent mal à l'aise avec les inconnus.",
+      "icone": "🙈",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/c/cf/Characteristic_Introverted.png/revision/latest?cb=20251101095743",
+      "nom_fichier_wiki": "Characteristic_Introverted.png",
+      "icone_fichier": "assets/icones/caracteristiques/Characteristic_Introverted.png",
+      "details": {
+        "incompatibles": [
+          "sociable",
+          "energique",
+          "volage"
+        ],
+        "traits_incompatibles": [],
+        "id_triche": "Introvert",
+        "age_min": "adolescent",
+        "ajoutee_en": "v0.4.0"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Characteristic",
+      "fr_source": "guide officiel des codes de triche FR (https://playinzoi.com/fr/guide/cheats)"
+    },
+    {
+      "id": "energique",
+      "nom": "Énergique",
+      "nom_en": "Lively",
+      "fr_verifie": true,
+      "categorie": "ado-et-plus",
+      "description": "Aime écouter de la musique, chanter, danser, jouer dans la rue et regarder des émissions musicales ; ressent de l'Excitation en entrant dans un club.",
+      "icone": "🎤",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/b/bb/Characteristic_Lively.png/revision/latest?cb=20251101095809",
+      "nom_fichier_wiki": "Characteristic_Lively.png",
+      "icone_fichier": "assets/icones/caracteristiques/Characteristic_Lively.png",
+      "details": {
+        "incompatibles": [
+          "morose",
+          "introverti"
+        ],
+        "traits_incompatibles": [],
+        "id_triche": "Energetic",
+        "age_min": "adolescent",
+        "ajoutee_en": "v0.4.0"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Characteristic",
+      "fr_source": "guide officiel des codes de triche FR (https://playinzoi.com/fr/guide/cheats)"
+    },
+    {
+      "id": "fou-de-la-proprete",
+      "nom": "Fou de la propreté",
+      "nom_en": "Neat Freak",
+      "fr_verifie": true,
+      "categorie": "ado-et-plus",
+      "description": "Nettoie et se lave souvent ; agacé quand ce n'est pas propre, satisfait quand ça l'est.",
+      "icone": "🧽",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/d/d1/Characteristic_Neat_Freak.png/revision/latest?cb=20251101095851",
+      "nom_fichier_wiki": "Characteristic_Neat_Freak.png",
+      "icone_fichier": "assets/icones/caracteristiques/Characteristic_Neat_Freak.png",
+      "details": {
+        "incompatibles": [
+          "tire-au-flanc"
+        ],
+        "traits_incompatibles": [],
+        "id_triche": "CleanFreak",
+        "age_min": "adolescent",
+        "ajoutee_en": "v0.4.0"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Characteristic",
+      "fr_source": "guide officiel des codes de triche FR (https://playinzoi.com/fr/guide/cheats)"
+    },
+    {
+      "id": "nuisible",
+      "nom": "Nuisible",
+      "nom_en": "Malicious",
+      "fr_verifie": true,
+      "categorie": "ado-et-plus",
+      "description": "Ses actions mettent souvent les autres mal à l'aise ; s'amuse dans le conflit et aime parfois semer la zizanie exprès. Débloque les interactions criminelles (v0.5.0).",
+      "icone": "😈",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/2/23/Characteristic_Malicious.png/revision/latest?cb=20251101095823",
+      "nom_fichier_wiki": "Characteristic_Malicious.png",
+      "icone_fichier": "assets/icones/caracteristiques/Characteristic_Malicious.png",
+      "details": {
+        "incompatibles": [],
+        "traits_incompatibles": [
+          "innovateur",
+          "pacifiste"
+        ],
+        "id_triche": "Mean",
+        "age_min": "adolescent",
+        "ajoutee_en": "v0.4.0",
+        "noms_fr_alternatifs": [
+          "Malveillant (guide des codes de triche FR)"
+        ]
+      },
+      "source": "https://inzoi.fandom.com/wiki/Characteristic",
+      "fr_source": "notes de patch FR v0.5.0 (https://playinzoi.com/fr/news/9533) (« le trait Nuisible »)"
+    },
+    {
+      "id": "materialiste",
+      "nom": "Matérialiste",
+      "nom_en": "Materialistic",
+      "fr_verifie": true,
+      "categorie": "ado-et-plus",
+      "description": "S'amuse en achetant des vêtements ou des meubles neufs ; soucieux de son apparence, vite agacé quand il n'est pas propre.",
+      "icone": "🛍️",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/0/07/Characteristic_Materialistic.png/revision/latest?cb=20251101095838",
+      "nom_fichier_wiki": "Characteristic_Materialistic.png",
+      "icone_fichier": "assets/icones/caracteristiques/Characteristic_Materialistic.png",
+      "details": {
+        "incompatibles": [],
+        "traits_incompatibles": [
+          "innovateur",
+          "idealiste"
+        ],
+        "id_triche": "Snob",
+        "age_min": "adolescent",
+        "ajoutee_en": "v0.4.0"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Characteristic",
+      "fr_source": "guide officiel des codes de triche FR (https://playinzoi.com/fr/guide/cheats)"
+    },
+    {
+      "id": "tire-au-flanc",
+      "nom": "Tire-au-flanc",
+      "nom_en": "Slacker",
+      "fr_verifie": true,
+      "categorie": "ado-et-plus",
+      "description": "Ne range pas toujours assiettes et livres, trouve le sport et le bain pénibles ; se repose et fait souvent la sieste, sa jauge de sommeil baisse vite.",
+      "icone": "🛋️",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/5/53/Characteristic_Slacker.png/revision/latest?cb=20251101095908",
+      "nom_fichier_wiki": "Characteristic_Slacker.png",
+      "icone_fichier": "assets/icones/caracteristiques/Characteristic_Slacker.png",
+      "details": {
+        "incompatibles": [
+          "adepte-de-condition-physique",
+          "fou-de-la-proprete",
+          "accro-au-travail"
+        ],
+        "traits_incompatibles": [
+          "perfectionniste",
+          "ambitieux"
+        ],
+        "id_triche": "Lazy",
+        "age_min": "adolescent",
+        "ajoutee_en": "v0.4.0",
+        "noms_fr_alternatifs": [
+          "Paresseux (guide des codes de triche FR)"
+        ]
+      },
+      "source": "https://inzoi.fandom.com/wiki/Characteristic",
+      "fr_source": "notes de patch FR v0.4.0 (https://playinzoi.com/fr/news/9309) + notes de patch FR v0.5.0 (https://playinzoi.com/fr/news/9533)"
+    },
+    {
+      "id": "accro-au-travail",
+      "nom": "Accro au travail",
+      "nom_en": "Workaholic",
+      "fr_verifie": true,
+      "categorie": "ado-et-plus",
+      "description": "Travailleur assidu, mal à l'aise sans emploi ni entreprise ; travaille encore plus dur dans une entreprise.",
+      "icone": "💼",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/9/96/Characteristic_Workaholic.png/revision/latest?cb=20251230113821",
+      "nom_fichier_wiki": "Characteristic_Workaholic.png",
+      "icone_fichier": "assets/icones/caracteristiques/Characteristic_Workaholic.png",
+      "details": {
+        "incompatibles": [
+          "tire-au-flanc"
+        ],
+        "traits_incompatibles": [
+          "solitaire"
+        ],
+        "id_triche": "Workaholic",
+        "age_min": "adolescent",
+        "ajoutee_en": "v0.5.0"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Characteristic",
+      "fr_source": "notes de patch FR v0.5.0 (https://playinzoi.com/fr/news/9533) + guide des codes de triche FR"
+    },
+    {
+      "id": "volage",
+      "nom": "Volage",
+      "nom_en": "Wandering Heart",
+      "fr_verifie": true,
+      "categorie": "ado-et-plus",
+      "description": "Aime les romances légères avec plusieurs personnes ; tente souvent des conversations romantiques même en couple.",
+      "icone": "💋",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/6/60/Characteristic_Flirt.png/revision/latest?cb=20260619182658",
+      "nom_fichier_wiki": "Characteristic_Flirt.png",
+      "icone_fichier": "assets/icones/caracteristiques/Characteristic_Flirt.png",
+      "details": {
+        "incompatibles": [
+          "coeur-fidele",
+          "introverti"
+        ],
+        "traits_incompatibles": [
+          "solitaire",
+          "prudent",
+          "pacifiste"
+        ],
+        "id_triche": "Flirt",
+        "age_min": "adolescent",
+        "ajoutee_en": "v0.9.0",
+        "noms_fr_alternatifs": [
+          "Séducteur (guide des codes de triche FR)"
+        ]
+      },
+      "source": "https://inzoi.fandom.com/wiki/Characteristic",
+      "fr_source": "notes de patch FR v0.9.0 (https://playinzoi.com/fr/news/10165) (« Les traits volage et cœur fidèle »)",
+      "notes": "Noms EN variables : « Wandering Heart » (wiki), « Flirt » (guide des codes de triche EN), « Philandering » (notes de patch EN v0.9.0)."
+    },
+    {
+      "id": "coeur-fidele",
+      "nom": "Cœur fidèle",
+      "nom_en": "Devoted",
+      "fr_verifie": true,
+      "categorie": "ado-et-plus",
+      "description": "Réserve son affection à une seule personne : en couple, il évite les conversations romantiques avec les autres.",
+      "icone": "💍",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/5/53/Characteristic_Devoted.png/revision/latest?cb=20260619182547",
+      "nom_fichier_wiki": "Characteristic_Devoted.png",
+      "icone_fichier": "assets/icones/caracteristiques/Characteristic_Devoted.png",
+      "details": {
+        "incompatibles": [
+          "volage"
+        ],
+        "traits_incompatibles": [],
+        "id_triche": "Faithful",
+        "age_min": "adolescent",
+        "ajoutee_en": "v0.9.0",
+        "noms_fr_alternatifs": [
+          "Fidèle (guide des codes de triche FR)"
+        ]
+      },
+      "source": "https://inzoi.fandom.com/wiki/Characteristic",
+      "fr_source": "notes de patch FR v0.9.0 (https://playinzoi.com/fr/news/10165) (« Les traits volage et cœur fidèle »)",
+      "notes": "Noms EN variables : « Devoted » (wiki, guide des codes de triche EN), « Single-Hearted » (notes de patch EN v0.9.0)."
+    },
+    {
+      "id": "fauteur-de-troubles",
+      "nom": "Fauteur de troubles",
+      "nom_en": "Troublemaker",
+      "fr_verifie": true,
+      "categorie": "enfant-en-bas-age",
+      "description": "Caractéristique de tout-petit (comportement turbulent).",
+      "icone": "🧨",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "incompatibles": [],
+        "traits_incompatibles": [],
+        "id_triche": "Baby_Troublemaker",
+        "age_min": "enfant-en-bas-age",
+        "ajoutee_en": "v0.9.0"
+      },
+      "source": "https://playinzoi.com/fr/guide/cheats",
+      "fr_source": "guide officiel des codes de triche FR (https://playinzoi.com/fr/guide/cheats)",
+      "notes": "Description non trouvée (proposée d'après le nom). Les valeurs développées bébé peuvent faire hériter de traits adaptés (v0.9.0)."
+    },
+    {
+      "id": "tout-doux",
+      "nom": "Tout doux",
+      "nom_en": "Softie",
+      "fr_verifie": true,
+      "categorie": "enfant-en-bas-age",
+      "description": "Caractéristique de tout-petit (tempérament doux).",
+      "icone": "🧸",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "incompatibles": [
+          "ronchon"
+        ],
+        "traits_incompatibles": [],
+        "id_triche": "Baby_Innocent",
+        "age_min": "enfant-en-bas-age",
+        "ajoutee_en": "v0.9.0"
+      },
+      "source": "https://playinzoi.com/fr/guide/cheats",
+      "fr_source": "guide officiel des codes de triche FR (https://playinzoi.com/fr/guide/cheats)",
+      "notes": "Description non trouvée (proposée d'après le nom)."
+    },
+    {
+      "id": "petit-chou",
+      "nom": "Petit chou",
+      "nom_en": "Cutie",
+      "fr_verifie": true,
+      "categorie": "enfant-en-bas-age",
+      "description": "Caractéristique de tout-petit (adorable).",
+      "icone": "🥰",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "incompatibles": [],
+        "traits_incompatibles": [],
+        "id_triche": "Baby_Cuty",
+        "age_min": "enfant-en-bas-age",
+        "ajoutee_en": "v0.9.0"
+      },
+      "source": "https://playinzoi.com/fr/guide/cheats",
+      "fr_source": "guide officiel des codes de triche FR (https://playinzoi.com/fr/guide/cheats)",
+      "notes": "Description non trouvée (proposée d'après le nom)."
+    },
+    {
+      "id": "ronchon",
+      "nom": "Ronchon",
+      "nom_en": "Prickly One",
+      "fr_verifie": true,
+      "categorie": "enfant-en-bas-age",
+      "description": "Caractéristique de tout-petit (tempérament grognon).",
+      "icone": "😤",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "incompatibles": [
+          "tout-doux"
+        ],
+        "traits_incompatibles": [],
+        "id_triche": "Baby_Feisty",
+        "age_min": "enfant-en-bas-age",
+        "ajoutee_en": "v0.9.0"
+      },
+      "source": "https://playinzoi.com/fr/guide/cheats",
+      "fr_source": "guide officiel des codes de triche FR (https://playinzoi.com/fr/guide/cheats)",
+      "notes": "Description non trouvée (proposée d'après le nom)."
+    }
+  ]
+}

@@ -1,0 +1,575 @@
+{
+  "referentiel": "traits",
+  "titre": "Traits de caractère",
+  "maj": "2026-10-23",
+  "version_jeu": "v0.11.x (patch v0.11.1 du 20/10/2026)",
+  "sources": [
+    "https://inzoi.fandom.com/wiki/Trait",
+    "https://inzoi.fandom.com/wiki/Trait_-_v0.3.0",
+    "https://playinzoi.com/fr/guide/cheats",
+    "https://playinzoi.com/en/guide/cheats",
+    "https://playinzoi.com/fr/news/9309",
+    "https://playinzoi.com/fr/news/9533",
+    "docs/references/jeu-fiche-profil.png"
+  ],
+  "notes": "18 traits actuels (après la refonte v0.4.0 d'octobre 2025 : Entertainer → Trouble-fête, Volunteer → Solitaire, Collaborator → Indocile ; renommages Social Activist → Innovator, Dreamer → Idealist, Mediator → Pacifist, Scholar → Intellectual). CATÉGORIES : le brief parlait de 6 catégories, mais toutes les sources trouvées en donnent 9 (modèle de l'Ennéagramme) ; depuis v0.4.0 elles ne contiennent plus forcément 2 traits chacune (1 à 3) d'après le wiki fandom, ce que confirme la capture EN de Créer un Zoi (« Cautious and Secretive / Recluse »). Les libellés FR des catégories ne sont dans aucune source FR : traductions proposées (fr_verifie false). Anciennes catégories FR de l'accès anticipé vues dans des guides : « Franc et audacieux », « Compétent et ambitieux », « Gentil et généreux ». LIBELLÉS FR : seule « Adepte des mondanités » vient d'une capture. « Solitaire », « Trouble-fête », « Indocile » viennent des notes de patch FR officielles. Les autres viennent du guide officiel des codes de triche FR (playinzoi.com/fr/guide/cheats), qui DIFFÈRE du jeu pour au moins Socialite (guide : « Meneur/Meneuse » ; jeu : « Adepte des mondanités ») et pour plusieurs caractéristiques : ces libellés sont officiels mais à confirmer en jeu (voir fr_source et noms_fr_alternatifs). Le guide donne des formes doubles masculin/féminin (« Explorateur/Exploratrice ») reprises telles quelles. details.valeurs : les 4 valeurs de départ ne sont documentées que pour la version v0.3 (fiche « Trait - v0.3.0 » du wiki) ; reprises pour les 15 traits conservés, inconnues pour Solitaire, Indocile et Trouble-fête. details.caracteristiques : vide volontairement — dans le jeu, les 2 caractéristiques (ex. « Sociable », « Génie ») sont choisies pour chaque Zoi indépendamment du trait ; le jeu définit seulement des incompatibilités trait ↔ caractéristique (details.caracteristiques_incompatibles, d'après le guide des codes de triche). details.id_triche = ID à utiliser avec le code setTrait. Depuis v0.9.0, un trait peut changer si le Zoi agit souvent à son encontre ; depuis v0.10.0, de nouveaux traits peuvent être obtenus en accomplissant des ambitions (liste non trouvée). Icônes : le wiki n'a pas d'icône aux nouveaux noms ; les fichiers des anciens traits correspondants sont utilisés (même emplacement de jeu).",
+  "categories": [
+    {
+      "id": "meticuleux-et-rigoureux",
+      "nom": "Méticuleux et rigoureux",
+      "nom_en": "Meticulous and Thorough",
+      "icone": "📐",
+      "fr_verifie": false
+    },
+    {
+      "id": "doux-et-juste",
+      "nom": "Doux et juste",
+      "nom_en": "Gentle and Just",
+      "icone": "⚖️",
+      "fr_verifie": false
+    },
+    {
+      "id": "prudent-et-secret",
+      "nom": "Prudent et secret",
+      "nom_en": "Cautious and Secretive",
+      "icone": "🤫",
+      "fr_verifie": false
+    },
+    {
+      "id": "gentil-et-charmant",
+      "nom": "Gentil et charmant",
+      "nom_en": "Kind and Charming",
+      "icone": "💖",
+      "fr_verifie": false
+    },
+    {
+      "id": "unique-et-creatif",
+      "nom": "Unique et créatif",
+      "nom_en": "Unique and Creative",
+      "icone": "🎨",
+      "fr_verifie": false
+    },
+    {
+      "id": "curieux-et-logique",
+      "nom": "Curieux et logique",
+      "nom_en": "Curious and Logical",
+      "icone": "🔍",
+      "fr_verifie": false
+    },
+    {
+      "id": "espiegle-et-cruel",
+      "nom": "Espiègle et cruel",
+      "nom_en": "Playful and Cruel",
+      "icone": "😈",
+      "fr_verifie": false
+    },
+    {
+      "id": "audacieux-et-desinhibe",
+      "nom": "Audacieux et désinhibé",
+      "nom_en": "Bold and Uninhibited",
+      "icone": "🧗",
+      "fr_verifie": false
+    },
+    {
+      "id": "affirme-et-autoritaire",
+      "nom": "Affirmé et autoritaire",
+      "nom_en": "Assertive and Authoritative",
+      "icone": "📣",
+      "fr_verifie": false
+    }
+  ],
+  "elements": [
+    {
+      "id": "perfectionniste",
+      "nom": "Perfectionniste",
+      "nom_en": "Perfectionist",
+      "fr_verifie": true,
+      "categorie": "meticuleux-et-rigoureux",
+      "description": "Brille quand tout est fait à la perfection. Attaché à l'ordre, méticuleux, trouve réconfort et stabilité dans la rigueur.",
+      "icone": "📏",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/d/d6/Trait_Perfectionist.png/revision/latest?cb=20250329210949",
+      "nom_fichier_wiki": "Trait_Perfectionist.png",
+      "icone_fichier": "assets/icones/traits/Trait_Perfectionist.png",
+      "details": {
+        "valeurs": [
+          "coexistence",
+          "respect-des-regles",
+          "realisation",
+          "tradition"
+        ],
+        "caracteristiques": [],
+        "caracteristiques_incompatibles": [
+          "maladroit",
+          "tire-au-flanc"
+        ],
+        "id_triche": "Perfectionist"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Trait",
+      "fr_source": "guide officiel des codes de triche FR (https://playinzoi.com/fr/guide/cheats)",
+      "notes": "Valeurs de départ reprises de la fiche v0.3 (avant la refonte v0.4.0) : à confirmer en jeu."
+    },
+    {
+      "id": "innovateur",
+      "nom": "Innovateur",
+      "nom_en": "Innovator",
+      "fr_verifie": true,
+      "categorie": "doux-et-juste",
+      "description": "Brille quand il mène le changement avec conviction. Attaché à ce qui est juste, ne plie jamais face à l'injustice, aime suivre l'actualité du monde.",
+      "icone": "📢",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/f/f1/Trait_Social_Activist.png/revision/latest?cb=20250329211033",
+      "nom_fichier_wiki": "Trait_Social_Activist.png",
+      "icone_fichier": "assets/icones/traits/Trait_Social_Activist.png",
+      "details": {
+        "valeurs": [
+          "coexistence",
+          "defi",
+          "autorite",
+          "amour"
+        ],
+        "caracteristiques": [],
+        "caracteristiques_incompatibles": [
+          "nuisible",
+          "materialiste"
+        ],
+        "id_triche": "Activist",
+        "nom_en_precedent": "Social Activist"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Trait",
+      "fr_source": "guide officiel des codes de triche FR (https://playinzoi.com/fr/guide/cheats)",
+      "notes": "Ancien « Social Activist » (même ID de triche « Activist », même icône sur le wiki). Valeurs de départ reprises de la fiche v0.3 (avant la refonte v0.4.0) : à confirmer en jeu."
+    },
+    {
+      "id": "solitaire",
+      "nom": "Solitaire",
+      "nom_en": "Recluse",
+      "fr_verifie": true,
+      "categorie": "prudent-et-secret",
+      "description": "Plus serein quand il est seul. Chérit le calme et la paix intérieure, préfère passer du temps avec lui-même qu'avec les autres.",
+      "icone": "🍀",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/6/6b/Trait_Volunteer.png/revision/latest?cb=20250329210920",
+      "nom_fichier_wiki": "Trait_Volunteer.png",
+      "icone_fichier": "assets/icones/traits/Trait_Volunteer.png",
+      "details": {
+        "valeurs": [],
+        "caracteristiques": [],
+        "caracteristiques_incompatibles": [
+          "en-manque-d-affection",
+          "sociable",
+          "accro-au-travail",
+          "volage"
+        ],
+        "id_triche": "Helper"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Trait",
+      "fr_source": "notes de patch FR v0.4.0 (https://playinzoi.com/fr/news/9309) + notes v0.5.0 + guide officiel des codes de triche FR (https://playinzoi.com/fr/guide/cheats)",
+      "notes": "Ajouté en v0.4.0 ; remplace « Volunteer » (FR : « Volontaire ») dans les sauvegardes et reprend son ID de triche « Helper ». Le wiki réutilise l'icône de Volunteer. Valeurs de départ inconnues."
+    },
+    {
+      "id": "charmeur",
+      "nom": "Charmeur",
+      "nom_en": "Charmer",
+      "fr_verifie": true,
+      "categorie": "gentil-et-charmant",
+      "description": "Brille quand il exprime une affection sincère. Entretient ses relations avec gentillesse et dévouement, aime profondément et exprime pleinement ses émotions.",
+      "icone": "💘",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/1/19/Trait_Charmer.png/revision/latest?cb=20250329210839",
+      "nom_fichier_wiki": "Trait_Charmer.png",
+      "icone_fichier": "assets/icones/traits/Trait_Charmer.png",
+      "details": {
+        "valeurs": [
+          "defi",
+          "realisation",
+          "autorite",
+          "amour"
+        ],
+        "caracteristiques": [],
+        "caracteristiques_incompatibles": [],
+        "id_triche": "Romantic"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Trait",
+      "fr_source": "guide officiel des codes de triche FR (https://playinzoi.com/fr/guide/cheats)",
+      "notes": "Certains guides FR de l'accès anticipé parlaient de « Magnétique ». Valeurs de départ reprises de la fiche v0.3 (avant la refonte v0.4.0) : à confirmer en jeu."
+    },
+    {
+      "id": "adepte-des-mondanites",
+      "nom": "Adepte des mondanités",
+      "nom_en": "Socialite",
+      "fr_verifie": true,
+      "categorie": "gentil-et-charmant",
+      "description": "Brille quand tous les regards sont tournés vers lui. Extraverti, se fait des amis facilement et devient le cœur de chaque rassemblement.",
+      "icone": "🥂",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/b/b1/Trait_Socialite.png/revision/latest?cb=20250329204912",
+      "nom_fichier_wiki": "Trait_Socialite.png",
+      "icone_fichier": "assets/icones/traits/Trait_Socialite.png",
+      "details": {
+        "valeurs": [
+          "realisation",
+          "plaisir",
+          "autorite",
+          "amour"
+        ],
+        "caracteristiques": [],
+        "caracteristiques_incompatibles": [],
+        "id_triche": "Popular",
+        "noms_fr_alternatifs": [
+          "Meneur/Meneuse (guide des codes de triche FR)",
+          "Sociable (guides FR de l'accès anticipé, avant v0.4.0)"
+        ]
+      },
+      "source": "https://inzoi.fandom.com/wiki/Trait",
+      "fr_source": "capture du jeu FR (docs/references/jeu-fiche-profil.png)",
+      "notes": "Le guide officiel des codes de triche FR dit « Meneur/Meneuse », mais le jeu affiche « Adepte des mondanités ». Valeurs de départ reprises de la fiche v0.3 (avant la refonte v0.4.0) : à confirmer en jeu."
+    },
+    {
+      "id": "ambitieux",
+      "nom": "Ambitieux/Ambitieuse",
+      "nom_en": "Go-Getter",
+      "fr_verifie": true,
+      "categorie": "meticuleux-et-rigoureux",
+      "description": "Brille quand il poursuit ses objectifs. Attaché au succès et à la reconnaissance, passionné par le dépassement de soi, se lance sans cesse des défis.",
+      "icone": "🏆",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/f/f2/Trait_Go-Getter.png/revision/latest?cb=20250329204605",
+      "nom_fichier_wiki": "Trait_Go-Getter.png",
+      "icone_fichier": "assets/icones/traits/Trait_Go-Getter.png",
+      "details": {
+        "valeurs": [
+          "realisation",
+          "autonomie",
+          "tradition",
+          "autorite"
+        ],
+        "caracteristiques": [],
+        "caracteristiques_incompatibles": [
+          "tire-au-flanc"
+        ],
+        "id_triche": "Achiever"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Trait",
+      "fr_source": "guide officiel des codes de triche FR (https://playinzoi.com/fr/guide/cheats)",
+      "notes": "Guides FR de l'accès anticipé : « Dynamique » ou « Opportuniste ». Valeurs de départ reprises de la fiche v0.3 (avant la refonte v0.4.0) : à confirmer en jeu."
+    },
+    {
+      "id": "artiste",
+      "nom": "Artiste",
+      "nom_en": "Visionary",
+      "fr_verifie": true,
+      "categorie": "unique-et-creatif",
+      "description": "Brille quand il exprime ses émotions par la création : art, musique ou écriture. Construit son propre univers avec une voix et un style uniques.",
+      "icone": "🖌️",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/c/cd/Trait_Visionary.png/revision/latest?cb=20250329211236",
+      "nom_fichier_wiki": "Trait_Visionary.png",
+      "icone_fichier": "assets/icones/traits/Trait_Visionary.png",
+      "details": {
+        "valeurs": [
+          "coexistence",
+          "realisation",
+          "autonomie",
+          "amour"
+        ],
+        "caracteristiques": [],
+        "caracteristiques_incompatibles": [],
+        "id_triche": "Artist"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Trait",
+      "fr_source": "guide officiel des codes de triche FR (https://playinzoi.com/fr/guide/cheats)",
+      "notes": "Libellé FR du guide des codes de triche (ID « Artist ») ; l'interface pourrait dire « Visionnaire ». Valeurs de départ reprises de la fiche v0.3 (avant la refonte v0.4.0) : à confirmer en jeu."
+    },
+    {
+      "id": "individualiste",
+      "nom": "Individualiste",
+      "nom_en": "Individualist",
+      "fr_verifie": true,
+      "categorie": "prudent-et-secret",
+      "description": "Brille quand il suit sa propre voie. Apprécie la solitude, se concentre sur sa croissance intérieure, indépendant et libre d'esprit.",
+      "icone": "🦋",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/8/89/Trait_Individualist.png/revision/latest?cb=20250329211138",
+      "nom_fichier_wiki": "Trait_Individualist.png",
+      "icone_fichier": "assets/icones/traits/Trait_Individualist.png",
+      "details": {
+        "valeurs": [
+          "defi",
+          "realisation",
+          "autonomie",
+          "plaisir"
+        ],
+        "caracteristiques": [],
+        "caracteristiques_incompatibles": [
+          "en-manque-d-affection"
+        ],
+        "id_triche": "Independent"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Trait",
+      "fr_source": "guide officiel des codes de triche FR (https://playinzoi.com/fr/guide/cheats)",
+      "notes": "Valeurs de départ reprises de la fiche v0.3 (avant la refonte v0.4.0) : à confirmer en jeu."
+    },
+    {
+      "id": "explorateur",
+      "nom": "Explorateur/Exploratrice",
+      "nom_en": "Explorer",
+      "fr_verifie": true,
+      "categorie": "curieux-et-logique",
+      "description": "Brille quand il cherche la vérité. Fasciné par le fonctionnement des choses, aime observer et explorer en permanence.",
+      "icone": "🧭",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/c/ca/Trait_Explorer.png/revision/latest?cb=20250329211312",
+      "nom_fichier_wiki": "Trait_Explorer.png",
+      "icone_fichier": "assets/icones/traits/Trait_Explorer.png",
+      "details": {
+        "valeurs": [
+          "coexistence",
+          "securite",
+          "defi",
+          "autonomie"
+        ],
+        "caracteristiques": [],
+        "caracteristiques_incompatibles": [],
+        "id_triche": "Observer"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Trait",
+      "fr_source": "guide officiel des codes de triche FR (https://playinzoi.com/fr/guide/cheats)",
+      "notes": "Valeurs de départ reprises de la fiche v0.3 (avant la refonte v0.4.0) : à confirmer en jeu."
+    },
+    {
+      "id": "intellectuel",
+      "nom": "Intellectuel/Intellectuelle",
+      "nom_en": "Intellectual",
+      "fr_verifie": true,
+      "categorie": "curieux-et-logique",
+      "description": "Brille quand il perfectionne ses connaissances et ses compétences. Préfère parler de savoir et d'information, aime lire et comprendre comment le monde fonctionne.",
+      "icone": "📚",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/d/d1/Trait_Scholar.png/revision/latest?cb=20250329211334",
+      "nom_fichier_wiki": "Trait_Scholar.png",
+      "icone_fichier": "assets/icones/traits/Trait_Scholar.png",
+      "details": {
+        "valeurs": [
+          "coexistence",
+          "securite",
+          "defi",
+          "respect-des-regles"
+        ],
+        "caracteristiques": [],
+        "caracteristiques_incompatibles": [],
+        "id_triche": "Intellect",
+        "nom_en_precedent": "Scholar (parfois « Expert »)"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Trait",
+      "fr_source": "guide officiel des codes de triche FR (https://playinzoi.com/fr/guide/cheats)",
+      "notes": "Ancien « Scholar » (icône Trait_Scholar sur le wiki). Guides FR de l'accès anticipé : « Spécialiste ». Valeurs de départ reprises de la fiche v0.3 (avant la refonte v0.4.0) : à confirmer en jeu."
+    },
+    {
+      "id": "prudent",
+      "nom": "Prudent/Prudente",
+      "nom_en": "Sentinel",
+      "fr_verifie": true,
+      "categorie": "prudent-et-secret",
+      "description": "Brille quand il est prudent et réfléchi. Préfère une routine calme et des relations stables, tient beaucoup à sa famille.",
+      "icone": "🛡️",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/a/ae/Trait_Sentinel.png/revision/latest?cb=20250329210400",
+      "nom_fichier_wiki": "Trait_Sentinel.png",
+      "icone_fichier": "assets/icones/traits/Trait_Sentinel.png",
+      "details": {
+        "valeurs": [
+          "securite",
+          "defi",
+          "respect-des-regles",
+          "tradition"
+        ],
+        "caracteristiques": [],
+        "caracteristiques_incompatibles": [
+          "volage"
+        ],
+        "id_triche": "Risk-averse",
+        "nom_en_precedent": "Safety-Conscious (selon certaines sources)"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Trait",
+      "fr_source": "guide officiel des codes de triche FR (https://playinzoi.com/fr/guide/cheats)",
+      "notes": "Guides FR de l'accès anticipé : « Sentinelle ». Valeurs de départ reprises de la fiche v0.3 (avant la refonte v0.4.0) : à confirmer en jeu."
+    },
+    {
+      "id": "indocile",
+      "nom": "Indocile",
+      "nom_en": "Rulebreaker",
+      "fr_verifie": true,
+      "categorie": "espiegle-et-cruel",
+      "description": "Brille quand il sème le chaos dans la société. Défie les règles et la morale, rejette les structures et préfère suivre sa propre voie. Débloque les interactions criminelles (compétence Crime niv. 0).",
+      "icone": "🏴‍☠️",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/2/2e/Trait_Collaborator.png/revision/latest?cb=20250329205918",
+      "nom_fichier_wiki": "Trait_Collaborator.png",
+      "icone_fichier": "assets/icones/traits/Trait_Collaborator.png",
+      "details": {
+        "valeurs": [],
+        "caracteristiques": [],
+        "caracteristiques_incompatibles": [],
+        "id_triche": "Cooperator",
+        "nom_en_precedent": "Outlaw (v0.4.0, selon le wiki)",
+        "noms_fr_alternatifs": [
+          "Rebelle (notes de patch FR v0.5.0 : « Trait de rebelle »)",
+          "Hors-la-loi (guide des codes de triche FR)"
+        ]
+      },
+      "source": "https://inzoi.fandom.com/wiki/Trait",
+      "fr_source": "notes de patch FR v0.4.0 (https://playinzoi.com/fr/news/9309)",
+      "notes": "Ajouté en v0.4.0 ; remplace « Collaborator » (FR : « Charitable ») et reprend son ID « Cooperator ». Trois libellés FR officiels différents existent : à vérifier en jeu. Valeurs de départ inconnues."
+    },
+    {
+      "id": "trouble-fete",
+      "nom": "Trouble-fête",
+      "nom_en": "Troublemaker",
+      "fr_verifie": true,
+      "categorie": "espiegle-et-cruel",
+      "description": "Brille par ses farces loufoques et espiègles. Charme enfantin et joueur, égaie n'importe quel lieu par sa bonne humeur.",
+      "icone": "🃏",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/2/2e/Trait_Entertainer.png/revision/latest?cb=20250329210735",
+      "nom_fichier_wiki": "Trait_Entertainer.png",
+      "icone_fichier": "assets/icones/traits/Trait_Entertainer.png",
+      "details": {
+        "valeurs": [],
+        "caracteristiques": [],
+        "caracteristiques_incompatibles": [],
+        "id_triche": "Entertainer",
+        "noms_fr_alternatifs": [
+          "Agitateur/Agitatrice (guide des codes de triche FR)"
+        ]
+      },
+      "source": "https://inzoi.fandom.com/wiki/Trait",
+      "fr_source": "notes de patch FR v0.4.0 (https://playinzoi.com/fr/news/9309)",
+      "notes": "Ajouté en v0.4.0 ; remplace « Entertainer » (FR : « Drôle ») et reprend son ID. Valeurs de départ inconnues."
+    },
+    {
+      "id": "aventurier",
+      "nom": "Aventurier/Aventurière",
+      "nom_en": "Adventurer",
+      "fr_verifie": true,
+      "categorie": "audacieux-et-desinhibe",
+      "description": "Brille quand il découvre un monde nouveau. La curiosité l'emporte souvent sur la peur ; se sent vivant à travers les défis et l'aventure.",
+      "icone": "🗺️",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/e/e5/Trait_Adventurer.png/revision/latest?cb=20250329210638",
+      "nom_fichier_wiki": "Trait_Adventurer.png",
+      "icone_fichier": "assets/icones/traits/Trait_Adventurer.png",
+      "details": {
+        "valeurs": [
+          "defi",
+          "realisation",
+          "plaisir",
+          "autorite"
+        ],
+        "caracteristiques": [],
+        "caracteristiques_incompatibles": [],
+        "id_triche": "Adventurer"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Trait",
+      "fr_source": "guide officiel des codes de triche FR (https://playinzoi.com/fr/guide/cheats)",
+      "notes": "Valeurs de départ reprises de la fiche v0.3 (avant la refonte v0.4.0) : à confirmer en jeu."
+    },
+    {
+      "id": "autoritaire",
+      "nom": "Autoritaire",
+      "nom_en": "Authoritarian",
+      "fr_verifie": true,
+      "categorie": "affirme-et-autoritaire",
+      "description": "Brille quand il défend fermement ses convictions. Ne recule pas quand les choses ne vont pas dans son sens ; volonté forte, parfois intransigeant.",
+      "icone": "👑",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/1/10/Trait_Authoritarian.png/revision/latest?cb=20250329210453",
+      "nom_fichier_wiki": "Trait_Authoritarian.png",
+      "icone_fichier": "assets/icones/traits/Trait_Authoritarian.png",
+      "details": {
+        "valeurs": [
+          "realisation",
+          "autonomie",
+          "plaisir",
+          "autorite"
+        ],
+        "caracteristiques": [],
+        "caracteristiques_incompatibles": [],
+        "id_triche": "Arrogant"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Trait",
+      "fr_source": "guide officiel des codes de triche FR (https://playinzoi.com/fr/guide/cheats)",
+      "notes": "Valeurs de départ reprises de la fiche v0.3 (avant la refonte v0.4.0) : à confirmer en jeu."
+    },
+    {
+      "id": "leader",
+      "nom": "Leader",
+      "nom_en": "Leader",
+      "fr_verifie": true,
+      "categorie": "affirme-et-autoritaire",
+      "description": "Brille quand il mène un groupe. Prend les devants avec assurance et décisions claires ; très responsable et influent.",
+      "icone": "🦁",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/7/78/Trait_Leader.png/revision/latest?cb=20250329210542",
+      "nom_fichier_wiki": "Trait_Leader.png",
+      "icone_fichier": "assets/icones/traits/Trait_Leader.png",
+      "details": {
+        "valeurs": [
+          "securite",
+          "respect-des-regles",
+          "autonomie",
+          "autorite"
+        ],
+        "caracteristiques": [],
+        "caracteristiques_incompatibles": [],
+        "id_triche": "Leader"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Trait",
+      "fr_source": "guide officiel des codes de triche FR (https://playinzoi.com/fr/guide/cheats)",
+      "notes": "Valeurs de départ reprises de la fiche v0.3 (avant la refonte v0.4.0) : à confirmer en jeu."
+    },
+    {
+      "id": "pacifiste",
+      "nom": "Pacifiste",
+      "nom_en": "Pacifist",
+      "fr_verifie": true,
+      "categorie": "doux-et-juste",
+      "description": "Brille quand il évite les conflits et maintient la paix. Attaché à l'harmonie, bâtit des relations avec chaleur, aime aider les autres.",
+      "icone": "🕊️",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/7/73/Trait_Mediator.png/revision/latest?cb=20250329203820",
+      "nom_fichier_wiki": "Trait_Mediator.png",
+      "icone_fichier": "assets/icones/traits/Trait_Mediator.png",
+      "details": {
+        "valeurs": [
+          "respect-des-regles",
+          "tradition",
+          "autorite",
+          "amour"
+        ],
+        "caracteristiques": [],
+        "caracteristiques_incompatibles": [
+          "nuisible",
+          "volage"
+        ],
+        "id_triche": "Peacemaker",
+        "nom_en_precedent": "Mediator"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Trait",
+      "fr_source": "guide officiel des codes de triche FR (https://playinzoi.com/fr/guide/cheats)",
+      "notes": "Ancien « Mediator » (FR accès anticipé : « Médiateur »). Valeurs de départ reprises de la fiche v0.3 (avant la refonte v0.4.0) : à confirmer en jeu."
+    },
+    {
+      "id": "idealiste",
+      "nom": "Idéaliste",
+      "nom_en": "Idealist",
+      "fr_verifie": true,
+      "categorie": "doux-et-juste",
+      "description": "Brille quand il laisse libre cours à ses rêves et à son imagination. Aime rêvasser, puise ses idéaux en lui-même, apprécie les conversations profondes.",
+      "icone": "🌙",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/6/6e/Trait_Dreamer.png/revision/latest?cb=20250329202932",
+      "nom_fichier_wiki": "Trait_Dreamer.png",
+      "icone_fichier": "assets/icones/traits/Trait_Dreamer.png",
+      "details": {
+        "valeurs": [
+          "coexistence",
+          "securite",
+          "respect-des-regles",
+          "tradition"
+        ],
+        "caracteristiques": [],
+        "caracteristiques_incompatibles": [
+          "materialiste"
+        ],
+        "id_triche": "Dreamer",
+        "nom_en_precedent": "Dreamer"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Trait",
+      "fr_source": "guide officiel des codes de triche FR (https://playinzoi.com/fr/guide/cheats)",
+      "notes": "Ancien « Dreamer » (FR accès anticipé : « Rêveur »). Valeurs de départ reprises de la fiche v0.3 (avant la refonte v0.4.0) : à confirmer en jeu."
+    }
+  ]
+}

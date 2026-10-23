@@ -31,7 +31,7 @@
       }
     ]
   },
-  "notes": "RÈGLES (capture FR + fandom) : jusqu'à 10 préférences par Zoi (« 5/10 » sur la fiche), chacune aimée (cœur jaune) ou détestée (cœur brisé) ; les cases vides affichent « Aucune préférence ». Elles influencent la vitesse de progression des compétences et les émotions des interactions. Plus d'attribution automatique aux nouveaux Zois depuis v0.3.0 ; réglables dans Créer un Zoi depuis v0.11.0.\nCOMPLÉTUDE : 34 préférences en 7 catégories selon le wiki fandom (33 au lancement + Natation). Aucune source ne mentionne de préférences de couleurs, de styles ou de genres musicaux dans inZOI, ni d'ajout de préférences dans les notes de patch v0.4 à v0.11 (les compétences Pâtisserie, Préparation de boissons, Pêcher, Collectionner, Jeu vidéo… n'ont pas de préférence associée connue). Les préférences de mods (ZoiWorks Preferences Pack, 118 préférences) sont exclues.\nLIBELLÉS FR : 6 vérifiés (5 sur capture + « Lavage de voitures » dans les notes de patch officielles FR v0.2.0) ; les autres sont des traductions proposées. Les noms de catégories ne sont pas affichés sur la fiche Préférences de la capture : noms FR proposés.\nICÔNES : toutes les préférences ont une icône sur le wiki fandom (icone_url + nom_fichier_wiki, ex. Pref_Laundry.png) ; le fichier de Musculation est orthographié « Pref_Strenght_Training.png » sur le wiki.",
+  "notes": "RÈGLES (capture FR + fandom) : jusqu'à 10 préférences par Zoi (« 5/10 » sur la fiche), chacune aimée (cœur jaune) ou détestée (cœur brisé) ; les cases vides affichent « Aucune préférence ». Elles influencent la vitesse de progression des compétences et les émotions des interactions. Plus d'attribution automatique aux nouveaux Zois depuis v0.3.0 ; réglables dans Créer un Zoi depuis v0.11.0.\nCOMPLÉTUDE : 34 préférences en 7 catégories selon le wiki fandom (33 au lancement + Natation). Aucune source ne mentionne de préférences de couleurs, de styles ou de genres musicaux dans inZOI, ni d'ajout de préférences dans les notes de patch v0.4 à v0.11 (les compétences Pâtisserie, Préparation de boissons, Pêcher, Collectionner, Jeu vidéo… n'ont pas de préférence associée connue). Les préférences de mods (ZoiWorks Preferences Pack, 118 préférences) sont exclues.\nLIBELLÉS FR : 6 vérifiés (5 sur capture + « Lavage de voitures » dans les notes de patch officielles FR v0.2.0) ; les autres sont des traductions proposées. Les noms de catégories ne sont pas affichés sur la fiche Préférences de la capture : noms FR proposés.\nICÔNES : toutes les préférences ont une icône sur le wiki fandom (icone_url + nom_fichier_wiki, ex. Pref_Laundry.png ; copie locale dans icone_fichier, ex. assets/icones/preferences/Pref_Laundry.png) ; le fichier de Musculation est orthographié « Pref_Strenght_Training.png » sur le wiki.",
   "categories": [
     {
       "id": "activites",
@@ -102,6 +102,7 @@
       "icone": "🛁",
       "icone_url": "https://static.wikia.nocookie.net/inzoi/images/4/47/Pref_Bathing.png/revision/latest",
       "nom_fichier_wiki": "Pref_Bathing.png",
+      "icone_fichier": "assets/icones/preferences/Pref_Bathing.png",
       "details": {
         "sous_categorie": null
       },
@@ -119,6 +120,7 @@
       "icone": "🧽",
       "icone_url": "https://static.wikia.nocookie.net/inzoi/images/2/22/Pref_Cleaning.png/revision/latest",
       "nom_fichier_wiki": "Pref_Cleaning.png",
+      "icone_fichier": "assets/icones/preferences/Pref_Cleaning.png",
       "details": {
         "sous_categorie": null
       },
@@ -136,6 +138,7 @@
       "icone": "🍳",
       "icone_url": "https://static.wikia.nocookie.net/inzoi/images/1/13/Pref_Cooking.png/revision/latest",
       "nom_fichier_wiki": "Pref_Cooking.png",
+      "icone_fichier": "assets/icones/preferences/Pref_Cooking.png",
       "details": {
         "sous_categorie": null
       },
@@ -153,6 +156,7 @@
       "icone": "🧺",
       "icone_url": "https://static.wikia.nocookie.net/inzoi/images/d/d2/Pref_Laundry.png/revision/latest",
       "nom_fichier_wiki": "Pref_Laundry.png",
+      "icone_fichier": "assets/icones/preferences/Pref_Laundry.png",
       "details": {
         "sous_categorie": null
       },
@@ -170,6 +174,7 @@
       "icone": "🔧",
       "icone_url": "https://static.wikia.nocookie.net/inzoi/images/e/eb/Pref_Repair_Work.png/revision/latest",
       "nom_fichier_wiki": "Pref_Repair_Work.png",
+      "icone_fichier": "assets/icones/preferences/Pref_Repair_Work.png",
       "details": {
         "sous_categorie": null
       },
@@ -187,6 +192,7 @@
       "icone": "🚗",
       "icone_url": "https://static.wikia.nocookie.net/inzoi/images/e/e4/Pref_Washing_Cars.png/revision/latest",
       "nom_fichier_wiki": "Pref_Washing_Cars.png",
+      "icone_fichier": "assets/icones/preferences/Pref_Washing_Cars.png",
       "details": {
         "sous_categorie": null
       },
@@ -204,6 +210,7 @@
       "icone": "🏀",
       "icone_url": "https://static.wikia.nocookie.net/inzoi/images/d/db/Pref_Ball_Sports.png/revision/latest",
       "nom_fichier_wiki": "Pref_Ball_Sports.png",
+      "icone_fichier": "assets/icones/preferences/Pref_Ball_Sports.png",
       "details": {
         "sous_categorie": null
       },
@@ -221,6 +228,7 @@
       "icone": "🥊",
       "icone_url": "https://static.wikia.nocookie.net/inzoi/images/0/03/Pref_Boxing.png/revision/latest",
       "nom_fichier_wiki": "Pref_Boxing.png",
+      "icone_fichier": "assets/icones/preferences/Pref_Boxing.png",
       "details": {
         "sous_categorie": null
       },
@@ -238,6 +246,7 @@
       "icone": "🏃",
       "icone_url": "https://static.wikia.nocookie.net/inzoi/images/e/ef/Pref_Jogging.png/revision/latest",
       "nom_fichier_wiki": "Pref_Jogging.png",
+      "icone_fichier": "assets/icones/preferences/Pref_Jogging.png",
       "details": {
         "sous_categorie": null
       },
@@ -255,6 +264,7 @@
       "icone": "🏋️",
       "icone_url": "https://static.wikia.nocookie.net/inzoi/images/c/ca/Pref_Strenght_Training.png/revision/latest",
       "nom_fichier_wiki": "Pref_Strenght_Training.png",
+      "icone_fichier": "assets/icones/preferences/Pref_Strenght_Training.png",
       "details": {
         "sous_categorie": null
       },
@@ -272,6 +282,7 @@
       "icone": "🧘",
       "icone_url": "https://static.wikia.nocookie.net/inzoi/images/5/59/Pref_Yoga.png/revision/latest",
       "nom_fichier_wiki": "Pref_Yoga.png",
+      "icone_fichier": "assets/icones/preferences/Pref_Yoga.png",
       "details": {
         "sous_categorie": null
       },
@@ -289,6 +300,7 @@
       "icone": "🏊",
       "icone_url": "https://static.wikia.nocookie.net/inzoi/images/3/33/Pref_Swimming.png/revision/latest",
       "nom_fichier_wiki": "Pref_Swimming.png",
+      "icone_fichier": "assets/icones/preferences/Pref_Swimming.png",
       "details": {
         "sous_categorie": null
       },
@@ -306,6 +318,7 @@
       "icone": "🍰",
       "icone_url": "https://static.wikia.nocookie.net/inzoi/images/b/b3/Pref_Cake.png/revision/latest",
       "nom_fichier_wiki": "Pref_Cake.png",
+      "icone_fichier": "assets/icones/preferences/Pref_Cake.png",
       "details": {
         "sous_categorie": null
       },
@@ -323,6 +336,7 @@
       "icone": "🥩",
       "icone_url": "https://static.wikia.nocookie.net/inzoi/images/a/a6/Pref_Meat.png/revision/latest",
       "nom_fichier_wiki": "Pref_Meat.png",
+      "icone_fichier": "assets/icones/preferences/Pref_Meat.png",
       "details": {
         "sous_categorie": null
       },
@@ -340,6 +354,7 @@
       "icone": "☕",
       "icone_url": "https://static.wikia.nocookie.net/inzoi/images/a/a2/Pref_Coffee.png/revision/latest",
       "nom_fichier_wiki": "Pref_Coffee.png",
+      "icone_fichier": "assets/icones/preferences/Pref_Coffee.png",
       "details": {
         "sous_categorie": null
       },
@@ -357,6 +372,7 @@
       "icone": "🍔",
       "icone_url": "https://static.wikia.nocookie.net/inzoi/images/6/67/Pref_Fast_Food.png/revision/latest",
       "nom_fichier_wiki": "Pref_Fast_Food.png",
+      "icone_fichier": "assets/icones/preferences/Pref_Fast_Food.png",
       "details": {
         "sous_categorie": null
       },
@@ -374,6 +390,7 @@
       "icone": "🌶️",
       "icone_url": "https://static.wikia.nocookie.net/inzoi/images/2/29/Pref_Spicy_Food.png/revision/latest",
       "nom_fichier_wiki": "Pref_Spicy_Food.png",
+      "icone_fichier": "assets/icones/preferences/Pref_Spicy_Food.png",
       "details": {
         "sous_categorie": null
       },
@@ -391,6 +408,7 @@
       "icone": "🍢",
       "icone_url": "https://static.wikia.nocookie.net/inzoi/images/a/a4/Pref_Street_Food.png/revision/latest",
       "nom_fichier_wiki": "Pref_Street_Food.png",
+      "icone_fichier": "assets/icones/preferences/Pref_Street_Food.png",
       "details": {
         "sous_categorie": null
       },
@@ -408,6 +426,7 @@
       "icone": "🥦",
       "icone_url": "https://static.wikia.nocookie.net/inzoi/images/2/2b/Pref_Vegetables.png/revision/latest",
       "nom_fichier_wiki": "Pref_Vegetables.png",
+      "icone_fichier": "assets/icones/preferences/Pref_Vegetables.png",
       "details": {
         "sous_categorie": null
       },
@@ -425,6 +444,7 @@
       "icone": "🖼️",
       "icone_url": "https://static.wikia.nocookie.net/inzoi/images/5/55/Pref_Appreciating_Art.png/revision/latest",
       "nom_fichier_wiki": "Pref_Appreciating_Art.png",
+      "icone_fichier": "assets/icones/preferences/Pref_Appreciating_Art.png",
       "details": {
         "sous_categorie": null
       },
@@ -442,6 +462,7 @@
       "icone": "💃",
       "icone_url": "https://static.wikia.nocookie.net/inzoi/images/a/a6/Pref_Dancing.png/revision/latest",
       "nom_fichier_wiki": "Pref_Dancing.png",
+      "icone_fichier": "assets/icones/preferences/Pref_Dancing.png",
       "details": {
         "sous_categorie": null
       },
@@ -459,6 +480,7 @@
       "icone": "🎮",
       "icone_url": "https://static.wikia.nocookie.net/inzoi/images/6/64/Pref_Gaming.png/revision/latest",
       "nom_fichier_wiki": "Pref_Gaming.png",
+      "icone_fichier": "assets/icones/preferences/Pref_Gaming.png",
       "details": {
         "sous_categorie": null
       },
@@ -476,6 +498,7 @@
       "icone": "🎨",
       "icone_url": "https://static.wikia.nocookie.net/inzoi/images/9/9c/Pref_Painting.png/revision/latest",
       "nom_fichier_wiki": "Pref_Painting.png",
+      "icone_fichier": "assets/icones/preferences/Pref_Painting.png",
       "details": {
         "sous_categorie": null
       },
@@ -493,6 +516,7 @@
       "icone": "🎤",
       "icone_url": "https://static.wikia.nocookie.net/inzoi/images/f/fb/Pref_Singing.png/revision/latest",
       "nom_fichier_wiki": "Pref_Singing.png",
+      "icone_fichier": "assets/icones/preferences/Pref_Singing.png",
       "details": {
         "sous_categorie": null
       },
@@ -510,6 +534,7 @@
       "icone": "📷",
       "icone_url": "https://static.wikia.nocookie.net/inzoi/images/f/f7/Pref_Taking_Photos.png/revision/latest",
       "nom_fichier_wiki": "Pref_Taking_Photos.png",
+      "icone_fichier": "assets/icones/preferences/Pref_Taking_Photos.png",
       "details": {
         "sous_categorie": null
       },
@@ -527,6 +552,7 @@
       "icone": "🥁",
       "icone_url": "https://static.wikia.nocookie.net/inzoi/images/9/9d/Pref_Drums.png/revision/latest",
       "nom_fichier_wiki": "Pref_Drums.png",
+      "icone_fichier": "assets/icones/preferences/Pref_Drums.png",
       "details": {
         "sous_categorie": null
       },
@@ -544,6 +570,7 @@
       "icone": "🎹",
       "icone_url": "https://static.wikia.nocookie.net/inzoi/images/3/38/Pref_Piano.png/revision/latest",
       "nom_fichier_wiki": "Pref_Piano.png",
+      "icone_fichier": "assets/icones/preferences/Pref_Piano.png",
       "details": {
         "sous_categorie": null
       },
@@ -561,6 +588,7 @@
       "icone": "🎸",
       "icone_url": "https://static.wikia.nocookie.net/inzoi/images/c/c3/Pref_Guitar.png/revision/latest",
       "nom_fichier_wiki": "Pref_Guitar.png",
+      "icone_fichier": "assets/icones/preferences/Pref_Guitar.png",
       "details": {
         "sous_categorie": null
       },
@@ -578,6 +606,7 @@
       "icone": "📕",
       "icone_url": "https://static.wikia.nocookie.net/inzoi/images/5/51/Pref_Art_Books.png/revision/latest",
       "nom_fichier_wiki": "Pref_Art_Books.png",
+      "icone_fichier": "assets/icones/preferences/Pref_Art_Books.png",
       "details": {
         "sous_categorie": null
       },
@@ -595,6 +624,7 @@
       "icone": "📗",
       "icone_url": "https://static.wikia.nocookie.net/inzoi/images/6/68/Pref_Health_Books.png/revision/latest",
       "nom_fichier_wiki": "Pref_Health_Books.png",
+      "icone_fichier": "assets/icones/preferences/Pref_Health_Books.png",
       "details": {
         "sous_categorie": null
       },
@@ -612,6 +642,7 @@
       "icone": "📘",
       "icone_url": "https://static.wikia.nocookie.net/inzoi/images/0/05/Pref_Novels.png/revision/latest",
       "nom_fichier_wiki": "Pref_Novels.png",
+      "icone_fichier": "assets/icones/preferences/Pref_Novels.png",
       "details": {
         "sous_categorie": null
       },
@@ -629,6 +660,7 @@
       "icone": "📙",
       "icone_url": "https://static.wikia.nocookie.net/inzoi/images/8/89/Pref_Self-Help_Books.png/revision/latest",
       "nom_fichier_wiki": "Pref_Self-Help_Books.png",
+      "icone_fichier": "assets/icones/preferences/Pref_Self-Help_Books.png",
       "details": {
         "sous_categorie": null
       },
@@ -646,6 +678,7 @@
       "icone": "🐾",
       "icone_url": "https://static.wikia.nocookie.net/inzoi/images/8/87/Pref_Animals.png/revision/latest",
       "nom_fichier_wiki": "Pref_Animals.png",
+      "icone_fichier": "assets/icones/preferences/Pref_Animals.png",
       "details": {
         "sous_categorie": null
       },
@@ -663,6 +696,7 @@
       "icone": "🪴",
       "icone_url": "https://static.wikia.nocookie.net/inzoi/images/9/97/Pref_Plants.png/revision/latest",
       "nom_fichier_wiki": "Pref_Plants.png",
+      "icone_fichier": "assets/icones/preferences/Pref_Plants.png",
       "details": {
         "sous_categorie": null
       },

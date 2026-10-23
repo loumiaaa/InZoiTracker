@@ -1,0 +1,603 @@
+{
+  "referentiel": "jalons",
+  "titre": "Jalons (Souvenirs)",
+  "maj": "2026-10-23",
+  "version_jeu": "v0.11.x (octobre 2026) — liste fandom datée v0.7.0 + 3 jalons vus sur capture ; incomplète",
+  "sources": [
+    "docs/references/jeu-fiche-souvenirs.png",
+    "https://inzoi.fandom.com/wiki/Memory",
+    "https://playinzoi.com/fr/news/9824",
+    "https://playinzoi.com/fr/news/9960",
+    "https://playinzoi.com/fr/news/10165",
+    "https://playinzoi.com/fr/news/10452",
+    "https://playinzoi.com/fr/news/11172",
+    "https://inzoi.fandom.com/wiki/Age_Group",
+    "https://inzoi.fandom.com/wiki/High_School"
+  ],
+  "notes": "FONCTIONNEMENT : onglet « Souvenirs » de la fiche Zoi, bloc « Jalons » (vignettes illustrées, compteur), à côté des « Souvenirs récents ». Système ajouté en v0.7.0 (notes FR : « Dates importantes ») ; v0.8.0 : certains jalons enregistrent le nom du Zoi concerné ; v0.11.0 : relations du foyer mieux décrites dans les jalons.\nCOMPLÉTUDE : 28 jalons = 25 du wiki fandom (liste v0.7.0, classée en 7 catégories) + « Partenaire de prom » et « Premier amour » vus sur capture (« Diplôme de lycée » est rapproché de « College Graduate »). TROUS CONNUS : les jalons ajoutés en v0.8.0 pour le freelance et les nouvelles carrières (Chercheur, Développeur IT, Architecte, Producteur de musique, Journaliste, Agent de voyage), et ceux du lycée v0.9.0 au-delà des deux vus en capture (bal de promo, roi/reine du bal, renvoi, diplôme avec mention…) ne sont documentés par aucune source accessible. D'autres jalons (ex. premier baiser, décès, fantôme, vacances v0.10) peuvent exister.\nLIBELLÉS FR : 6 vérifiés sur capture (Première grossesse, Fiançailles, Premier emploi, Diplôme de lycée, Partenaire de prom, Premier amour) ; les autres et toutes les descriptions sont des traductions proposées depuis l'anglais du wiki fandom (descriptions EN conservées dans details.description_en). Les catégories viennent du classement du wiki fandom et ne sont pas visibles sur la capture : noms FR proposés.\nÉTAPE DE VIE : details.etape_de_vie = étape à partir de laquelle le jalon peut normalement être obtenu (« toutes » = n'importe quel âge). Ids alignés sur data/referentiels/etapes-de-vie.json (nourrisson, enfant-en-bas-age, enfant, preadolescent, adolescent, jeune-adulte, adulte, age-moyen, senior) ; valeur spéciale « toutes ». Étapes minimales déduites des mécaniques (lycée, mariage, conduite…), non documentées jalon par jalon.\nICÔNES : le wiki fandom n'héberge pas les illustrations des jalons (seulement Checkpoint.png, générique) → icone_url null.",
+  "categories": [
+    {
+      "id": "education",
+      "nom": "Développement et éducation",
+      "nom_en": "Development / Education",
+      "fr_verifie": false,
+      "icone": "🎓"
+    },
+    {
+      "id": "carriere",
+      "nom": "Parcours professionnel",
+      "nom_en": "Career Path",
+      "fr_verifie": false,
+      "icone": "💼"
+    },
+    {
+      "id": "romance",
+      "nom": "Romance",
+      "nom_en": "Romance",
+      "fr_verifie": false,
+      "icone": "💕"
+    },
+    {
+      "id": "famille",
+      "nom": "Famille",
+      "nom_en": "Family",
+      "fr_verifie": false,
+      "icone": "👪"
+    },
+    {
+      "id": "vie",
+      "nom": "Vie",
+      "nom_en": "Life",
+      "fr_verifie": false,
+      "icone": "🌱"
+    },
+    {
+      "id": "catastrophe",
+      "nom": "Catastrophe",
+      "nom_en": "Disaster",
+      "fr_verifie": false,
+      "icone": "🌪️"
+    },
+    {
+      "id": "crime",
+      "nom": "Crime",
+      "nom_en": "Crime",
+      "fr_verifie": false,
+      "icone": "🚔"
+    }
+  ],
+  "elements": [
+    {
+      "id": "diplome-de-lycee",
+      "nom": "Diplôme de lycée",
+      "nom_en": "College Graduate",
+      "fr_verifie": true,
+      "source_fr": "capture du jeu FR (docs/references/jeu-fiche-souvenirs.png)",
+      "categorie": "education",
+      "description": "Après de longues études, j'ai lancé mon mortier de diplômé vers le ciel.",
+      "icone": "🎓",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "etape_de_vie": "adolescent",
+        "description_en": "After completing my lengthy studies, I tossed my graduation cap into sky."
+      },
+      "notes": "Libellé FR vérifié sur capture (illustration : mortiers lancés en l'air). Le wiki fandom (v0.7.0) liste en EN « College Graduate » avec cette description ; correspondance supposée (le jeu n'a qu'un lycée, remise des diplômes à la fin du cursus, v0.9.0). Le libellé EN actuel peut être « High School Graduate ».",
+      "source": "docs/references/jeu-fiche-souvenirs.png"
+    },
+    {
+      "id": "exclusion-scolaire",
+      "nom": "Départ de l'école sans diplôme",
+      "nom_en": "Experience with Expulsion",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "education",
+      "description": "Vous avez quitté l'école autrement que par l'obtention du diplôme.",
+      "icone": "🚪",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "etape_de_vie": "adolescent",
+        "description_en": "You have left school by means other than graduation."
+      },
+      "notes": "Lié notamment à l'objectif « Se faire renvoyer » de l'ambition ado « La voie du rebelle ».",
+      "source": "https://inzoi.fandom.com/wiki/Memory"
+    },
+    {
+      "id": "partenaire-de-prom",
+      "nom": "Partenaire de prom",
+      "nom_en": "Prom Partner",
+      "fr_verifie": true,
+      "source_fr": "capture du jeu FR (docs/references/jeu-fiche-souvenirs.png)",
+      "categorie": "education",
+      "description": "Avoir eu un(e) partenaire pour le bal de promo du lycée.",
+      "icone": "💃",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "etape_de_vie": "adolescent",
+        "description_en": null
+      },
+      "notes": "Vu sur capture FR ; ajouté avec le lycée actif et le bal de promo (v0.9.0). Nom EN et catégorie non confirmés (proposition).",
+      "source": "docs/references/jeu-fiche-souvenirs.png"
+    },
+    {
+      "id": "premier-emploi",
+      "nom": "Premier emploi",
+      "nom_en": "First Employment",
+      "fr_verifie": true,
+      "source_fr": "capture du jeu FR (docs/references/jeu-fiche-souvenirs.png)",
+      "categorie": "carriere",
+      "description": "Enfin, vous avez fait vos premiers pas dans la société.",
+      "icone": "💼",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "etape_de_vie": "jeune-adulte",
+        "description_en": "At last, you've made your first foray into society."
+      },
+      "notes": null,
+      "source": "docs/references/jeu-fiche-souvenirs.png"
+    },
+    {
+      "id": "premier-licenciement",
+      "nom": "Premier licenciement",
+      "nom_en": "First Dismissal",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "carriere",
+      "description": "Soudain, j'ai été renvoyé(e) de mon travail et je me suis retrouvé(e) à la rue.",
+      "icone": "📦",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "etape_de_vie": "jeune-adulte",
+        "description_en": "Suddenly, I was unexpectedly let go from my workplace and found myself on the streets."
+      },
+      "notes": null,
+      "source": "https://inzoi.fandom.com/wiki/Memory"
+    },
+    {
+      "id": "premiere-promotion",
+      "nom": "Première promotion",
+      "nom_en": "Initial Promotion",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "carriere",
+      "description": "Vous avez été promu(e) d'un échelon et affecté(e) à un nouveau poste.",
+      "icone": "📈",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "etape_de_vie": "jeune-adulte",
+        "description_en": "Your job position has been promoted by one level and you've been placed in a new role."
+      },
+      "notes": null,
+      "source": "https://inzoi.fandom.com/wiki/Memory"
+    },
+    {
+      "id": "premiere-demission",
+      "nom": "Première démission",
+      "nom_en": "First Resignation",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "carriere",
+      "description": "J'ai rédigé ma propre lettre de démission et pris la route d'un nouveau départ.",
+      "icone": "✉️",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "etape_de_vie": "jeune-adulte",
+        "description_en": "I penned my own resignation and embarked on a journey towards a new beginning."
+      },
+      "notes": null,
+      "source": "https://inzoi.fandom.com/wiki/Memory"
+    },
+    {
+      "id": "premier-amour",
+      "nom": "Premier amour",
+      "nom_en": "First Love",
+      "fr_verifie": true,
+      "source_fr": "capture du jeu FR (docs/references/jeu-fiche-souvenirs.png)",
+      "categorie": "romance",
+      "description": "Vivre son premier amour.",
+      "icone": "💗",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "etape_de_vie": "adolescent",
+        "description_en": null
+      },
+      "notes": "Vu sur capture FR ; absent de la liste fandom (v0.7.0), probablement ajouté avec la romance adolescente (v0.9.0). Nom EN et description non confirmés.",
+      "source": "docs/references/jeu-fiche-souvenirs.png"
+    },
+    {
+      "id": "premier-chagrin-d-amour",
+      "nom": "Premier chagrin d'amour",
+      "nom_en": "First Heartbreak",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "romance",
+      "description": "Je me suis déclaré(e) pour la première fois, le cœur battant, mais je n'ai pas été accepté(e).",
+      "icone": "💔",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "etape_de_vie": "adolescent",
+        "description_en": "Although I confessed with a trembling heart for the first time, it was not accepted."
+      },
+      "notes": null,
+      "source": "https://inzoi.fandom.com/wiki/Memory"
+    },
+    {
+      "id": "fiancailles",
+      "nom": "Fiançailles",
+      "nom_en": "Engaged",
+      "fr_verifie": true,
+      "source_fr": "capture du jeu FR (docs/references/jeu-fiche-souvenirs.png)",
+      "categorie": "romance",
+      "description": "Vous avez échangé des bagues avec l'être aimé et promis un avenir ensemble.",
+      "icone": "💍",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "etape_de_vie": "jeune-adulte",
+        "description_en": "You exchanged rings with your beloved and pledged a future together."
+      },
+      "notes": null,
+      "source": "docs/references/jeu-fiche-souvenirs.png"
+    },
+    {
+      "id": "double-jeu",
+      "nom": "Double jeu",
+      "nom_en": "Playing the Field",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "romance",
+      "description": "Alors que quelqu'un partage votre vie, vous avez donné votre cœur à une autre personne.",
+      "icone": "🎭",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "etape_de_vie": "adolescent",
+        "description_en": "While you have someone by your side, you've given your heart to another."
+      },
+      "notes": null,
+      "source": "https://inzoi.fandom.com/wiki/Memory"
+    },
+    {
+      "id": "infidelite-de-l-etre-aime",
+      "nom": "Infidélité de l'être aimé",
+      "nom_en": "Infidelity of a Sweetheart",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "romance",
+      "description": "J'ai compris que la personne que j'aime donne son affection à quelqu'un d'autre que moi.",
+      "icone": "🥀",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "etape_de_vie": "adolescent",
+        "description_en": "I came to realize that my beloved is giving their affection to someone else, not me."
+      },
+      "notes": null,
+      "source": "https://inzoi.fandom.com/wiki/Memory"
+    },
+    {
+      "id": "mariage",
+      "nom": "Mariage",
+      "nom_en": "Marriage",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "romance",
+      "description": "Faisant le vœu de passer leur vie ensemble, ils ont échangé des alliances.",
+      "icone": "💒",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "etape_de_vie": "jeune-adulte",
+        "description_en": "With a vow to spend their lives together, they exchanged rings."
+      },
+      "notes": null,
+      "source": "https://inzoi.fandom.com/wiki/Memory"
+    },
+    {
+      "id": "remariage",
+      "nom": "Remariage",
+      "nom_en": "Remarriage",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "romance",
+      "description": "Vous avez de nouveau promis votre vie à quelqu'un.",
+      "icone": "💞",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "etape_de_vie": "jeune-adulte",
+        "description_en": "You've once again made a lifelong promise to someone."
+      },
+      "notes": null,
+      "source": "https://inzoi.fandom.com/wiki/Memory"
+    },
+    {
+      "id": "divorce",
+      "nom": "Divorce",
+      "nom_en": "Divorce",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "romance",
+      "description": "J'ai fini par me séparer de la personne avec qui j'étais.",
+      "icone": "📝",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "etape_de_vie": "jeune-adulte",
+        "description_en": "I ended up parting ways with the person is was with."
+      },
+      "notes": null,
+      "source": "https://inzoi.fandom.com/wiki/Memory"
+    },
+    {
+      "id": "premiere-grossesse",
+      "nom": "Première grossesse",
+      "nom_en": "First Pregnancy",
+      "fr_verifie": true,
+      "source_fr": "capture du jeu FR (docs/references/jeu-fiche-souvenirs.png)",
+      "categorie": "famille",
+      "description": "Vous avez découvert qu'une nouvelle vie grandit en vous !",
+      "icone": "🤰",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "etape_de_vie": "jeune-adulte",
+        "description_en": "You've discovered a new life growing within you!"
+      },
+      "notes": null,
+      "source": "docs/references/jeu-fiche-souvenirs.png"
+    },
+    {
+      "id": "naissance",
+      "nom": "Naissance d'une nouvelle vie",
+      "nom_en": "Birth of New Life",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "famille",
+      "description": "Pour la première fois, j'ai tenu dans mes bras l'être le plus précieux au monde.",
+      "icone": "👶",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "etape_de_vie": "jeune-adulte",
+        "description_en": "For the first time, I cradled the most precious being in the world in my arms."
+      },
+      "notes": null,
+      "source": "https://inzoi.fandom.com/wiki/Memory"
+    },
+    {
+      "id": "enfant-du-coeur",
+      "nom": "Enfant du cœur",
+      "nom_en": "Child born from the heart",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "famille",
+      "description": "Nous avons accueilli dans notre famille un enfant lié à nous par le cœur.",
+      "icone": "🫶",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "etape_de_vie": "jeune-adulte",
+        "description_en": "We embraced a child bound by the heart as family."
+      },
+      "notes": "Jalon d'adoption.",
+      "source": "https://inzoi.fandom.com/wiki/Memory"
+    },
+    {
+      "id": "deces-d-un-membre-de-la-famille",
+      "nom": "Décès d'un membre de la famille",
+      "nom_en": "Family's Death",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "famille",
+      "description": "Un être cher qui était toujours à vos côtés a quitté ce monde.",
+      "icone": "🕯️",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "etape_de_vie": "toutes",
+        "description_en": "A loved one who was always by your side has left this world."
+      },
+      "notes": null,
+      "source": "https://inzoi.fandom.com/wiki/Memory"
+    },
+    {
+      "id": "faillite",
+      "nom": "Faillite",
+      "nom_en": "Bankrupt Father",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "vie",
+      "description": "Vous avez tout donné pour votre famille, mais il ne vous reste que les poches vides.",
+      "icone": "💸",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "etape_de_vie": "jeune-adulte",
+        "description_en": "You've persevered for your family, but in the end you're left with nothing but empty pockets."
+      },
+      "notes": "Libellé EN du wiki fandom (« Bankrupt Father ») à prendre avec prudence ; traduction FR adaptée.",
+      "source": "https://inzoi.fandom.com/wiki/Memory"
+    },
+    {
+      "id": "accident-de-la-route-mortel",
+      "nom": "Accident de la route mortel",
+      "nom_en": "Inducing fatal traffic accidents",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "vie",
+      "description": "Un instant d'inattention a causé un accident irréparable.",
+      "icone": "🚑",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "etape_de_vie": "jeune-adulte",
+        "description_en": "An instant lapse led to an irreversible accident."
+      },
+      "notes": "La conduite est réservée aux jeunes adultes et plus (achat de voiture à partir de jeune adulte).",
+      "source": "https://inzoi.fandom.com/wiki/Memory"
+    },
+    {
+      "id": "deces-d-une-connaissance",
+      "nom": "Décès d'une connaissance",
+      "nom_en": "Passing of an Acquaintance",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "vie",
+      "description": "J'ai dû dire adieu à quelqu'un de proche.",
+      "icone": "🕊️",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "etape_de_vie": "toutes",
+        "description_en": "I had to say goodbye to someone I was close to."
+      },
+      "notes": null,
+      "source": "https://inzoi.fandom.com/wiki/Memory"
+    },
+    {
+      "id": "premier-incendie",
+      "nom": "Premier incendie",
+      "nom_en": "The First Fire",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "catastrophe",
+      "description": "Pour la première fois, j'ai vu des flammes s'élever sous mes yeux.",
+      "icone": "🔥",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "etape_de_vie": "toutes",
+        "description_en": "I witnessed flames soaring before my eyes for the first time."
+      },
+      "notes": null,
+      "source": "https://inzoi.fandom.com/wiki/Memory"
+    },
+    {
+      "id": "premiere-tempete",
+      "nom": "Première tempête",
+      "nom_en": "The First Storm",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "catastrophe",
+      "description": "Pour la première fois, j'ai affronté le vent et la pluie déchaînés.",
+      "icone": "⛈️",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "etape_de_vie": "toutes",
+        "description_en": "I encountered the fierce wind and rain for the first time."
+      },
+      "notes": null,
+      "source": "https://inzoi.fandom.com/wiki/Memory"
+    },
+    {
+      "id": "sur-la-voie-du-crime",
+      "nom": "Sur la voie du crime",
+      "nom_en": "The Path of Crime",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "crime",
+      "description": "Pour la première fois, j'ai enfreint la loi et j'en ai subi les conséquences.",
+      "icone": "🦹",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "etape_de_vie": "adolescent",
+        "description_en": "For the first time, I violated the law and reaped the consequences."
+      },
+      "notes": "Étape de vie minimale supposée.",
+      "source": "https://inzoi.fandom.com/wiki/Memory"
+    },
+    {
+      "id": "derriere-les-barreaux",
+      "nom": "Derrière les barreaux",
+      "nom_en": "Trapped Behind Bars",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "crime",
+      "description": "Vous avez été enfermé(e) derrière de froids barreaux de fer, privé(e) de liberté.",
+      "icone": "⛓️",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "etape_de_vie": "jeune-adulte",
+        "description_en": "You've been imprisoned within the cold iron bars, stripped of your freedom."
+      },
+      "notes": null,
+      "source": "https://inzoi.fandom.com/wiki/Memory"
+    },
+    {
+      "id": "accuse",
+      "nom": "Accusé(e)",
+      "nom_en": "Defendant",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "crime",
+      "description": "Vous avez comparu comme accusé(e) devant un tribunal.",
+      "icone": "⚖️",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "etape_de_vie": "jeune-adulte",
+        "description_en": "You have taken the stand as a defendant in a courtroom."
+      },
+      "notes": null,
+      "source": "https://inzoi.fandom.com/wiki/Memory"
+    },
+    {
+      "id": "arnaque-telephonique",
+      "nom": "Arnaque téléphonique",
+      "nom_en": "Voice Phishing",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "crime",
+      "description": "Vous avez dupé la personne au bout du fil et lui avez pris son argent.",
+      "icone": "📞",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "etape_de_vie": "jeune-adulte",
+        "description_en": "You deceived the person on the other end of the phone and took their money."
+      },
+      "notes": "Lié aux escroqueries ajoutées en v0.5.0 (compétence Crime).",
+      "source": "https://inzoi.fandom.com/wiki/Memory"
+    }
+  ]
+}

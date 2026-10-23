@@ -21,7 +21,7 @@
     "https://www.sportskeeda.com/esports/what-ambitions-work-inzoi",
     "https://www.curseforge.com/inzoi/mods/easier-ambitions"
   ],
-  "notes": "STRUCTURE : catégorie → ambitions → 3 niveaux (affichés « Lv.1/3 » et onglets « Étape 1/2/3 » en jeu FR), chacun avec 1 à 2 objectifs ; récompenses = bonus débloqués quand l'ambition est accomplie. Chaque étape rapporte aussi des pièces Ronron (Meow Coins, montants non trouvés). Depuis v0.10.0, accomplir certaines ambitions peut aussi donner un nouveau trait (lesquels : non trouvé).\nCOMPLÉTUDE : 15 catégories / 34 ambitions = liste du wiki fandom (à jour v0.9.0) + recoupements. TROU CONNU : la v0.10.0 (03/09/2026) permet aux ENFANTS de choisir des ambitions ; aucune source n'en donne les noms → non listées. Les ambitions de mods (ZoiWorks Ambitions Pack…) sont exclues.\nLIBELLÉS FR : fr_verifie=true si le nom vient de la capture du jeu, des notes de patch officielles FR (playinzoi.com/fr) ou d'un guide FR (Dexerto.fr / Millenium, avril 2025). Le champ source_fr précise laquelle. Les guides FR tiers n'ont pu être lus que via des extraits de moteur de recherche (pages inaccessibles) : à confirmer en jeu. Les notes de patch FR ne coïncident pas toujours avec le jeu (« Pro de la préparation de boissons » dans le patch v0.7.0 vs « Maître de la préparation de boissons » sur la capture).\nOBJECTIFS : traduits en FR à partir du wiki fandom (anglais), complétés par Gfinity ; seuls ceux de l'étape 1 de « Maître de la préparation de boissons » sont vérifiés sur capture. Noms des compétences et objets alignés sur le vocabulaire officiel FR (guide des codes de triche playinzoi.com/fr : Condition physique, Pensée critique, Rhétorique, Spectacle, Fabrication de café, Collectionner, Pêcher, Nager, Travail manuel, Pâtisserie, Préparation de boissons, Production média, Miaou…). Les objectifs EN sont conservés dans objectifs_en.\nDIVERGENCES : refonte v0.5.0 — Stay Healthy renommée Physical Training ; Neat Freak → Cleanliness Champion et Master Chef déplacés vers Lifehacker ; récompenses rééquilibrées (les récompenses listées sont celles du fandom post-v0.5.0). Le tableau fandom range Coffee Master dans Harmonie et paix (à vérifier). Le tableau fandom recopie par erreur les objectifs de Vilain notoire pour Famous Hackers (objectifs repris de Gfinity). Richesse niv. 3 : 200 000 vs 20 000 Miaou selon les sources. TheGamesWiki nomme les ambitions v0.7.0 « Master Barista / Master Baker / Master Bartender » (noms officiels EN : Coffee Master, Baking Master, Drink Mixing Master).\nPUBLIC : ambitions adultes = jeune adulte et plus (choisies à la création du Zoi depuis v0.4.0) ; catégories Célébrité de l'école et Esprit libre à l'école = adolescents (lycée, v0.9.0).\nICÔNES : seules les catégories ont une icône sur le wiki fandom (icone_url + nom_fichier_wiki) ; les illustrations propres à chaque ambition (ex. tablier pour la préparation de boissons) ne sont pas disponibles.",
+  "notes": "STRUCTURE : catégorie → ambitions → 3 niveaux (affichés « Lv.1/3 » et onglets « Étape 1/2/3 » en jeu FR), chacun avec 1 à 2 objectifs ; récompenses = bonus débloqués quand l'ambition est accomplie. Chaque étape rapporte aussi des pièces Ronron (Meow Coins, montants non trouvés). Depuis v0.10.0, accomplir certaines ambitions peut aussi donner un nouveau trait (lesquels : non trouvé).\nCOMPLÉTUDE : 15 catégories / 34 ambitions = liste du wiki fandom (à jour v0.9.0) + recoupements. TROU CONNU : la v0.10.0 (03/09/2026) permet aux ENFANTS de choisir des ambitions ; aucune source n'en donne les noms → non listées. Les ambitions de mods (ZoiWorks Ambitions Pack…) sont exclues.\nLIBELLÉS FR : fr_verifie=true si le nom vient de la capture du jeu, des notes de patch officielles FR (playinzoi.com/fr) ou d'un guide FR (Dexerto.fr / Millenium, avril 2025). Le champ source_fr précise laquelle. Les guides FR tiers n'ont pu être lus que via des extraits de moteur de recherche (pages inaccessibles) : à confirmer en jeu. Les notes de patch FR ne coïncident pas toujours avec le jeu (« Pro de la préparation de boissons » dans le patch v0.7.0 vs « Maître de la préparation de boissons » sur la capture).\nOBJECTIFS : traduits en FR à partir du wiki fandom (anglais), complétés par Gfinity ; seuls ceux de l'étape 1 de « Maître de la préparation de boissons » sont vérifiés sur capture. Noms des compétences et objets alignés sur le vocabulaire officiel FR (guide des codes de triche playinzoi.com/fr : Condition physique, Pensée critique, Rhétorique, Spectacle, Fabrication de café, Collectionner, Pêcher, Nager, Travail manuel, Pâtisserie, Préparation de boissons, Production média, Miaou…). Les objectifs EN sont conservés dans objectifs_en.\nDIVERGENCES : refonte v0.5.0 — Stay Healthy renommée Physical Training ; Neat Freak → Cleanliness Champion et Master Chef déplacés vers Lifehacker ; récompenses rééquilibrées (les récompenses listées sont celles du fandom post-v0.5.0). Le tableau fandom range Coffee Master dans Harmonie et paix (à vérifier). Le tableau fandom recopie par erreur les objectifs de Vilain notoire pour Famous Hackers (objectifs repris de Gfinity). Richesse niv. 3 : 200 000 vs 20 000 Miaou selon les sources. TheGamesWiki nomme les ambitions v0.7.0 « Master Barista / Master Baker / Master Bartender » (noms officiels EN : Coffee Master, Baking Master, Drink Mixing Master).\nPUBLIC (champ public = étape de vie minimale, ids de etapes-de-vie.json) : ambitions adultes = jeune-adulte et plus (choisies à la création du Zoi depuis v0.4.0) ; catégories Célébrité de l'école et Esprit libre à l'école = adolescent (lycée, v0.9.0).\nICÔNES : seules les catégories ont une icône sur le wiki fandom (icone_url + nom_fichier_wiki + icone_fichier local dans assets/icones/ambitions/) ; les illustrations propres à chaque ambition (ex. tablier pour la préparation de boissons) ne sont pas disponibles.",
   "categories": [
     {
       "id": "reussite-financiere",
@@ -33,7 +33,8 @@
       "icone": "💰",
       "icone_url": "https://static.wikia.nocookie.net/inzoi/images/8/86/Ambition_Financial_Success.png/revision/latest",
       "nom_fichier_wiki": "Ambition_Financial_Success.png",
-      "public": "jeune-adulte+",
+      "icone_fichier": "assets/icones/ambitions/Ambition_Financial_Success.png",
+      "public": "jeune-adulte",
       "version_ajout": "lancement (v0.1)",
       "notes": null
     },
@@ -47,7 +48,8 @@
       "icone": "💼",
       "icone_url": "https://static.wikia.nocookie.net/inzoi/images/5/52/Ambition_Career_Success.png/revision/latest",
       "nom_fichier_wiki": "Ambition_Career_Success.png",
-      "public": "jeune-adulte+",
+      "icone_fichier": "assets/icones/ambitions/Ambition_Career_Success.png",
+      "public": "jeune-adulte",
       "version_ajout": "lancement (v0.1)",
       "notes": "Attention : les notes de patch FR v0.5.0 emploient aussi « Réussite professionnelle » pour traduire la nouvelle ambition « Business Success » (catégorie Business Flourishing)."
     },
@@ -61,7 +63,8 @@
       "icone": "🏋️",
       "icone_url": "https://static.wikia.nocookie.net/inzoi/images/a/a0/Ambition_Stay_Healthy.png/revision/latest",
       "nom_fichier_wiki": "Ambition_Stay_Healthy.png",
-      "public": "jeune-adulte+",
+      "icone_fichier": "assets/icones/ambitions/Ambition_Stay_Healthy.png",
+      "public": "jeune-adulte",
       "version_ajout": "lancement (v0.1)",
       "notes": "Catégorie appelée « Stay Healthy » au lancement (FR : « Bonne santé » selon Dexerto.fr et Millenium) ; renommée « Physical Training » sur le wiki fandom après la refonte v0.5.0, où Grand chef et Maniaque de la propreté ont été déplacés vers Pro des astuces du quotidien. Libellé FR actuel non vérifié."
     },
@@ -75,7 +78,8 @@
       "icone": "👨‍👩‍👧",
       "icone_url": "https://static.wikia.nocookie.net/inzoi/images/6/63/Ambition_Family_Happiness.png/revision/latest",
       "nom_fichier_wiki": "Ambition_Family_Happiness.png",
-      "public": "jeune-adulte+",
+      "icone_fichier": "assets/icones/ambitions/Ambition_Family_Happiness.png",
+      "public": "jeune-adulte",
       "version_ajout": "lancement (v0.1)",
       "notes": null
     },
@@ -89,7 +93,8 @@
       "icone": "🕊️",
       "icone_url": "https://static.wikia.nocookie.net/inzoi/images/0/08/Ambition_Harmony_and_Peace.png/revision/latest",
       "nom_fichier_wiki": "Ambition_Harmony_and_Peace.png",
-      "public": "jeune-adulte+",
+      "icone_fichier": "assets/icones/ambitions/Ambition_Harmony_and_Peace.png",
+      "public": "jeune-adulte",
       "version_ajout": "lancement (v0.1)",
       "notes": null
     },
@@ -103,7 +108,8 @@
       "icone": "📚",
       "icone_url": "https://static.wikia.nocookie.net/inzoi/images/a/ac/Ambition_Knowledge_and_Learning.png/revision/latest",
       "nom_fichier_wiki": "Ambition_Knowledge_and_Learning.png",
-      "public": "jeune-adulte+",
+      "icone_fichier": "assets/icones/ambitions/Ambition_Knowledge_and_Learning.png",
+      "public": "jeune-adulte",
       "version_ajout": "lancement (v0.1)",
       "notes": null
     },
@@ -117,7 +123,8 @@
       "icone": "🎨",
       "icone_url": "https://static.wikia.nocookie.net/inzoi/images/c/cb/Ambition_Creative_Expression.png/revision/latest",
       "nom_fichier_wiki": "Ambition_Creative_Expression.png",
-      "public": "jeune-adulte+",
+      "icone_fichier": "assets/icones/ambitions/Ambition_Creative_Expression.png",
+      "public": "jeune-adulte",
       "version_ajout": "lancement (v0.1)",
       "notes": null
     },
@@ -131,7 +138,8 @@
       "icone": "💘",
       "icone_url": "https://static.wikia.nocookie.net/inzoi/images/2/2e/Ambition_Pursuit_of_Love.png/revision/latest",
       "nom_fichier_wiki": "Ambition_Pursuit_of_Love.png",
-      "public": "jeune-adulte+",
+      "icone_fichier": "assets/icones/ambitions/Ambition_Pursuit_of_Love.png",
+      "public": "jeune-adulte",
       "version_ajout": "lancement (v0.1)",
       "notes": "Appelée « Romantic Relationship » dans certains guides EN du lancement (Kotaku, inzoiresource)."
     },
@@ -145,7 +153,8 @@
       "icone": "🤝",
       "icone_url": "https://static.wikia.nocookie.net/inzoi/images/a/a6/Ambition_Community_Contribution.png/revision/latest",
       "nom_fichier_wiki": "Ambition_Community_Contribution.png",
-      "public": "jeune-adulte+",
+      "icone_fichier": "assets/icones/ambitions/Ambition_Community_Contribution.png",
+      "public": "jeune-adulte",
       "version_ajout": "lancement (v0.1)",
       "notes": "Aussi appelée « Contribute to Community » dans des guides EN ; Dexerto.fr écrit « Contributions à la communauté »."
     },
@@ -159,7 +168,8 @@
       "icone": "😈",
       "icone_url": "https://static.wikia.nocookie.net/inzoi/images/3/35/Ambition_Social_Disorder.png/revision/latest",
       "nom_fichier_wiki": "Ambition_Social_Disorder.png",
-      "public": "jeune-adulte+",
+      "icone_fichier": "assets/icones/ambitions/Ambition_Social_Disorder.png",
+      "public": "jeune-adulte",
       "version_ajout": "lancement (v0.1)",
       "notes": "Appelée « Social Unrest » par Sportskeeda."
     },
@@ -173,7 +183,8 @@
       "icone": "🧽",
       "icone_url": "https://static.wikia.nocookie.net/inzoi/images/4/41/Ambition_Lifehacker.png/revision/latest",
       "nom_fichier_wiki": "Ambition_Lifehacker.png",
-      "public": "jeune-adulte+",
+      "icone_fichier": "assets/icones/ambitions/Ambition_Lifehacker.png",
+      "public": "jeune-adulte",
       "version_ajout": "v0.5.0",
       "notes": null
     },
@@ -187,7 +198,8 @@
       "icone": "⛏️",
       "icone_url": "https://static.wikia.nocookie.net/inzoi/images/e/ea/Ambition_Collecting.png/revision/latest",
       "nom_fichier_wiki": "Ambition_Collecting.png",
-      "public": "jeune-adulte+",
+      "icone_fichier": "assets/icones/ambitions/Ambition_Collecting.png",
+      "public": "jeune-adulte",
       "version_ajout": "v0.5.0",
       "notes": "Libellé FR tiré des notes de patch v0.5.0 (« Collectionner et Création ») ; le libellé exact en jeu reste à confirmer."
     },
@@ -201,7 +213,8 @@
       "icone": "🏪",
       "icone_url": "https://static.wikia.nocookie.net/inzoi/images/c/c6/Ambition_Business.png/revision/latest",
       "nom_fichier_wiki": "Ambition_Business.png",
-      "public": "jeune-adulte+",
+      "icone_fichier": "assets/icones/ambitions/Ambition_Business.png",
+      "public": "jeune-adulte",
       "version_ajout": "v0.5.0",
       "notes": "Nom EN « Business Flourishing » (wiki fandom) / « Business Success » (notes de patch EN v0.5.0). Les notes FR v0.5.0 traduisent « Réussite professionnelle » (homonyme de Career Success) ; « Prospérité de l'entreprise » est le titre de section FR des notes v0.5.0 sur les entreprises, repris ici comme proposition."
     },
@@ -215,6 +228,7 @@
       "icone": "🌟",
       "icone_url": "https://static.wikia.nocookie.net/inzoi/images/8/8b/Ambition_School_Celebrity.png/revision/latest",
       "nom_fichier_wiki": "Ambition_School_Celebrity.png",
+      "icone_fichier": "assets/icones/ambitions/Ambition_School_Celebrity.png",
       "public": "adolescent",
       "version_ajout": "v0.9.0",
       "notes": null
@@ -229,6 +243,7 @@
       "icone": "🛹",
       "icone_url": "https://static.wikia.nocookie.net/inzoi/images/b/b9/Ambition_Free_Spirit_School.png/revision/latest",
       "nom_fichier_wiki": "Ambition_Free_Spirit_School.png",
+      "icone_fichier": "assets/icones/ambitions/Ambition_Free_Spirit_School.png",
       "public": "adolescent",
       "version_ajout": "v0.9.0",
       "notes": null
@@ -246,6 +261,7 @@
       "icone": "💰",
       "icone_url": null,
       "nom_fichier_wiki": null,
+      "icone_fichier": null,
       "details": {
         "niveaux": [
           {
@@ -292,7 +308,7 @@
           "\"Give Away Money\" self-interaction",
           "\"Bragging About Your Money\" conversation"
         ],
-        "public": "jeune-adulte+",
+        "public": "jeune-adulte",
         "version_ajout": "lancement (v0.1)"
       },
       "notes": "Niveau 3 : 200 000 Miaou selon fandom, Dexerto, Game8 ; 20 000 selon Gfinity et TheGamer. La valeur de propriété ne compte que le terrain (précision officielle FR v0.1.5).",
@@ -309,6 +325,7 @@
       "icone": "🏰",
       "icone_url": null,
       "nom_fichier_wiki": null,
+      "icone_fichier": null,
       "details": {
         "niveaux": [
           {
@@ -355,7 +372,7 @@
           "You can use VIP products at the bank",
           "\"Show Off Your House\" conversation"
         ],
-        "public": "jeune-adulte+",
+        "public": "jeune-adulte",
         "version_ajout": "lancement (v0.1)"
       },
       "notes": null,
@@ -372,6 +389,7 @@
       "icone": "👔",
       "icone_url": null,
       "nom_fichier_wiki": null,
+      "icone_fichier": null,
       "details": {
         "niveaux": [
           {
@@ -414,7 +432,7 @@
           "Additional lecture fee after the seminar",
           "Business card self-interaction (\"Show Off Business Card\")"
         ],
-        "public": "jeune-adulte+",
+        "public": "jeune-adulte",
         "version_ajout": "lancement (v0.1)"
       },
       "notes": "Libellé FR des notes de patch officielles v0.3.0 ; Dexerto.fr (avril 2025) écrit « Leader de dernière génération ».",
@@ -431,6 +449,7 @@
       "icone": "📈",
       "icone_url": null,
       "nom_fichier_wiki": null,
+      "icone_fichier": null,
       "details": {
         "niveaux": [
           {
@@ -475,7 +494,7 @@
           "\"Genuinely Invest Stocks\" interaction",
           "Additional Business Relationship points during conversations"
         ],
-        "public": "jeune-adulte+",
+        "public": "jeune-adulte",
         "version_ajout": "lancement (v0.1)"
       },
       "notes": null,
@@ -492,6 +511,7 @@
       "icone": "💪",
       "icone_url": null,
       "nom_fichier_wiki": null,
+      "icone_fichier": null,
       "details": {
         "niveaux": [
           {
@@ -536,7 +556,7 @@
           "\"Show Off Muscles\" self-interaction",
           "\"Explain How to Maintain Focus While Working Out\" conversation"
         ],
-        "public": "jeune-adulte+",
+        "public": "jeune-adulte",
         "version_ajout": "lancement (v0.1)"
       },
       "notes": null,
@@ -553,6 +573,7 @@
       "icone": "🏊",
       "icone_url": null,
       "nom_fichier_wiki": null,
+      "icone_fichier": null,
       "details": {
         "niveaux": [
           {
@@ -595,7 +616,7 @@
           "Vitality decreases very slowly when swimming",
           "Chances of winning a swimming competition increase"
         ],
-        "public": "jeune-adulte+",
+        "public": "jeune-adulte",
         "version_ajout": "lancement (v0.1)"
       },
       "notes": "Liée à la compétence Nager (arrivée avec le DLC Escapade insulaire / v0.3.0) ; version d'ajout de l'ambition non confirmée. « Nager » = nom officiel FR de la compétence (guide des codes de triche).",
@@ -612,6 +633,7 @@
       "icone": "👨‍👩‍👧",
       "icone_url": null,
       "nom_fichier_wiki": null,
+      "icone_fichier": null,
       "details": {
         "niveaux": [
           {
@@ -656,7 +678,7 @@
           "\"Counseling Loving Families\" conversation",
           "Additional family relationship points during conversations"
         ],
-        "public": "jeune-adulte+",
+        "public": "jeune-adulte",
         "version_ajout": "lancement (v0.1)"
       },
       "notes": null,
@@ -673,6 +695,7 @@
       "icone": "🍼",
       "icone_url": null,
       "nom_fichier_wiki": null,
+      "icone_fichier": null,
       "details": {
         "niveaux": [
           {
@@ -717,7 +740,7 @@
           "You can apply for a babysitting job",
           "\"Parenting Tips\" conversation"
         ],
-        "public": "jeune-adulte+",
+        "public": "jeune-adulte",
         "version_ajout": "lancement (v0.1)"
       },
       "notes": "Les guides ne répartissent pas tous les objectifs de la même façon entre les niveaux.",
@@ -734,6 +757,7 @@
       "icone": "🪴",
       "icone_url": null,
       "nom_fichier_wiki": null,
+      "icone_fichier": null,
       "details": {
         "niveaux": [
           {
@@ -778,7 +802,7 @@
           "\"Grow a plant immediately\" interaction",
           "\"How to take care of a plant\" conversation"
         ],
-        "public": "jeune-adulte+",
+        "public": "jeune-adulte",
         "version_ajout": "lancement (v0.1)"
       },
       "notes": "Nom FR de l'interaction de récompense tiré des notes de patch officielles FR v0.3.0.",
@@ -795,6 +819,7 @@
       "icone": "🧘",
       "icone_url": null,
       "nom_fichier_wiki": null,
+      "icone_fichier": null,
       "details": {
         "niveaux": [
           {
@@ -839,7 +864,7 @@
           "The Content emotion is always active",
           "\"Share Inner Peace\" self-interaction"
         ],
-        "public": "jeune-adulte+",
+        "public": "jeune-adulte",
         "version_ajout": "lancement (v0.1)"
       },
       "notes": null,
@@ -856,6 +881,7 @@
       "icone": "☕",
       "icone_url": null,
       "nom_fichier_wiki": null,
+      "icone_fichier": null,
       "details": {
         "niveaux": [
           {
@@ -898,7 +924,7 @@
         "recompenses_en": [
           "Your focus increases when brewing coffee, leading to a higher quality cup of coffee"
         ],
-        "public": "jeune-adulte+",
+        "public": "jeune-adulte",
         "version_ajout": "v0.7.0"
       },
       "notes": "Notes de patch officielles FR v0.7.0 : « Pro du café » ; mais la même note écrit « Pro de la préparation de boissons » alors que le jeu affiche « Maître de la préparation de boissons » (capture), d'où la proposition « Maître du café ». Classée dans Harmonie et paix par le wiki fandom (les deux autres ambitions v0.7.0 sont dans Pro des astuces du quotidien) : catégorie à vérifier en jeu. TheGamesWiki l'appelle « Master Barista ».",
@@ -915,6 +941,7 @@
       "icone": "📖",
       "icone_url": null,
       "nom_fichier_wiki": null,
+      "icone_fichier": null,
       "details": {
         "niveaux": [
           {
@@ -959,7 +986,7 @@
           "Chances of malfunctions and fires decrease",
           "More experience in Chores, Gardening, Exercise, Cooking, Coffee Craft and Instruments"
         ],
-        "public": "jeune-adulte+",
+        "public": "jeune-adulte",
         "version_ajout": "lancement (v0.1)"
       },
       "notes": null,
@@ -976,6 +1003,7 @@
       "icone": "🎓",
       "icone_url": null,
       "nom_fichier_wiki": null,
+      "icone_fichier": null,
       "details": {
         "niveaux": [
           {
@@ -1018,7 +1046,7 @@
         "recompenses_en": [
           "Additional skill experience for Charm, Critical Thinking, Programming, Art, Media Production"
         ],
-        "public": "jeune-adulte+",
+        "public": "jeune-adulte",
         "version_ajout": "lancement (v0.1)"
       },
       "notes": null,
@@ -1035,6 +1063,7 @@
       "icone": "🖼️",
       "icone_url": null,
       "nom_fichier_wiki": null,
+      "icone_fichier": null,
       "details": {
         "niveaux": [
           {
@@ -1077,7 +1106,7 @@
         "recompenses_en": [
           "You can gain additional emotions on the art gallery property"
         ],
-        "public": "jeune-adulte+",
+        "public": "jeune-adulte",
         "version_ajout": "lancement (v0.1)"
       },
       "notes": null,
@@ -1094,6 +1123,7 @@
       "icone": "🎤",
       "icone_url": null,
       "nom_fichier_wiki": null,
+      "icone_fichier": null,
       "details": {
         "niveaux": [
           {
@@ -1138,7 +1168,7 @@
           "Probability of winning a singing competition increases",
           "\"Sing with Sweet Voice\" self-interaction"
         ],
-        "public": "jeune-adulte+",
+        "public": "jeune-adulte",
         "version_ajout": "lancement (v0.1)"
       },
       "notes": null,
@@ -1155,6 +1185,7 @@
       "icone": "🎸",
       "icone_url": null,
       "nom_fichier_wiki": null,
+      "icone_fichier": null,
       "details": {
         "niveaux": [
           {
@@ -1199,7 +1230,7 @@
           "Chances of winning a competition increase",
           "\"Play Guitar Professionally\" self-interaction"
         ],
-        "public": "jeune-adulte+",
+        "public": "jeune-adulte",
         "version_ajout": "lancement (v0.1)"
       },
       "notes": "Niveau 2 : émotion « Moved » (fandom) ou « Sentimental » (Gfinity, Game8).",
@@ -1216,6 +1247,7 @@
       "icone": "😍",
       "icone_url": null,
       "nom_fichier_wiki": null,
+      "icone_fichier": null,
       "details": {
         "niveaux": [
           {
@@ -1256,7 +1288,7 @@
           "Romantic relationship scores increase more during conversations",
           "\"Express Attraction\" self-interaction"
         ],
-        "public": "jeune-adulte+",
+        "public": "jeune-adulte",
         "version_ajout": "lancement (v0.1)"
       },
       "notes": "Gfinity indique « 1 relation True Love » au niveau 3 ; fandom et Sportskeeda indiquent 5.",
@@ -1273,6 +1305,7 @@
       "icone": "💑",
       "icone_url": null,
       "nom_fichier_wiki": null,
+      "icone_fichier": null,
       "details": {
         "niveaux": [
           {
@@ -1315,7 +1348,7 @@
         "recompenses_en": [
           "You can give relationship advice in a conversation"
         ],
-        "public": "jeune-adulte+",
+        "public": "jeune-adulte",
         "version_ajout": "lancement (v0.1)"
       },
       "notes": null,
@@ -1332,6 +1365,7 @@
       "icone": "🎁",
       "icone_url": null,
       "nom_fichier_wiki": null,
+      "icone_fichier": null,
       "details": {
         "niveaux": [
           {
@@ -1374,7 +1408,7 @@
         "recompenses_en": [
           "Thank-you messages and currency from anonymous supporters"
         ],
-        "public": "jeune-adulte+",
+        "public": "jeune-adulte",
         "version_ajout": "lancement (v0.1)"
       },
       "notes": null,
@@ -1391,6 +1425,7 @@
       "icone": "😊",
       "icone_url": null,
       "nom_fichier_wiki": null,
+      "icone_fichier": null,
       "details": {
         "niveaux": [
           {
@@ -1437,7 +1472,7 @@
           "\"Pleasant Dance\" self-interaction",
           "\"Recommend Local Attractions\" conversation"
         ],
-        "public": "jeune-adulte+",
+        "public": "jeune-adulte",
         "version_ajout": "lancement (v0.1)"
       },
       "notes": null,
@@ -1454,6 +1489,7 @@
       "icone": "🦹",
       "icone_url": null,
       "nom_fichier_wiki": null,
+      "icone_fichier": null,
       "details": {
         "niveaux": [
           {
@@ -1496,7 +1532,7 @@
         "recompenses_en": [
           "\"Request Increased Police Attention\" interaction"
         ],
-        "public": "jeune-adulte+",
+        "public": "jeune-adulte",
         "version_ajout": "lancement (v0.1)"
       },
       "notes": "Appelée « Crime-Bent Villain » par Gfinity. Niveau 3 avant v0.5.0 (Gfinity/Sportskeeda) : « présenter une bonne idée et obtenir un investissement 5 fois ». Dexerto.fr (selon un extrait de moteur de recherche) écrirait « Malfaiteur notoire » : le libellé retenu est celui des notes de patch officielles FR v0.1.5.",
@@ -1513,6 +1549,7 @@
       "icone": "💻",
       "icone_url": null,
       "nom_fichier_wiki": null,
+      "icone_fichier": null,
       "details": {
         "niveaux": [
           {
@@ -1557,7 +1594,7 @@
           "Chances of winning a hacking competition increase",
           "\"Spread malicious code on the internet\" interaction"
         ],
-        "public": "jeune-adulte+",
+        "public": "jeune-adulte",
         "version_ajout": "lancement (v0.1)"
       },
       "notes": "Objectifs d'après Gfinity/Sportskeeda (le tableau fandom recopie par erreur ceux de Vilain notoire) ; récompenses d'après fandom. Aussi orthographié « Famous Hacker ».",
@@ -1574,6 +1611,7 @@
       "icone": "🧹",
       "icone_url": null,
       "nom_fichier_wiki": null,
+      "icone_fichier": null,
       "details": {
         "niveaux": [
           {
@@ -1618,7 +1656,7 @@
           "\"Professional Cleaning\" self-interaction",
           "\"Providing Tips for Maintaining Cleanliness\" conversation"
         ],
-        "public": "jeune-adulte+",
+        "public": "jeune-adulte",
         "version_ajout": "v0.5.0"
       },
       "notes": "Ex-« Neat Freak » (catégorie Stay Healthy au lancement), FR « Maniaque de la propreté » selon Dexerto.fr et Millenium (avril 2025). Renommée « Cleanliness Champion » et déplacée dans Lifehacker en v0.5.0 : le libellé FR actuel n'est pas confirmé (« Maniaque de la propreté » peut toujours être affiché).",
@@ -1635,6 +1673,7 @@
       "icone": "👨‍🍳",
       "icone_url": null,
       "nom_fichier_wiki": null,
+      "icone_fichier": null,
       "details": {
         "niveaux": [
           {
@@ -1677,7 +1716,7 @@
           "\"Post Cooking Recipe on Social Media\" interaction",
           "\"Teach Cooking Mindset\" conversation"
         ],
-        "public": "jeune-adulte+",
+        "public": "jeune-adulte",
         "version_ajout": "v0.5.0"
       },
       "notes": "Dans la catégorie Stay Healthy au lancement ; déplacée dans Lifehacker en v0.5.0 (wiki fandom, TheGamesWiki).",
@@ -1694,6 +1733,7 @@
       "icone": "🧁",
       "icone_url": null,
       "nom_fichier_wiki": null,
+      "icone_fichier": null,
       "details": {
         "niveaux": [
           {
@@ -1736,7 +1776,7 @@
         "recompenses_en": [
           "With impeccable baking skills, you can produce baked goods of superior quality"
         ],
-        "public": "jeune-adulte+",
+        "public": "jeune-adulte",
         "version_ajout": "v0.7.0"
       },
       "notes": "Nom EN officiel (notes de patch v0.7.0) « Baking Master » ; le wiki fandom écrit « Master Baker ». Notes de patch FR v0.7.0 : « Pro de la pâtisserie » (même schéma que « Pro de la préparation de boissons », contredit par la capture du jeu qui affiche « Maître de la préparation de boissons »).",
@@ -1753,6 +1793,7 @@
       "icone": "🍹",
       "icone_url": null,
       "nom_fichier_wiki": null,
+      "icone_fichier": null,
       "details": {
         "niveaux": [
           {
@@ -1795,7 +1836,7 @@
         "recompenses_en": [
           "You can create mixed drinks of superior quality by enhancing the flavor and scent of your beverages"
         ],
-        "public": "jeune-adulte+",
+        "public": "jeune-adulte",
         "version_ajout": "v0.7.0"
       },
       "notes": "Nom et objectifs de l'étape 1 vérifiés sur capture FR (« Lv.1/3 », onglets « Étape 1/2/3 »). Notes de patch FR v0.7.0 : « Pro de la préparation de boissons ». TheGamesWiki : « Master Bartender ».",
@@ -1812,6 +1853,7 @@
       "icone": "💎",
       "icone_url": null,
       "nom_fichier_wiki": null,
+      "icone_fichier": null,
       "details": {
         "niveaux": [
           {
@@ -1854,7 +1896,7 @@
           "You can purchase silver, gold, and gem pickaxes at the farming store",
           "Chances of obtaining rare collectibles increase"
         ],
-        "public": "jeune-adulte+",
+        "public": "jeune-adulte",
         "version_ajout": "v0.5.0"
       },
       "notes": null,
@@ -1871,6 +1913,7 @@
       "icone": "🎣",
       "icone_url": null,
       "nom_fichier_wiki": null,
+      "icone_fichier": null,
       "details": {
         "niveaux": [
           {
@@ -1913,7 +1956,7 @@
           "You can buy Silver, Gold, and Jewel Fishing Rods at the Fishing Store",
           "Chances of obtaining a rare fish increase"
         ],
-        "public": "jeune-adulte+",
+        "public": "jeune-adulte",
         "version_ajout": "v0.5.0"
       },
       "notes": null,
@@ -1930,6 +1973,7 @@
       "icone": "⚒️",
       "icone_url": null,
       "nom_fichier_wiki": null,
+      "icone_fichier": null,
       "details": {
         "niveaux": [
           {
@@ -1970,7 +2014,7 @@
         "recompenses_en": [
           "You can probabilistically get back the main materials used at the crafting table"
         ],
-        "public": "jeune-adulte+",
+        "public": "jeune-adulte",
         "version_ajout": "v0.5.0"
       },
       "notes": null,
@@ -1987,6 +2031,7 @@
       "icone": "🏪",
       "icone_url": null,
       "nom_fichier_wiki": null,
+      "icone_fichier": null,
       "details": {
         "niveaux": [
           {
@@ -2029,7 +2074,7 @@
         "recompenses_en": [
           "Fixed operational costs are reduced when running a business"
         ],
-        "public": "jeune-adulte+",
+        "public": "jeune-adulte",
         "version_ajout": "v0.5.0"
       },
       "notes": "Seule ambition connue de la catégorie. Les noms des niveaux de valeur d'entreprise en FR n'ont pas été trouvés.",
@@ -2046,6 +2091,7 @@
       "icone": "📝",
       "icone_url": null,
       "nom_fichier_wiki": null,
+      "icone_fichier": null,
       "details": {
         "niveaux": [
           {
@@ -2105,6 +2151,7 @@
       "icone": "🌟",
       "icone_url": null,
       "nom_fichier_wiki": null,
+      "icone_fichier": null,
       "details": {
         "niveaux": [
           {
@@ -2162,6 +2209,7 @@
       "icone": "🤘",
       "icone_url": null,
       "nom_fichier_wiki": null,
+      "icone_fichier": null,
       "details": {
         "niveaux": [
           {
@@ -2221,6 +2269,7 @@
       "icone": "🎭",
       "icone_url": null,
       "nom_fichier_wiki": null,
+      "icone_fichier": null,
       "details": {
         "niveaux": [
           {
