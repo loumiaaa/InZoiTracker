@@ -5,24 +5,25 @@ Carnet de bord pour suivre ses familles et ses Zois dans **inZOI** : fiche Zoi c
 Application non officielle. inZOI et ses visuels © KRAFTON, Inc. — usage personnel (voir `assets/CREDITS.md`).
 
 ## Installer
-Les installateurs sont fabriqués par GitHub Actions : onglet **Actions** → **Installateurs** → **Run workflow**, puis télécharger l'artefact `zoi-tracker-windows-latest` (.exe) ou `zoi-tracker-macos-latest` (.dmg).
+Zoi Tracker est une web app installable (PWA) :
+- **Chrome / Edge** : ouvrir l'adresse de l'app → icône « Installer » dans la barre d'adresse.
+- **Safari (Mac)** : Fichier → **Ajouter au Dock**. **iPhone / iPad** : Partager → **Sur l'écran d'accueil**.
 
-- **Windows** : si SmartScreen s'affiche, « Informations complémentaires » → « Exécuter quand même ».
-- **macOS** : l'app n'est pas signée ; au premier lancement, clic droit sur l'app → **Ouvrir**.
+Chaque nouvelle version publiée s'installe toute seule au lancement suivant. Les données restent dans le navigateur de chaque appareil : utilise Réglages → Exporter / Importer pour les transférer.
 
 ## Développer
 ```bash
 npm install
-npm run dev     # interface dans le navigateur (données en localStorage)
-npm start       # application Electron
-npm run dist    # installateur pour le système courant
+npm run dev       # serveur de développement
+npm run build     # version de production dans dist/
+npm run preview   # tester la version de production
 ```
 
 ## Organisation
 | Dossier | Contenu |
 |---|---|
 | `src/` | Interface React (fiche Zoi dans `components/FicheZoi.tsx`) |
-| `electron/` | Fenêtre et sauvegarde sur disque |
+| `public/` | Icônes de l'app (PWA) |
 | `data/referentiels/` | Listes du jeu (traits, ambitions, carrières…) — format dans `docs/contrat-donnees.md` |
 | `assets/icones/` | Icônes officielles du jeu |
 | `docs/` | Brief, direction artistique, specs UX |

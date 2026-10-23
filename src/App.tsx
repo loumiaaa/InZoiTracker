@@ -293,14 +293,12 @@ function Reglages({ remplacer }: { remplacer: (d: Donnees) => void }) {
   const [reset, setReset] = useState(false)
   const contenu = () => JSON.stringify(d, null, 1)
 
-  const exporter = async () => {
-    if (window.zoiApi) { if (await window.zoiApi.exporter(contenu())) setMessage('Sauvegarde exportée ✔') }
-    else {
-      const a = document.createElement('a')
-      a.href = URL.createObjectURL(new Blob([contenu()], { type: 'application/json' }))
-      a.download = `zoi-tracker-${new Date().toISOString().slice(0, 10)}.json`
-      a.click()
-    }
+  const exporter = () => {
+    const a = document.createElement('a')
+    a.href = URL.createObjectURL(new Blob([contenu()], { type: 'application/json' }))
+    a.download = `zoi-tracker-${new Date().toISOString().slice(0, 10)}.json`
+    a.click()
+    setMessage('Sauvegarde exportée ✔')
   }
   const importer = async (brut: string | null) => {
     if (!brut) return
@@ -311,12 +309,10 @@ function Reglages({ remplacer }: { remplacer: (d: Donnees) => void }) {
     <div className="pile">
       <h1 className="titre-page">Réglages</h1>
       <Panneau titre="Sauvegarde">
-        <p className="texte-doux">Tes données restent sur ton ordinateur et sont enregistrées automatiquement. Exporte-les régulièrement pour en garder une copie.</p>
+        <p className="texte-doux">Tes données sont enregistrées automatiquement dans ce navigateur, sur cet appareil. Exporte-les régulièrement pour en garder une copie ou pour les transférer sur un autre appareil (Importer).</p>
         <div className="actions">
           <button className="btn btn-accent" onClick={exporter}>Exporter mes données</button>
-          {window.zoiApi
-            ? <button className="btn" onClick={async () => importer(await window.zoiApi!.importer())}>Importer une sauvegarde</button>
-            : <label className="btn">Importer une sauvegarde<input type="file" accept=".json" hidden onChange={async (e) => importer(await e.target.files?.[0]?.text() ?? null)} /></label>}
+          <label className="btn">Importer une sauvegarde<input type="file" accept=".json" hidden onChange={async (e) => importer(await e.target.files?.[0]?.text() ?? null)} /></label>
           <button className="btn btn-danger-doux" onClick={() => setReset(true)}>Tout effacer</button>
         </div>
         {message && <p className="message">{message}</p>}

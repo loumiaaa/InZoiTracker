@@ -60,24 +60,44 @@ export const nouveauZoi = (foyerId?: string): Zoi => ({
   freelance: { licences: [] }, vie: { vehicules: [], animaux: [] }, projets: [], cree: Date.now(),
 })
 
-declare global {
-  interface Window {
-    zoiApi?: {
-      lire: () => Promise<string | null>
-      ecrire: (c: string) => Promise<boolean>
-      exporter: (c: string) => Promise<boolean>
-      importer: () => Promise<string | null>
-    }
-  }
+// Stockage dans IndexedDB (le localStorage est limité à ~5 Mo, trop peu pour les photos).
+const BASE = 'zoi-tracker'
+const CLE = 'donnees'
+
+function ouvrirBase(): Promise<IDBDatabase> {
+  return new Promise((ok, ko) => {
+    const req = indexedDB.open(BASE, 1)
+    req.onupgradeneeded = () => req.result.createObjectStore('etat')
+    req.onsuccess = () => ok(req.result)
+    req.onerror = () => ko(req.error)
+  })
 }
 
-const CLE_LOCALE = 'zoi-tracker'
+async function lireBase(): Promise<string | undefined> {
+  const db = await ouvrirBase()
+  return new Promise((ok, ko) => {
+    const req = db.transaction('etat').objectStore('etat').get(CLE)
+    req.onsuccess = () => ok(req.result)
+    req.onerror = () => ko(req.error)
+  })
+}
+
+async function ecrireBase(contenu: string) {
+  const db = await ouvrirBase()
+  return new Promise<void>((ok, ko) => {
+    const tx = db.transaction('etat', 'readwrite')
+    tx.objectStore('etat').put(contenu, CLE)
+    tx.oncomplete = () => ok()
+    tx.onerror = () => ko(tx.error)
+  })
+}
 
 async function charger(): Promise<Donnees> {
+  // Demande au navigateur de ne pas effacer les données en cas de manque d'espace.
+  navigator.storage?.persist?.().catch(() => {})
   try {
-    const brut = window.zoiApi ? await window.zoiApi.lire() : localStorage.getItem(CLE_LOCALE)
-    if (!brut) return vide()
-    return normaliser(JSON.parse(brut))
+    const brut = await lireBase()
+    return brut ? normaliser(JSON.parse(brut)) : vide()
   } catch {
     return vide()
   }
@@ -96,11 +116,7 @@ export function normaliser(d: any): Donnees {
 }
 
 async function sauver(d: Donnees) {
-  const contenu = JSON.stringify(d)
-  if (window.zoiApi) await window.zoiApi.ecrire(contenu)
-  else {
-    try { localStorage.setItem(CLE_LOCALE, contenu) } catch { /* quota navigateur dépassé */ }
-  }
+  try { await ecrireBase(JSON.stringify(d)) } catch (e) { console.error('Sauvegarde impossible', e) }
 }
 
 /** État global + sauvegarde automatique (débounce 400 ms). */
