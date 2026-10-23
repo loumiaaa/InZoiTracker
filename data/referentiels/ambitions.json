@@ -1,0 +1,2271 @@
+{
+  "referentiel": "ambitions",
+  "titre": "Ambitions",
+  "maj": "2026-10-23",
+  "version_jeu": "v0.11.x (octobre 2026) — liste adultes/ados à jour v0.9.0 ; ambitions enfants (v0.10.0) manquantes",
+  "sources": [
+    "docs/references/jeu-fiche-ambitions.png",
+    "https://inzoi.fandom.com/wiki/Ambition",
+    "https://www.gfinityesports.com/article/inzoi-complete-guide-to-ambitions",
+    "https://playinzoi.com/fr/news/8544",
+    "https://playinzoi.com/fr/news/9079",
+    "https://playinzoi.com/fr/news/9309",
+    "https://playinzoi.com/fr/news/9533",
+    "https://playinzoi.com/fr/news/9824",
+    "https://playinzoi.com/fr/news/10165",
+    "https://playinzoi.com/fr/news/10849",
+    "https://playinzoi.com/fr/guide/cheats",
+    "https://www.dexerto.fr/jeux-video/ambitions-inzoi-1608329/",
+    "https://www.millenium.org/guide/423177.html",
+    "https://thegameswiki.com/inzoi/wiki/ambitions",
+    "https://www.sportskeeda.com/esports/what-ambitions-work-inzoi",
+    "https://www.curseforge.com/inzoi/mods/easier-ambitions"
+  ],
+  "notes": "STRUCTURE : catégorie → ambitions → 3 niveaux (affichés « Lv.1/3 » et onglets « Étape 1/2/3 » en jeu FR), chacun avec 1 à 2 objectifs ; récompenses = bonus débloqués quand l'ambition est accomplie. Chaque étape rapporte aussi des pièces Ronron (Meow Coins, montants non trouvés). Depuis v0.10.0, accomplir certaines ambitions peut aussi donner un nouveau trait (lesquels : non trouvé).\nCOMPLÉTUDE : 15 catégories / 34 ambitions = liste du wiki fandom (à jour v0.9.0) + recoupements. TROU CONNU : la v0.10.0 (03/09/2026) permet aux ENFANTS de choisir des ambitions ; aucune source n'en donne les noms → non listées. Les ambitions de mods (ZoiWorks Ambitions Pack…) sont exclues.\nLIBELLÉS FR : fr_verifie=true si le nom vient de la capture du jeu, des notes de patch officielles FR (playinzoi.com/fr) ou d'un guide FR (Dexerto.fr / Millenium, avril 2025). Le champ source_fr précise laquelle. Les guides FR tiers n'ont pu être lus que via des extraits de moteur de recherche (pages inaccessibles) : à confirmer en jeu. Les notes de patch FR ne coïncident pas toujours avec le jeu (« Pro de la préparation de boissons » dans le patch v0.7.0 vs « Maître de la préparation de boissons » sur la capture).\nOBJECTIFS : traduits en FR à partir du wiki fandom (anglais), complétés par Gfinity ; seuls ceux de l'étape 1 de « Maître de la préparation de boissons » sont vérifiés sur capture. Noms des compétences et objets alignés sur le vocabulaire officiel FR (guide des codes de triche playinzoi.com/fr : Condition physique, Pensée critique, Rhétorique, Spectacle, Fabrication de café, Collectionner, Pêcher, Nager, Travail manuel, Pâtisserie, Préparation de boissons, Production média, Miaou…). Les objectifs EN sont conservés dans objectifs_en.\nDIVERGENCES : refonte v0.5.0 — Stay Healthy renommée Physical Training ; Neat Freak → Cleanliness Champion et Master Chef déplacés vers Lifehacker ; récompenses rééquilibrées (les récompenses listées sont celles du fandom post-v0.5.0). Le tableau fandom range Coffee Master dans Harmonie et paix (à vérifier). Le tableau fandom recopie par erreur les objectifs de Vilain notoire pour Famous Hackers (objectifs repris de Gfinity). Richesse niv. 3 : 200 000 vs 20 000 Miaou selon les sources. TheGamesWiki nomme les ambitions v0.7.0 « Master Barista / Master Baker / Master Bartender » (noms officiels EN : Coffee Master, Baking Master, Drink Mixing Master).\nPUBLIC : ambitions adultes = jeune adulte et plus (choisies à la création du Zoi depuis v0.4.0) ; catégories Célébrité de l'école et Esprit libre à l'école = adolescents (lycée, v0.9.0).\nICÔNES : seules les catégories ont une icône sur le wiki fandom (icone_url + nom_fichier_wiki) ; les illustrations propres à chaque ambition (ex. tablier pour la préparation de boissons) ne sont pas disponibles.",
+  "categories": [
+    {
+      "id": "reussite-financiere",
+      "nom": "Réussite financière",
+      "nom_en": "Financial Success",
+      "fr_verifie": true,
+      "source_fr": "notes de patch officielles FR v0.1.5 (playinzoi.com/fr/news/8544)",
+      "description": "Disposer de ressources financières suffisantes pour vivre sans soucis d'argent.",
+      "icone": "💰",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/8/86/Ambition_Financial_Success.png/revision/latest",
+      "nom_fichier_wiki": "Ambition_Financial_Success.png",
+      "public": "jeune-adulte+",
+      "version_ajout": "lancement (v0.1)",
+      "notes": null
+    },
+    {
+      "id": "reussite-professionnelle",
+      "nom": "Réussite professionnelle",
+      "nom_en": "Career Success",
+      "fr_verifie": true,
+      "source_fr": "guide FR tiers Dexerto.fr (avril 2025, lu via extraits de moteur de recherche)",
+      "description": "Viser un poste plus élevé dans sa carrière.",
+      "icone": "💼",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/5/52/Ambition_Career_Success.png/revision/latest",
+      "nom_fichier_wiki": "Ambition_Career_Success.png",
+      "public": "jeune-adulte+",
+      "version_ajout": "lancement (v0.1)",
+      "notes": "Attention : les notes de patch FR v0.5.0 emploient aussi « Réussite professionnelle » pour traduire la nouvelle ambition « Business Success » (catégorie Business Flourishing)."
+    },
+    {
+      "id": "entrainement-physique",
+      "nom": "Entraînement physique",
+      "nom_en": "Physical Training",
+      "fr_verifie": false,
+      "source_fr": null,
+      "description": "Développer son endurance et affiner ses capacités par diverses activités physiques.",
+      "icone": "🏋️",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/a/a0/Ambition_Stay_Healthy.png/revision/latest",
+      "nom_fichier_wiki": "Ambition_Stay_Healthy.png",
+      "public": "jeune-adulte+",
+      "version_ajout": "lancement (v0.1)",
+      "notes": "Catégorie appelée « Stay Healthy » au lancement (FR : « Bonne santé » selon Dexerto.fr et Millenium) ; renommée « Physical Training » sur le wiki fandom après la refonte v0.5.0, où Grand chef et Maniaque de la propreté ont été déplacés vers Pro des astuces du quotidien. Libellé FR actuel non vérifié."
+    },
+    {
+      "id": "bonheur-familial",
+      "nom": "Bonheur familial",
+      "nom_en": "Family Happiness",
+      "fr_verifie": true,
+      "source_fr": "guide FR tiers Dexerto.fr (avril 2025, lu via extraits de moteur de recherche)",
+      "description": "Offrir une vie heureuse et stable à tous les membres de la famille.",
+      "icone": "👨‍👩‍👧",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/6/63/Ambition_Family_Happiness.png/revision/latest",
+      "nom_fichier_wiki": "Ambition_Family_Happiness.png",
+      "public": "jeune-adulte+",
+      "version_ajout": "lancement (v0.1)",
+      "notes": null
+    },
+    {
+      "id": "harmonie-et-paix",
+      "nom": "Harmonie et paix",
+      "nom_en": "Harmony and Peace",
+      "fr_verifie": true,
+      "source_fr": "guide FR tiers Dexerto.fr (avril 2025, lu via extraits de moteur de recherche)",
+      "description": "Trouver la paix intérieure et rechercher la tranquillité en harmonie avec la nature.",
+      "icone": "🕊️",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/0/08/Ambition_Harmony_and_Peace.png/revision/latest",
+      "nom_fichier_wiki": "Ambition_Harmony_and_Peace.png",
+      "public": "jeune-adulte+",
+      "version_ajout": "lancement (v0.1)",
+      "notes": null
+    },
+    {
+      "id": "connaissances-et-etudes",
+      "nom": "Connaissances et études",
+      "nom_en": "Knowledge and Learning",
+      "fr_verifie": true,
+      "source_fr": "notes de patch officielles FR v0.3.0 (playinzoi.com/fr/news/9079)",
+      "description": "Acquérir des connaissances et découvrir de nouvelles technologies pour élargir ses horizons.",
+      "icone": "📚",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/a/ac/Ambition_Knowledge_and_Learning.png/revision/latest",
+      "nom_fichier_wiki": "Ambition_Knowledge_and_Learning.png",
+      "public": "jeune-adulte+",
+      "version_ajout": "lancement (v0.1)",
+      "notes": null
+    },
+    {
+      "id": "expression-artistique",
+      "nom": "Expression artistique",
+      "nom_en": "Creative Expression",
+      "fr_verifie": true,
+      "source_fr": "guide FR tiers Dexerto.fr (avril 2025, lu via extraits de moteur de recherche)",
+      "description": "Exprimer sa créativité à travers des activités artistiques et musicales.",
+      "icone": "🎨",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/c/cb/Ambition_Creative_Expression.png/revision/latest",
+      "nom_fichier_wiki": "Ambition_Creative_Expression.png",
+      "public": "jeune-adulte+",
+      "version_ajout": "lancement (v0.1)",
+      "notes": null
+    },
+    {
+      "id": "quete-de-l-amour",
+      "nom": "Quête de l'amour",
+      "nom_en": "Pursuit of Love",
+      "fr_verifie": true,
+      "source_fr": "notes de patch officielles FR v0.1.5 (playinzoi.com/fr/news/8544)",
+      "description": "Entretenir une relation amoureuse avec quelqu'un.",
+      "icone": "💘",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/2/2e/Ambition_Pursuit_of_Love.png/revision/latest",
+      "nom_fichier_wiki": "Ambition_Pursuit_of_Love.png",
+      "public": "jeune-adulte+",
+      "version_ajout": "lancement (v0.1)",
+      "notes": "Appelée « Romantic Relationship » dans certains guides EN du lancement (Kotaku, inzoiresource)."
+    },
+    {
+      "id": "contribution-communautaire",
+      "nom": "Contribution communautaire",
+      "nom_en": "Community Contribution",
+      "fr_verifie": true,
+      "source_fr": "notes de patch officielles FR v0.4.0 (playinzoi.com/fr/news/9309)",
+      "description": "Contribuer à la communauté et renforcer la solidarité sociale.",
+      "icone": "🤝",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/a/a6/Ambition_Community_Contribution.png/revision/latest",
+      "nom_fichier_wiki": "Ambition_Community_Contribution.png",
+      "public": "jeune-adulte+",
+      "version_ajout": "lancement (v0.1)",
+      "notes": "Aussi appelée « Contribute to Community » dans des guides EN ; Dexerto.fr écrit « Contributions à la communauté »."
+    },
+    {
+      "id": "desordre-social",
+      "nom": "Désordre social",
+      "nom_en": "Social Disorder",
+      "fr_verifie": true,
+      "source_fr": "guide FR tiers Dexerto.fr (avril 2025, lu via extraits de moteur de recherche)",
+      "description": "Défier la loi et l'ordre en commettant des délits.",
+      "icone": "😈",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/3/35/Ambition_Social_Disorder.png/revision/latest",
+      "nom_fichier_wiki": "Ambition_Social_Disorder.png",
+      "public": "jeune-adulte+",
+      "version_ajout": "lancement (v0.1)",
+      "notes": "Appelée « Social Unrest » par Sportskeeda."
+    },
+    {
+      "id": "pro-des-astuces-du-quotidien",
+      "nom": "Pro des astuces du quotidien",
+      "nom_en": "Lifehacker",
+      "fr_verifie": true,
+      "source_fr": "capture du jeu FR (docs/references/jeu-fiche-ambitions.png) + notes de patch officielles FR v0.5.0 (playinzoi.com/fr/news/9533)",
+      "description": "Maîtriser les tâches du quotidien et se construire une vie autonome.",
+      "icone": "🧽",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/4/41/Ambition_Lifehacker.png/revision/latest",
+      "nom_fichier_wiki": "Ambition_Lifehacker.png",
+      "public": "jeune-adulte+",
+      "version_ajout": "v0.5.0",
+      "notes": null
+    },
+    {
+      "id": "collectionner-et-creation",
+      "nom": "Collectionner et Création",
+      "nom_en": "Collecting and Crafting",
+      "fr_verifie": true,
+      "source_fr": "notes de patch officielles FR v0.5.0 (playinzoi.com/fr/news/9533)",
+      "description": "Récolter des ressources et les transformer en objets de valeur.",
+      "icone": "⛏️",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/e/ea/Ambition_Collecting.png/revision/latest",
+      "nom_fichier_wiki": "Ambition_Collecting.png",
+      "public": "jeune-adulte+",
+      "version_ajout": "v0.5.0",
+      "notes": "Libellé FR tiré des notes de patch v0.5.0 (« Collectionner et Création ») ; le libellé exact en jeu reste à confirmer."
+    },
+    {
+      "id": "prosperite-de-l-entreprise",
+      "nom": "Prospérité de l'entreprise",
+      "nom_en": "Business Flourishing",
+      "fr_verifie": false,
+      "source_fr": null,
+      "description": "Saisir les opportunités et créer de la valeur pour faire prospérer son entreprise.",
+      "icone": "🏪",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/c/c6/Ambition_Business.png/revision/latest",
+      "nom_fichier_wiki": "Ambition_Business.png",
+      "public": "jeune-adulte+",
+      "version_ajout": "v0.5.0",
+      "notes": "Nom EN « Business Flourishing » (wiki fandom) / « Business Success » (notes de patch EN v0.5.0). Les notes FR v0.5.0 traduisent « Réussite professionnelle » (homonyme de Career Success) ; « Prospérité de l'entreprise » est le titre de section FR des notes v0.5.0 sur les entreprises, repris ici comme proposition."
+    },
+    {
+      "id": "celebrite-de-l-ecole",
+      "nom": "Célébrité de l'école",
+      "nom_en": "School Celebrity",
+      "fr_verifie": false,
+      "source_fr": null,
+      "description": "Pour les Zois qui veulent être au centre de la vie scolaire et attirer tous les regards.",
+      "icone": "🌟",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/8/8b/Ambition_School_Celebrity.png/revision/latest",
+      "nom_fichier_wiki": "Ambition_School_Celebrity.png",
+      "public": "adolescent",
+      "version_ajout": "v0.9.0",
+      "notes": null
+    },
+    {
+      "id": "esprit-libre-a-l-ecole",
+      "nom": "Esprit libre à l'école",
+      "nom_en": "Free Spirit at School",
+      "fr_verifie": false,
+      "source_fr": null,
+      "description": "Devenir une présence fascinante qui parcourt l'école librement et avec audace.",
+      "icone": "🛹",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/b/b9/Ambition_Free_Spirit_School.png/revision/latest",
+      "nom_fichier_wiki": "Ambition_Free_Spirit_School.png",
+      "public": "adolescent",
+      "version_ajout": "v0.9.0",
+      "notes": null
+    }
+  ],
+  "elements": [
+    {
+      "id": "richesse",
+      "nom": "Richesse",
+      "nom_en": "Wealth",
+      "fr_verifie": true,
+      "source_fr": "guide FR tiers Dexerto.fr (avril 2025, lu via extraits de moteur de recherche)",
+      "categorie": "reussite-financiere",
+      "description": "Accumuler de l'argent, épargner à la banque et vivre dans une propriété de valeur.",
+      "icone": "💰",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "details": {
+        "niveaux": [
+          {
+            "niveau": 1,
+            "objectifs": [
+              "Posséder 50 000 Miaou",
+              "Acheter 5 fois un meuble de plus de 800 Miaou"
+            ],
+            "objectifs_en": [
+              "Hold 50,000 Meow",
+              "Buy 5 furniture pieces worth 800+ Meow"
+            ]
+          },
+          {
+            "niveau": 2,
+            "objectifs": [
+              "Déposer de l'argent à la banque 10 fois",
+              "Habiter une propriété d'une valeur de plus de 35 000 Miaou"
+            ],
+            "objectifs_en": [
+              "Deposit money 10 times",
+              "Own property worth 35,000+ Meow"
+            ]
+          },
+          {
+            "niveau": 3,
+            "objectifs": [
+              "Posséder 200 000 Miaou",
+              "Habiter une propriété d'une valeur de plus de 50 000 Miaou"
+            ],
+            "objectifs_en": [
+              "Hold 200,000 Meow",
+              "Own property worth 50,000+ Meow"
+            ]
+          }
+        ],
+        "recompenses": [
+          "Accès aux produits VIP de la banque",
+          "Interaction sur soi « Donner de l'argent »",
+          "Conversation « Se vanter de son argent »"
+        ],
+        "recompenses_en": [
+          "You can use VIP products at the bank",
+          "\"Give Away Money\" self-interaction",
+          "\"Bragging About Your Money\" conversation"
+        ],
+        "public": "jeune-adulte+",
+        "version_ajout": "lancement (v0.1)"
+      },
+      "notes": "Niveau 3 : 200 000 Miaou selon fandom, Dexerto, Game8 ; 20 000 selon Gfinity et TheGamer. La valeur de propriété ne compte que le terrain (précision officielle FR v0.1.5).",
+      "source": "https://inzoi.fandom.com/wiki/Ambition"
+    },
+    {
+      "id": "manoir-de-luxe",
+      "nom": "Manoir de luxe",
+      "nom_en": "Luxury Mansion",
+      "fr_verifie": true,
+      "source_fr": "guide FR tiers Dexerto.fr (avril 2025, lu via extraits de moteur de recherche)",
+      "categorie": "reussite-financiere",
+      "description": "Posséder une propriété luxueuse et la meubler richement.",
+      "icone": "🏰",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "details": {
+        "niveaux": [
+          {
+            "niveau": 1,
+            "objectifs": [
+              "Posséder 50 000 Miaou",
+              "Habiter une propriété d'une valeur de 35 000 Miaou ou plus (terrain seul)"
+            ],
+            "objectifs_en": [
+              "Hold 50,000 Meow",
+              "Own property worth 35,000+ Meow"
+            ]
+          },
+          {
+            "niveau": 2,
+            "objectifs": [
+              "Acheter un meuble de plus de 1 500 Miaou",
+              "Planter 10 arbres de taille moyenne ou plus"
+            ],
+            "objectifs_en": [
+              "Buy 1,500+ Meow furniture",
+              "Plant 10 medium/large trees"
+            ]
+          },
+          {
+            "niveau": 3,
+            "objectifs": [
+              "Acheter 5 fois un meuble de plus de 800 Miaou",
+              "Habiter une propriété d'une valeur de plus de 50 000 Miaou"
+            ],
+            "objectifs_en": [
+              "Buy 800+ Meow furniture 5 times",
+              "Own property worth 50,000+ Meow"
+            ]
+          }
+        ],
+        "recompenses": [
+          "Réduction sur les factures d'eau et d'électricité du foyer",
+          "Accès aux produits VIP de la banque",
+          "Conversation « Montrer sa maison »"
+        ],
+        "recompenses_en": [
+          "Water and electricity usage at home discounted",
+          "You can use VIP products at the bank",
+          "\"Show Off Your House\" conversation"
+        ],
+        "public": "jeune-adulte+",
+        "version_ajout": "lancement (v0.1)"
+      },
+      "notes": null,
+      "source": "https://inzoi.fandom.com/wiki/Ambition"
+    },
+    {
+      "id": "responsable-de-generation-suivante",
+      "nom": "Responsable de génération suivante",
+      "nom_en": "Next Gen Leader",
+      "fr_verifie": true,
+      "source_fr": "notes de patch officielles FR v0.3.0 (playinzoi.com/fr/news/9079)",
+      "categorie": "reussite-professionnelle",
+      "description": "Devenir un leader grâce à la lecture et à l'éloquence.",
+      "icone": "👔",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "details": {
+        "niveaux": [
+          {
+            "niveau": 1,
+            "objectifs": [
+              "Lire 10 fois des livres de développement personnel"
+            ],
+            "objectifs_en": [
+              "Read self-help books 10 times"
+            ]
+          },
+          {
+            "niveau": 2,
+            "objectifs": [
+              "Atteindre le niveau 6 en Rhétorique",
+              "Lire 10 fois des livres de développement personnel"
+            ],
+            "objectifs_en": [
+              "Rhetoric level 6",
+              "Read self-help books 10 times"
+            ]
+          },
+          {
+            "niveau": 3,
+            "objectifs": [
+              "Avoir 100 conversations d'affaires positives",
+              "Atteindre le niveau 10 en Rhétorique"
+            ],
+            "objectifs_en": [
+              "100 positive business conversations",
+              "Rhetoric level 10"
+            ]
+          }
+        ],
+        "recompenses": [
+          "Cachet supplémentaire après un séminaire",
+          "Interaction sur soi « Montrer la carte de visite »"
+        ],
+        "recompenses_en": [
+          "Additional lecture fee after the seminar",
+          "Business card self-interaction (\"Show Off Business Card\")"
+        ],
+        "public": "jeune-adulte+",
+        "version_ajout": "lancement (v0.1)"
+      },
+      "notes": "Libellé FR des notes de patch officielles v0.3.0 ; Dexerto.fr (avril 2025) écrit « Leader de dernière génération ».",
+      "source": "https://inzoi.fandom.com/wiki/Ambition"
+    },
+    {
+      "id": "zoi-competent",
+      "nom": "Zoi compétent",
+      "nom_en": "Competent Talent",
+      "fr_verifie": true,
+      "source_fr": "guide FR tiers Dexerto.fr (avril 2025, lu via extraits de moteur de recherche)",
+      "categorie": "reussite-professionnelle",
+      "description": "Réseauter, investir et grimper les échelons au travail.",
+      "icone": "📈",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "details": {
+        "niveaux": [
+          {
+            "niveau": 1,
+            "objectifs": [
+              "Serrer la main d'une connaissance (ou plus proche) 10 fois",
+              "S'entraîner à l'investissement simulé sur ordinateur 5 fois"
+            ],
+            "objectifs_en": [
+              "Shake hands 10 times",
+              "Simulate investments 5 times"
+            ]
+          },
+          {
+            "niveau": 2,
+            "objectifs": [
+              "Avoir un emploi à temps plein",
+              "Obtenir une promotion"
+            ],
+            "objectifs_en": [
+              "Have full-time job",
+              "Get promoted once"
+            ]
+          },
+          {
+            "niveau": 3,
+            "objectifs": [
+              "Trinquer 10 fois avec un partenaire d'affaires",
+              "Obtenir 2 promotions"
+            ],
+            "objectifs_en": [
+              "Toast with partners 10 times",
+              "Get promoted twice"
+            ]
+          }
+        ],
+        "recompenses": [
+          "Interaction « Investir réellement en bourse »",
+          "Points de relation d'affaires supplémentaires pendant les conversations"
+        ],
+        "recompenses_en": [
+          "\"Genuinely Invest Stocks\" interaction",
+          "Additional Business Relationship points during conversations"
+        ],
+        "public": "jeune-adulte+",
+        "version_ajout": "lancement (v0.1)"
+      },
+      "notes": null,
+      "source": "https://inzoi.fandom.com/wiki/Ambition"
+    },
+    {
+      "id": "expert-de-la-condition-physique",
+      "nom": "Expert de la condition physique",
+      "nom_en": "Fitness Master",
+      "fr_verifie": true,
+      "source_fr": "guide FR tiers Dexerto.fr (avril 2025, lu via extraits de moteur de recherche)",
+      "categorie": "entrainement-physique",
+      "description": "S'entraîner régulièrement et maîtriser la compétence Condition physique.",
+      "icone": "💪",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "details": {
+        "niveaux": [
+          {
+            "niveau": 1,
+            "objectifs": [
+              "Acheter un équipement de fitness",
+              "Faire de l'exercice 3 fois"
+            ],
+            "objectifs_en": [
+              "Buy fitness equipment",
+              "Work out 3 times"
+            ]
+          },
+          {
+            "niveau": 2,
+            "objectifs": [
+              "Lire 10 fois des livres sur la santé",
+              "Atteindre le niveau 6 en Condition physique"
+            ],
+            "objectifs_en": [
+              "Read health books 10 times",
+              "Fitness level 6"
+            ]
+          },
+          {
+            "niveau": 3,
+            "objectifs": [
+              "Faire de l'exercice 20 fois en étant concentré",
+              "Atteindre le niveau 10 en Condition physique"
+            ],
+            "objectifs_en": [
+              "Work out 20 times while focused",
+              "Fitness level 10"
+            ]
+          }
+        ],
+        "recompenses": [
+          "Interaction sur soi « Montrer ses muscles »",
+          "Conversation « Expliquer comment rester concentré pendant l'entraînement »"
+        ],
+        "recompenses_en": [
+          "\"Show Off Muscles\" self-interaction",
+          "\"Explain How to Maintain Focus While Working Out\" conversation"
+        ],
+        "public": "jeune-adulte+",
+        "version_ajout": "lancement (v0.1)"
+      },
+      "notes": null,
+      "source": "https://inzoi.fandom.com/wiki/Ambition"
+    },
+    {
+      "id": "maitre-de-la-natation",
+      "nom": "Maître de la natation",
+      "nom_en": "Master Swimmer",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "entrainement-physique",
+      "description": "Prendre des cours, gagner des compétitions et maîtriser la natation.",
+      "icone": "🏊",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "details": {
+        "niveaux": [
+          {
+            "niveau": 1,
+            "objectifs": [
+              "Participer 3 fois à des cours de natation",
+              "Atteindre le niveau 3 en Nager"
+            ],
+            "objectifs_en": [
+              "Participate in swimming lessons 3 times",
+              "Swimming level 3"
+            ]
+          },
+          {
+            "niveau": 2,
+            "objectifs": [
+              "Gagner 3 fois une compétition de natation",
+              "Atteindre le niveau 6 en Nager"
+            ],
+            "objectifs_en": [
+              "Win a swimming competition 3 times",
+              "Swimming level 6"
+            ]
+          },
+          {
+            "niveau": 3,
+            "objectifs": [
+              "Atteindre le niveau 10 en Nager"
+            ],
+            "objectifs_en": [
+              "Swimming level 10"
+            ]
+          }
+        ],
+        "recompenses": [
+          "La Vitalité diminue très lentement pendant la nage",
+          "Meilleures chances de gagner une compétition de natation"
+        ],
+        "recompenses_en": [
+          "Vitality decreases very slowly when swimming",
+          "Chances of winning a swimming competition increase"
+        ],
+        "public": "jeune-adulte+",
+        "version_ajout": "lancement (v0.1)"
+      },
+      "notes": "Liée à la compétence Nager (arrivée avec le DLC Escapade insulaire / v0.3.0) ; version d'ajout de l'ambition non confirmée. « Nager » = nom officiel FR de la compétence (guide des codes de triche).",
+      "source": "https://inzoi.fandom.com/wiki/Ambition"
+    },
+    {
+      "id": "famille-aimante",
+      "nom": "Famille aimante",
+      "nom_en": "Loving Family",
+      "fr_verifie": true,
+      "source_fr": "guide FR tiers Dexerto.fr (avril 2025, lu via extraits de moteur de recherche)",
+      "categorie": "bonheur-familial",
+      "description": "Fonder une famille et entretenir des liens chaleureux avec son/sa partenaire et ses enfants.",
+      "icone": "👨‍👩‍👧",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "details": {
+        "niveaux": [
+          {
+            "niveau": 1,
+            "objectifs": [
+              "Se marier (fonder une famille)",
+              "Avoir 3 conversations familiales positives avec son/sa partenaire"
+            ],
+            "objectifs_en": [
+              "Get married",
+              "3 positive family conversations"
+            ]
+          },
+          {
+            "niveau": 2,
+            "objectifs": [
+              "Avoir 20 conversations familiales positives avec son/sa partenaire",
+              "Avoir 10 conversations familiales touchantes en étant ému(e) ou sentimental(e)"
+            ],
+            "objectifs_en": [
+              "20 positive partner conversations",
+              "10 sentimental family moments"
+            ]
+          },
+          {
+            "niveau": 3,
+            "objectifs": [
+              "Avoir 50 conversations familiales positives avec son/sa partenaire",
+              "Avoir 30 conversations positives avec un enfant"
+            ],
+            "objectifs_en": [
+              "50 positive partner conversations",
+              "30 positive child conversations"
+            ]
+          }
+        ],
+        "recompenses": [
+          "Conversation « Conseils pour une famille aimante »",
+          "Points de relation familiale supplémentaires pendant les conversations"
+        ],
+        "recompenses_en": [
+          "\"Counseling Loving Families\" conversation",
+          "Additional family relationship points during conversations"
+        ],
+        "public": "jeune-adulte+",
+        "version_ajout": "lancement (v0.1)"
+      },
+      "notes": null,
+      "source": "https://inzoi.fandom.com/wiki/Ambition"
+    },
+    {
+      "id": "parentalite-experte",
+      "nom": "Parentalité experte",
+      "nom_en": "Parenting Expert",
+      "fr_verifie": true,
+      "source_fr": "guide FR tiers Dexerto.fr (avril 2025, lu via extraits de moteur de recherche)",
+      "categorie": "bonheur-familial",
+      "description": "Jouer avec ses enfants, s'en occuper et les éduquer.",
+      "icone": "🍼",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "details": {
+        "niveaux": [
+          {
+            "niveau": 1,
+            "objectifs": [
+              "Jouer 5 fois avec un enfant",
+              "Danser 5 fois pour un enfant"
+            ],
+            "objectifs_en": [
+              "Play with child 5 times",
+              "Dance for child 5 times"
+            ]
+          },
+          {
+            "niveau": 2,
+            "objectifs": [
+              "Raconter 10 fois une histoire",
+              "S'occuper d'un enfant 20 fois"
+            ],
+            "objectifs_en": [
+              "Tell stories 10 times",
+              "Child care 20 times"
+            ]
+          },
+          {
+            "niveau": 3,
+            "objectifs": [
+              "Chanter 10 fois des chansons amusantes à un enfant",
+              "Faire 50 actions d'éducation"
+            ],
+            "objectifs_en": [
+              "Sing to child 10 times",
+              "Child rearing 50 times"
+            ]
+          }
+        ],
+        "recompenses": [
+          "Possibilité de postuler à un emploi de baby-sitter",
+          "Conversation « Conseils de parentalité »"
+        ],
+        "recompenses_en": [
+          "You can apply for a babysitting job",
+          "\"Parenting Tips\" conversation"
+        ],
+        "public": "jeune-adulte+",
+        "version_ajout": "lancement (v0.1)"
+      },
+      "notes": "Les guides ne répartissent pas tous les objectifs de la même façon entre les niveaux.",
+      "source": "https://inzoi.fandom.com/wiki/Ambition"
+    },
+    {
+      "id": "amateur-de-plantes",
+      "nom": "Amateur de plantes",
+      "nom_en": "Plant Lover",
+      "fr_verifie": true,
+      "source_fr": "guide FR tiers Dexerto.fr (avril 2025, lu via extraits de moteur de recherche)",
+      "categorie": "harmonie-et-paix",
+      "description": "Cultiver des plantes d'intérieur et des bonsaïs, maîtriser le Jardinage.",
+      "icone": "🪴",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "details": {
+        "niveaux": [
+          {
+            "niveau": 1,
+            "objectifs": [
+              "Acheter 5 plantes d'intérieur",
+              "Arroser un pot de fleurs (ou interagir avec) 3 fois"
+            ],
+            "objectifs_en": [
+              "Buy 5 houseplants",
+              "Water plants 3 times"
+            ]
+          },
+          {
+            "niveau": 2,
+            "objectifs": [
+              "Arroser les plantes (ou interagir avec) 10 fois",
+              "Atteindre le niveau 6 en Jardinage"
+            ],
+            "objectifs_en": [
+              "Water plants 10 times",
+              "Gardening level 6"
+            ]
+          },
+          {
+            "niveau": 3,
+            "objectifs": [
+              "Arranger un bonsaï 5 fois (pot à bonsaï)",
+              "Atteindre le niveau 10 en Jardinage"
+            ],
+            "objectifs_en": [
+              "Arrange bonsai 5 times",
+              "Gardening level 10"
+            ]
+          }
+        ],
+        "recompenses": [
+          "Interaction « Faire pousser les plantes instantanément »",
+          "Conversation « Comment prendre soin d'une plante »"
+        ],
+        "recompenses_en": [
+          "\"Grow a plant immediately\" interaction",
+          "\"How to take care of a plant\" conversation"
+        ],
+        "public": "jeune-adulte+",
+        "version_ajout": "lancement (v0.1)"
+      },
+      "notes": "Nom FR de l'interaction de récompense tiré des notes de patch officielles FR v0.3.0.",
+      "source": "https://inzoi.fandom.com/wiki/Ambition"
+    },
+    {
+      "id": "esprit-tranquille",
+      "nom": "Esprit tranquille",
+      "nom_en": "Tranquil Mind",
+      "fr_verifie": true,
+      "source_fr": "guide FR tiers Dexerto.fr (avril 2025, lu via extraits de moteur de recherche)",
+      "categorie": "harmonie-et-paix",
+      "description": "Yoga, méditation et détente pour atteindre la sérénité.",
+      "icone": "🧘",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "details": {
+        "niveaux": [
+          {
+            "niveau": 1,
+            "objectifs": [
+              "Acheter un tapis de yoga",
+              "Faire du yoga 3 fois"
+            ],
+            "objectifs_en": [
+              "Buy yoga mat",
+              "Do yoga 3 times"
+            ]
+          },
+          {
+            "niveau": 2,
+            "objectifs": [
+              "Faire du yoga 10 fois",
+              "Prendre une douche chaude 5 fois en étant mal à l'aise"
+            ],
+            "objectifs_en": [
+              "Yoga 10 times",
+              "Hot showers 5 times when uncomfortable"
+            ]
+          },
+          {
+            "niveau": 3,
+            "objectifs": [
+              "Méditer 50 fois sur un tapis de yoga",
+              "Se reposer ou faire la sieste 30 fois sur un transat"
+            ],
+            "objectifs_en": [
+              "Meditate 50 times",
+              "Sunbed naps 30 times"
+            ]
+          }
+        ],
+        "recompenses": [
+          "L'émotion « Satisfait » est toujours active",
+          "Interaction sur soi « Partager sa paix intérieure »"
+        ],
+        "recompenses_en": [
+          "The Content emotion is always active",
+          "\"Share Inner Peace\" self-interaction"
+        ],
+        "public": "jeune-adulte+",
+        "version_ajout": "lancement (v0.1)"
+      },
+      "notes": null,
+      "source": "https://inzoi.fandom.com/wiki/Ambition"
+    },
+    {
+      "id": "maitre-du-cafe",
+      "nom": "Maître du café",
+      "nom_en": "Coffee Master",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "harmonie-et-paix",
+      "description": "Préparer du café et maîtriser la compétence Fabrication de café.",
+      "icone": "☕",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "details": {
+        "niveaux": [
+          {
+            "niveau": 1,
+            "objectifs": [
+              "Acheter un moulin à café",
+              "Préparer 5 tasses de café"
+            ],
+            "objectifs_en": [
+              "Purchase a Coffee Grinder",
+              "Make 5 cups of coffee"
+            ]
+          },
+          {
+            "niveau": 2,
+            "objectifs": [
+              "Atteindre le niveau 6 en Fabrication de café",
+              "Préparer 15 tasses de café"
+            ],
+            "objectifs_en": [
+              "Coffee Craft Level 6",
+              "Make 15 cups of coffee"
+            ]
+          },
+          {
+            "niveau": 3,
+            "objectifs": [
+              "Atteindre le niveau 10 en Fabrication de café",
+              "Préparer 5 cafés de qualité parfaite"
+            ],
+            "objectifs_en": [
+              "Coffee Craft Level 10",
+              "Make 5 perfect quality cups of coffee"
+            ]
+          }
+        ],
+        "recompenses": [
+          "Concentration accrue en préparant le café, pour des cafés de meilleure qualité"
+        ],
+        "recompenses_en": [
+          "Your focus increases when brewing coffee, leading to a higher quality cup of coffee"
+        ],
+        "public": "jeune-adulte+",
+        "version_ajout": "v0.7.0"
+      },
+      "notes": "Notes de patch officielles FR v0.7.0 : « Pro du café » ; mais la même note écrit « Pro de la préparation de boissons » alors que le jeu affiche « Maître de la préparation de boissons » (capture), d'où la proposition « Maître du café ». Classée dans Harmonie et paix par le wiki fandom (les deux autres ambitions v0.7.0 sont dans Pro des astuces du quotidien) : catégorie à vérifier en jeu. TheGamesWiki l'appelle « Master Barista ».",
+      "source": "https://inzoi.fandom.com/wiki/Ambition"
+    },
+    {
+      "id": "encyclopedie-vivante",
+      "nom": "Encyclopédie vivante",
+      "nom_en": "Walking Encyclopedia",
+      "fr_verifie": true,
+      "source_fr": "guide FR tiers Dexerto.fr (avril 2025, lu via extraits de moteur de recherche)",
+      "categorie": "connaissances-et-etudes",
+      "description": "Réparer, fabriquer, créer et monter de nombreuses compétences.",
+      "icone": "📖",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "details": {
+        "niveaux": [
+          {
+            "niveau": 1,
+            "objectifs": [
+              "Réparer un objet cassé 3 fois",
+              "Atteindre le niveau 5 dans 3 compétences"
+            ],
+            "objectifs_en": [
+              "Fix objects 3 times",
+              "Level 5 in 3 skills"
+            ]
+          },
+          {
+            "niveau": 2,
+            "objectifs": [
+              "Fabriquer des meubles à l'établi 15 fois",
+              "Atteindre le niveau 8 dans 5 compétences"
+            ],
+            "objectifs_en": [
+              "Make furniture 15 times",
+              "Level 8 in 5 skills"
+            ]
+          },
+          {
+            "niveau": 3,
+            "objectifs": [
+              "Créer des vidéos sur ordinateur 20 fois",
+              "Atteindre le niveau 10 dans 5 compétences"
+            ],
+            "objectifs_en": [
+              "Create videos 20 times",
+              "Level 10 in 5 skills"
+            ]
+          }
+        ],
+        "recompenses": [
+          "Moins de risques de pannes et d'incendies",
+          "Plus d'XP en Tâches ménagères, Jardinage, Condition physique, Cuisine, Fabrication de café et Instruments"
+        ],
+        "recompenses_en": [
+          "Chances of malfunctions and fires decrease",
+          "More experience in Chores, Gardening, Exercise, Cooking, Coffee Craft and Instruments"
+        ],
+        "public": "jeune-adulte+",
+        "version_ajout": "lancement (v0.1)"
+      },
+      "notes": null,
+      "source": "https://inzoi.fandom.com/wiki/Ambition"
+    },
+    {
+      "id": "puits-de-connaissance",
+      "nom": "Puits de connaissance",
+      "nom_en": "Knowledge Seeker",
+      "fr_verifie": true,
+      "source_fr": "guide FR tiers Millenium (avril 2025, lu via extraits de moteur de recherche)",
+      "categorie": "connaissances-et-etudes",
+      "description": "Lire, s'informer, écrire et maîtriser la Pensée critique.",
+      "icone": "🎓",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "details": {
+        "niveaux": [
+          {
+            "niveau": 1,
+            "objectifs": [
+              "Acheter une bibliothèque",
+              "Lire un livre 3 fois"
+            ],
+            "objectifs_en": [
+              "Buy bookshelf",
+              "Read books 3 times"
+            ]
+          },
+          {
+            "niveau": 2,
+            "objectifs": [
+              "Lire un livre 10 fois",
+              "Lire le journal 5 fois (tablette ou kiosque)"
+            ],
+            "objectifs_en": [
+              "Read books 10 times",
+              "Read news 5 times"
+            ]
+          },
+          {
+            "niveau": 3,
+            "objectifs": [
+              "Atteindre le niveau 10 en Pensée critique",
+              "Écrire 20 fois sur un ordinateur"
+            ],
+            "objectifs_en": [
+              "Critical Thinking level 10",
+              "Write on computer 20 times"
+            ]
+          }
+        ],
+        "recompenses": [
+          "XP supplémentaire en Charme, Pensée critique, Programmation, Art et Production média"
+        ],
+        "recompenses_en": [
+          "Additional skill experience for Charm, Critical Thinking, Programming, Art, Media Production"
+        ],
+        "public": "jeune-adulte+",
+        "version_ajout": "lancement (v0.1)"
+      },
+      "notes": null,
+      "source": "https://inzoi.fandom.com/wiki/Ambition"
+    },
+    {
+      "id": "grand-peintre",
+      "nom": "Grand peintre",
+      "nom_en": "Great Painter",
+      "fr_verifie": true,
+      "source_fr": "guide FR tiers Dexerto.fr (avril 2025, lu via extraits de moteur de recherche)",
+      "categorie": "expression-artistique",
+      "description": "Peindre, étudier l'art et maîtriser la compétence Art.",
+      "icone": "🖼️",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "details": {
+        "niveaux": [
+          {
+            "niveau": 1,
+            "objectifs": [
+              "Acheter un chevalet",
+              "Peindre 3 tableaux"
+            ],
+            "objectifs_en": [
+              "Buy easel",
+              "Paint 3 times"
+            ]
+          },
+          {
+            "niveau": 2,
+            "objectifs": [
+              "Peindre 10 tableaux",
+              "Lire 10 livres d'art"
+            ],
+            "objectifs_en": [
+              "Paint 10 times",
+              "Read art books 10 times"
+            ]
+          },
+          {
+            "niveau": 3,
+            "objectifs": [
+              "Atteindre le niveau 10 en Art",
+              "Apprécier l'art 10 fois en étant curieux"
+            ],
+            "objectifs_en": [
+              "Art level 10",
+              "Appreciate art 10 times while Curious"
+            ]
+          }
+        ],
+        "recompenses": [
+          "Émotions supplémentaires dans les galeries d'art"
+        ],
+        "recompenses_en": [
+          "You can gain additional emotions on the art gallery property"
+        ],
+        "public": "jeune-adulte+",
+        "version_ajout": "lancement (v0.1)"
+      },
+      "notes": null,
+      "source": "https://inzoi.fandom.com/wiki/Ambition"
+    },
+    {
+      "id": "voix-d-ange",
+      "nom": "Voix d'ange",
+      "nom_en": "Voice of Heaven",
+      "fr_verifie": true,
+      "source_fr": "guide FR tiers Dexerto.fr (avril 2025, lu via extraits de moteur de recherche)",
+      "categorie": "expression-artistique",
+      "description": "Chanter, faire du karaoké et maîtriser la compétence Spectacle.",
+      "icone": "🎤",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "details": {
+        "niveaux": [
+          {
+            "niveau": 1,
+            "objectifs": [
+              "Acheter un micro sur pied",
+              "Chanter 3 fois"
+            ],
+            "objectifs_en": [
+              "Buy a standing microphone",
+              "Sing 3 times"
+            ]
+          },
+          {
+            "niveau": 2,
+            "objectifs": [
+              "Chanter 10 fois en étant amusé",
+              "Atteindre le niveau 6 en Spectacle"
+            ],
+            "objectifs_en": [
+              "Sing 10 times while amused",
+              "Performance level 6"
+            ]
+          },
+          {
+            "niveau": 3,
+            "objectifs": [
+              "Chanter 10 fois au karaoké (cabine à pièces)",
+              "Atteindre le niveau 10 en Spectacle"
+            ],
+            "objectifs_en": [
+              "Karaoke 10 times",
+              "Performance level 10"
+            ]
+          }
+        ],
+        "recompenses": [
+          "Meilleures chances de gagner un concours de chant",
+          "Interaction sur soi « Chanter d'une voix douce »"
+        ],
+        "recompenses_en": [
+          "Probability of winning a singing competition increases",
+          "\"Sing with Sweet Voice\" self-interaction"
+        ],
+        "public": "jeune-adulte+",
+        "version_ajout": "lancement (v0.1)"
+      },
+      "notes": null,
+      "source": "https://inzoi.fandom.com/wiki/Ambition"
+    },
+    {
+      "id": "pro-de-la-musique",
+      "nom": "Pro de la musique",
+      "nom_en": "Pro Musician",
+      "fr_verifie": true,
+      "source_fr": "guide FR tiers Dexerto.fr (avril 2025, lu via extraits de moteur de recherche)",
+      "categorie": "expression-artistique",
+      "description": "Jouer d'un instrument et maîtriser la compétence Instruments.",
+      "icone": "🎸",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "details": {
+        "niveaux": [
+          {
+            "niveau": 1,
+            "objectifs": [
+              "Acheter un instrument",
+              "Jouer d'un instrument 3 fois"
+            ],
+            "objectifs_en": [
+              "Buy instrument",
+              "Play 3 times"
+            ]
+          },
+          {
+            "niveau": 2,
+            "objectifs": [
+              "Jouer de la batterie 10 fois",
+              "Jouer d'un instrument 10 fois en étant sentimental"
+            ],
+            "objectifs_en": [
+              "Play drums 10 times",
+              "Play instrument 10 times while Moved"
+            ]
+          },
+          {
+            "niveau": 3,
+            "objectifs": [
+              "Atteindre le niveau 10 en Instruments",
+              "Jouer de la guitare 20 fois"
+            ],
+            "objectifs_en": [
+              "Instrument level 10",
+              "Play guitar 20 times"
+            ]
+          }
+        ],
+        "recompenses": [
+          "Meilleures chances de gagner une compétition",
+          "Interaction sur soi « Jouer de la guitare comme un pro »"
+        ],
+        "recompenses_en": [
+          "Chances of winning a competition increase",
+          "\"Play Guitar Professionally\" self-interaction"
+        ],
+        "public": "jeune-adulte+",
+        "version_ajout": "lancement (v0.1)"
+      },
+      "notes": "Niveau 2 : émotion « Moved » (fandom) ou « Sentimental » (Gfinity, Game8).",
+      "source": "https://inzoi.fandom.com/wiki/Ambition"
+    },
+    {
+      "id": "chouchou-de-la-nation",
+      "nom": "Chouchou de la nation",
+      "nom_en": "Nation's Sweetheart",
+      "fr_verifie": true,
+      "source_fr": "notes de patch officielles FR v0.1.5 (playinzoi.com/fr/news/8544)",
+      "categorie": "quete-de-l-amour",
+      "description": "Multiplier les conversations romantiques et les grands amours.",
+      "icone": "😍",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "details": {
+        "niveaux": [
+          {
+            "niveau": 1,
+            "objectifs": [
+              "Avoir 5 conversations romantiques positives"
+            ],
+            "objectifs_en": [
+              "Positive romantic conversations 5 times"
+            ]
+          },
+          {
+            "niveau": 2,
+            "objectifs": [
+              "Avoir 50 conversations romantiques positives"
+            ],
+            "objectifs_en": [
+              "Romantic conversations 50 times"
+            ]
+          },
+          {
+            "niveau": 3,
+            "objectifs": [
+              "Atteindre le niveau 10 en Charme",
+              "Avoir 5 relations « Grand amour »"
+            ],
+            "objectifs_en": [
+              "Charm level 10",
+              "5 true love relationships"
+            ]
+          }
+        ],
+        "recompenses": [
+          "Les points de relation amoureuse augmentent davantage pendant les conversations",
+          "Interaction sur soi « Exprimer son attirance »"
+        ],
+        "recompenses_en": [
+          "Romantic relationship scores increase more during conversations",
+          "\"Express Attraction\" self-interaction"
+        ],
+        "public": "jeune-adulte+",
+        "version_ajout": "lancement (v0.1)"
+      },
+      "notes": "Gfinity indique « 1 relation True Love » au niveau 3 ; fandom et Sportskeeda indiquent 5.",
+      "source": "https://inzoi.fandom.com/wiki/Ambition"
+    },
+    {
+      "id": "partenaires-amoureux",
+      "nom": "Partenaires amoureux",
+      "nom_en": "Partners in Love",
+      "fr_verifie": true,
+      "source_fr": "notes de patch officielles FR v0.1.5 (playinzoi.com/fr/news/8544)",
+      "categorie": "quete-de-l-amour",
+      "description": "Vivre une relation de couple jusqu'à la demande en mariage.",
+      "icone": "💑",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "details": {
+        "niveaux": [
+          {
+            "niveau": 1,
+            "objectifs": [
+              "Avoir 1 relation de béguin réciproque",
+              "Se tenir la main et discuter 3 fois (béguin réciproque ou plus)"
+            ],
+            "objectifs_en": [
+              "1 mutual crush",
+              "Hold hands and talk 3 times"
+            ]
+          },
+          {
+            "niveau": 2,
+            "objectifs": [
+              "Se tenir la main et discuter 10 fois",
+              "Faire une sérénade 10 fois (chéri(e) ou plus)"
+            ],
+            "objectifs_en": [
+              "Hold hands and talk 10 times",
+              "Serenade 10 times"
+            ]
+          },
+          {
+            "niveau": 3,
+            "objectifs": [
+              "Faire sa demande en étant troublé(e) ou ébloui(e)",
+              "Montrer son affection à son grand amour 20 fois"
+            ],
+            "objectifs_en": [
+              "Propose while aflutter",
+              "Show affection True Love 20 times"
+            ]
+          }
+        ],
+        "recompenses": [
+          "Possibilité de donner des conseils amoureux en conversation"
+        ],
+        "recompenses_en": [
+          "You can give relationship advice in a conversation"
+        ],
+        "public": "jeune-adulte+",
+        "version_ajout": "lancement (v0.1)"
+      },
+      "notes": null,
+      "source": "https://inzoi.fandom.com/wiki/Ambition"
+    },
+    {
+      "id": "philanthrope",
+      "nom": "Philanthrope",
+      "nom_en": "Philanthropist",
+      "fr_verifie": true,
+      "source_fr": "notes de patch officielles FR v0.1.5 (playinzoi.com/fr/news/8544)",
+      "categorie": "contribution-communautaire",
+      "description": "Faire des dons et aider la communauté.",
+      "icone": "🎁",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "details": {
+        "niveaux": [
+          {
+            "niveau": 1,
+            "objectifs": [
+              "Envoyer 5 lettres depuis une boîte aux lettres de rue",
+              "Faire 5 dons à une œuvre caritative via un distributeur automatique de billets"
+            ],
+            "objectifs_en": [
+              "Send letters 5 times",
+              "Charity via ATM 5 times"
+            ]
+          },
+          {
+            "niveau": 2,
+            "objectifs": [
+              "Faire 10 dons à la communauté locale (boîte aux lettres de rue)",
+              "Donner 15 livres (boîte aux lettres)"
+            ],
+            "objectifs_en": [
+              "Donate to community 10 times",
+              "Donate books 15 times"
+            ]
+          },
+          {
+            "niveau": 3,
+            "objectifs": [
+              "Faire 10 dons à un sans-abri",
+              "Signer un accord de don d'organes sur ordinateur (action de karma)"
+            ],
+            "objectifs_en": [
+              "Donate to homeless 10 times",
+              "Sign organ donation"
+            ]
+          }
+        ],
+        "recompenses": [
+          "Messages de remerciement et argent envoyés par des bienfaiteurs anonymes"
+        ],
+        "recompenses_en": [
+          "Thank-you messages and currency from anonymous supporters"
+        ],
+        "public": "jeune-adulte+",
+        "version_ajout": "lancement (v0.1)"
+      },
+      "notes": null,
+      "source": "https://inzoi.fandom.com/wiki/Ambition"
+    },
+    {
+      "id": "voisin-enjoue",
+      "nom": "Voisin enjoué",
+      "nom_en": "Cheerful Neighbor",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "contribution-communautaire",
+      "description": "Se faire des amis dans le voisinage et multiplier les meilleurs amis.",
+      "icone": "😊",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "details": {
+        "niveaux": [
+          {
+            "niveau": 1,
+            "objectifs": [
+              "Avoir 5 conversations positives",
+              "Avoir 5 conversations amicales positives"
+            ],
+            "objectifs_en": [
+              "Positive conversations 5 times",
+              "Positive friendship talks 5 times"
+            ]
+          },
+          {
+            "niveau": 2,
+            "objectifs": [
+              "Avoir 15 conversations amicales positives",
+              "Offrir 10 cartes de remerciement ou cadeaux surprises"
+            ],
+            "objectifs_en": [
+              "Friendship talks 15 times",
+              "Give gifts 10 times"
+            ]
+          },
+          {
+            "niveau": 3,
+            "objectifs": [
+              "Avoir 10 relations de meilleur(e) ami(e)",
+              "Danser avec enthousiasme 20 fois avec un(e) meilleur(e) ami(e)"
+            ],
+            "objectifs_en": [
+              "10 BFF relationships",
+              "Dance with BFF 20 times"
+            ]
+          }
+        ],
+        "recompenses": [
+          "Les points d'amitié augmentent davantage pendant les conversations",
+          "Interaction sur soi « Danse joyeuse »",
+          "Conversation « Recommander des attractions locales »"
+        ],
+        "recompenses_en": [
+          "Friendship relationship points increase more during conversations",
+          "\"Pleasant Dance\" self-interaction",
+          "\"Recommend Local Attractions\" conversation"
+        ],
+        "public": "jeune-adulte+",
+        "version_ajout": "lancement (v0.1)"
+      },
+      "notes": null,
+      "source": "https://inzoi.fandom.com/wiki/Ambition"
+    },
+    {
+      "id": "vilain-notoire",
+      "nom": "Vilain notoire",
+      "nom_en": "Notorious Villain",
+      "fr_verifie": true,
+      "source_fr": "notes de patch officielles FR v0.1.5 (playinzoi.com/fr/news/8544)",
+      "categorie": "desordre-social",
+      "description": "Vandaliser, se battre et finir derrière les barreaux.",
+      "icone": "🦹",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "details": {
+        "niveaux": [
+          {
+            "niveau": 1,
+            "objectifs": [
+              "Passer sa colère sur un distributeur automatique 5 fois",
+              "Jeter discrètement des déchets par terre 3 fois"
+            ],
+            "objectifs_en": [
+              "Damage vending machines 5 times",
+              "Litter 3 times"
+            ]
+          },
+          {
+            "niveau": 2,
+            "objectifs": [
+              "Pousser et faire tomber des Zois 3 fois",
+              "Déclencher une bagarre 5 fois"
+            ],
+            "objectifs_en": [
+              "Push Zois 3 times",
+              "Start fights 5 times"
+            ]
+          },
+          {
+            "niveau": 3,
+            "objectifs": [
+              "Obtenir un financement grâce à de fausses informations 5 fois (Rhétorique niv. 5 requise)",
+              "Être arrêté(e) et placé(e) en détention 5 fois"
+            ],
+            "objectifs_en": [
+              "Secure Funding through False Information 5 times (Rhetoric skill Level 5)",
+              "Get arrested 5 times"
+            ]
+          }
+        ],
+        "recompenses": [
+          "Interaction « Demander une surveillance policière accrue »"
+        ],
+        "recompenses_en": [
+          "\"Request Increased Police Attention\" interaction"
+        ],
+        "public": "jeune-adulte+",
+        "version_ajout": "lancement (v0.1)"
+      },
+      "notes": "Appelée « Crime-Bent Villain » par Gfinity. Niveau 3 avant v0.5.0 (Gfinity/Sportskeeda) : « présenter une bonne idée et obtenir un investissement 5 fois ». Dexerto.fr (selon un extrait de moteur de recherche) écrirait « Malfaiteur notoire » : le libellé retenu est celui des notes de patch officielles FR v0.1.5.",
+      "source": "https://inzoi.fandom.com/wiki/Ambition"
+    },
+    {
+      "id": "hackers-celebres",
+      "nom": "Hackers célèbres",
+      "nom_en": "Famous Hackers",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "desordre-social",
+      "description": "Programmer, pirater des DAB puis des banques.",
+      "icone": "💻",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "details": {
+        "niveaux": [
+          {
+            "niveau": 1,
+            "objectifs": [
+              "Atteindre le niveau 3 en Programmation",
+              "Survivre 5 fois à une arnaque de vente d'occasion"
+            ],
+            "objectifs_en": [
+              "Achieve programming level 3",
+              "Survive a secondhand trade scam 5 times"
+            ]
+          },
+          {
+            "niveau": 2,
+            "objectifs": [
+              "Atteindre le niveau 6 en Programmation",
+              "Pirater un distributeur automatique de billets 10 fois"
+            ],
+            "objectifs_en": [
+              "Achieve programming level 6",
+              "Hack an ATM 10 times"
+            ]
+          },
+          {
+            "niveau": 3,
+            "objectifs": [
+              "Atteindre le niveau 10 en Programmation",
+              "Pirater une banque 3 fois"
+            ],
+            "objectifs_en": [
+              "Achieve programming level 10",
+              "Hack a bank 3 times"
+            ]
+          }
+        ],
+        "recompenses": [
+          "Meilleures chances de gagner un concours de piratage",
+          "Interaction « Diffuser un code malveillant sur Internet »"
+        ],
+        "recompenses_en": [
+          "Chances of winning a hacking competition increase",
+          "\"Spread malicious code on the internet\" interaction"
+        ],
+        "public": "jeune-adulte+",
+        "version_ajout": "lancement (v0.1)"
+      },
+      "notes": "Objectifs d'après Gfinity/Sportskeeda (le tableau fandom recopie par erreur ceux de Vilain notoire) ; récompenses d'après fandom. Aussi orthographié « Famous Hacker ».",
+      "source": "https://www.gfinityesports.com/article/inzoi-complete-guide-to-ambitions"
+    },
+    {
+      "id": "champion-de-la-proprete",
+      "nom": "Champion de la propreté",
+      "nom_en": "Cleanliness Champion",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "pro-des-astuces-du-quotidien",
+      "description": "Nettoyer, faire la lessive et maîtriser les Tâches ménagères.",
+      "icone": "🧹",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "details": {
+        "niveaux": [
+          {
+            "niveau": 1,
+            "objectifs": [
+              "Acheter un outil de nettoyage",
+              "Nettoyer 3 fois"
+            ],
+            "objectifs_en": [
+              "Buy a cleaning tool",
+              "Clean 3 times"
+            ]
+          },
+          {
+            "niveau": 2,
+            "objectifs": [
+              "Nettoyer 10 fois",
+              "Acheter un lave-linge"
+            ],
+            "objectifs_en": [
+              "Clean 10 times",
+              "Buy a washing machine"
+            ]
+          },
+          {
+            "niveau": 3,
+            "objectifs": [
+              "Faire la lessive 20 fois",
+              "Atteindre le niveau 10 en Tâches ménagères"
+            ],
+            "objectifs_en": [
+              "Do laundry 20 times",
+              "Housework level 10"
+            ]
+          }
+        ],
+        "recompenses": [
+          "Interaction sur soi « Nettoyage professionnel »",
+          "Conversation « Donner des astuces pour garder la maison propre »"
+        ],
+        "recompenses_en": [
+          "\"Professional Cleaning\" self-interaction",
+          "\"Providing Tips for Maintaining Cleanliness\" conversation"
+        ],
+        "public": "jeune-adulte+",
+        "version_ajout": "v0.5.0"
+      },
+      "notes": "Ex-« Neat Freak » (catégorie Stay Healthy au lancement), FR « Maniaque de la propreté » selon Dexerto.fr et Millenium (avril 2025). Renommée « Cleanliness Champion » et déplacée dans Lifehacker en v0.5.0 : le libellé FR actuel n'est pas confirmé (« Maniaque de la propreté » peut toujours être affiché).",
+      "source": "https://inzoi.fandom.com/wiki/Ambition"
+    },
+    {
+      "id": "grand-chef",
+      "nom": "Grand chef",
+      "nom_en": "Master Chef",
+      "fr_verifie": true,
+      "source_fr": "guide FR tiers Dexerto.fr (avril 2025, lu via extraits de moteur de recherche)",
+      "categorie": "pro-des-astuces-du-quotidien",
+      "description": "Cuisiner régulièrement et maîtriser la compétence Cuisine.",
+      "icone": "👨‍🍳",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "details": {
+        "niveaux": [
+          {
+            "niveau": 1,
+            "objectifs": [
+              "Cuisiner 5 fois à partir du réfrigérateur"
+            ],
+            "objectifs_en": [
+              "Cook from refrigerator 5 times"
+            ]
+          },
+          {
+            "niveau": 2,
+            "objectifs": [
+              "Atteindre le niveau 6 en Cuisine",
+              "Cuisiner 20 fois à partir du réfrigérateur"
+            ],
+            "objectifs_en": [
+              "Cooking level 6",
+              "Cook from refrigerator 20 times"
+            ]
+          },
+          {
+            "niveau": 3,
+            "objectifs": [
+              "Atteindre le niveau 10 en Cuisine",
+              "Cuisiner 30 fois à partir du réfrigérateur"
+            ],
+            "objectifs_en": [
+              "Cooking level 10",
+              "Cook from refrigerator 30 times"
+            ]
+          }
+        ],
+        "recompenses": [
+          "Interaction « Publier une recette sur les réseaux sociaux »",
+          "Conversation « Transmettre l'état d'esprit du cuisinier »"
+        ],
+        "recompenses_en": [
+          "\"Post Cooking Recipe on Social Media\" interaction",
+          "\"Teach Cooking Mindset\" conversation"
+        ],
+        "public": "jeune-adulte+",
+        "version_ajout": "v0.5.0"
+      },
+      "notes": "Dans la catégorie Stay Healthy au lancement ; déplacée dans Lifehacker en v0.5.0 (wiki fandom, TheGamesWiki).",
+      "source": "https://inzoi.fandom.com/wiki/Ambition"
+    },
+    {
+      "id": "maitre-de-la-patisserie",
+      "nom": "Maître de la pâtisserie",
+      "nom_en": "Baking Master",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "pro-des-astuces-du-quotidien",
+      "description": "Préparer des desserts et maîtriser la compétence Pâtisserie.",
+      "icone": "🧁",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "details": {
+        "niveaux": [
+          {
+            "niveau": 1,
+            "objectifs": [
+              "Préparer 1 assiette de biscuits au beurre",
+              "Préparer 5 portions de dessert"
+            ],
+            "objectifs_en": [
+              "Make 1 plates of butter cookies",
+              "Prepare 5 servings of dessert"
+            ]
+          },
+          {
+            "niveau": 2,
+            "objectifs": [
+              "Atteindre le niveau 6 en Pâtisserie",
+              "Préparer 15 portions de dessert"
+            ],
+            "objectifs_en": [
+              "Baking level 6",
+              "Prepare 15 servings of dessert"
+            ]
+          },
+          {
+            "niveau": 3,
+            "objectifs": [
+              "Atteindre le niveau 10 en Pâtisserie",
+              "Réaliser 5 desserts de qualité parfaite"
+            ],
+            "objectifs_en": [
+              "Baking level 10",
+              "Produce 5 perfect quality desserts"
+            ]
+          }
+        ],
+        "recompenses": [
+          "Grâce à un savoir-faire impeccable, les pâtisseries sont de qualité supérieure"
+        ],
+        "recompenses_en": [
+          "With impeccable baking skills, you can produce baked goods of superior quality"
+        ],
+        "public": "jeune-adulte+",
+        "version_ajout": "v0.7.0"
+      },
+      "notes": "Nom EN officiel (notes de patch v0.7.0) « Baking Master » ; le wiki fandom écrit « Master Baker ». Notes de patch FR v0.7.0 : « Pro de la pâtisserie » (même schéma que « Pro de la préparation de boissons », contredit par la capture du jeu qui affiche « Maître de la préparation de boissons »).",
+      "source": "https://inzoi.fandom.com/wiki/Ambition"
+    },
+    {
+      "id": "maitre-de-la-preparation-de-boissons",
+      "nom": "Maître de la préparation de boissons",
+      "nom_en": "Drink Mixing Master",
+      "fr_verifie": true,
+      "source_fr": "capture du jeu FR (docs/references/jeu-fiche-ambitions.png)",
+      "categorie": "pro-des-astuces-du-quotidien",
+      "description": "Préparer des boissons mélangées et maîtriser la compétence Préparation de boissons.",
+      "icone": "🍹",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "details": {
+        "niveaux": [
+          {
+            "niveau": 1,
+            "objectifs": [
+              "Acheter un distributeur de préparation de boissons",
+              "Préparer 5 boissons mélangées"
+            ],
+            "objectifs_en": [
+              "Purchase a Drink Mixing Dispenser",
+              "Prepare 5 servings of mixed drink"
+            ]
+          },
+          {
+            "niveau": 2,
+            "objectifs": [
+              "Atteindre le niveau 6 en Préparation de boissons",
+              "Préparer 15 boissons mélangées"
+            ],
+            "objectifs_en": [
+              "Drink Mixing Skill level 6",
+              "Prepare 15 servings of mixed drink"
+            ]
+          },
+          {
+            "niveau": 3,
+            "objectifs": [
+              "Atteindre le niveau 10 en Préparation de boissons",
+              "Préparer 5 boissons mélangées de qualité parfaite"
+            ],
+            "objectifs_en": [
+              "Drink Mixing Skill level 10",
+              "Make 5 perfect quality mixed drinks"
+            ]
+          }
+        ],
+        "recompenses": [
+          "Boissons mélangées de qualité supérieure grâce à une saveur et un arôme améliorés"
+        ],
+        "recompenses_en": [
+          "You can create mixed drinks of superior quality by enhancing the flavor and scent of your beverages"
+        ],
+        "public": "jeune-adulte+",
+        "version_ajout": "v0.7.0"
+      },
+      "notes": "Nom et objectifs de l'étape 1 vérifiés sur capture FR (« Lv.1/3 », onglets « Étape 1/2/3 »). Notes de patch FR v0.7.0 : « Pro de la préparation de boissons ». TheGamesWiki : « Master Bartender ».",
+      "source": "https://inzoi.fandom.com/wiki/Ambition"
+    },
+    {
+      "id": "expert-en-collection",
+      "nom": "Expert en collection",
+      "nom_en": "Collection Expert",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "collectionner-et-creation",
+      "description": "Miner et maîtriser la compétence Collectionner.",
+      "icone": "💎",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "details": {
+        "niveaux": [
+          {
+            "niveau": 1,
+            "objectifs": [
+              "Miner 5 fois",
+              "Acheter une pioche"
+            ],
+            "objectifs_en": [
+              "Mine 5 times",
+              "Buy a pickaxe"
+            ]
+          },
+          {
+            "niveau": 2,
+            "objectifs": [
+              "Miner 20 fois",
+              "Atteindre le niveau 6 en Collectionner"
+            ],
+            "objectifs_en": [
+              "Mine 20 times",
+              "Collecting level 6"
+            ]
+          },
+          {
+            "niveau": 3,
+            "objectifs": [
+              "Atteindre le niveau 10 en Collectionner"
+            ],
+            "objectifs_en": [
+              "Collecting level 10"
+            ]
+          }
+        ],
+        "recompenses": [
+          "Achat de pioches en argent, en or et en joyau au magasin de fournitures agricoles",
+          "Plus de chances d'obtenir des objets de collection rares"
+        ],
+        "recompenses_en": [
+          "You can purchase silver, gold, and gem pickaxes at the farming store",
+          "Chances of obtaining rare collectibles increase"
+        ],
+        "public": "jeune-adulte+",
+        "version_ajout": "v0.5.0"
+      },
+      "notes": null,
+      "source": "https://inzoi.fandom.com/wiki/Ambition"
+    },
+    {
+      "id": "pecheur-hors-pair",
+      "nom": "Pêcheur hors pair",
+      "nom_en": "Godlike Angler",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "collectionner-et-creation",
+      "description": "Pêcher avec appât et maîtriser la compétence Pêcher.",
+      "icone": "🎣",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "details": {
+        "niveaux": [
+          {
+            "niveau": 1,
+            "objectifs": [
+              "Acheter une canne à pêche",
+              "Pêcher 10 fois"
+            ],
+            "objectifs_en": [
+              "Buy a fishing rod",
+              "Fish 10 times"
+            ]
+          },
+          {
+            "niveau": 2,
+            "objectifs": [
+              "Pêcher 20 fois avec un appât",
+              "Atteindre le niveau 6 en Pêcher"
+            ],
+            "objectifs_en": [
+              "Fish with bait 20 times",
+              "Fishing level 6"
+            ]
+          },
+          {
+            "niveau": 3,
+            "objectifs": [
+              "Atteindre le niveau 10 en Pêcher"
+            ],
+            "objectifs_en": [
+              "Fishing level 10"
+            ]
+          }
+        ],
+        "recompenses": [
+          "Achat de cannes à pêche en argent, en or et en joyau au magasin de pêche",
+          "Plus de chances d'attraper un poisson rare"
+        ],
+        "recompenses_en": [
+          "You can buy Silver, Gold, and Jewel Fishing Rods at the Fishing Store",
+          "Chances of obtaining a rare fish increase"
+        ],
+        "public": "jeune-adulte+",
+        "version_ajout": "v0.5.0"
+      },
+      "notes": null,
+      "source": "https://inzoi.fandom.com/wiki/Ambition"
+    },
+    {
+      "id": "forgeron",
+      "nom": "Forgeron",
+      "nom_en": "Blacksmith",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "collectionner-et-creation",
+      "description": "Fabriquer des outils, tailler des gemmes et maîtriser le Travail manuel.",
+      "icone": "⚒️",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "details": {
+        "niveaux": [
+          {
+            "niveau": 1,
+            "objectifs": [
+              "Fabriquer des outils 3 fois",
+              "Tailler des gemmes 3 fois"
+            ],
+            "objectifs_en": [
+              "Craft tools 3 times",
+              "Cut gems 3 times"
+            ]
+          },
+          {
+            "niveau": 2,
+            "objectifs": [
+              "Fabriquer 3 fois des outils premium ou en joyau",
+              "Atteindre le niveau 6 en Travail manuel"
+            ],
+            "objectifs_en": [
+              "Craft premium or Jewel Tools 3 times",
+              "Handiwork level 6"
+            ]
+          },
+          {
+            "niveau": 3,
+            "objectifs": [
+              "Atteindre le niveau 10 en Travail manuel"
+            ],
+            "objectifs_en": [
+              "Handiwork level 10"
+            ]
+          }
+        ],
+        "recompenses": [
+          "Chance de récupérer les matériaux principaux utilisés à l'établi"
+        ],
+        "recompenses_en": [
+          "You can probabilistically get back the main materials used at the crafting table"
+        ],
+        "public": "jeune-adulte+",
+        "version_ajout": "v0.5.0"
+      },
+      "notes": null,
+      "source": "https://inzoi.fandom.com/wiki/Ambition"
+    },
+    {
+      "id": "entrepreneur-avise",
+      "nom": "Entrepreneur avisé",
+      "nom_en": "Savvy Entrepreneur",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "prosperite-de-l-entreprise",
+      "description": "Développer le chiffre d'affaires et la valeur de son entreprise.",
+      "icone": "🏪",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "details": {
+        "niveaux": [
+          {
+            "niveau": 1,
+            "objectifs": [
+              "Atteindre 10 000 de chiffre d'affaires",
+              "Atteindre le niveau de valeur d'entreprise « Sprout Store » (libellé FR inconnu)"
+            ],
+            "objectifs_en": [
+              "10,000 Business Revenue",
+              "Reaching \"Sprout Store\" Business Value Level"
+            ]
+          },
+          {
+            "niveau": 2,
+            "objectifs": [
+              "Atteindre 50 000 de chiffre d'affaires",
+              "Embaucher 2 employés"
+            ],
+            "objectifs_en": [
+              "50,000 Business Revenue",
+              "Hire 2 employees"
+            ]
+          },
+          {
+            "niveau": 3,
+            "objectifs": [
+              "Atteindre 200 000 de chiffre d'affaires",
+              "Atteindre le niveau de valeur « Local Representative Store » (libellé FR inconnu)"
+            ],
+            "objectifs_en": [
+              "200,000 Business Revenue",
+              "Achieving the \"Local Representative Store\" Value Level"
+            ]
+          }
+        ],
+        "recompenses": [
+          "Réduction des coûts d'exploitation fixes de l'entreprise"
+        ],
+        "recompenses_en": [
+          "Fixed operational costs are reduced when running a business"
+        ],
+        "public": "jeune-adulte+",
+        "version_ajout": "v0.5.0"
+      },
+      "notes": "Seule ambition connue de la catégorie. Les noms des niveaux de valeur d'entreprise en FR n'ont pas été trouvés.",
+      "source": "https://inzoi.fandom.com/wiki/Ambition"
+    },
+    {
+      "id": "eleve-modele",
+      "nom": "Élève modèle",
+      "nom_en": "Quintessential Role Model",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "celebrite-de-l-ecole",
+      "description": "Briller par ses résultats et son sérieux en classe.",
+      "icone": "📝",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "details": {
+        "niveaux": [
+          {
+            "niveau": 1,
+            "objectifs": [
+              "Terminer 3 fois la tâche « Devoirs après l'école »",
+              "Poser 3 fois une question au professeur sur la leçon pendant le cours"
+            ],
+            "objectifs_en": [
+              "Complete the \"After-School Homework\" to-do 3 times",
+              "Ask the teacher a question about the lesson during class 3 times"
+            ]
+          },
+          {
+            "niveau": 2,
+            "objectifs": [
+              "Terminer 5 fois la tâche « Devoirs après l'école »",
+              "Accomplir 10 tâches liées à l'emploi du temps scolaire pendant les cours"
+            ],
+            "objectifs_en": [
+              "Complete the \"After-School Homework\" to-do item 5 time(s)",
+              "Complete 10 School Schedule-related task(s) during class"
+            ]
+          },
+          {
+            "niveau": 3,
+            "objectifs": [
+              "Obtenir 1 fois une évaluation de rang A+"
+            ],
+            "objectifs_en": [
+              "Receive an A+ Rank Evaluation 1 time"
+            ]
+          }
+        ],
+        "recompenses": [
+          "Les compétences Pensée critique, Rhétorique et Programmation progressent plus vite",
+          "Petit bonus lors des entretiens d'embauche et des évaluations de promotion"
+        ],
+        "recompenses_en": [
+          "Logic, Rhetoric, and Programming skills increase faster",
+          "Small bonus during job interviews and promotion reviews"
+        ],
+        "public": "adolescent",
+        "version_ajout": "v0.9.0"
+      },
+      "notes": null,
+      "source": "https://inzoi.fandom.com/wiki/Ambition"
+    },
+    {
+      "id": "star-mondaine-du-lycee",
+      "nom": "Star mondaine du lycée",
+      "nom_en": "Socialite Taking School by Storm",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "celebrite-de-l-ecole",
+      "description": "Se faire des amis, rejoindre un club et régner sur le bal de promo.",
+      "icone": "🌟",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "details": {
+        "niveaux": [
+          {
+            "niveau": 1,
+            "objectifs": [
+              "Se faire 3 nouveaux amis",
+              "Rejoindre un club scolaire"
+            ],
+            "objectifs_en": [
+              "Make 3 new friend(s)",
+              "Join a School Club"
+            ]
+          },
+          {
+            "niveau": 2,
+            "objectifs": [
+              "Aller au bal de promo avec quelqu'un",
+              "Établir 3 nouvelles relations de confident"
+            ],
+            "objectifs_en": [
+              "Attend Prom with someone",
+              "Establish 3 new Confidant relationship(s)"
+            ]
+          },
+          {
+            "niveau": 3,
+            "objectifs": [
+              "Être élu(e) roi ou reine du bal de promo 1 fois"
+            ],
+            "objectifs_en": [
+              "Get selected as Prom Party Royalty 1 time(s)"
+            ]
+          }
+        ],
+        "recompenses": [
+          "L'amitié et la romance construites par la conversation progressent légèrement plus vite"
+        ],
+        "recompenses_en": [
+          "Friendship and Romance built through conversation deepen slightly faster"
+        ],
+        "public": "adolescent",
+        "version_ajout": "v0.9.0"
+      },
+      "notes": null,
+      "source": "https://inzoi.fandom.com/wiki/Ambition"
+    },
+    {
+      "id": "la-voie-du-rebelle",
+      "nom": "La voie du rebelle",
+      "nom_en": "The Rebel's Path",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "esprit-libre-a-l-ecole",
+      "description": "Farces, insolence et renvoi de l'école.",
+      "icone": "🤘",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "details": {
+        "niveaux": [
+          {
+            "niveau": 1,
+            "objectifs": [
+              "Faire 1 farce à l'école",
+              "Dire du mal d'un autre ami 3 fois"
+            ],
+            "objectifs_en": [
+              "Pull a mischievous prank at school 1 time(s)",
+              "Badmouth a different friend 3 time(s)"
+            ]
+          },
+          {
+            "niveau": 2,
+            "objectifs": [
+              "Répondre au professeur 3 fois",
+              "Recevoir 1 évaluation de rang F"
+            ],
+            "objectifs_en": [
+              "Talk back to the teacher 3 time(s)",
+              "Receive an F-rank evaluation 1 time(s)"
+            ]
+          },
+          {
+            "niveau": 3,
+            "objectifs": [
+              "Se faire renvoyer"
+            ],
+            "objectifs_en": [
+              "Being Expelled"
+            ]
+          }
+        ],
+        "recompenses": [
+          "Les compétences Art, Spectacle et Production média progressent plus vite",
+          "Réussir un entretien d'embauche devient légèrement plus difficile"
+        ],
+        "recompenses_en": [
+          "Art, Performance, and Video Production skills increase faster",
+          "Passing job interviews becomes slightly more difficult"
+        ],
+        "public": "adolescent",
+        "version_ajout": "v0.9.0"
+      },
+      "notes": null,
+      "source": "https://inzoi.fandom.com/wiki/Ambition"
+    },
+    {
+      "id": "au-coeur-du-drame",
+      "nom": "Au cœur du drame",
+      "nom_en": "Center of the Drama",
+      "fr_verifie": false,
+      "source_fr": null,
+      "categorie": "esprit-libre-a-l-ecole",
+      "description": "Collectionner les béguins et les chéri(e)s au lycée.",
+      "icone": "🎭",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "details": {
+        "niveaux": [
+          {
+            "niveau": 1,
+            "objectifs": [
+              "Avoir un béguin réciproque avec 2 personnes en même temps",
+              "Atteindre le niveau 3 en Charme"
+            ],
+            "objectifs_en": [
+              "Have Mutual Crush relationship(s) with 2 people at the same time",
+              "Reach level 3 in the Charm skill"
+            ]
+          },
+          {
+            "niveau": 2,
+            "objectifs": [
+              "Réussir 3 demandes de rendez-vous amoureux",
+              "Être en relation « Chéri(e) » avec 3 personnes en même temps"
+            ],
+            "objectifs_en": [
+              "Successfully send a Dating request 3 time(s)",
+              "Enter into a \"Sweetheart\" relationship with 3 people at the same time"
+            ]
+          },
+          {
+            "niveau": 3,
+            "objectifs": [
+              "Aller 2 fois au bal de promo avec des partenaires différents"
+            ],
+            "objectifs_en": [
+              "Attend Prom 2 time(s) with different partners"
+            ]
+          }
+        ],
+        "recompenses": [
+          "Meilleur taux de réussite des demandes et romance qui progresse un peu plus vite"
+        ],
+        "recompenses_en": [
+          "Proposal success rate increases, and Romance deepens a little faster"
+        ],
+        "public": "adolescent",
+        "version_ajout": "v0.9.0"
+      },
+      "notes": null,
+      "source": "https://inzoi.fandom.com/wiki/Ambition"
+    }
+  ]
+}
