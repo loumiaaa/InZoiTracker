@@ -1,0 +1,1532 @@
+{
+  "referentiel": "logements",
+  "titre": "Logements et terrains",
+  "maj": "2026-10-23",
+  "version_jeu": "v0.11.1 (accès anticipé, patch du 20/10/2026)",
+  "sources": [
+    "https://playinzoi.com/fr/guide/cheats",
+    "https://playinzoi.com/en/guide/cheats",
+    "https://inzoi.fandom.com/wiki/Category%3AResidential_Lots_in_Dowon",
+    "https://inzoi.fandom.com/wiki/Category%3AResidential_Lots_in_Bliss_Bay",
+    "https://inzoi.fandom.com/wiki/Category%3AResidential_Lots_in_Cahaya",
+    "https://playinzoi.com/fr/news/9533",
+    "https://playinzoi.com/fr/news/9824",
+    "https://playinzoi.com/fr/news/9960",
+    "https://playinzoi.com/fr/news/10849",
+    "https://game8.co/games/inZOI/archives/505557",
+    "https://game8.co/games/inZOI/archives/506708",
+    "https://thegameswiki.com/inzoi/wiki/lots-and-housing",
+    "https://www.playnews.gg/en/guides/inzoi-bliss-bay-the-complete-city-guide-addresses-prices-shops-and-tips-2026",
+    "https://inzoi.wiki.fextralife.com/Dowon_Buildings"
+  ],
+  "categories": [
+    {
+      "id": "type",
+      "nom": "Types de terrain",
+      "nom_en": "Lot types",
+      "icone": "🗂️"
+    },
+    {
+      "id": "residentiel",
+      "nom": "Terrains résidentiels",
+      "nom_en": "Residential lots",
+      "icone": "🏠"
+    },
+    {
+      "id": "hebergement",
+      "nom": "Hébergements (vacances)",
+      "nom_en": "Lodging",
+      "icone": "🛏️"
+    }
+  ],
+  "notes": "LISTE COMPLÈTE des terrains résidentiels : 12 à Dowon, 14 à Bliss Bay et 11 à Cahaya. Elle correspond aux catégories du wiki fandom et au guide officiel des triches (37 ID). Les hébergements sont les 10 lieux réservables pour les vacances (v0.10.0). Les terrains commerciaux, publics et de carrière ne sont pas détaillés (voir entreprises.json / carrieres.json).\nNOMS FR : les noms des terrains et hébergements viennent du guide officiel FR des codes de triche (playinzoi.com/fr/guide/cheats), associés aux noms EN par l'ID de région (`id_jeu`, utilisable avec « teleport »). Les notes de patch FR ont parfois d'autres variantes (« Villa de Dowon », « Les hauteurs de Dowon », « 1011 Allée du Saule », « Air Asri House » non traduit).\nPRIX (en Miaous) : ce sont ceux du wiki fandom, cohérents avec la baisse des prix des propriétés de gamme moyenne et supérieure en v0.5.0 (7 terrains à Dowon et 7 à Bliss Bay) et la standardisation des tailles en v0.7.0. Les prix d'autres guides, souvent plus élevés (Game8 de 2025, et Playnews / thegameswiki qui semblent reprendre d'anciens chiffres), sont dans `prix_autres_sources`. Le prix réel dépend du mobilier et de la version : à vérifier en jeu.\nTAILLES : 7 formats standards depuis la v0.7.0 (codes du wiki Z3 à Z8 et W8), X = immeuble ou format spécial. Les occupants sont ceux d'une partie neuve : ils ont été retravaillés en v0.11.0. Divergences : Playnews met la famille Hughes au 510 avenue des Palmiers (le wiki dit inoccupé) et Game8 met les Koo à la Villa Dowon (le wiki dit inoccupé).\nSARI KECIL : le wiki la donne comme « Sari Kecil House » (renommée en v0.7.0, maison construite), alors que le guide officiel garde « Sari Kecil Property / Propriété Sari Kecil » (ID EmptySite2). C'est le nom officiel qui est retenu.\n`gamme` (modeste / intermédiaire / haut de gamme) est déduite de l'ID interne des terrains de Bliss Bay (Low / Mid / Up). Les images (`nom_fichier_wiki`) sont des captures Map_*.jpg du wiki, non téléchargées dans assets/ (`icone_fichier` = null).",
+  "elements": [
+    {
+      "id": "type-propriete-residentielle",
+      "nom": "Propriété résidentielle",
+      "nom_en": "Residential property",
+      "fr_verifie": true,
+      "categorie": "type",
+      "description": "Terrain habitable qu'un foyer peut acheter (maison, appartement ou terrain vide). Achat possible avec un prêt immobilier pour une première maison.",
+      "icone": "🏘️",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "type": "type de terrain"
+      },
+      "source": "https://playinzoi.com/fr/news/9533"
+    },
+    {
+      "id": "type-maison",
+      "nom": "Maison",
+      "nom_en": "House",
+      "fr_verifie": true,
+      "categorie": "type",
+      "description": "Maison individuelle sur terrain modifiable.",
+      "icone": "🏠",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "type": "type de terrain"
+      },
+      "source": "https://playinzoi.com/fr/news/9533"
+    },
+    {
+      "id": "type-appartement",
+      "nom": "Appartement",
+      "nom_en": "Apartment",
+      "fr_verifie": true,
+      "categorie": "type",
+      "description": "Logement dans un immeuble : seul l'intérieur est modifiable, pas la coque extérieure.",
+      "icone": "🏢",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "type": "type de terrain"
+      },
+      "source": "https://playinzoi.com/fr/news/9824"
+    },
+    {
+      "id": "type-penthouse",
+      "nom": "Penthouse",
+      "nom_en": "Penthouse",
+      "fr_verifie": false,
+      "categorie": "type",
+      "description": "Appartement au dernier étage d'une tour (Les hauteurs de Dowon, Lumière). Piscine possible au rez-de-chaussée de ces deux immeubles.",
+      "icone": "🌆",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "type": "type de terrain"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Dowon_Heights_Building"
+    },
+    {
+      "id": "type-terrain-vide",
+      "nom": "Terrain vide",
+      "nom_en": "Empty lot",
+      "fr_verifie": true,
+      "categorie": "type",
+      "description": "Terrain sans construction, à bâtir soi-même.",
+      "icone": "🟩",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "type": "type de terrain"
+      },
+      "source": "https://playinzoi.com/fr/news/9533"
+    },
+    {
+      "id": "type-villa-complexe",
+      "nom": "Villa de complexe touristique",
+      "nom_en": "Resort villa",
+      "fr_verifie": false,
+      "categorie": "type",
+      "description": "Villa du centre balnéaire de Sri Lestari (Cahaya). Deux sont des terrains résidentiels, les autres se réservent.",
+      "icone": "🌴",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "type": "type de terrain"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Room_302,_Premier_Ocean_View_Villa"
+    },
+    {
+      "id": "type-hebergement",
+      "nom": "Hébergement",
+      "nom_en": "Lodging",
+      "fr_verifie": true,
+      "categorie": "type",
+      "description": "Hébergement réservable à la nuit pour des vacances dans une autre ville (v0.10.0).",
+      "icone": "🛏️",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "type": "type de terrain"
+      },
+      "source": "https://playinzoi.com/fr/news/10849"
+    },
+    {
+      "id": "type-propriete-commerciale",
+      "nom": "Propriété commerciale",
+      "nom_en": "Business property",
+      "fr_verifie": true,
+      "categorie": "type",
+      "description": "Terrain où l'on peut exploiter sa propre entreprise (« Terrain commercial »).",
+      "icone": "🏪",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "type": "type de terrain"
+      },
+      "source": "https://playinzoi.com/fr/news/9533"
+    },
+    {
+      "id": "type-propriete-publique",
+      "nom": "Propriété publique",
+      "nom_en": "Public / community property",
+      "fr_verifie": true,
+      "categorie": "type",
+      "description": "Lieu public : parc, plage, magasin, bibliothèque, etc.",
+      "icone": "🏛️",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "type": "type de terrain"
+      },
+      "source": "https://playinzoi.com/fr/news/10849"
+    },
+    {
+      "id": "type-lieu-de-travail",
+      "nom": "Lieu de travail",
+      "nom_en": "Workplace (career lot)",
+      "fr_verifie": true,
+      "categorie": "type",
+      "description": "Bâtiment où travaillent les Zois salariés (carrières).",
+      "icone": "💼",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "type": "type de terrain"
+      },
+      "source": "https://playinzoi.com/fr/news/9960"
+    },
+    {
+      "id": "aram-estate-property",
+      "nom": "Propriété Domaine Aram",
+      "nom_en": "Aram Estate Property",
+      "fr_verifie": true,
+      "categorie": "residentiel",
+      "description": "Terrain vide pour construire sa maison. Préréglages hanok ajoutés en v0.6.1.",
+      "icone": "🟩",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/8/8f/Map_Aram_Estate_Property.jpg/revision/latest?cb=20250513114545",
+      "nom_fichier_wiki": "Map_Aram_Estate_Property.jpg",
+      "icone_fichier": null,
+      "details": {
+        "ville": "Dowon",
+        "type": "terrain vide",
+        "prix": 3000,
+        "devise": "Miaou",
+        "taille": "20 m × 25 m",
+        "taille_code": "Z5",
+        "emplacement": "nord-est de Dowon",
+        "famille_occupante": null,
+        "id_jeu": "Gangnam_Residence_Free03",
+        "prix_autres_sources": [
+          {
+            "prix": 5000,
+            "source": "Game8 / thegameswiki / Fextralife"
+          }
+        ]
+      },
+      "source": "https://inzoi.fandom.com/wiki/Aram_Estate_Property"
+    },
+    {
+      "id": "dowon-heights-building",
+      "nom": "Bâtiment Les hauteurs de Dowon",
+      "nom_en": "Dowon Heights Building",
+      "fr_verifie": true,
+      "categorie": "residentiel",
+      "description": "Penthouse au sommet d'une tour de 14 étages, vue sur toute la ville. Recommandé pour 3-4 personnes. Plus grand terrain de Dowon. Occupé par la famille Hwang.",
+      "icone": "🌆",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/6/65/Map_Dowon_Heights_Building.jpg/revision/latest?cb=20250508084009",
+      "nom_fichier_wiki": "Map_Dowon_Heights_Building.jpg",
+      "icone_fichier": null,
+      "details": {
+        "ville": "Dowon",
+        "type": "penthouse",
+        "prix": 155393,
+        "devise": "Miaou",
+        "taille": "28,5 m × 37,5 m",
+        "taille_code": "X",
+        "emplacement": "sud-est de Dowon",
+        "famille_occupante": "Hwang",
+        "id_jeu": "Gangnam_Residence_SkyBD",
+        "prix_autres_sources": [
+          {
+            "prix": 259246,
+            "source": "Game8"
+          }
+        ]
+      },
+      "source": "https://inzoi.fandom.com/wiki/Dowon_Heights_Building"
+    },
+    {
+      "id": "dowon-villa",
+      "nom": "Villa Dowon",
+      "nom_en": "Dowon Villa",
+      "fr_verifie": true,
+      "categorie": "residentiel",
+      "description": "Appartement au dernier étage d'un immeuble de 5 étages. Abordable, recommandé pour une personne seule. Inoccupé.",
+      "icone": "🏢",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/a/ac/Map_Dowon_Villa.jpg/revision/latest?cb=20250513093755",
+      "nom_fichier_wiki": "Map_Dowon_Villa.jpg",
+      "icone_fichier": null,
+      "details": {
+        "ville": "Dowon",
+        "type": "appartement",
+        "prix": 9769,
+        "devise": "Miaou",
+        "taille": "14,5 m × 13 m",
+        "taille_code": "X",
+        "emplacement": "centre de Dowon",
+        "famille_occupante": null,
+        "id_jeu": "Gangnam_Residence_DowonVilla",
+        "prix_autres_sources": [
+          {
+            "prix": 10654,
+            "source": "Game8 / thegameswiki"
+          },
+          {
+            "prix": 9585,
+            "source": "Fextralife"
+          }
+        ]
+      },
+      "source": "https://inzoi.fandom.com/wiki/Dowon_Villa"
+    },
+    {
+      "id": "evergreen-house-property",
+      "nom": "Propriété Maison Evergreen",
+      "nom_en": "Evergreen House Property",
+      "fr_verifie": true,
+      "categorie": "residentiel",
+      "description": "Terrain vide près du Temple d'Ullim.",
+      "icone": "🟩",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/8/80/Map_Evergreen_House_Property.jpg/revision/latest?cb=20250513102143",
+      "nom_fichier_wiki": "Map_Evergreen_House_Property.jpg",
+      "icone_fichier": null,
+      "details": {
+        "ville": "Dowon",
+        "type": "terrain vide",
+        "prix": 2000,
+        "devise": "Miaou",
+        "taille": "20 m × 15 m",
+        "taille_code": "Z4",
+        "emplacement": "nord-ouest de Dowon",
+        "famille_occupante": null,
+        "id_jeu": "Gangnam_Residence_Free08",
+        "prix_autres_sources": [
+          {
+            "prix": 34815,
+            "source": "Game8 / thegameswiki"
+          }
+        ]
+      },
+      "source": "https://inzoi.fandom.com/wiki/Evergreen_House_Property"
+    },
+    {
+      "id": "gaya-apartments-building-102",
+      "nom": "Appartements Gaya, bâtiment 102",
+      "nom_en": "Gaya Apartments, Building 102",
+      "fr_verifie": true,
+      "categorie": "residentiel",
+      "description": "Appartement au 10e étage d'un immeuble de 20 étages. Recommandé pour 3-4 personnes avec enfants. Inoccupé.",
+      "icone": "🏢",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/d/d8/Map_Gaya_Apartments%2C_Building_102.jpg/revision/latest?cb=20250513070808",
+      "nom_fichier_wiki": "Map_Gaya_Apartments,_Building_102.jpg",
+      "icone_fichier": null,
+      "details": {
+        "ville": "Dowon",
+        "type": "appartement",
+        "prix": 75193,
+        "devise": "Miaou",
+        "taille": "26,5 m × 15 m",
+        "taille_code": "X",
+        "emplacement": "cœur de Dowon",
+        "famille_occupante": null,
+        "id_jeu": "Gangnam_Residence_CentralAPT",
+        "prix_autres_sources": [
+          {
+            "prix": 126440,
+            "source": "Game8"
+          }
+        ]
+      },
+      "source": "https://inzoi.fandom.com/wiki/Gaya_Apartments,_Building_102"
+    },
+    {
+      "id": "gaya-apartments-building-105",
+      "nom": "Appartements Gaya, bâtiment 105",
+      "nom_en": "Gaya Apartments, Building 105",
+      "fr_verifie": true,
+      "categorie": "residentiel",
+      "description": "Appartement au 10e étage d'un immeuble de 20 étages. Recommandé pour 3-4 personnes. Occupé par la famille Martin.",
+      "icone": "🏢",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/0/04/Map_Gaya_Apartments%2C_Building_105.jpg/revision/latest?cb=20250513072730",
+      "nom_fichier_wiki": "Map_Gaya_Apartments,_Building_105.jpg",
+      "icone_fichier": null,
+      "details": {
+        "ville": "Dowon",
+        "type": "appartement",
+        "prix": 97158,
+        "devise": "Miaou",
+        "taille": "26,5 m × 15 m",
+        "taille_code": "X",
+        "emplacement": "centre de Dowon",
+        "famille_occupante": "Martin",
+        "id_jeu": "Gangnam_Residence_CentralAPT105",
+        "prix_autres_sources": [
+          {
+            "prix": 148153,
+            "source": "Game8 / thegameswiki"
+          },
+          {
+            "prix": 143531,
+            "source": "Fextralife"
+          }
+        ]
+      },
+      "source": "https://inzoi.fandom.com/wiki/Gaya_Apartments,_Building_105"
+    },
+    {
+      "id": "hangyeol-house",
+      "nom": "Maison Hangyeol",
+      "nom_en": "Hangyeol House",
+      "fr_verifie": true,
+      "categorie": "residentiel",
+      "description": "Appartement au 1er étage d'un immeuble de 4 étages, entre vie urbaine et calme. Inoccupé.",
+      "icone": "🏢",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/4/40/Map_Hangyeol_House.jpg/revision/latest?cb=20250507121106",
+      "nom_fichier_wiki": "Map_Hangyeol_House.jpg",
+      "icone_fichier": null,
+      "details": {
+        "ville": "Dowon",
+        "type": "appartement",
+        "prix": 15402,
+        "devise": "Miaou",
+        "taille": "20 m × 15 m",
+        "taille_code": "Z4",
+        "emplacement": "centre de Dowon",
+        "famille_occupante": null,
+        "id_jeu": "Gangnam_Residence_Free07"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Hangyeol_House"
+    },
+    {
+      "id": "junghwa-parkville",
+      "nom": "Junghwa Parkville",
+      "nom_en": "Junghwa Parkville",
+      "fr_verifie": true,
+      "categorie": "residentiel",
+      "description": "Maison de plain-pied avec grand salon et pelouse. Préréglages hanok ajoutés en v0.6.1. Inoccupé.",
+      "icone": "🏠",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/6/69/Map_Junghwa_Parkville.jpg/revision/latest?cb=20250513120604",
+      "nom_fichier_wiki": "Map_Junghwa_Parkville.jpg",
+      "icone_fichier": null,
+      "details": {
+        "ville": "Dowon",
+        "type": "maison",
+        "prix": 102379,
+        "devise": "Miaou",
+        "taille": "20 m × 25 m",
+        "taille_code": "Z5",
+        "emplacement": "nord-est de Dowon",
+        "famille_occupante": null,
+        "id_jeu": "Gangnam_Residence_Free01"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Junghwa_Parkville"
+    },
+    {
+      "id": "metro-house",
+      "nom": "Maison métropolitaine",
+      "nom_en": "Metro House",
+      "fr_verifie": true,
+      "categorie": "residentiel",
+      "description": "Duplex dans un immeuble de 4 étages, près d'une station de métro. Occupé par la famille Lee.",
+      "icone": "🏢",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/f/f5/Map_Metro_House.jpg/revision/latest?cb=20250512085020",
+      "nom_fichier_wiki": "Map_Metro_House.jpg",
+      "icone_fichier": null,
+      "details": {
+        "ville": "Dowon",
+        "type": "appartement",
+        "prix": 41621,
+        "devise": "Miaou",
+        "taille": "15 m × 10 m",
+        "taille_code": "Z3",
+        "emplacement": "nord-est de Dowon",
+        "famille_occupante": "Lee",
+        "id_jeu": "Gangnam_Residence_Free06",
+        "prix_autres_sources": [
+          {
+            "prix": 49317,
+            "source": "Game8 / thegameswiki"
+          },
+          {
+            "prix": 47912,
+            "source": "Fextralife"
+          }
+        ]
+      },
+      "source": "https://inzoi.fandom.com/wiki/Metro_House"
+    },
+    {
+      "id": "moaville",
+      "nom": "Moaville",
+      "nom_en": "Moaville",
+      "fr_verifie": true,
+      "categorie": "residentiel",
+      "description": "Appartement au 1er étage d'un immeuble de 4 étages, au calme. Préréglage campagne européenne en v0.8.0. Occupé par la famille Lee.",
+      "icone": "🏢",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/1/10/Map_Moaville.jpg/revision/latest?cb=20250512075324",
+      "nom_fichier_wiki": "Map_Moaville.jpg",
+      "icone_fichier": null,
+      "details": {
+        "ville": "Dowon",
+        "type": "appartement",
+        "prix": 23995,
+        "devise": "Miaou",
+        "taille": "15 m × 20 m",
+        "taille_code": "Z4",
+        "emplacement": "est de Dowon",
+        "famille_occupante": "Lee",
+        "id_jeu": "Gangnam_Residence_Free04"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Moaville"
+    },
+    {
+      "id": "mugunghwa-villa",
+      "nom": "Villa Mugunghwa",
+      "nom_en": "Mugunghwa Villa",
+      "fr_verifie": true,
+      "categorie": "residentiel",
+      "description": "Appartement en rez-de-chaussée d'un immeuble de 4 étages, avec un grand salon. Préréglage avec sous-sol en v0.10.0. Occupé par la famille Kim.",
+      "icone": "🏢",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/1/1f/Map_Mugunghwa_Villa.jpg/revision/latest?cb=20250513124558",
+      "nom_fichier_wiki": "Map_Mugunghwa_Villa.jpg",
+      "icone_fichier": null,
+      "details": {
+        "ville": "Dowon",
+        "type": "appartement",
+        "prix": 32092,
+        "devise": "Miaou",
+        "taille": "20 m × 15 m",
+        "taille_code": "Z4",
+        "emplacement": "nord-est de Dowon",
+        "famille_occupante": "Kim",
+        "id_jeu": "Gangnam_Residence_Free05"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Mugunghwa_Villa"
+    },
+    {
+      "id": "sandeul-villa",
+      "nom": "Villa Sandeul",
+      "nom_en": "Sandeul Villa",
+      "fr_verifie": true,
+      "categorie": "residentiel",
+      "description": "Maison individuelle de deux étages (l'étage n'est pas accessible). Occupé par la famille Park.",
+      "icone": "🏠",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/3/34/Map_Sandeul_Villa.jpg/revision/latest?cb=20250507152141",
+      "nom_fichier_wiki": "Map_Sandeul_Villa.jpg",
+      "icone_fichier": null,
+      "details": {
+        "ville": "Dowon",
+        "type": "maison",
+        "prix": 21074,
+        "devise": "Miaou",
+        "taille": "15 m × 20 m",
+        "taille_code": "Z4",
+        "emplacement": "nord de Dowon",
+        "famille_occupante": "Park",
+        "id_jeu": "Gangnam_Residence_Free02"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Sandeul_Villa"
+    },
+    {
+      "id": "1011-willowtree-lane",
+      "nom": "1011 allée du saule",
+      "nom_en": "1011 Willowtree Lane",
+      "fr_verifie": true,
+      "categorie": "residentiel",
+      "description": "Maison de deux étages, chambres privées et grands espaces communs. Préréglage avec sous-sol en v0.10.0. Occupé par la famille Williams.",
+      "icone": "🏠",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/1/1d/Map_1011_Willowtree_Lane.jpg/revision/latest?cb=20250501154305",
+      "nom_fichier_wiki": "Map_1011_Willowtree_Lane.jpg",
+      "icone_fichier": null,
+      "details": {
+        "ville": "Bliss Bay",
+        "type": "maison",
+        "prix": 55428,
+        "devise": "Miaou",
+        "taille": "40 m × 20 m",
+        "taille_code": "W8",
+        "emplacement": "nord-est de Bliss Bay",
+        "famille_occupante": "Williams",
+        "id_jeu": "RedCity_Residence_Mid3_Free",
+        "gamme": "intermédiaire",
+        "prix_autres_sources": [
+          {
+            "prix": 86220,
+            "source": "thegameswiki / Playnews"
+          }
+        ]
+      },
+      "source": "https://inzoi.fandom.com/wiki/1011_Willowtree_Lane"
+    },
+    {
+      "id": "19-beachfront-drive",
+      "nom": "19 allée du Front de mer",
+      "nom_en": "19 Beachfront Drive",
+      "fr_verifie": true,
+      "categorie": "residentiel",
+      "description": "Maison de trois étages avec équipements de sport et de loisirs. Occupé par la famille Abbott.",
+      "icone": "🏠",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/b/b4/Map_19_Beachfront_Drive.jpg/revision/latest?cb=20250509094437",
+      "nom_fichier_wiki": "Map_19_Beachfront_Drive.jpg",
+      "icone_fichier": null,
+      "details": {
+        "ville": "Bliss Bay",
+        "type": "maison",
+        "prix": 232152,
+        "devise": "Miaou",
+        "taille": "35 m × 30 m",
+        "taille_code": "Z7",
+        "emplacement": "sud-est de Bliss Bay",
+        "famille_occupante": "Abbott",
+        "id_jeu": "RedCity_Residence_Up6_Free",
+        "gamme": "haut de gamme",
+        "prix_autres_sources": [
+          {
+            "prix": 336036,
+            "source": "Playnews 2026 / Game8"
+          },
+          {
+            "prix": 329181,
+            "source": "thegameswiki"
+          }
+        ]
+      },
+      "source": "https://inzoi.fandom.com/wiki/19_Beachfront_Drive"
+    },
+    {
+      "id": "2008-oakridge-drive",
+      "nom": "2008 allée de la chênaie",
+      "nom_en": "2008 Oakridge Drive",
+      "fr_verifie": true,
+      "categorie": "residentiel",
+      "description": "Terrain vide spacieux, idéal pour une grande famille.",
+      "icone": "🟩",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/5/55/Map_2008_Oakridge_Drive.jpg/revision/latest?cb=20250425084552",
+      "nom_fichier_wiki": "Map_2008_Oakridge_Drive.jpg",
+      "icone_fichier": null,
+      "details": {
+        "ville": "Bliss Bay",
+        "type": "terrain vide",
+        "prix": 10000,
+        "devise": "Miaou",
+        "taille": "40 m × 20 m",
+        "taille_code": "W8",
+        "emplacement": "nord-est de Bliss Bay",
+        "famille_occupante": null,
+        "id_jeu": "RedCity_Residence_Free04"
+      },
+      "source": "https://inzoi.fandom.com/wiki/2008_Oakridge_Drive"
+    },
+    {
+      "id": "203-somerset-place",
+      "nom": "203 place de Somerset",
+      "nom_en": "203 Somerset Place",
+      "fr_verifie": true,
+      "categorie": "residentiel",
+      "description": "Grande maison de trois étages pour plusieurs résidents. Préréglage campagne européenne en v0.8.0. Inoccupé.",
+      "icone": "🏠",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/0/0e/Map_203_Somerset_Place.jpg/revision/latest?cb=20250425073049",
+      "nom_fichier_wiki": "Map_203_Somerset_Place.jpg",
+      "icone_fichier": null,
+      "details": {
+        "ville": "Bliss Bay",
+        "type": "maison",
+        "prix": 128670,
+        "devise": "Miaou",
+        "taille": "25 m × 30 m",
+        "taille_code": "Z6",
+        "emplacement": "sud-ouest de Bliss Bay",
+        "famille_occupante": null,
+        "id_jeu": "RedCity_Residence_Up3_Free",
+        "gamme": "haut de gamme",
+        "prix_autres_sources": [
+          {
+            "prix": 215344,
+            "source": "thegameswiki / Playnews"
+          }
+        ]
+      },
+      "source": "https://inzoi.fandom.com/wiki/203_Somerset_Place"
+    },
+    {
+      "id": "3140-greenway-street",
+      "nom": "3140 rue de la Voie Verte",
+      "nom_en": "3140 Greenway Street",
+      "fr_verifie": true,
+      "categorie": "residentiel",
+      "description": "Terrain vide au calme. Préréglage campagne européenne en v0.8.0.",
+      "icone": "🟩",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/1/11/Map_3140_Greenway_Street.jpg/revision/latest?cb=20250425091212",
+      "nom_fichier_wiki": "Map_3140_Greenway_Street.jpg",
+      "icone_fichier": null,
+      "details": {
+        "ville": "Bliss Bay",
+        "type": "terrain vide",
+        "prix": 5000,
+        "devise": "Miaou",
+        "taille": "40 m × 20 m",
+        "taille_code": "W8",
+        "emplacement": "nord-est de Bliss Bay",
+        "famille_occupante": null,
+        "id_jeu": "RedCity_Residence_Mid1_Empty",
+        "gamme": "intermédiaire"
+      },
+      "source": "https://inzoi.fandom.com/wiki/3140_Greenway_Street"
+    },
+    {
+      "id": "420-kingsbury-court",
+      "nom": "420 cours de Kingsbury",
+      "nom_en": "420 Kingsbury Court",
+      "fr_verifie": true,
+      "categorie": "residentiel",
+      "description": "Maison de plain-pied raffinée aux intérieurs épurés. Occupé par la famille Collins.",
+      "icone": "🏠",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/8/85/Map_420_Kingsbury_Court.jpg/revision/latest?cb=20250425073616",
+      "nom_fichier_wiki": "Map_420_Kingsbury_Court.jpg",
+      "icone_fichier": null,
+      "details": {
+        "ville": "Bliss Bay",
+        "type": "maison",
+        "prix": 73235,
+        "devise": "Miaou",
+        "taille": "25 m × 30 m",
+        "taille_code": "Z6",
+        "emplacement": "sud-ouest de Bliss Bay",
+        "famille_occupante": "Collins",
+        "id_jeu": "RedCity_Residence_Up2_Free",
+        "gamme": "haut de gamme",
+        "prix_autres_sources": [
+          {
+            "prix": 116312,
+            "source": "Playnews 2026"
+          }
+        ]
+      },
+      "source": "https://inzoi.fandom.com/wiki/420_Kingsbury_Court"
+    },
+    {
+      "id": "510-palm-tree-avenue",
+      "nom": "510 avenue des Palmiers",
+      "nom_en": "510 Palm Tree Avenue",
+      "fr_verifie": true,
+      "categorie": "residentiel",
+      "description": "Grande maison de deux étages sur l'un des plus grands terrains du jeu. Inoccupé.",
+      "icone": "🏠",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/5/55/Map_510_Palm_Tree_Avenue.jpg/revision/latest?cb=20250502083428",
+      "nom_fichier_wiki": "Map_510_Palm_Tree_Avenue.jpg",
+      "icone_fichier": null,
+      "details": {
+        "ville": "Bliss Bay",
+        "type": "maison",
+        "prix": 157785,
+        "devise": "Miaou",
+        "taille": "35 m × 40 m",
+        "taille_code": "Z8",
+        "emplacement": "ouest de Bliss Bay",
+        "famille_occupante": null,
+        "id_jeu": "RedCity_Residence_Up1_Empty",
+        "gamme": "haut de gamme",
+        "prix_autres_sources": [
+          {
+            "prix": 213563,
+            "source": "Playnews 2026"
+          },
+          {
+            "prix": 228494,
+            "source": "thegameswiki"
+          }
+        ]
+      },
+      "source": "https://inzoi.fandom.com/wiki/510_Palm_Tree_Avenue"
+    },
+    {
+      "id": "5151-sunshine-avenue",
+      "nom": "5151 avenue du Soleil",
+      "nom_en": "5151 Sunshine Avenue",
+      "fr_verifie": true,
+      "categorie": "residentiel",
+      "description": "Maison de plain-pied près de Burger de la Pomme d'or. Inoccupé.",
+      "icone": "🏠",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/0/04/Map_5151_Sunshine_Avenue.jpg/revision/latest?cb=20250425090336",
+      "nom_fichier_wiki": "Map_5151_Sunshine_Avenue.jpg",
+      "icone_fichier": null,
+      "details": {
+        "ville": "Bliss Bay",
+        "type": "maison",
+        "prix": 21205,
+        "devise": "Miaou",
+        "taille": "25 m × 20 m",
+        "taille_code": "Z5",
+        "emplacement": "nord-ouest de Bliss Bay",
+        "famille_occupante": null,
+        "id_jeu": "RedCity_Residence_Free03",
+        "prix_autres_sources": [
+          {
+            "prix": 42041,
+            "source": "thegameswiki / Playnews"
+          }
+        ]
+      },
+      "source": "https://inzoi.fandom.com/wiki/5151_Sunshine_Avenue"
+    },
+    {
+      "id": "6117-sunshine-avenue",
+      "nom": "6117 avenue du Soleil",
+      "nom_en": "6117 Sunshine Avenue",
+      "fr_verifie": true,
+      "categorie": "residentiel",
+      "description": "Maison de plain-pied près d'une école, adaptée aux familles. Inoccupé.",
+      "icone": "🏠",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/f/fe/Map_6117_Sunshine_Avenue.jpg/revision/latest?cb=20250425090642",
+      "nom_fichier_wiki": "Map_6117_Sunshine_Avenue.jpg",
+      "icone_fichier": null,
+      "details": {
+        "ville": "Bliss Bay",
+        "type": "maison",
+        "prix": 19559,
+        "devise": "Miaou",
+        "taille": "25 m × 20 m",
+        "taille_code": "Z5",
+        "emplacement": "nord de Bliss Bay",
+        "famille_occupante": null,
+        "id_jeu": "RedCity_Residence_Low3_Empty",
+        "gamme": "modeste",
+        "prix_autres_sources": [
+          {
+            "prix": 35104,
+            "source": "thegameswiki / Playnews"
+          }
+        ]
+      },
+      "source": "https://inzoi.fandom.com/wiki/6117_Sunshine_Avenue"
+    },
+    {
+      "id": "8-beachfront-drive",
+      "nom": "8 allée du Front de mer",
+      "nom_en": "8 Beachfront Drive",
+      "fr_verifie": true,
+      "categorie": "residentiel",
+      "description": "Terrain vide en bord de mer, vue panoramique sur l'océan. Préréglage campagne européenne en v0.8.0.",
+      "icone": "🟩",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/4/49/Map_8_Beachfront_Drive.jpg/revision/latest?cb=20250425072534",
+      "nom_fichier_wiki": "Map_8_Beachfront_Drive.jpg",
+      "icone_fichier": null,
+      "details": {
+        "ville": "Bliss Bay",
+        "type": "terrain vide",
+        "prix": 20000,
+        "devise": "Miaou",
+        "taille": "20 m × 25 m",
+        "taille_code": "Z5",
+        "emplacement": "sud de Bliss Bay",
+        "famille_occupante": null,
+        "id_jeu": "RedCity_Residence_Up5_Empty",
+        "gamme": "haut de gamme",
+        "prix_autres_sources": [
+          {
+            "prix": 40000,
+            "source": "Playnews 2026"
+          }
+        ]
+      },
+      "source": "https://inzoi.fandom.com/wiki/8_Beachfront_Drive"
+    },
+    {
+      "id": "city-nest-apartment",
+      "nom": "Appartements Nid urbain",
+      "nom_en": "City Nest Apartment",
+      "fr_verifie": true,
+      "categorie": "residentiel",
+      "description": "Appartement au dernier étage d'un immeuble de 4 étages, près de la plage et du centre. Recommandé pour 3-4 personnes. Inoccupé.",
+      "icone": "🏢",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/7/72/Map_City_Nest_Apartment.jpg/revision/latest?cb=20250425064229",
+      "nom_fichier_wiki": "Map_City_Nest_Apartment.jpg",
+      "icone_fichier": null,
+      "details": {
+        "ville": "Bliss Bay",
+        "type": "appartement",
+        "prix": 33837,
+        "devise": "Miaou",
+        "taille": "17,5 m × 41 m",
+        "taille_code": "X",
+        "emplacement": "nord-est de Bliss Bay",
+        "famille_occupante": null,
+        "id_jeu": "RedCity_Residence_Mid4_APT",
+        "gamme": "intermédiaire",
+        "prix_autres_sources": [
+          {
+            "prix": 39567,
+            "source": "Playnews 2026"
+          }
+        ]
+      },
+      "source": "https://inzoi.fandom.com/wiki/City_Nest_Apartment"
+    },
+    {
+      "id": "heaven-hill-apartments",
+      "nom": "Appartements Colline de l'Éden",
+      "nom_en": "Heaven Hill Apartments",
+      "fr_verifie": true,
+      "categorie": "residentiel",
+      "description": "Appartement modeste au dernier étage d'un immeuble de 4 étages, près d'un parc. Recommandé pour 1-2 personnes. Occupé par la famille Yoon.",
+      "icone": "🏢",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/a/ad/Map_Heaven_Hill_Apartments.jpg/revision/latest?cb=20250425075941",
+      "nom_fichier_wiki": "Map_Heaven_Hill_Apartments.jpg",
+      "icone_fichier": null,
+      "details": {
+        "ville": "Bliss Bay",
+        "type": "appartement",
+        "prix": 17124,
+        "devise": "Miaou",
+        "taille": "13 m × 24,5 m",
+        "taille_code": "X",
+        "emplacement": "nord-ouest de Bliss Bay",
+        "famille_occupante": "Yoon",
+        "id_jeu": "RedCity_Residence_Low1_APT",
+        "gamme": "modeste",
+        "prix_autres_sources": [
+          {
+            "prix": 17438,
+            "source": "thegameswiki / Playnews"
+          }
+        ]
+      },
+      "source": "https://inzoi.fandom.com/wiki/Heaven_Hill_Apartments"
+    },
+    {
+      "id": "lumiere",
+      "nom": "Lumière",
+      "nom_en": "Lumiere",
+      "fr_verifie": true,
+      "categorie": "residentiel",
+      "description": "Appartement (penthouse) au dernier étage d'un immeuble de 7 étages. Recommandé pour 5-6 personnes. Inoccupé.",
+      "icone": "🌆",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/c/ce/Map_Lumiere.jpg/revision/latest?cb=20250425075502",
+      "nom_fichier_wiki": "Map_Lumiere.jpg",
+      "icone_fichier": null,
+      "details": {
+        "ville": "Bliss Bay",
+        "type": "penthouse",
+        "prix": 122411,
+        "devise": "Miaou",
+        "taille": "19,5 m × 38,5 m",
+        "taille_code": "X",
+        "emplacement": "centre de Bliss Bay",
+        "famille_occupante": null,
+        "id_jeu": "RedCity_Residence_Up7_Pent",
+        "gamme": "haut de gamme",
+        "prix_autres_sources": [
+          {
+            "prix": 227854,
+            "source": "thegameswiki / Playnews"
+          }
+        ]
+      },
+      "source": "https://inzoi.fandom.com/wiki/Lumiere"
+    },
+    {
+      "id": "ocean-bliss-apartment",
+      "nom": "Appartement Félicité océanique",
+      "nom_en": "Ocean Bliss Apartment",
+      "fr_verifie": true,
+      "categorie": "residentiel",
+      "description": "Appartement au 12e étage d'un immeuble de 15 étages, en front de mer. Recommandé pour 1-2 personnes. Occupé par la famille Murphy.",
+      "icone": "🏢",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/4/41/Map_Ocean_Bliss_Apartment.jpg/revision/latest?cb=20250513114234",
+      "nom_fichier_wiki": "Map_Ocean_Bliss_Apartment.jpg",
+      "icone_fichier": null,
+      "details": {
+        "ville": "Bliss Bay",
+        "type": "appartement",
+        "prix": 34820,
+        "devise": "Miaou",
+        "taille": "16,5 m × 23,5 m",
+        "taille_code": "X",
+        "emplacement": "est de Bliss Bay",
+        "famille_occupante": "Murphy",
+        "id_jeu": "RedCity_Residence_Mid5_APT",
+        "gamme": "intermédiaire",
+        "prix_autres_sources": [
+          {
+            "prix": 74132,
+            "source": "thegameswiki / Playnews"
+          }
+        ]
+      },
+      "source": "https://inzoi.fandom.com/wiki/Ocean_Bliss_Apartment"
+    },
+    {
+      "id": "air-asri-house",
+      "nom": "Logement Air Asri",
+      "nom_en": "Air Asri House",
+      "fr_verifie": true,
+      "categorie": "residentiel",
+      "description": "Maison de plain-pied avec dépendance et piscine, à prix modéré. Inoccupé.",
+      "icone": "🏠",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/1/15/Map_Air_Asri_House.jpg/revision/latest?cb=20250821152851",
+      "nom_fichier_wiki": "Map_Air_Asri_House.jpg",
+      "icone_fichier": null,
+      "details": {
+        "ville": "Cahaya",
+        "type": "maison",
+        "prix": 39396,
+        "devise": "Miaou",
+        "taille": "25 m × 20 m",
+        "taille_code": "Z5",
+        "emplacement": "centre de l'île principale",
+        "famille_occupante": null,
+        "id_jeu": "Cahaya_Residence_LocalHouse1",
+        "ile": "Île principale"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Air_Asri_House"
+    },
+    {
+      "id": "bayu-suka-house",
+      "nom": "Logement Bayu Suka",
+      "nom_en": "Bayu Suka House",
+      "fr_verifie": true,
+      "categorie": "residentiel",
+      "description": "Maison de plain-pied proche du centre, au calme. Occupé par la famille Melanie.",
+      "icone": "🏠",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/b/bf/Map_Bayu_Suka_House.jpg/revision/latest?cb=20250821161917",
+      "nom_fichier_wiki": "Map_Bayu_Suka_House.jpg",
+      "icone_fichier": null,
+      "details": {
+        "ville": "Cahaya",
+        "type": "maison",
+        "prix": 27256,
+        "devise": "Miaou",
+        "taille": "40 m × 20 m",
+        "taille_code": "W8",
+        "emplacement": "nord de l'île principale",
+        "famille_occupante": "Melanie",
+        "id_jeu": "Cahaya_Residence_NPCSite1",
+        "ile": "Île principale"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Bayu_Suka_House"
+    },
+    {
+      "id": "bumi-indah-house",
+      "nom": "Logement Bumi Indah",
+      "nom_en": "Bumi Indah House",
+      "fr_verifie": true,
+      "categorie": "residentiel",
+      "description": "Deux maisons de plain-pied et une piscine. Préréglage avec sous-sol en v0.10.0. Occupé par la famille Kang.",
+      "icone": "🏠",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/0/01/Map_Bumi_Indah_House.jpg/revision/latest?cb=20250821160112",
+      "nom_fichier_wiki": "Map_Bumi_Indah_House.jpg",
+      "icone_fichier": null,
+      "details": {
+        "ville": "Cahaya",
+        "type": "maison",
+        "prix": 32114,
+        "devise": "Miaou",
+        "taille": "40 m × 20 m",
+        "taille_code": "W8",
+        "emplacement": "nord-est de l'île principale",
+        "famille_occupante": "Kang",
+        "id_jeu": "Cahaya_Residence_NPCSite3",
+        "ile": "Île principale"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Bumi_Indah_House"
+    },
+    {
+      "id": "damai-house",
+      "nom": "Logement Damai",
+      "nom_en": "Damai House",
+      "fr_verifie": true,
+      "categorie": "residentiel",
+      "description": "Maison de plain-pied bien équipée. Inoccupé.",
+      "icone": "🏠",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/4/43/Map_Damai_House.jpg/revision/latest?cb=20250821142826",
+      "nom_fichier_wiki": "Map_Damai_House.jpg",
+      "icone_fichier": null,
+      "details": {
+        "ville": "Cahaya",
+        "type": "maison",
+        "prix": 12568,
+        "devise": "Miaou",
+        "taille": "40 m × 35 m",
+        "taille_code": "Z8",
+        "emplacement": "sud-ouest de l'île principale",
+        "famille_occupante": null,
+        "id_jeu": "Cahaya_Residence_EmptySite1",
+        "ile": "Île principale"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Damai_House"
+    },
+    {
+      "id": "kenanga-laut-house",
+      "nom": "Logement Kenanga Laut",
+      "nom_en": "Kenanga Laut House",
+      "fr_verifie": true,
+      "categorie": "residentiel",
+      "description": "Maison de plain-pied avec deux dépendances et vue sur l'océan, petit budget. Occupé par la famille Putri.",
+      "icone": "🏠",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/a/a0/Map_Kenanga_Laut_House.jpg/revision/latest?cb=20250821140755",
+      "nom_fichier_wiki": "Map_Kenanga_Laut_House.jpg",
+      "icone_fichier": null,
+      "details": {
+        "ville": "Cahaya",
+        "type": "maison",
+        "prix": 15479,
+        "devise": "Miaou",
+        "taille": "40 m × 35 m",
+        "taille_code": "Z8",
+        "emplacement": "sud de l'île principale",
+        "famille_occupante": "Putri",
+        "id_jeu": "Cahaya_Residence_NPCSite2",
+        "ile": "Île principale"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Kenanga_Laut_House"
+    },
+    {
+      "id": "room-115-garden-villa",
+      "nom": "Chambre 115, Villa avec vue sur le jardin",
+      "nom_en": "Room 115, Garden Villa",
+      "fr_verifie": true,
+      "categorie": "residentiel",
+      "description": "Villa de deux étages côté jardin, dans le complexe Sri Lestari. Occupé par la famille Belie.",
+      "icone": "🌴",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/5/59/Map_Room_115%2C_Garden_Villa.jpg/revision/latest?cb=20250822094929",
+      "nom_fichier_wiki": "Map_Room_115,_Garden_Villa.jpg",
+      "icone_fichier": null,
+      "details": {
+        "ville": "Cahaya",
+        "type": "villa",
+        "prix": 1018553,
+        "devise": "Miaou",
+        "taille": "8 m × 13,5 m",
+        "taille_code": "X",
+        "emplacement": "Centre balnéaire de Sri Lestari (sud-est)",
+        "famille_occupante": "Belie",
+        "id_jeu": "Cahaya_Residence_Resort1",
+        "ile": "Centre balnéaire de Sri Lestari"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Room_115,_Garden_Villa"
+    },
+    {
+      "id": "room-302-premier-ocean-view-villa",
+      "nom": "Chambre 302, Villa premium avec vue sur l'océan",
+      "nom_en": "Room 302, Premier Ocean View Villa",
+      "fr_verifie": true,
+      "categorie": "residentiel",
+      "description": "Villa de deux étages avec piscine, près de la piscine Havre bleu. Terrain résidentiel le plus cher du jeu. Occupé par la famille Cruz.",
+      "icone": "🌴",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/2/2f/Map_Room_302%2C_Premier_Ocean_View_Villa.jpg/revision/latest?cb=20250822093658",
+      "nom_fichier_wiki": "Map_Room_302,_Premier_Ocean_View_Villa.jpg",
+      "icone_fichier": null,
+      "details": {
+        "ville": "Cahaya",
+        "type": "villa",
+        "prix": 5045199,
+        "devise": "Miaou",
+        "taille": "20 m × 24 m",
+        "taille_code": "X",
+        "emplacement": "Centre balnéaire de Sri Lestari (sud-ouest)",
+        "famille_occupante": "Cruz",
+        "id_jeu": "Cahaya_Residence_Resort10",
+        "ile": "Centre balnéaire de Sri Lestari"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Room_302,_Premier_Ocean_View_Villa"
+    },
+    {
+      "id": "sari-kecil-property",
+      "nom": "Propriété Sari Kecil",
+      "nom_en": "Sari Kecil Property",
+      "fr_verifie": true,
+      "categorie": "residentiel",
+      "description": "Petite maison de plain-pied près de l'artère principale, abordable. Inoccupé.",
+      "icone": "🏠",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/9/98/Map_Sari_Kecil_Property.jpg/revision/latest?cb=20250821154644",
+      "nom_fichier_wiki": "Map_Sari_Kecil_Property.jpg",
+      "icone_fichier": null,
+      "details": {
+        "ville": "Cahaya",
+        "type": "maison",
+        "prix": 16871,
+        "devise": "Miaou",
+        "taille": "25 m × 20 m",
+        "taille_code": "Z5",
+        "emplacement": "centre de l'île principale",
+        "famille_occupante": null,
+        "id_jeu": "Cahaya_Residence_EmptySite2",
+        "ile": "Île principale"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Sari_Kecil_House"
+    },
+    {
+      "id": "senja-tenang-house",
+      "nom": "Logement Senja Tenang",
+      "nom_en": "Senja Tenang House",
+      "fr_verifie": true,
+      "categorie": "residentiel",
+      "description": "Maison de plain-pied spacieuse avec deux dépendances, au calme. Occupé par la famille Kurniawan.",
+      "icone": "🏠",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/c/c5/Map_Senja_Tenang_House.jpg/revision/latest?cb=20250821144536",
+      "nom_fichier_wiki": "Map_Senja_Tenang_House.jpg",
+      "icone_fichier": null,
+      "details": {
+        "ville": "Cahaya",
+        "type": "maison",
+        "prix": 30755,
+        "devise": "Miaou",
+        "taille": "40 m × 35 m",
+        "taille_code": "Z8",
+        "emplacement": "ouest de l'île principale",
+        "famille_occupante": "Kurniawan",
+        "id_jeu": "Cahaya_Residence_NPCSite4",
+        "ile": "Île principale"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Senja_Tenang_House"
+    },
+    {
+      "id": "senyap-property",
+      "nom": "Propriété Senyap",
+      "nom_en": "Senyap Property",
+      "fr_verifie": true,
+      "categorie": "residentiel",
+      "description": "Terrain vide bon marché dans un coin tranquille.",
+      "icone": "🟩",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/d/d8/Map_Senyap_Property.jpg/revision/latest?cb=20250821131652",
+      "nom_fichier_wiki": "Map_Senyap_Property.jpg",
+      "icone_fichier": null,
+      "details": {
+        "ville": "Cahaya",
+        "type": "terrain vide",
+        "prix": 2000,
+        "devise": "Miaou",
+        "taille": "40 m × 35 m",
+        "taille_code": "Z8",
+        "emplacement": "sud-ouest de l'île principale",
+        "famille_occupante": null,
+        "id_jeu": "Cahaya_Residence_EmptySite5",
+        "ile": "Île principale"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Senyap_Property"
+    },
+    {
+      "id": "tadu-luhur-property",
+      "nom": "Propriété Tadu Luhur",
+      "nom_en": "Tadu Luhur Property",
+      "fr_verifie": true,
+      "categorie": "residentiel",
+      "description": "Terrain vide bon marché dans un cadre paisible.",
+      "icone": "🟩",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/2/2d/Map_Tadu_Luhur_Property.jpg/revision/latest?cb=20250821150424",
+      "nom_fichier_wiki": "Map_Tadu_Luhur_Property.jpg",
+      "icone_fichier": null,
+      "details": {
+        "ville": "Cahaya",
+        "type": "terrain vide",
+        "prix": 3000,
+        "devise": "Miaou",
+        "taille": "25 m × 20 m",
+        "taille_code": "Z5",
+        "emplacement": "sud-ouest de l'île principale",
+        "famille_occupante": null,
+        "id_jeu": "Cahaya_Residence_EmptySite4",
+        "ile": "Île principale"
+      },
+      "source": "https://inzoi.fandom.com/wiki/Tadu_Luhur_Property"
+    },
+    {
+      "id": "dream-stay",
+      "nom": "Dream Stay",
+      "nom_en": "Dream Stay",
+      "fr_verifie": true,
+      "categorie": "hebergement",
+      "description": "Auberge à petits prix, chambres et dortoirs de 2 à 8 personnes.",
+      "icone": "🛏️",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/8/83/Map_Dream_Stay.jpg/revision/latest?cb=20260923102128",
+      "nom_fichier_wiki": "Map_Dream_Stay.jpg",
+      "icone_fichier": null,
+      "details": {
+        "ville": "Dowon",
+        "type": "hébergement",
+        "prix": 40,
+        "prix_type": "par nuit (minimum)",
+        "tarifs": {
+          "Chambre 101": 130,
+          "Dortoir 102": 70,
+          "Dortoir 201": 100,
+          "Chambre 202": 40,
+          "Dortoir 301": 70,
+          "Chambre 302": 40
+        },
+        "devise": "Miaou",
+        "emplacement": "nord-ouest",
+        "id_jeu": "Gangnam_Accommodation1",
+        "reservable_vacances": true
+      },
+      "source": "https://inzoi.fandom.com/wiki/Dream_Stay"
+    },
+    {
+      "id": "grandhaven",
+      "nom": "Grand Haven",
+      "nom_en": "Grandhaven",
+      "fr_verifie": true,
+      "categorie": "hebergement",
+      "description": "Maison entière pour un groupe (rattachée à Dream Stay).",
+      "icone": "🛏️",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/0/0e/Map_Grandhaven.jpg/revision/latest?cb=20260923103214",
+      "nom_fichier_wiki": "Map_Grandhaven.jpg",
+      "icone_fichier": null,
+      "details": {
+        "ville": "Dowon",
+        "type": "hébergement",
+        "prix": 300,
+        "prix_type": "par nuit (minimum)",
+        "tarifs": {
+          "1 nuit": 300,
+          "2 nuits": 600,
+          "3 nuits": 900
+        },
+        "devise": "Miaou",
+        "emplacement": "nord-est",
+        "id_jeu": "Gangnam_Accommodation2",
+        "reservable_vacances": true
+      },
+      "source": "https://inzoi.fandom.com/wiki/Grandhaven"
+    },
+    {
+      "id": "sunset-backpackers",
+      "nom": "Sunset Backpackers",
+      "nom_en": "Sunset Backpackers",
+      "fr_verifie": true,
+      "categorie": "hebergement",
+      "description": "Auberge de routards, dortoirs de 2 à 8 personnes.",
+      "icone": "🛏️",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/2/24/Map_Sunset_Backpapers.jpg/revision/latest?cb=20260908164212",
+      "nom_fichier_wiki": "Map_Sunset_Backpapers.jpg",
+      "icone_fichier": null,
+      "details": {
+        "ville": "Bliss Bay",
+        "type": "hébergement",
+        "prix": 40,
+        "prix_type": "par nuit (minimum)",
+        "tarifs": {
+          "Dortoir 101": 100,
+          "Dortoir 201": 70,
+          "Dortoir 202": 70,
+          "Dortoir 203": 70,
+          "Dortoir 204": 40,
+          "Dortoir 301": 130
+        },
+        "devise": "Miaou",
+        "emplacement": "près des plages",
+        "id_jeu": "RedCity_Accommodation1",
+        "reservable_vacances": true
+      },
+      "source": "https://inzoi.fandom.com/wiki/Sunset_Backpapers"
+    },
+    {
+      "id": "golden-coast-villa",
+      "nom": "Golden Coast Villa",
+      "nom_en": "Golden Coast Villa",
+      "fr_verifie": true,
+      "categorie": "hebergement",
+      "description": "Villa indépendante pour 8 avec piscine (rattachée à Sunset Backpackers).",
+      "icone": "🛏️",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/f/f4/Map_Golden_Coast_Villa.jpg/revision/latest?cb=20260908162850",
+      "nom_fichier_wiki": "Map_Golden_Coast_Villa.jpg",
+      "icone_fichier": null,
+      "details": {
+        "ville": "Bliss Bay",
+        "type": "hébergement",
+        "prix": 300,
+        "prix_type": "par nuit (minimum)",
+        "tarifs": {
+          "1 nuit": 300,
+          "2 nuits": 600,
+          "3 nuits": 900
+        },
+        "devise": "Miaou",
+        "emplacement": "sud-est",
+        "id_jeu": "RedCity_Accommodation2",
+        "reservable_vacances": true
+      },
+      "source": "https://inzoi.fandom.com/wiki/Golden_Coast_Villa"
+    },
+    {
+      "id": "sri-lestari-hostel-main-building",
+      "nom": "Bâtiment principal de Sri Lestari Hostel",
+      "nom_en": "Sri Lestari Hostel Main Building",
+      "fr_verifie": true,
+      "categorie": "hebergement",
+      "description": "Auberge, chambres de 6 et 8 personnes.",
+      "icone": "🛏️",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/e/ec/Map_Sri_Lestari_Hostel_Main_Building.jpg/revision/latest?cb=20260923112652",
+      "nom_fichier_wiki": "Map_Sri_Lestari_Hostel_Main_Building.jpg",
+      "icone_fichier": null,
+      "details": {
+        "ville": "Cahaya",
+        "type": "hébergement",
+        "prix": 100,
+        "prix_type": "par nuit (minimum)",
+        "tarifs": {
+          "Chambre 101": 100,
+          "Chambre 102": 130
+        },
+        "devise": "Miaou",
+        "emplacement": "Centre balnéaire de Sri Lestari (est)",
+        "id_jeu": "Cahaya_Business_SriHostel1",
+        "reservable_vacances": true
+      },
+      "source": "https://inzoi.fandom.com/wiki/Sri_Lestari_Hostel_Main_Building"
+    },
+    {
+      "id": "sri-lestari-hostel-annex",
+      "nom": "Annexe du Sri Lestari Hostel",
+      "nom_en": "Sri Lestari Hostel Annex",
+      "fr_verifie": true,
+      "categorie": "hebergement",
+      "description": "Annexe avec piscine, chambres de 2 à 4 personnes.",
+      "icone": "🛏️",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/a/aa/Map_Sri_Lestari_Hostel_Annex.jpg/revision/latest?cb=20260923113247",
+      "nom_fichier_wiki": "Map_Sri_Lestari_Hostel_Annex.jpg",
+      "icone_fichier": null,
+      "details": {
+        "ville": "Cahaya",
+        "type": "hébergement",
+        "prix": 40,
+        "prix_type": "par nuit (minimum)",
+        "tarifs": {
+          "Chambre 101": 40,
+          "Chambre 102": 40,
+          "Chambre 103": 70,
+          "Chambre 104": 70
+        },
+        "devise": "Miaou",
+        "emplacement": "Centre balnéaire de Sri Lestari (est)",
+        "id_jeu": "Cahaya_Business_SriHostel2",
+        "reservable_vacances": true
+      },
+      "source": "https://inzoi.fandom.com/wiki/Sri_Lestari_Hostel_Annex"
+    },
+    {
+      "id": "room-108-garden-villa",
+      "nom": "Chambre 108, Villa avec vue sur le jardin",
+      "nom_en": "Room 108, Garden Villa",
+      "fr_verifie": true,
+      "categorie": "hebergement",
+      "description": "Villa côté jardin, vue sur les couchers de soleil.",
+      "icone": "🛏️",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/2/2c/Map_Room_108%2C_Garden_Villa.jpg/revision/latest?cb=20250823085158",
+      "nom_fichier_wiki": "Map_Room_108,_Garden_Villa.jpg",
+      "icone_fichier": null,
+      "details": {
+        "ville": "Cahaya",
+        "type": "hébergement",
+        "prix": 2000,
+        "prix_type": "par nuit (minimum)",
+        "tarifs": {
+          "1 nuit": 2000,
+          "2 nuits": 3900,
+          "3 nuits": 5800
+        },
+        "devise": "Miaou",
+        "emplacement": "Centre balnéaire de Sri Lestari (nord-est)",
+        "id_jeu": "Cahaya_Business_Resort3",
+        "reservable_vacances": true
+      },
+      "source": "https://inzoi.fandom.com/wiki/Room_108,_Garden_Villa"
+    },
+    {
+      "id": "room-201-premier-ocean-view-villa",
+      "nom": "Chambre 201, Villa premium avec vue sur l'océan",
+      "nom_en": "Room 201, Premier Ocean View Villa",
+      "fr_verifie": true,
+      "categorie": "hebergement",
+      "description": "Villa premium face à l'océan.",
+      "icone": "🛏️",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/d/dd/Map_Room_201%2C_Premier_Ocean_View_Villa.jpg/revision/latest?cb=20250823085627",
+      "nom_fichier_wiki": "Map_Room_201,_Premier_Ocean_View_Villa.jpg",
+      "icone_fichier": null,
+      "details": {
+        "ville": "Cahaya",
+        "type": "hébergement",
+        "prix": 2500,
+        "prix_type": "par nuit (minimum)",
+        "tarifs": {
+          "1 nuit": 2500,
+          "2 nuits": 4900,
+          "3 nuits": 7300
+        },
+        "devise": "Miaou",
+        "emplacement": "Centre balnéaire de Sri Lestari (sud)",
+        "id_jeu": "Cahaya_Business_Resort8",
+        "reservable_vacances": true
+      },
+      "source": "https://inzoi.fandom.com/wiki/Room_201,_Premier_Ocean_View_Villa"
+    },
+    {
+      "id": "room-403-private-water-villa",
+      "nom": "Chambre 403, Villa privée sur l'eau",
+      "nom_en": "Room 403, Private Water Villa",
+      "fr_verifie": true,
+      "categorie": "hebergement",
+      "description": "Villa sur pilotis, la plus romantique de Cahaya.",
+      "icone": "🛏️",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/3/3a/Map_Room_403%2C_Private_Water_Villa.jpg/revision/latest?cb=20250823084658",
+      "nom_fichier_wiki": "Map_Room_403,_Private_Water_Villa.jpg",
+      "icone_fichier": null,
+      "details": {
+        "ville": "Cahaya",
+        "type": "hébergement",
+        "prix": 1800,
+        "prix_type": "par nuit (minimum)",
+        "tarifs": {
+          "1 nuit": 1800,
+          "2 nuits": 3500,
+          "3 nuits": 5200
+        },
+        "devise": "Miaou",
+        "emplacement": "Centre balnéaire de Sri Lestari (ouest)",
+        "id_jeu": "Cahaya_Business_StiltHouse1",
+        "reservable_vacances": true
+      },
+      "source": "https://inzoi.fandom.com/wiki/Room_403,_Private_Water_Villa"
+    },
+    {
+      "id": "palmora-stay",
+      "nom": "Palmora Stay",
+      "nom_en": "Palmora Stay",
+      "fr_verifie": true,
+      "categorie": "hebergement",
+      "description": "Pension locale. Tarifs non documentés.",
+      "icone": "🛏️",
+      "icone_url": "https://static.wikia.nocookie.net/inzoi/images/6/6b/Map_Palmora_Stay.jpg/revision/latest?cb=20250824121627",
+      "nom_fichier_wiki": "Map_Palmora_Stay.jpg",
+      "icone_fichier": null,
+      "details": {
+        "ville": "Cahaya",
+        "type": "hébergement",
+        "prix": null,
+        "prix_type": "par nuit (minimum)",
+        "tarifs": {},
+        "devise": "Miaou",
+        "emplacement": "est de l'île principale",
+        "id_jeu": "Cahaya_Public_GuestHouse1",
+        "reservable_vacances": true
+      },
+      "source": "https://inzoi.fandom.com/wiki/Palmora_Stay"
+    }
+  ]
+}

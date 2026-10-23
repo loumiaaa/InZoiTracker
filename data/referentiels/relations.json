@@ -1,0 +1,1473 @@
+{
+  "referentiel": "relations",
+  "titre": "Relations",
+  "maj": "2026-10-23",
+  "version_jeu": "v0.11.1 (accès anticipé, patch du 20/10/2026)",
+  "sources": [
+    "https://playinzoi.com/fr/guide/cheats",
+    "https://playinzoi.com/fr/news/8812",
+    "https://playinzoi.com/fr/news/9079",
+    "https://playinzoi.com/fr/news/9309",
+    "https://playinzoi.com/fr/news/9533",
+    "https://playinzoi.com/fr/news/9824",
+    "https://playinzoi.com/fr/news/9960",
+    "https://playinzoi.com/fr/news/10849",
+    "https://playinzoi.com/fr/news/11172",
+    "https://inzoi.fandom.com/wiki/Family",
+    "https://inzoi.fandom.com/wiki/Memory",
+    "https://inzoi.fandom.com/wiki/Ambitions",
+    "https://inzoi.wiki.fextralife.com/Relationships",
+    "https://game8.co/games/inZOI/archives/504446",
+    "https://thegameswiki.com/inzoi/wiki/relationships",
+    "https://thegameswiki.com/inzoi/wiki/romance",
+    "https://thegameswiki.com/inzoi/wiki/family",
+    "https://www.dexerto.fr/jeux-video/ambitions-inzoi-1608329/",
+    "docs/references/jeu-fiche-souvenirs.png",
+    "docs/references/jeu-fiche-profil.png"
+  ],
+  "categories": [
+    {
+      "id": "jauge",
+      "nom": "Jauges de relation",
+      "nom_en": "Relationship types",
+      "icone": "📊"
+    },
+    {
+      "id": "niveau-amour",
+      "nom": "Niveaux d'amour",
+      "nom_en": "Love levels",
+      "icone": "💕"
+    },
+    {
+      "id": "niveau-amitie",
+      "nom": "Niveaux d'amitié",
+      "nom_en": "Friendship levels",
+      "icone": "🤝"
+    },
+    {
+      "id": "niveau-famille",
+      "nom": "Niveaux familiaux",
+      "nom_en": "Family levels",
+      "icone": "👨‍👩‍👧"
+    },
+    {
+      "id": "niveau-affaires",
+      "nom": "Niveaux d'affaires",
+      "nom_en": "Business levels",
+      "icone": "💼"
+    },
+    {
+      "id": "statut",
+      "nom": "Statuts",
+      "nom_en": "Statuses",
+      "icone": "🏷️"
+    },
+    {
+      "id": "professionnel",
+      "nom": "Liens professionnels",
+      "nom_en": "Work ties",
+      "icone": "🧑‍💼"
+    },
+    {
+      "id": "lien-familial",
+      "nom": "Liens familiaux",
+      "nom_en": "Family ties",
+      "icone": "🌳"
+    }
+  ],
+  "notes": "AFFICHAGE EN JEU : chaque relation entre deux Zois a 4 jauges indépendantes (Amour, Amitié, Affaires, Famille ; noms FR officiels du guide des triches, où « Amour » correspond à l'ID « Romance »). Chaque jauge va de -100 à +100 (setRelationship). Le panneau Relations affiche les jauges et donne le score au survol de la souris. La jauge Amour n'apparaît qu'après une première conversation romantique. Au mariage, une partie du score d'amour passe dans la jauge Famille et le statut affiché devient « Famille » (« Relative » en anglais). Le jeu tient aussi des journaux de la relation et un arbre généalogique (bouton « Arbre généalogique » de la Carte Zoi ; relations du foyer modifiables depuis la v0.10.0, niveaux réglables dans Créer Zoi depuis la v0.11.0).\nPALIERS : 6 paliers nommés par jauge (3 négatifs, 3 positifs) avec un point neutre au milieu, d'après Fextralife (Game8 et thegameswiki concordent pour Amour et Affaires). thegameswiki ne cite pas « Neutre » pour l'amitié. Un guide (VGTimes) donne d'autres noms (« Mutual Affection », « Lovers ») qui n'ont pas été retenus. Les seuils chiffrés de chaque palier ne sont pas connus.\nLIBELLÉS FR : sont vérifiés les 4 jauges (guide des triches FR), « Crush réciproque » et « Amoureux » (notes de patch FR v0.2.0), « Grand amour » (Dexerto.fr, d'après les objectifs d'ambition) et les termes de statut tirés des notes de patch FR (connaissance, colocataire, ex, fiancé, conjoint, parents, pères biologiques, partenaire amoureux, relation interdite, obsession, coups de cœur non partagés, admirateur secret, partenaire de bal, collègues, membres du personnel) ainsi que des captures (Fiançailles, Partenaire de prom, Arbre généalogique). Tous les autres noms de paliers (amitié, famille, affaires et paliers négatifs d'amour) sont des traductions proposées : à vérifier en jeu dans le panneau Relations.\nLIENS FAMILIAUX : à la création, on ne choisit que parent / enfant / conjoint (et colocataire) ; frères et sœurs et grands-parents sont déduits et visibles dans l'arbre. Les autres liens (oncle, cousin, beaux-parents, demi-frère, etc.) sont ajoutés pour le suivi avec affiche_en_jeu=false. `variantes` donne les formes masculine et féminine.\nTROUS : les noms FR exacts des paliers et le libellé affiché pour un partenaire « en couple » ne sont pas connus. Le système de rivalité annoncé pour 2026 n'est pas documenté. Les jalons relationnels (Mariage, Remariage, Premier chagrin d'amour…) relèvent de jalons.json.",
+  "elements": [
+    {
+      "id": "jauge-amour",
+      "nom": "Amour",
+      "nom_en": "Love (Romance)",
+      "fr_verifie": true,
+      "categorie": "jauge",
+      "description": "Jauge amoureuse. Elle n'apparaît dans le menu Relations qu'après au moins une conversation romantique (v0.2.0). Au mariage, une partie du score est transférée dans la jauge Famille.",
+      "icone": "💕",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "type": "jauge",
+        "valeur_min": -100,
+        "valeur_max": 100,
+        "id_triche": "Romance",
+        "niveaux": [
+          "amour-terrible",
+          "amour-uncomfortable",
+          "amour-ambivalent",
+          "amour-neutral",
+          "amour-mutual-crush",
+          "amour-sweetheart",
+          "amour-true-love"
+        ]
+      },
+      "source": "https://playinzoi.com/fr/guide/cheats"
+    },
+    {
+      "id": "jauge-amitie",
+      "nom": "Amitié",
+      "nom_en": "Friendship",
+      "fr_verifie": true,
+      "categorie": "jauge",
+      "description": "Jauge d'amitié, qui progresse avec les conversations amicales. Les interactions romantiques demandent en général un minimum d'amitié (environ 20 % selon thegameswiki).",
+      "icone": "🤝",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "type": "jauge",
+        "valeur_min": -100,
+        "valeur_max": 100,
+        "id_triche": "Friendship",
+        "niveaux": [
+          "amitie-foe",
+          "amitie-stranger",
+          "amitie-awkward",
+          "amitie-neutral",
+          "amitie-friend",
+          "amitie-confidant",
+          "amitie-bff"
+        ]
+      },
+      "source": "https://playinzoi.com/fr/guide/cheats"
+    },
+    {
+      "id": "jauge-affaires",
+      "nom": "Affaires",
+      "nom_en": "Business",
+      "fr_verifie": true,
+      "categorie": "jauge",
+      "description": "Jauge professionnelle (adultes seulement), qui progresse en parlant travail, bourse ou finances. Selon les guides, elle évolue à l'inverse de l'amitié.",
+      "icone": "💼",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "type": "jauge",
+        "valeur_min": -100,
+        "valeur_max": 100,
+        "id_triche": "Business",
+        "niveaux": [
+          "affaires-enemy",
+          "affaires-rival",
+          "affaires-guarded",
+          "affaires-neutral",
+          "affaires-peer",
+          "affaires-colleague",
+          "affaires-business-partner"
+        ]
+      },
+      "source": "https://playinzoi.com/fr/guide/cheats"
+    },
+    {
+      "id": "jauge-famille",
+      "nom": "Famille",
+      "nom_en": "Family",
+      "fr_verifie": true,
+      "categorie": "jauge",
+      "description": "Jauge familiale. Le lien naît de la naissance, de l'adoption ou du mariage ; on ne peut pas le créer par de simples interactions.",
+      "icone": "👨‍👩‍👧",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "type": "jauge",
+        "valeur_min": -100,
+        "valeur_max": 100,
+        "id_triche": "Family",
+        "niveaux": [
+          "famille-estranged",
+          "famille-dysfunctional",
+          "famille-distant",
+          "famille-neutral",
+          "famille-affectionate",
+          "famille-close",
+          "famille-loving"
+        ]
+      },
+      "source": "https://playinzoi.com/fr/guide/cheats"
+    },
+    {
+      "id": "amour-terrible",
+      "nom": "Exécrable",
+      "nom_en": "Terrible",
+      "fr_verifie": false,
+      "categorie": "niveau-amour",
+      "description": "Palier 1/7 de la jauge Amour (négatif).",
+      "icone": "😡",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "type": "niveau",
+        "jauge": "amour",
+        "ordre": 1,
+        "palier_source": 1
+      },
+      "source": "https://inzoi.wiki.fextralife.com/Relationships"
+    },
+    {
+      "id": "amour-uncomfortable",
+      "nom": "Mal à l'aise",
+      "nom_en": "Uncomfortable",
+      "fr_verifie": false,
+      "categorie": "niveau-amour",
+      "description": "Palier 2/7 de la jauge Amour (négatif).",
+      "icone": "😠",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "type": "niveau",
+        "jauge": "amour",
+        "ordre": 2,
+        "palier_source": 2
+      },
+      "source": "https://inzoi.wiki.fextralife.com/Relationships"
+    },
+    {
+      "id": "amour-ambivalent",
+      "nom": "Ambivalent",
+      "nom_en": "Ambivalent",
+      "fr_verifie": false,
+      "categorie": "niveau-amour",
+      "description": "Palier 3/7 de la jauge Amour (négatif).",
+      "icone": "😕",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "type": "niveau",
+        "jauge": "amour",
+        "ordre": 3,
+        "palier_source": 3
+      },
+      "source": "https://inzoi.wiki.fextralife.com/Relationships"
+    },
+    {
+      "id": "amour-neutral",
+      "nom": "Neutre",
+      "nom_en": "Neutral",
+      "fr_verifie": false,
+      "categorie": "niveau-amour",
+      "description": "Palier 4/7 de la jauge Amour (point neutre).",
+      "icone": "😐",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "type": "niveau",
+        "jauge": "amour",
+        "ordre": 4,
+        "palier_source": "neutre"
+      },
+      "source": "https://inzoi.wiki.fextralife.com/Relationships"
+    },
+    {
+      "id": "amour-mutual-crush",
+      "nom": "Crush réciproque",
+      "nom_en": "Mutual Crush",
+      "fr_verifie": true,
+      "categorie": "niveau-amour",
+      "description": "Palier 5/7 de la jauge Amour (positif).",
+      "icone": "🙂",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "type": "niveau",
+        "jauge": "amour",
+        "ordre": 5,
+        "palier_source": 4
+      },
+      "source": "https://playinzoi.com/fr/news/8812"
+    },
+    {
+      "id": "amour-sweetheart",
+      "nom": "Amoureux",
+      "nom_en": "Sweetheart",
+      "fr_verifie": true,
+      "categorie": "niveau-amour",
+      "description": "Palier 6/7 de la jauge Amour (positif). Le patch FR v0.2.0 décrit le passage de « crush réciproque » à « amoureux ».",
+      "icone": "😊",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "type": "niveau",
+        "jauge": "amour",
+        "ordre": 6,
+        "palier_source": 5
+      },
+      "source": "https://playinzoi.com/fr/news/8812"
+    },
+    {
+      "id": "amour-true-love",
+      "nom": "Grand amour",
+      "nom_en": "True Love",
+      "fr_verifie": true,
+      "categorie": "niveau-amour",
+      "description": "Palier 7/7 de la jauge Amour (positif). Libellé FR repris d'objectifs d'ambition (Dexerto.fr : « 5 relations de Grand Amour »). Débloque le mariage.",
+      "icone": "🥰",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "type": "niveau",
+        "jauge": "amour",
+        "ordre": 7,
+        "palier_source": 6
+      },
+      "source": "https://www.dexerto.fr/jeux-video/ambitions-inzoi-1608329/"
+    },
+    {
+      "id": "amitie-foe",
+      "nom": "Ennemi",
+      "nom_en": "Foe",
+      "fr_verifie": false,
+      "categorie": "niveau-amitie",
+      "description": "Palier 1/7 de la jauge Amitié (négatif).",
+      "icone": "😡",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "type": "niveau",
+        "jauge": "amitie",
+        "ordre": 1,
+        "palier_source": 1
+      },
+      "source": "https://inzoi.wiki.fextralife.com/Relationships"
+    },
+    {
+      "id": "amitie-stranger",
+      "nom": "Inconnu",
+      "nom_en": "Stranger",
+      "fr_verifie": false,
+      "categorie": "niveau-amitie",
+      "description": "Palier 2/7 de la jauge Amitié (négatif).",
+      "icone": "😠",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "type": "niveau",
+        "jauge": "amitie",
+        "ordre": 2,
+        "palier_source": 2
+      },
+      "source": "https://inzoi.wiki.fextralife.com/Relationships"
+    },
+    {
+      "id": "amitie-awkward",
+      "nom": "Gêné",
+      "nom_en": "Awkward",
+      "fr_verifie": false,
+      "categorie": "niveau-amitie",
+      "description": "Palier 3/7 de la jauge Amitié (négatif).",
+      "icone": "😕",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "type": "niveau",
+        "jauge": "amitie",
+        "ordre": 3,
+        "palier_source": 3
+      },
+      "source": "https://inzoi.wiki.fextralife.com/Relationships"
+    },
+    {
+      "id": "amitie-neutral",
+      "nom": "Neutre",
+      "nom_en": "Neutral",
+      "fr_verifie": false,
+      "categorie": "niveau-amitie",
+      "description": "Palier 4/7 de la jauge Amitié (point neutre).",
+      "icone": "😐",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "type": "niveau",
+        "jauge": "amitie",
+        "ordre": 4,
+        "palier_source": "neutre"
+      },
+      "source": "https://inzoi.wiki.fextralife.com/Relationships"
+    },
+    {
+      "id": "amitie-friend",
+      "nom": "Ami",
+      "nom_en": "Friend",
+      "fr_verifie": false,
+      "categorie": "niveau-amitie",
+      "description": "Palier 5/7 de la jauge Amitié (positif).",
+      "icone": "🙂",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "type": "niveau",
+        "jauge": "amitie",
+        "ordre": 5,
+        "palier_source": 4
+      },
+      "source": "https://inzoi.wiki.fextralife.com/Relationships"
+    },
+    {
+      "id": "amitie-confidant",
+      "nom": "Confident",
+      "nom_en": "Confidant",
+      "fr_verifie": false,
+      "categorie": "niveau-amitie",
+      "description": "Palier 6/7 de la jauge Amitié (positif).",
+      "icone": "😊",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "type": "niveau",
+        "jauge": "amitie",
+        "ordre": 6,
+        "palier_source": 5
+      },
+      "source": "https://inzoi.wiki.fextralife.com/Relationships"
+    },
+    {
+      "id": "amitie-bff",
+      "nom": "Meilleur ami (BFF)",
+      "nom_en": "BFF",
+      "fr_verifie": false,
+      "categorie": "niveau-amitie",
+      "description": "Palier 7/7 de la jauge Amitié (positif).",
+      "icone": "🥰",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "type": "niveau",
+        "jauge": "amitie",
+        "ordre": 7,
+        "palier_source": 6
+      },
+      "source": "https://inzoi.wiki.fextralife.com/Relationships"
+    },
+    {
+      "id": "famille-estranged",
+      "nom": "Brouillé",
+      "nom_en": "Estranged",
+      "fr_verifie": false,
+      "categorie": "niveau-famille",
+      "description": "Palier 1/7 de la jauge Famille (négatif).",
+      "icone": "😡",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "type": "niveau",
+        "jauge": "famille",
+        "ordre": 1,
+        "palier_source": 1
+      },
+      "source": "https://inzoi.wiki.fextralife.com/Relationships"
+    },
+    {
+      "id": "famille-dysfunctional",
+      "nom": "Dysfonctionnel",
+      "nom_en": "Dysfunctional",
+      "fr_verifie": false,
+      "categorie": "niveau-famille",
+      "description": "Palier 2/7 de la jauge Famille (négatif).",
+      "icone": "😠",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "type": "niveau",
+        "jauge": "famille",
+        "ordre": 2,
+        "palier_source": 2
+      },
+      "source": "https://inzoi.wiki.fextralife.com/Relationships"
+    },
+    {
+      "id": "famille-distant",
+      "nom": "Distant",
+      "nom_en": "Distant",
+      "fr_verifie": false,
+      "categorie": "niveau-famille",
+      "description": "Palier 3/7 de la jauge Famille (négatif).",
+      "icone": "😕",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "type": "niveau",
+        "jauge": "famille",
+        "ordre": 3,
+        "palier_source": 3
+      },
+      "source": "https://inzoi.wiki.fextralife.com/Relationships"
+    },
+    {
+      "id": "famille-neutral",
+      "nom": "Neutre",
+      "nom_en": "Neutral",
+      "fr_verifie": false,
+      "categorie": "niveau-famille",
+      "description": "Palier 4/7 de la jauge Famille (point neutre).",
+      "icone": "😐",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "type": "niveau",
+        "jauge": "famille",
+        "ordre": 4,
+        "palier_source": "neutre"
+      },
+      "source": "https://inzoi.wiki.fextralife.com/Relationships"
+    },
+    {
+      "id": "famille-affectionate",
+      "nom": "Affectueux",
+      "nom_en": "Affectionate",
+      "fr_verifie": false,
+      "categorie": "niveau-famille",
+      "description": "Palier 5/7 de la jauge Famille (positif).",
+      "icone": "🙂",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "type": "niveau",
+        "jauge": "famille",
+        "ordre": 5,
+        "palier_source": 4
+      },
+      "source": "https://inzoi.wiki.fextralife.com/Relationships"
+    },
+    {
+      "id": "famille-close",
+      "nom": "Proche",
+      "nom_en": "Close",
+      "fr_verifie": false,
+      "categorie": "niveau-famille",
+      "description": "Palier 6/7 de la jauge Famille (positif).",
+      "icone": "😊",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "type": "niveau",
+        "jauge": "famille",
+        "ordre": 6,
+        "palier_source": 5
+      },
+      "source": "https://inzoi.wiki.fextralife.com/Relationships"
+    },
+    {
+      "id": "famille-loving",
+      "nom": "Aimant",
+      "nom_en": "Loving",
+      "fr_verifie": false,
+      "categorie": "niveau-famille",
+      "description": "Palier 7/7 de la jauge Famille (positif).",
+      "icone": "🥰",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "type": "niveau",
+        "jauge": "famille",
+        "ordre": 7,
+        "palier_source": 6
+      },
+      "source": "https://inzoi.wiki.fextralife.com/Relationships"
+    },
+    {
+      "id": "affaires-enemy",
+      "nom": "Ennemi",
+      "nom_en": "Enemy",
+      "fr_verifie": false,
+      "categorie": "niveau-affaires",
+      "description": "Palier 1/7 de la jauge Affaires (négatif).",
+      "icone": "😡",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "type": "niveau",
+        "jauge": "affaires",
+        "ordre": 1,
+        "palier_source": 1
+      },
+      "source": "https://inzoi.wiki.fextralife.com/Relationships"
+    },
+    {
+      "id": "affaires-rival",
+      "nom": "Rival",
+      "nom_en": "Rival",
+      "fr_verifie": false,
+      "categorie": "niveau-affaires",
+      "description": "Palier 2/7 de la jauge Affaires (négatif).",
+      "icone": "😠",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "type": "niveau",
+        "jauge": "affaires",
+        "ordre": 2,
+        "palier_source": 2
+      },
+      "source": "https://inzoi.wiki.fextralife.com/Relationships"
+    },
+    {
+      "id": "affaires-guarded",
+      "nom": "Méfiant",
+      "nom_en": "Guarded",
+      "fr_verifie": false,
+      "categorie": "niveau-affaires",
+      "description": "Palier 3/7 de la jauge Affaires (négatif).",
+      "icone": "😕",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "type": "niveau",
+        "jauge": "affaires",
+        "ordre": 3,
+        "palier_source": 3
+      },
+      "source": "https://inzoi.wiki.fextralife.com/Relationships"
+    },
+    {
+      "id": "affaires-neutral",
+      "nom": "Neutre",
+      "nom_en": "Neutral",
+      "fr_verifie": false,
+      "categorie": "niveau-affaires",
+      "description": "Palier 4/7 de la jauge Affaires (point neutre).",
+      "icone": "😐",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "type": "niveau",
+        "jauge": "affaires",
+        "ordre": 4,
+        "palier_source": "neutre"
+      },
+      "source": "https://inzoi.wiki.fextralife.com/Relationships"
+    },
+    {
+      "id": "affaires-peer",
+      "nom": "Pair",
+      "nom_en": "Peer",
+      "fr_verifie": false,
+      "categorie": "niveau-affaires",
+      "description": "Palier 5/7 de la jauge Affaires (positif).",
+      "icone": "🙂",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "type": "niveau",
+        "jauge": "affaires",
+        "ordre": 5,
+        "palier_source": 4
+      },
+      "source": "https://inzoi.wiki.fextralife.com/Relationships"
+    },
+    {
+      "id": "affaires-colleague",
+      "nom": "Collègue",
+      "nom_en": "Colleague",
+      "fr_verifie": false,
+      "categorie": "niveau-affaires",
+      "description": "Palier 6/7 de la jauge Affaires (positif).",
+      "icone": "😊",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "type": "niveau",
+        "jauge": "affaires",
+        "ordre": 6,
+        "palier_source": 5
+      },
+      "source": "https://inzoi.wiki.fextralife.com/Relationships"
+    },
+    {
+      "id": "affaires-business-partner",
+      "nom": "Partenaire d'affaires",
+      "nom_en": "Business Partner",
+      "fr_verifie": false,
+      "categorie": "niveau-affaires",
+      "description": "Palier 7/7 de la jauge Affaires (positif).",
+      "icone": "🥰",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "type": "niveau",
+        "jauge": "affaires",
+        "ordre": 7,
+        "palier_source": 6
+      },
+      "source": "https://inzoi.wiki.fextralife.com/Relationships"
+    },
+    {
+      "id": "celibataire",
+      "nom": "Célibataire",
+      "nom_en": "Single",
+      "fr_verifie": false,
+      "categorie": "statut",
+      "description": "Aucun partenaire amoureux. Ce n'est pas un statut affiché en jeu ; il est ajouté pour le suivi.",
+      "icone": "🙋",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "type": "statut",
+        "affiche_en_jeu": false
+      },
+      "source": ""
+    },
+    {
+      "id": "coup-de-coeur-non-partage",
+      "nom": "Coup de cœur non partagé",
+      "nom_en": "One-sided crush",
+      "fr_verifie": true,
+      "categorie": "statut",
+      "description": "Amour à sens unique (v0.3.0).",
+      "icone": "💔",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "type": "statut",
+        "affiche_en_jeu": true
+      },
+      "source": "https://playinzoi.com/fr/news/9079"
+    },
+    {
+      "id": "admirateur-secret",
+      "nom": "Admirateur secret",
+      "nom_en": "Secret admirer",
+      "fr_verifie": true,
+      "categorie": "statut",
+      "description": "Déclaration anonyme (romance ados, v0.2.0).",
+      "icone": "💌",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "type": "statut",
+        "affiche_en_jeu": true
+      },
+      "source": "https://playinzoi.com/fr/news/8812"
+    },
+    {
+      "id": "partenaire-amoureux",
+      "nom": "Partenaire amoureux",
+      "nom_en": "Sweetheart / lover",
+      "fr_verifie": true,
+      "categorie": "statut",
+      "description": "En couple, sans être fiancés.",
+      "icone": "💑",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "type": "statut",
+        "affiche_en_jeu": true
+      },
+      "source": "https://playinzoi.com/fr/news/8812"
+    },
+    {
+      "id": "fiance",
+      "nom": "Fiancé(e)",
+      "nom_en": "Engaged / Fiancé",
+      "fr_verifie": true,
+      "categorie": "statut",
+      "description": "Après l'interaction « Fiançailles » (jalon « Fiançailles »).",
+      "icone": "💍",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "type": "statut",
+        "affiche_en_jeu": true
+      },
+      "source": "https://playinzoi.com/fr/news/9309"
+    },
+    {
+      "id": "marie",
+      "nom": "Marié(e)",
+      "nom_en": "Married",
+      "fr_verifie": false,
+      "categorie": "statut",
+      "description": "Après « Se marier ». Le lien devient familial : le statut affiché passe à « Famille ».",
+      "icone": "💒",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "type": "statut",
+        "affiche_en_jeu": true
+      },
+      "source": "https://playinzoi.com/fr/news/9309"
+    },
+    {
+      "id": "divorce",
+      "nom": "Divorcé(e)",
+      "nom_en": "Divorced",
+      "fr_verifie": false,
+      "categorie": "statut",
+      "description": "Après « Divorcer » (catégorie Conflit). Jalon « Divorce », émotion « Divorce réussi ».",
+      "icone": "📄",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "type": "statut",
+        "affiche_en_jeu": true
+      },
+      "source": "https://playinzoi.com/fr/news/9079"
+    },
+    {
+      "id": "ex",
+      "nom": "Ex",
+      "nom_en": "Ex",
+      "fr_verifie": true,
+      "categorie": "statut",
+      "description": "Ancien partenaire (interactions spécifiques avec les ex depuis la v0.4.0).",
+      "icone": "🔙",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "type": "statut",
+        "affiche_en_jeu": true
+      },
+      "source": "https://playinzoi.com/fr/news/9309"
+    },
+    {
+      "id": "veuf",
+      "nom": "Veuf / Veuve",
+      "nom_en": "Widowed",
+      "fr_verifie": false,
+      "categorie": "statut",
+      "description": "Conjoint décédé. Ce n'est pas un statut affiché en jeu ; il est ajouté pour le suivi.",
+      "icone": "🖤",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "type": "statut",
+        "affiche_en_jeu": false
+      },
+      "source": ""
+    },
+    {
+      "id": "infidelite",
+      "nom": "Infidélité",
+      "nom_en": "Cheating",
+      "fr_verifie": false,
+      "categorie": "statut",
+      "description": "Zoi surpris en train de tromper son partenaire amoureux : le score d'amour baisse fortement. Jalons EN « Playing the Field » et « Infidelity of a Sweetheart ».",
+      "icone": "🫣",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "type": "statut",
+        "affiche_en_jeu": true
+      },
+      "source": "https://playinzoi.com/fr/news/9533"
+    },
+    {
+      "id": "relation-interdite",
+      "nom": "Relation interdite",
+      "nom_en": "Forbidden relationship",
+      "fr_verifie": true,
+      "categorie": "statut",
+      "description": "Déclenche des désirs spéciaux (v0.5.0).",
+      "icone": "🚫",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "type": "statut",
+        "affiche_en_jeu": true
+      },
+      "source": "https://playinzoi.com/fr/news/9533"
+    },
+    {
+      "id": "obsession",
+      "nom": "Obsession",
+      "nom_en": "Obsession",
+      "fr_verifie": true,
+      "categorie": "statut",
+      "description": "Développement romantique ajouté en v0.3.0.",
+      "icone": "🌀",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "type": "statut",
+        "affiche_en_jeu": true
+      },
+      "source": "https://playinzoi.com/fr/news/9079"
+    },
+    {
+      "id": "partenaire-de-bal",
+      "nom": "Partenaire de bal de promo",
+      "nom_en": "Prom partner",
+      "fr_verifie": true,
+      "categorie": "statut",
+      "description": "Partenaire pour le bal de promo du lycée (jalon affiché « Partenaire de prom » sur la capture du jeu).",
+      "icone": "💃",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "type": "statut",
+        "affiche_en_jeu": true
+      },
+      "source": "https://playinzoi.com/fr/news/10165"
+    },
+    {
+      "id": "colocataire",
+      "nom": "Colocataire",
+      "nom_en": "Roommate / Housemate",
+      "fr_verifie": true,
+      "categorie": "statut",
+      "description": "Zoi qui vit sous le même toit sans lien familial ni amoureux.",
+      "icone": "🏠",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "type": "statut",
+        "affiche_en_jeu": true
+      },
+      "source": "https://playinzoi.com/fr/news/9309"
+    },
+    {
+      "id": "connaissance",
+      "nom": "Connaissance",
+      "nom_en": "Acquaintance",
+      "fr_verifie": true,
+      "categorie": "statut",
+      "description": "Zoi rencontré, sans relation particulière.",
+      "icone": "👋",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "type": "statut",
+        "affiche_en_jeu": true
+      },
+      "source": "https://playinzoi.com/fr/news/9533"
+    },
+    {
+      "id": "collegue-de-travail",
+      "nom": "Collègue",
+      "nom_en": "Coworker",
+      "fr_verifie": true,
+      "categorie": "professionnel",
+      "description": "Zoi du même lieu de travail.",
+      "icone": "🧑‍💼",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "type": "professionnel",
+        "affiche_en_jeu": true
+      },
+      "source": "https://playinzoi.com/fr/news/9960"
+    },
+    {
+      "id": "membre-du-personnel",
+      "nom": "Membre du personnel",
+      "nom_en": "Staff member / Employee",
+      "fr_verifie": true,
+      "categorie": "professionnel",
+      "description": "Employé de l'entreprise du Zoi (gestion d'entreprise, v0.5.0).",
+      "icone": "🧾",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "type": "professionnel",
+        "affiche_en_jeu": true
+      },
+      "source": "https://playinzoi.com/fr/news/9533"
+    },
+    {
+      "id": "famille-generique",
+      "nom": "Famille",
+      "nom_en": "Relative",
+      "fr_verifie": true,
+      "categorie": "lien-familial",
+      "description": "Statut générique affiché pour un lien de parenté (« Relative » en anglais).",
+      "icone": "👪",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "type": "lien familial",
+        "affiche_en_jeu": true,
+        "variantes": {}
+      },
+      "source": "https://playinzoi.com/fr/news/9309"
+    },
+    {
+      "id": "parent",
+      "nom": "Parent",
+      "nom_en": "Parent",
+      "fr_verifie": true,
+      "categorie": "lien-familial",
+      "description": "Lien direct que l'on peut définir à la création du foyer.",
+      "icone": "🧑‍🍼",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "type": "lien familial",
+        "affiche_en_jeu": true,
+        "variantes": {
+          "masculin": "Père",
+          "feminin": "Mère"
+        }
+      },
+      "source": "https://playinzoi.com/fr/news/10849"
+    },
+    {
+      "id": "enfant",
+      "nom": "Enfant",
+      "nom_en": "Child",
+      "fr_verifie": true,
+      "categorie": "lien-familial",
+      "description": "Lien direct que l'on peut définir à la création du foyer.",
+      "icone": "🧒",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "type": "lien familial",
+        "affiche_en_jeu": true,
+        "variantes": {
+          "masculin": "Fils",
+          "feminin": "Fille"
+        }
+      },
+      "source": "https://playinzoi.com/fr/news/10849"
+    },
+    {
+      "id": "conjoint",
+      "nom": "Conjoint(e)",
+      "nom_en": "Spouse",
+      "fr_verifie": true,
+      "categorie": "lien-familial",
+      "description": "Époux / épouse.",
+      "icone": "💞",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "type": "lien familial",
+        "affiche_en_jeu": true,
+        "variantes": {
+          "masculin": "Mari",
+          "feminin": "Femme"
+        }
+      },
+      "source": "https://playinzoi.com/fr/news/10849"
+    },
+    {
+      "id": "frere-soeur",
+      "nom": "Frère / Sœur",
+      "nom_en": "Sibling",
+      "fr_verifie": false,
+      "categorie": "lien-familial",
+      "description": "Lien déduit automatiquement quand deux Zois partagent les mêmes parents ; visible dans l'arbre généalogique.",
+      "icone": "👫",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "type": "lien familial",
+        "affiche_en_jeu": true,
+        "variantes": {
+          "masculin": "Frère",
+          "feminin": "Sœur"
+        }
+      },
+      "source": "https://thegameswiki.com/inzoi/wiki/family"
+    },
+    {
+      "id": "grand-parent",
+      "nom": "Grand-parent",
+      "nom_en": "Grandparent",
+      "fr_verifie": false,
+      "categorie": "lien-familial",
+      "description": "Lien déduit (parent d'un parent).",
+      "icone": "👴",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "type": "lien familial",
+        "affiche_en_jeu": true,
+        "variantes": {
+          "masculin": "Grand-père",
+          "feminin": "Grand-mère"
+        }
+      },
+      "source": "https://thegameswiki.com/inzoi/wiki/family"
+    },
+    {
+      "id": "petit-enfant",
+      "nom": "Petit-enfant",
+      "nom_en": "Grandchild",
+      "fr_verifie": false,
+      "categorie": "lien-familial",
+      "description": "Lien déduit (enfant d'un enfant).",
+      "icone": "👶",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "type": "lien familial",
+        "affiche_en_jeu": true,
+        "variantes": {
+          "masculin": "Petit-fils",
+          "feminin": "Petite-fille"
+        }
+      },
+      "source": "https://thegameswiki.com/inzoi/wiki/family"
+    },
+    {
+      "id": "parent-biologique",
+      "nom": "Parent biologique",
+      "nom_en": "Biological parent",
+      "fr_verifie": true,
+      "categorie": "lien-familial",
+      "description": "Parent génétique, par exemple après une naissance hors mariage.",
+      "icone": "🧬",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "type": "lien familial",
+        "affiche_en_jeu": true,
+        "variantes": {
+          "masculin": "Père biologique",
+          "feminin": "Mère biologique"
+        }
+      },
+      "source": "https://playinzoi.com/fr/news/9079"
+    },
+    {
+      "id": "enfant-adopte",
+      "nom": "Enfant adopté",
+      "nom_en": "Adopted child",
+      "fr_verifie": false,
+      "categorie": "lien-familial",
+      "description": "Via le menu « Adopter un enfant » (ordinateur). Jalon EN « Child born from the heart ».",
+      "icone": "🤲",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "type": "lien familial",
+        "affiche_en_jeu": true,
+        "variantes": {
+          "masculin": "Fils adoptif",
+          "feminin": "Fille adoptive"
+        }
+      },
+      "source": "https://playinzoi.com/fr/news/8812"
+    },
+    {
+      "id": "parent-adoptif",
+      "nom": "Parent adoptif",
+      "nom_en": "Adoptive parent",
+      "fr_verifie": false,
+      "categorie": "lien-familial",
+      "description": "Parent d'un enfant adopté.",
+      "icone": "🤲",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "type": "lien familial",
+        "affiche_en_jeu": true,
+        "variantes": {
+          "masculin": "Père adoptif",
+          "feminin": "Mère adoptive"
+        }
+      },
+      "source": "https://playinzoi.com/fr/news/8812"
+    },
+    {
+      "id": "arriere-grand-parent",
+      "nom": "Arrière-grand-parent",
+      "nom_en": "Great-grandparent",
+      "fr_verifie": false,
+      "categorie": "lien-familial",
+      "description": "Lien courant ajouté pour le suivi (non affiché en jeu).",
+      "icone": "👵",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "type": "lien familial",
+        "affiche_en_jeu": false,
+        "variantes": {
+          "masculin": "Arrière-grand-père",
+          "feminin": "Arrière-grand-mère"
+        }
+      },
+      "source": ""
+    },
+    {
+      "id": "arriere-petit-enfant",
+      "nom": "Arrière-petit-enfant",
+      "nom_en": "Great-grandchild",
+      "fr_verifie": false,
+      "categorie": "lien-familial",
+      "description": "Lien courant ajouté pour le suivi (non affiché en jeu).",
+      "icone": "🍼",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "type": "lien familial",
+        "affiche_en_jeu": false,
+        "variantes": {
+          "masculin": "Arrière-petit-fils",
+          "feminin": "Arrière-petite-fille"
+        }
+      },
+      "source": ""
+    },
+    {
+      "id": "oncle-tante",
+      "nom": "Oncle / Tante",
+      "nom_en": "Uncle / Aunt",
+      "fr_verifie": false,
+      "categorie": "lien-familial",
+      "description": "Lien courant ajouté pour le suivi (non affiché en jeu).",
+      "icone": "🧔",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "type": "lien familial",
+        "affiche_en_jeu": false,
+        "variantes": {
+          "masculin": "Oncle",
+          "feminin": "Tante"
+        }
+      },
+      "source": ""
+    },
+    {
+      "id": "neveu-niece",
+      "nom": "Neveu / Nièce",
+      "nom_en": "Nephew / Niece",
+      "fr_verifie": false,
+      "categorie": "lien-familial",
+      "description": "Lien courant ajouté pour le suivi (non affiché en jeu).",
+      "icone": "🧒",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "type": "lien familial",
+        "affiche_en_jeu": false,
+        "variantes": {
+          "masculin": "Neveu",
+          "feminin": "Nièce"
+        }
+      },
+      "source": ""
+    },
+    {
+      "id": "cousin",
+      "nom": "Cousin(e)",
+      "nom_en": "Cousin",
+      "fr_verifie": false,
+      "categorie": "lien-familial",
+      "description": "Lien courant ajouté pour le suivi. Un rapport de bug du forum mentionne des couples affichés comme « cousins » : ce libellé existe peut-être en jeu, à vérifier.",
+      "icone": "🧑‍🤝‍🧑",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "type": "lien familial",
+        "affiche_en_jeu": false,
+        "variantes": {
+          "masculin": "Cousin",
+          "feminin": "Cousine"
+        }
+      },
+      "source": "https://forum.playinzoi.com/t/broken-family-ties-everyone-is-just-relatives-married-couple-turned-to-cousins/3730"
+    },
+    {
+      "id": "beau-parent-conjoint",
+      "nom": "Beau-parent (parent du conjoint)",
+      "nom_en": "Parent-in-law",
+      "fr_verifie": false,
+      "categorie": "lien-familial",
+      "description": "Lien courant ajouté pour le suivi (non affiché en jeu).",
+      "icone": "👨‍🦳",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "type": "lien familial",
+        "affiche_en_jeu": false,
+        "variantes": {
+          "masculin": "Beau-père",
+          "feminin": "Belle-mère"
+        }
+      },
+      "source": ""
+    },
+    {
+      "id": "gendre-belle-fille",
+      "nom": "Gendre / Belle-fille",
+      "nom_en": "Child-in-law",
+      "fr_verifie": false,
+      "categorie": "lien-familial",
+      "description": "Conjoint de son enfant. Lien ajouté pour le suivi (non affiché en jeu).",
+      "icone": "🤵",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "type": "lien familial",
+        "affiche_en_jeu": false,
+        "variantes": {
+          "masculin": "Gendre",
+          "feminin": "Belle-fille"
+        }
+      },
+      "source": ""
+    },
+    {
+      "id": "beau-frere-belle-soeur",
+      "nom": "Beau-frère / Belle-sœur",
+      "nom_en": "Sibling-in-law",
+      "fr_verifie": false,
+      "categorie": "lien-familial",
+      "description": "Lien courant ajouté pour le suivi (non affiché en jeu).",
+      "icone": "🧑",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "type": "lien familial",
+        "affiche_en_jeu": false,
+        "variantes": {
+          "masculin": "Beau-frère",
+          "feminin": "Belle-sœur"
+        }
+      },
+      "source": ""
+    },
+    {
+      "id": "beau-parent-recompose",
+      "nom": "Beau-parent (conjoint d'un parent)",
+      "nom_en": "Step-parent",
+      "fr_verifie": false,
+      "categorie": "lien-familial",
+      "description": "Famille recomposée. Lien ajouté pour le suivi (non affiché en jeu).",
+      "icone": "🏡",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "type": "lien familial",
+        "affiche_en_jeu": false,
+        "variantes": {
+          "masculin": "Beau-père",
+          "feminin": "Belle-mère"
+        }
+      },
+      "source": ""
+    },
+    {
+      "id": "bel-enfant",
+      "nom": "Bel-enfant (enfant du conjoint)",
+      "nom_en": "Step-child",
+      "fr_verifie": false,
+      "categorie": "lien-familial",
+      "description": "Famille recomposée. Lien ajouté pour le suivi (non affiché en jeu).",
+      "icone": "🧸",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "type": "lien familial",
+        "affiche_en_jeu": false,
+        "variantes": {
+          "masculin": "Beau-fils",
+          "feminin": "Belle-fille"
+        }
+      },
+      "source": ""
+    },
+    {
+      "id": "demi-frere-soeur",
+      "nom": "Demi-frère / Demi-sœur",
+      "nom_en": "Half-sibling",
+      "fr_verifie": false,
+      "categorie": "lien-familial",
+      "description": "Un seul parent en commun. Lien ajouté pour le suivi (non affiché en jeu).",
+      "icone": "👭",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "type": "lien familial",
+        "affiche_en_jeu": false,
+        "variantes": {
+          "masculin": "Demi-frère",
+          "feminin": "Demi-sœur"
+        }
+      },
+      "source": ""
+    },
+    {
+      "id": "jumeau",
+      "nom": "Jumeau / Jumelle",
+      "nom_en": "Twin",
+      "fr_verifie": false,
+      "categorie": "lien-familial",
+      "description": "Lien ajouté pour le suivi. On ne sait pas si le jeu gère les naissances multiples.",
+      "icone": "👯",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "type": "lien familial",
+        "affiche_en_jeu": false,
+        "variantes": {
+          "masculin": "Jumeau",
+          "feminin": "Jumelle"
+        }
+      },
+      "source": ""
+    }
+  ]
+}

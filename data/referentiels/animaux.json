@@ -1,0 +1,228 @@
+{
+  "referentiel": "animaux",
+  "titre": "Animaux",
+  "maj": "2026-10-23",
+  "version_jeu": "v0.11.1 (accès anticipé, patch du 20/10/2026)",
+  "sources": [
+    "https://www.jeuxvideo.com/news/1982743/inzoi-ou-trouver-les-animaux-et-comment-les-adopter.htm",
+    "https://thegameswiki.com/inzoi/wiki/pet-system",
+    "https://thegameswiki.com/inzoi/wiki/animals",
+    "https://thegameswiki.com/inzoi/wiki/pet-care-guide",
+    "https://playinzoi.com/fr/news/9079",
+    "https://game8.co/games/inZOI/archives/507524",
+    "https://gamerant.com/inzoi-how-get-feed-animals-cats-pandas-dogs/"
+  ],
+  "categories": [
+    {
+      "id": "faune-ville",
+      "nom": "Animaux de la ville (éditeur)",
+      "nom_en": "City animals",
+      "icone": "🌳"
+    },
+    {
+      "id": "faune-cahaya",
+      "nom": "Faune marine de Cahaya",
+      "nom_en": "Cahaya wildlife",
+      "icone": "🌊"
+    },
+    {
+      "id": "compagnie",
+      "nom": "Animaux de compagnie",
+      "nom_en": "Pets",
+      "icone": "🐾"
+    }
+  ],
+  "notes": "PAS D'ANIMAUX DE COMPAGNIE au 23/10/2026 (v0.11.1) : un Zoi ne peut ni adopter, ni acheter, ni garder un animal. Aucune espèce ni race de compagnie n'existe ; la catégorie « compagnie » est vide, prête pour une future mise à jour. Krafton parle d'une « haute priorité » depuis mars 2025, sans calendrier. Les mods « Cats and Dogs as Pets » détournent la faune de la ville.\nFAUNE DE VILLE : 8 espèces à placer dans Modifier la ville > Apparence de la ville > Animaux, 3 au maximum à la fois, avec une densité réglable. Noms FR tirés de jeuxvideo.com (mars 2025, guide FR, pas un libellé du jeu confirmé). Sources divergentes sur les interactions : les chats sont interactifs partout ; le panda est nourrissable selon certaines sources, simple décor selon d'autres.\nNe sont pas listés : les poissons et créatures marines pêchés ou collectionnés (journal de collection), les robots-tortues et Psycat (la mascotte et le guide du jeu).",
+  "elements": [
+    {
+      "id": "chat",
+      "nom": "Chat",
+      "nom_en": "Cat",
+      "fr_verifie": true,
+      "categorie": "faune-ville",
+      "description": "Seul animal vraiment interactif : il faut au moins 60 points dans la valeur Coexistence (nom EN) ; friandises, caresses, réconfort. Présent dans les rues, ruelles et parcs de toutes les villes, et très nombreux à Cahaya (chats du Temple Miatara).",
+      "icone": "🐱",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "espece": "chat",
+        "adoptable": false,
+        "races": [],
+        "placable_editeur_ville": true
+      },
+      "source": "https://www.jeuxvideo.com/news/1982743/inzoi-ou-trouver-les-animaux-et-comment-les-adopter.htm"
+    },
+    {
+      "id": "chien",
+      "nom": "Chien",
+      "nom_en": "Dog",
+      "fr_verifie": true,
+      "categorie": "faune-ville",
+      "description": "Animal d'ambiance (décor), pas d'interaction confirmée.",
+      "icone": "🐶",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "espece": "chien",
+        "adoptable": false,
+        "races": [],
+        "placable_editeur_ville": true
+      },
+      "source": "https://www.jeuxvideo.com/news/1982743/inzoi-ou-trouver-les-animaux-et-comment-les-adopter.htm"
+    },
+    {
+      "id": "panda",
+      "nom": "Panda",
+      "nom_en": "Panda",
+      "fr_verifie": true,
+      "categorie": "faune-ville",
+      "description": "Dans les parcs et espaces verts. Selon les sources, on peut lui donner du bambou ou bien il n'est qu'un élément de décor.",
+      "icone": "🐼",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "espece": "panda",
+        "adoptable": false,
+        "races": [],
+        "placable_editeur_ville": true
+      },
+      "source": "https://www.jeuxvideo.com/news/1982743/inzoi-ou-trouver-les-animaux-et-comment-les-adopter.htm"
+    },
+    {
+      "id": "cerf",
+      "nom": "Cerf",
+      "nom_en": "Deer",
+      "fr_verifie": true,
+      "categorie": "faune-ville",
+      "description": "Animal d'ambiance (zones boisées, parcs).",
+      "icone": "🦌",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "espece": "cerf",
+        "adoptable": false,
+        "races": [],
+        "placable_editeur_ville": true
+      },
+      "source": "https://www.jeuxvideo.com/news/1982743/inzoi-ou-trouver-les-animaux-et-comment-les-adopter.htm"
+    },
+    {
+      "id": "raton-laveur",
+      "nom": "Raton laveur",
+      "nom_en": "Raccoon",
+      "fr_verifie": true,
+      "categorie": "faune-ville",
+      "description": "Animal d'ambiance.",
+      "icone": "🦝",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "espece": "raton laveur",
+        "adoptable": false,
+        "races": [],
+        "placable_editeur_ville": true
+      },
+      "source": "https://www.jeuxvideo.com/news/1982743/inzoi-ou-trouver-les-animaux-et-comment-les-adopter.htm"
+    },
+    {
+      "id": "ecureuil",
+      "nom": "Écureuil",
+      "nom_en": "Squirrel",
+      "fr_verifie": true,
+      "categorie": "faune-ville",
+      "description": "Animal d'ambiance (arbres, parcs).",
+      "icone": "🐿️",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "espece": "écureuil",
+        "adoptable": false,
+        "races": [],
+        "placable_editeur_ville": true
+      },
+      "source": "https://www.jeuxvideo.com/news/1982743/inzoi-ou-trouver-les-animaux-et-comment-les-adopter.htm"
+    },
+    {
+      "id": "renard",
+      "nom": "Renard",
+      "nom_en": "Fox",
+      "fr_verifie": true,
+      "categorie": "faune-ville",
+      "description": "Animal d'ambiance (zones calmes).",
+      "icone": "🦊",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "espece": "renard",
+        "adoptable": false,
+        "races": [],
+        "placable_editeur_ville": true
+      },
+      "source": "https://www.jeuxvideo.com/news/1982743/inzoi-ou-trouver-les-animaux-et-comment-les-adopter.htm"
+    },
+    {
+      "id": "crocodile",
+      "nom": "Crocodile",
+      "nom_en": "Crocodile",
+      "fr_verifie": true,
+      "categorie": "faune-ville",
+      "description": "Animal d'ambiance, près de l'eau (voies d'eau de Cahaya). Certaines sources disent « alligator ».",
+      "icone": "🐊",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "espece": "crocodile",
+        "adoptable": false,
+        "races": [],
+        "placable_editeur_ville": true
+      },
+      "source": "https://www.jeuxvideo.com/news/1982743/inzoi-ou-trouver-les-animaux-et-comment-les-adopter.htm"
+    },
+    {
+      "id": "tortue-de-mer",
+      "nom": "Tortue de mer",
+      "nom_en": "Sea turtle",
+      "fr_verifie": true,
+      "categorie": "faune-cahaya",
+      "description": "Cahaya : récifs à explorer en plongée et Sanctuaire des tortues. Ne pas confondre avec les robots-tortues des courses du centre balnéaire.",
+      "icone": "🐢",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "espece": "tortue de mer",
+        "adoptable": false,
+        "races": [],
+        "placable_editeur_ville": false
+      },
+      "source": "https://playinzoi.com/fr/news/9079"
+    },
+    {
+      "id": "dauphin",
+      "nom": "Dauphin",
+      "nom_en": "Dolphin",
+      "fr_verifie": true,
+      "categorie": "faune-cahaya",
+      "description": "Cahaya : à observer en snorkeling.",
+      "icone": "🐬",
+      "icone_url": null,
+      "nom_fichier_wiki": null,
+      "icone_fichier": null,
+      "details": {
+        "espece": "dauphin",
+        "adoptable": false,
+        "races": [],
+        "placable_editeur_ville": false
+      },
+      "source": "https://playinzoi.com/fr/news/9079"
+    }
+  ]
+}
