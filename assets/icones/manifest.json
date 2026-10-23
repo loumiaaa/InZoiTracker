@@ -1,0 +1,2522 @@
+[
+ {
+  "fichier": "assets/icones/etapes-de-vie/AgeGroup_Adolescent.png",
+  "nom_fichier_wiki": "AgeGroup_Adolescent.png",
+  "source": "https://inzoi.fandom.com/wiki/File:AgeGroup_Adolescent.png",
+  "taille": [
+   964,
+   614
+  ]
+ },
+ {
+  "fichier": "assets/icones/etapes-de-vie/AgeGroup_Adult.png",
+  "nom_fichier_wiki": "AgeGroup_Adult.png",
+  "source": "https://inzoi.fandom.com/wiki/File:AgeGroup_Adult.png",
+  "taille": [
+   963,
+   614
+  ]
+ },
+ {
+  "fichier": "assets/icones/etapes-de-vie/AgeGroup_Child.png",
+  "nom_fichier_wiki": "AgeGroup_Child.png",
+  "source": "https://inzoi.fandom.com/wiki/File:AgeGroup_Child.png",
+  "taille": [
+   966,
+   617
+  ]
+ },
+ {
+  "fichier": "assets/icones/etapes-de-vie/AgeGroup_Middle_Age.png",
+  "nom_fichier_wiki": "AgeGroup_Middle_Age.png",
+  "source": "https://inzoi.fandom.com/wiki/File:AgeGroup_Middle_Age.png",
+  "taille": [
+   966,
+   617
+  ]
+ },
+ {
+  "fichier": "assets/icones/etapes-de-vie/AgeGroup_Senior.png",
+  "nom_fichier_wiki": "AgeGroup_Senior.png",
+  "source": "https://inzoi.fandom.com/wiki/File:AgeGroup_Senior.png",
+  "taille": [
+   947,
+   596
+  ]
+ },
+ {
+  "fichier": "assets/icones/etapes-de-vie/AgeGroup_Teenager.png",
+  "nom_fichier_wiki": "AgeGroup_Teenager.png",
+  "source": "https://inzoi.fandom.com/wiki/File:AgeGroup_Teenager.png",
+  "taille": [
+   969,
+   621
+  ]
+ },
+ {
+  "fichier": "assets/icones/etapes-de-vie/AgeGroup_Toddler.png",
+  "nom_fichier_wiki": "AgeGroup_Toddler.png",
+  "source": "https://inzoi.fandom.com/wiki/File:AgeGroup_Toddler.png",
+  "taille": [
+   949,
+   597
+  ]
+ },
+ {
+  "fichier": "assets/icones/etapes-de-vie/AgeGroup_Young_Adult.png",
+  "nom_fichier_wiki": "AgeGroup_Young_Adult.png",
+  "source": "https://inzoi.fandom.com/wiki/File:AgeGroup_Young_Adult.png",
+  "taille": [
+   981,
+   631
+  ]
+ },
+ {
+  "fichier": "assets/icones/etapes-de-vie-alt/Age_Adolescent.png",
+  "nom_fichier_wiki": "Age_Adolescent.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Age_Adolescent.png",
+  "taille": [
+   85,
+   84
+  ]
+ },
+ {
+  "fichier": "assets/icones/etapes-de-vie-alt/Age_Adult.png",
+  "nom_fichier_wiki": "Age_Adult.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Age_Adult.png",
+  "taille": [
+   85,
+   84
+  ]
+ },
+ {
+  "fichier": "assets/icones/etapes-de-vie-alt/Age_Child.png",
+  "nom_fichier_wiki": "Age_Child.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Age_Child.png",
+  "taille": [
+   45,
+   43
+  ]
+ },
+ {
+  "fichier": "assets/icones/etapes-de-vie-alt/Age_Middle-Age.png",
+  "nom_fichier_wiki": "Age_Middle-Age.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Age_Middle-Age.png",
+  "taille": [
+   85,
+   84
+  ]
+ },
+ {
+  "fichier": "assets/icones/etapes-de-vie-alt/Age_Senior.png",
+  "nom_fichier_wiki": "Age_Senior.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Age_Senior.png",
+  "taille": [
+   85,
+   84
+  ]
+ },
+ {
+  "fichier": "assets/icones/etapes-de-vie-alt/Age_Teenager.png",
+  "nom_fichier_wiki": "Age_Teenager.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Age_Teenager.png",
+  "taille": [
+   85,
+   84
+  ]
+ },
+ {
+  "fichier": "assets/icones/etapes-de-vie-alt/Age_Young_Adult.png",
+  "nom_fichier_wiki": "Age_Young_Adult.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Age_Young_Adult.png",
+  "taille": [
+   85,
+   84
+  ]
+ },
+ {
+  "fichier": "assets/icones/etapes-de-vie-alt/Age_zero.png",
+  "nom_fichier_wiki": "Age_zero.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Age_zero.png",
+  "taille": [
+   85,
+   84
+  ]
+ },
+ {
+  "fichier": "assets/icones/ambitions/Ambition_Business.png",
+  "nom_fichier_wiki": "Ambition_Business.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Ambition_Business.png",
+  "taille": [
+   155,
+   90
+  ]
+ },
+ {
+  "fichier": "assets/icones/ambitions/Ambition_Career_Success.png",
+  "nom_fichier_wiki": "Ambition_Career_Success.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Ambition_Career_Success.png",
+  "taille": [
+   155,
+   90
+  ]
+ },
+ {
+  "fichier": "assets/icones/ambitions/Ambition_Collecting.png",
+  "nom_fichier_wiki": "Ambition_Collecting.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Ambition_Collecting.png",
+  "taille": [
+   155,
+   90
+  ]
+ },
+ {
+  "fichier": "assets/icones/ambitions/Ambition_Community_Contribution.png",
+  "nom_fichier_wiki": "Ambition_Community_Contribution.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Ambition_Community_Contribution.png",
+  "taille": [
+   155,
+   90
+  ]
+ },
+ {
+  "fichier": "assets/icones/ambitions/Ambition_Creative_Expression.png",
+  "nom_fichier_wiki": "Ambition_Creative_Expression.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Ambition_Creative_Expression.png",
+  "taille": [
+   155,
+   89
+  ]
+ },
+ {
+  "fichier": "assets/icones/ambitions/Ambition_Family_Happiness.png",
+  "nom_fichier_wiki": "Ambition_Family_Happiness.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Ambition_Family_Happiness.png",
+  "taille": [
+   155,
+   89
+  ]
+ },
+ {
+  "fichier": "assets/icones/ambitions/Ambition_Financial_Success.png",
+  "nom_fichier_wiki": "Ambition_Financial_Success.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Ambition_Financial_Success.png",
+  "taille": [
+   155,
+   90
+  ]
+ },
+ {
+  "fichier": "assets/icones/ambitions/Ambition_Free_Spirit_School.png",
+  "nom_fichier_wiki": "Ambition_Free_Spirit_School.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Ambition_Free_Spirit_School.png",
+  "taille": [
+   155,
+   90
+  ]
+ },
+ {
+  "fichier": "assets/icones/ambitions/Ambition_Harmony_and_Peace.png",
+  "nom_fichier_wiki": "Ambition_Harmony_and_Peace.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Ambition_Harmony_and_Peace.png",
+  "taille": [
+   155,
+   89
+  ]
+ },
+ {
+  "fichier": "assets/icones/ambitions/Ambition_Knowledge_and_Learning.png",
+  "nom_fichier_wiki": "Ambition_Knowledge_and_Learning.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Ambition_Knowledge_and_Learning.png",
+  "taille": [
+   155,
+   89
+  ]
+ },
+ {
+  "fichier": "assets/icones/ambitions/Ambition_Lifehacker.png",
+  "nom_fichier_wiki": "Ambition_Lifehacker.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Ambition_Lifehacker.png",
+  "taille": [
+   155,
+   90
+  ]
+ },
+ {
+  "fichier": "assets/icones/ambitions/Ambition_Pursuit_of_Love.png",
+  "nom_fichier_wiki": "Ambition_Pursuit_of_Love.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Ambition_Pursuit_of_Love.png",
+  "taille": [
+   155,
+   89
+  ]
+ },
+ {
+  "fichier": "assets/icones/ambitions/Ambition_School_Celebrity.png",
+  "nom_fichier_wiki": "Ambition_School_Celebrity.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Ambition_School_Celebrity.png",
+  "taille": [
+   155,
+   90
+  ]
+ },
+ {
+  "fichier": "assets/icones/ambitions/Ambition_Social_Disorder.png",
+  "nom_fichier_wiki": "Ambition_Social_Disorder.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Ambition_Social_Disorder.png",
+  "taille": [
+   155,
+   90
+  ]
+ },
+ {
+  "fichier": "assets/icones/ambitions/Ambition_Stay_Healthy.png",
+  "nom_fichier_wiki": "Ambition_Stay_Healthy.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Ambition_Stay_Healthy.png",
+  "taille": [
+   155,
+   90
+  ]
+ },
+ {
+  "fichier": "assets/icones/entreprises/Business_Basic.png",
+  "nom_fichier_wiki": "Business_Basic.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Business_Basic.png",
+  "taille": [
+   707,
+   998
+  ]
+ },
+ {
+  "fichier": "assets/icones/entreprises/Business_Log.png",
+  "nom_fichier_wiki": "Business_Log.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Business_Log.png",
+  "taille": [
+   775,
+   870
+  ]
+ },
+ {
+  "fichier": "assets/icones/entreprises/Business_Manage_Employees.png",
+  "nom_fichier_wiki": "Business_Manage_Employees.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Business_Manage_Employees.png",
+  "taille": [
+   625,
+   783
+  ]
+ },
+ {
+  "fichier": "assets/icones/vehicules/Car_Bicycle.png",
+  "nom_fichier_wiki": "Car_Bicycle.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Car_Bicycle.png",
+  "taille": [
+   120,
+   85
+  ]
+ },
+ {
+  "fichier": "assets/icones/vehicules/Car_Bounce_Scooter.png",
+  "nom_fichier_wiki": "Car_Bounce_Scooter.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Car_Bounce_Scooter.png",
+  "taille": [
+   200,
+   141
+  ]
+ },
+ {
+  "fichier": "assets/icones/vehicules/Car_Electric_Scooter.png",
+  "nom_fichier_wiki": "Car_Electric_Scooter.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Car_Electric_Scooter.png",
+  "taille": [
+   200,
+   141
+  ]
+ },
+ {
+  "fichier": "assets/icones/vehicules/Car_Grandeur.png",
+  "nom_fichier_wiki": "Car_Grandeur.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Car_Grandeur.png",
+  "taille": [
+   200,
+   141
+  ]
+ },
+ {
+  "fichier": "assets/icones/vehicules/Car_Ground_Electric_Scooter.png",
+  "nom_fichier_wiki": "Car_Ground_Electric_Scooter.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Car_Ground_Electric_Scooter.png",
+  "taille": [
+   200,
+   141
+  ]
+ },
+ {
+  "fichier": "assets/icones/vehicules/Car_Inster.png",
+  "nom_fichier_wiki": "Car_Inster.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Car_Inster.png",
+  "taille": [
+   200,
+   141
+  ]
+ },
+ {
+  "fichier": "assets/icones/vehicules/Car_Ioniq5.png",
+  "nom_fichier_wiki": "Car_Ioniq5.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Car_Ioniq5.png",
+  "taille": [
+   200,
+   141
+  ]
+ },
+ {
+  "fichier": "assets/icones/vehicules/Car_Ioniq9.png",
+  "nom_fichier_wiki": "Car_Ioniq9.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Car_Ioniq9.png",
+  "taille": [
+   200,
+   141
+  ]
+ },
+ {
+  "fichier": "assets/icones/vehicules/Car_Moped.png",
+  "nom_fichier_wiki": "Car_Moped.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Car_Moped.png",
+  "taille": [
+   200,
+   141
+  ]
+ },
+ {
+  "fichier": "assets/icones/vehicules/Car_Motorbike.png",
+  "nom_fichier_wiki": "Car_Motorbike.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Car_Motorbike.png",
+  "taille": [
+   200,
+   141
+  ]
+ },
+ {
+  "fichier": "assets/icones/vehicules/Car_Quick_Moped.png",
+  "nom_fichier_wiki": "Car_Quick_Moped.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Car_Quick_Moped.png",
+  "taille": [
+   200,
+   141
+  ]
+ },
+ {
+  "fichier": "assets/icones/vehicules/Car_Riv_Moped.png",
+  "nom_fichier_wiki": "Car_Riv_Moped.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Car_Riv_Moped.png",
+  "taille": [
+   200,
+   141
+  ]
+ },
+ {
+  "fichier": "assets/icones/vehicules/Car_STARIA_Lounge.png",
+  "nom_fichier_wiki": "Car_STARIA_Lounge.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Car_STARIA_Lounge.png",
+  "taille": [
+   200,
+   141
+  ]
+ },
+ {
+  "fichier": "assets/icones/vehicules/Car_SUV.png",
+  "nom_fichier_wiki": "Car_SUV.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Car_SUV.png",
+  "taille": [
+   200,
+   141
+  ]
+ },
+ {
+  "fichier": "assets/icones/vehicules/Car_Scooter.png",
+  "nom_fichier_wiki": "Car_Scooter.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Car_Scooter.png",
+  "taille": [
+   200,
+   141
+  ]
+ },
+ {
+  "fichier": "assets/icones/vehicules/Car_Sedan.png",
+  "nom_fichier_wiki": "Car_Sedan.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Car_Sedan.png",
+  "taille": [
+   200,
+   141
+  ]
+ },
+ {
+  "fichier": "assets/icones/vehicules/Car_Speed_Motorbike.png",
+  "nom_fichier_wiki": "Car_Speed_Motorbike.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Car_Speed_Motorbike.png",
+  "taille": [
+   200,
+   141
+  ]
+ },
+ {
+  "fichier": "assets/icones/vehicules/Car_Sports_Motorbike.png",
+  "nom_fichier_wiki": "Car_Sports_Motorbike.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Car_Sports_Motorbike.png",
+  "taille": [
+   200,
+   141
+  ]
+ },
+ {
+  "fichier": "assets/icones/vehicules/Car_Used_Moped.png",
+  "nom_fichier_wiki": "Car_Used_Moped.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Car_Used_Moped.png",
+  "taille": [
+   200,
+   141
+  ]
+ },
+ {
+  "fichier": "assets/icones/vehicules/Car_Used_Motorbike.png",
+  "nom_fichier_wiki": "Car_Used_Motorbike.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Car_Used_Motorbike.png",
+  "taille": [
+   200,
+   141
+  ]
+ },
+ {
+  "fichier": "assets/icones/vehicules/Car_Used_SUV.png",
+  "nom_fichier_wiki": "Car_Used_SUV.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Car_Used_SUV.png",
+  "taille": [
+   200,
+   141
+  ]
+ },
+ {
+  "fichier": "assets/icones/vehicules/Car_Used_Scooter.png",
+  "nom_fichier_wiki": "Car_Used_Scooter.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Car_Used_Scooter.png",
+  "taille": [
+   200,
+   141
+  ]
+ },
+ {
+  "fichier": "assets/icones/vehicules/Car_Used_Sedan.png",
+  "nom_fichier_wiki": "Car_Used_Sedan.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Car_Used_Sedan.png",
+  "taille": [
+   200,
+   141
+  ]
+ },
+ {
+  "fichier": "assets/icones/vehicules/Car_Used_Z-Car.png",
+  "nom_fichier_wiki": "Car_Used_Z-Car.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Car_Used_Z-Car.png",
+  "taille": [
+   200,
+   141
+  ]
+ },
+ {
+  "fichier": "assets/icones/vehicules/Car_Wind_Scooter.png",
+  "nom_fichier_wiki": "Car_Wind_Scooter.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Car_Wind_Scooter.png",
+  "taille": [
+   200,
+   141
+  ]
+ },
+ {
+  "fichier": "assets/icones/vehicules/Car_Z-Car.png",
+  "nom_fichier_wiki": "Car_Z-Car.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Car_Z-Car.png",
+  "taille": [
+   200,
+   141
+  ]
+ },
+ {
+  "fichier": "assets/icones/vehicules/Car_all_new_nexo.png",
+  "nom_fichier_wiki": "Car_all_new_nexo.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Car_all_new_nexo.png",
+  "taille": [
+   200,
+   141
+  ]
+ },
+ {
+  "fichier": "assets/icones/carrieres/Career_AZ_Convenience_Store.png",
+  "nom_fichier_wiki": "Career_AZ_Convenience_Store.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Career_AZ_Convenience_Store.png",
+  "taille": [
+   58,
+   55
+  ]
+ },
+ {
+  "fichier": "assets/icones/carrieres/Career_Adam_Entertainment.png",
+  "nom_fichier_wiki": "Career_Adam_Entertainment.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Career_Adam_Entertainment.png",
+  "taille": [
+   58,
+   55
+  ]
+ },
+ {
+  "fichier": "assets/icones/carrieres/Career_Beat_Code.png",
+  "nom_fichier_wiki": "Career_Beat_Code.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Career_Beat_Code.png",
+  "taille": [
+   58,
+   55
+  ]
+ },
+ {
+  "fichier": "assets/icones/carrieres/Career_Bliss_Bay_Amusement_Park.png",
+  "nom_fichier_wiki": "Career_Bliss_Bay_Amusement_Park.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Career_Bliss_Bay_Amusement_Park.png",
+  "taille": [
+   58,
+   55
+  ]
+ },
+ {
+  "fichier": "assets/icones/carrieres/Career_Bliss_Bay_Nautilus.png",
+  "nom_fichier_wiki": "Career_Bliss_Bay_Nautilus.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Career_Bliss_Bay_Nautilus.png",
+  "taille": [
+   58,
+   55
+  ]
+ },
+ {
+  "fichier": "assets/icones/carrieres/Career_Bliss_Bay_Times.png",
+  "nom_fichier_wiki": "Career_Bliss_Bay_Times.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Career_Bliss_Bay_Times.png",
+  "taille": [
+   58,
+   55
+  ]
+ },
+ {
+  "fichier": "assets/icones/carrieres/Career_Bliss_Bay_University.png",
+  "nom_fichier_wiki": "Career_Bliss_Bay_University.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Career_Bliss_Bay_University.png",
+  "taille": [
+   58,
+   55
+  ]
+ },
+ {
+  "fichier": "assets/icones/carrieres/Career_Blue_Moon_Soft.png",
+  "nom_fichier_wiki": "Career_Blue_Moon_Soft.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Career_Blue_Moon_Soft.png",
+  "taille": [
+   58,
+   55
+  ]
+ },
+ {
+  "fichier": "assets/icones/carrieres/Career_DG_Esports.png",
+  "nom_fichier_wiki": "Career_DG_Esports.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Career_DG_Esports.png",
+  "taille": [
+   58,
+   55
+  ]
+ },
+ {
+  "fichier": "assets/icones/carrieres/Career_DW_Soft.png",
+  "nom_fichier_wiki": "Career_DW_Soft.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Career_DW_Soft.png",
+  "taille": [
+   58,
+   55
+  ]
+ },
+ {
+  "fichier": "assets/icones/carrieres/Career_Dowon_Deli.png",
+  "nom_fichier_wiki": "Career_Dowon_Deli.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Career_Dowon_Deli.png",
+  "taille": [
+   58,
+   55
+  ]
+ },
+ {
+  "fichier": "assets/icones/carrieres/Career_Dowon_Fire_Station.png",
+  "nom_fichier_wiki": "Career_Dowon_Fire_Station.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Career_Dowon_Fire_Station.png",
+  "taille": [
+   58,
+   55
+  ]
+ },
+ {
+  "fichier": "assets/icones/carrieres/Career_Farming.png",
+  "nom_fichier_wiki": "Career_Farming.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Career_Farming.png",
+  "taille": [
+   58,
+   55
+  ]
+ },
+ {
+  "fichier": "assets/icones/carrieres/Career_Golden_Apple_Burger.png",
+  "nom_fichier_wiki": "Career_Golden_Apple_Burger.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Career_Golden_Apple_Burger.png",
+  "taille": [
+   58,
+   55
+  ]
+ },
+ {
+  "fichier": "assets/icones/carrieres/Career_Jallan_Network.png",
+  "nom_fichier_wiki": "Career_Jallan_Network.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Career_Jallan_Network.png",
+  "taille": [
+   58,
+   55
+  ]
+ },
+ {
+  "fichier": "assets/icones/carrieres/Career_Law_Firm.png",
+  "nom_fichier_wiki": "Career_Law_Firm.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Career_Law_Firm.png",
+  "taille": [
+   58,
+   55
+  ]
+ },
+ {
+  "fichier": "assets/icones/carrieres/Career_Mackenzie_Furniture_Store.png",
+  "nom_fichier_wiki": "Career_Mackenzie_Furniture_Store.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Career_Mackenzie_Furniture_Store.png",
+  "taille": [
+   58,
+   55
+  ]
+ },
+ {
+  "fichier": "assets/icones/carrieres/Career_Map_Point.png",
+  "nom_fichier_wiki": "Career_Map_Point.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Career_Map_Point.png",
+  "taille": [
+   58,
+   55
+  ]
+ },
+ {
+  "fichier": "assets/icones/carrieres/Career_Military_Manpower_Admin.png",
+  "nom_fichier_wiki": "Career_Military_Manpower_Admin.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Career_Military_Manpower_Admin.png",
+  "taille": [
+   58,
+   55
+  ]
+ },
+ {
+  "fichier": "assets/icones/carrieres/Career_Mining_Union.png",
+  "nom_fichier_wiki": "Career_Mining_Union.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Career_Mining_Union.png",
+  "taille": [
+   58,
+   55
+  ]
+ },
+ {
+  "fichier": "assets/icones/carrieres/Career_Napas_Yoga.png",
+  "nom_fichier_wiki": "Career_Napas_Yoga.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Career_Napas_Yoga.png",
+  "taille": [
+   58,
+   55
+  ]
+ },
+ {
+  "fichier": "assets/icones/carrieres/Career_Natap_Encyclopedia.png",
+  "nom_fichier_wiki": "Career_Natap_Encyclopedia.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Career_Natap_Encyclopedia.png",
+  "taille": [
+   58,
+   55
+  ]
+ },
+ {
+  "fichier": "assets/icones/carrieres/Career_Navy.png",
+  "nom_fichier_wiki": "Career_Navy.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Career_Navy.png",
+  "taille": [
+   58,
+   55
+  ]
+ },
+ {
+  "fichier": "assets/icones/carrieres/Career_Neo_Chemi.png",
+  "nom_fichier_wiki": "Career_Neo_Chemi.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Career_Neo_Chemi.png",
+  "taille": [
+   58,
+   55
+  ]
+ },
+ {
+  "fichier": "assets/icones/carrieres/Career_Plutus_Financial.png",
+  "nom_fichier_wiki": "Career_Plutus_Financial.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Career_Plutus_Financial.png",
+  "taille": [
+   58,
+   55
+  ]
+ },
+ {
+  "fichier": "assets/icones/carrieres/Career_Posey's_Surf_Shop.png",
+  "nom_fichier_wiki": "Career_Posey's_Surf_Shop.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Career_Posey%27s_Surf_Shop.png",
+  "taille": [
+   58,
+   55
+  ]
+ },
+ {
+  "fichier": "assets/icones/carrieres/Career_Red_Bones.png",
+  "nom_fichier_wiki": "Career_Red_Bones.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Career_Red_Bones.png",
+  "taille": [
+   58,
+   55
+  ]
+ },
+ {
+  "fichier": "assets/icones/carrieres/Career_Sea_Turtle.png",
+  "nom_fichier_wiki": "Career_Sea_Turtle.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Career_Sea_Turtle.png",
+  "taille": [
+   58,
+   55
+  ]
+ },
+ {
+  "fichier": "assets/icones/carrieres/Career_Sync_Up.png",
+  "nom_fichier_wiki": "Career_Sync_Up.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Career_Sync_Up.png",
+  "taille": [
+   58,
+   55
+  ]
+ },
+ {
+  "fichier": "assets/icones/carrieres/Career_The_Press.png",
+  "nom_fichier_wiki": "Career_The_Press.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Career_The_Press.png",
+  "taille": [
+   58,
+   55
+  ]
+ },
+ {
+  "fichier": "assets/icones/carrieres/Career_Travel_Agency.png",
+  "nom_fichier_wiki": "Career_Travel_Agency.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Career_Travel_Agency.png",
+  "taille": [
+   58,
+   55
+  ]
+ },
+ {
+  "fichier": "assets/icones/carrieres/Career_Unit_Plan.png",
+  "nom_fichier_wiki": "Career_Unit_Plan.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Career_Unit_Plan.png",
+  "taille": [
+   58,
+   55
+  ]
+ },
+ {
+  "fichier": "assets/icones/carrieres/Career_University_of_Youngsung.png",
+  "nom_fichier_wiki": "Career_University_of_Youngsung.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Career_University_of_Youngsung.png",
+  "taille": [
+   58,
+   55
+  ]
+ },
+ {
+  "fichier": "assets/icones/carrieres/Career_Westside_Hustler.png",
+  "nom_fichier_wiki": "Career_Westside_Hustler.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Career_Westside_Hustler.png",
+  "taille": [
+   58,
+   55
+  ]
+ },
+ {
+  "fichier": "assets/icones/caracteristiques/Characteristic_Cheerful.png",
+  "nom_fichier_wiki": "Characteristic_Cheerful.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Characteristic_Cheerful.png",
+  "taille": [
+   59,
+   73
+  ]
+ },
+ {
+  "fichier": "assets/icones/caracteristiques/Characteristic_Childish.png",
+  "nom_fichier_wiki": "Characteristic_Childish.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Characteristic_Childish.png",
+  "taille": [
+   59,
+   73
+  ]
+ },
+ {
+  "fichier": "assets/icones/caracteristiques/Characteristic_Clumsy.png",
+  "nom_fichier_wiki": "Characteristic_Clumsy.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Characteristic_Clumsy.png",
+  "taille": [
+   59,
+   73
+  ]
+ },
+ {
+  "fichier": "assets/icones/caracteristiques/Characteristic_Depressed.png",
+  "nom_fichier_wiki": "Characteristic_Depressed.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Characteristic_Depressed.png",
+  "taille": [
+   59,
+   73
+  ]
+ },
+ {
+  "fichier": "assets/icones/caracteristiques/Characteristic_Devoted.png",
+  "nom_fichier_wiki": "Characteristic_Devoted.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Characteristic_Devoted.png",
+  "taille": [
+   59,
+   73
+  ]
+ },
+ {
+  "fichier": "assets/icones/caracteristiques/Characteristic_Emotionally_Needy.png",
+  "nom_fichier_wiki": "Characteristic_Emotionally_Needy.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Characteristic_Emotionally_Needy.png",
+  "taille": [
+   59,
+   73
+  ]
+ },
+ {
+  "fichier": "assets/icones/caracteristiques/Characteristic_Extroverted.png",
+  "nom_fichier_wiki": "Characteristic_Extroverted.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Characteristic_Extroverted.png",
+  "taille": [
+   59,
+   73
+  ]
+ },
+ {
+  "fichier": "assets/icones/caracteristiques/Characteristic_Fitness_Enthusiast.png",
+  "nom_fichier_wiki": "Characteristic_Fitness_Enthusiast.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Characteristic_Fitness_Enthusiast.png",
+  "taille": [
+   59,
+   73
+  ]
+ },
+ {
+  "fichier": "assets/icones/caracteristiques/Characteristic_Flirt.png",
+  "nom_fichier_wiki": "Characteristic_Flirt.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Characteristic_Flirt.png",
+  "taille": [
+   59,
+   73
+  ]
+ },
+ {
+  "fichier": "assets/icones/caracteristiques/Characteristic_Genius.png",
+  "nom_fichier_wiki": "Characteristic_Genius.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Characteristic_Genius.png",
+  "taille": [
+   59,
+   73
+  ]
+ },
+ {
+  "fichier": "assets/icones/caracteristiques/Characteristic_Introverted.png",
+  "nom_fichier_wiki": "Characteristic_Introverted.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Characteristic_Introverted.png",
+  "taille": [
+   59,
+   73
+  ]
+ },
+ {
+  "fichier": "assets/icones/caracteristiques/Characteristic_Lively.png",
+  "nom_fichier_wiki": "Characteristic_Lively.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Characteristic_Lively.png",
+  "taille": [
+   59,
+   73
+  ]
+ },
+ {
+  "fichier": "assets/icones/caracteristiques/Characteristic_Malicious.png",
+  "nom_fichier_wiki": "Characteristic_Malicious.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Characteristic_Malicious.png",
+  "taille": [
+   59,
+   73
+  ]
+ },
+ {
+  "fichier": "assets/icones/caracteristiques/Characteristic_Materialistic.png",
+  "nom_fichier_wiki": "Characteristic_Materialistic.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Characteristic_Materialistic.png",
+  "taille": [
+   59,
+   73
+  ]
+ },
+ {
+  "fichier": "assets/icones/caracteristiques/Characteristic_Neat_Freak.png",
+  "nom_fichier_wiki": "Characteristic_Neat_Freak.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Characteristic_Neat_Freak.png",
+  "taille": [
+   59,
+   73
+  ]
+ },
+ {
+  "fichier": "assets/icones/caracteristiques/Characteristic_Slacker.png",
+  "nom_fichier_wiki": "Characteristic_Slacker.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Characteristic_Slacker.png",
+  "taille": [
+   59,
+   73
+  ]
+ },
+ {
+  "fichier": "assets/icones/caracteristiques/Characteristic_Workaholic.png",
+  "nom_fichier_wiki": "Characteristic_Workaholic.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Characteristic_Workaholic.png",
+  "taille": [
+   59,
+   73
+  ]
+ },
+ {
+  "fichier": "assets/icones/caracteristiques/Characteristic_bookworm.png",
+  "nom_fichier_wiki": "Characteristic_bookworm.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Characteristic_bookworm.png",
+  "taille": [
+   59,
+   73
+  ]
+ },
+ {
+  "fichier": "assets/icones/villes/City_Decoration01.png",
+  "nom_fichier_wiki": "City_Decoration01.png",
+  "source": "https://inzoi.fandom.com/wiki/File:City_Decoration01.png",
+  "taille": [
+   277,
+   195
+  ]
+ },
+ {
+  "fichier": "assets/icones/villes/City_Dowon.png",
+  "nom_fichier_wiki": "City_Dowon.png",
+  "source": "https://inzoi.fandom.com/wiki/File:City_Dowon.png",
+  "taille": [
+   772,
+   384
+  ]
+ },
+ {
+  "fichier": "assets/icones/villes/City_Manage_Zoi.png",
+  "nom_fichier_wiki": "City_Manage_Zoi.png",
+  "source": "https://inzoi.fandom.com/wiki/File:City_Manage_Zoi.png",
+  "taille": [
+   739,
+   950
+  ]
+ },
+ {
+  "fichier": "assets/icones/villes/City_World.png",
+  "nom_fichier_wiki": "City_World.png",
+  "source": "https://inzoi.fandom.com/wiki/File:City_World.png",
+  "taille": [
+   1102,
+   683
+  ]
+ },
+ {
+  "fichier": "assets/icones/emotions/Emotion_ASleep.png",
+  "nom_fichier_wiki": "Emotion_ASleep.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Emotion_ASleep.png",
+  "taille": [
+   49,
+   49
+  ]
+ },
+ {
+  "fichier": "assets/icones/emotions/Emotion_Aflutter.png",
+  "nom_fichier_wiki": "Emotion_Aflutter.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Emotion_Aflutter.png",
+  "taille": [
+   49,
+   49
+  ]
+ },
+ {
+  "fichier": "assets/icones/emotions/Emotion_Amused.png",
+  "nom_fichier_wiki": "Emotion_Amused.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Emotion_Amused.png",
+  "taille": [
+   49,
+   49
+  ]
+ },
+ {
+  "fichier": "assets/icones/emotions/Emotion_Annoyed.png",
+  "nom_fichier_wiki": "Emotion_Annoyed.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Emotion_Annoyed.png",
+  "taille": [
+   50,
+   50
+  ]
+ },
+ {
+  "fichier": "assets/icones/emotions/Emotion_Bored.png",
+  "nom_fichier_wiki": "Emotion_Bored.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Emotion_Bored.png",
+  "taille": [
+   49,
+   49
+  ]
+ },
+ {
+  "fichier": "assets/icones/emotions/Emotion_Confident.png",
+  "nom_fichier_wiki": "Emotion_Confident.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Emotion_Confident.png",
+  "taille": [
+   49,
+   49
+  ]
+ },
+ {
+  "fichier": "assets/icones/emotions/Emotion_Content.png",
+  "nom_fichier_wiki": "Emotion_Content.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Emotion_Content.png",
+  "taille": [
+   49,
+   49
+  ]
+ },
+ {
+  "fichier": "assets/icones/emotions/Emotion_Curious.png",
+  "nom_fichier_wiki": "Emotion_Curious.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Emotion_Curious.png",
+  "taille": [
+   49,
+   49
+  ]
+ },
+ {
+  "fichier": "assets/icones/emotions/Emotion_Excited.png",
+  "nom_fichier_wiki": "Emotion_Excited.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Emotion_Excited.png",
+  "taille": [
+   49,
+   49
+  ]
+ },
+ {
+  "fichier": "assets/icones/emotions/Emotion_Flustered.png",
+  "nom_fichier_wiki": "Emotion_Flustered.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Emotion_Flustered.png",
+  "taille": [
+   49,
+   49
+  ]
+ },
+ {
+  "fichier": "assets/icones/emotions/Emotion_Focused.png",
+  "nom_fichier_wiki": "Emotion_Focused.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Emotion_Focused.png",
+  "taille": [
+   49,
+   49
+  ]
+ },
+ {
+  "fichier": "assets/icones/emotions/Emotion_Lethargic.png",
+  "nom_fichier_wiki": "Emotion_Lethargic.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Emotion_Lethargic.png",
+  "taille": [
+   49,
+   49
+  ]
+ },
+ {
+  "fichier": "assets/icones/emotions/Emotion_Miserable.png",
+  "nom_fichier_wiki": "Emotion_Miserable.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Emotion_Miserable.png",
+  "taille": [
+   49,
+   49
+  ]
+ },
+ {
+  "fichier": "assets/icones/emotions/Emotion_Moved.png",
+  "nom_fichier_wiki": "Emotion_Moved.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Emotion_Moved.png",
+  "taille": [
+   49,
+   50
+  ]
+ },
+ {
+  "fichier": "assets/icones/emotions/Emotion_Nervous.png",
+  "nom_fichier_wiki": "Emotion_Nervous.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Emotion_Nervous.png",
+  "taille": [
+   49,
+   50
+  ]
+ },
+ {
+  "fichier": "assets/icones/emotions/Emotion_Uncomfortable.png",
+  "nom_fichier_wiki": "Emotion_Uncomfortable.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Emotion_Uncomfortable.png",
+  "taille": [
+   50,
+   49
+  ]
+ },
+ {
+  "fichier": "assets/icones/emotions/Emotion_Worried.png",
+  "nom_fichier_wiki": "Emotion_Worried.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Emotion_Worried.png",
+  "taille": [
+   49,
+   49
+  ]
+ },
+ {
+  "fichier": "assets/icones/freelance/License_Composer.png",
+  "nom_fichier_wiki": "License_Composer.png",
+  "source": "https://inzoi.fandom.com/wiki/File:License_Composer.png",
+  "taille": [
+   61,
+   65
+  ]
+ },
+ {
+  "fichier": "assets/icones/freelance/License_Delivery.png",
+  "nom_fichier_wiki": "License_Delivery.png",
+  "source": "https://inzoi.fandom.com/wiki/File:License_Delivery.png",
+  "taille": [
+   61,
+   65
+  ]
+ },
+ {
+  "fichier": "assets/icones/freelance/License_Media.png",
+  "nom_fichier_wiki": "License_Media.png",
+  "source": "https://inzoi.fandom.com/wiki/File:License_Media.png",
+  "taille": [
+   61,
+   65
+  ]
+ },
+ {
+  "fichier": "assets/icones/freelance/License_Programming.png",
+  "nom_fichier_wiki": "License_Programming.png",
+  "source": "https://inzoi.fandom.com/wiki/File:License_Programming.png",
+  "taille": [
+   61,
+   65
+  ]
+ },
+ {
+  "fichier": "assets/icones/freelance/License_Writer.png",
+  "nom_fichier_wiki": "License_Writer.png",
+  "source": "https://inzoi.fandom.com/wiki/File:License_Writer.png",
+  "taille": [
+   61,
+   65
+  ]
+ },
+ {
+  "fichier": "assets/icones/vies-desirees/Life_of_Abundance.png",
+  "nom_fichier_wiki": "Life_of_Abundance.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Life_of_Abundance.png",
+  "taille": [
+   860,
+   1428
+  ]
+ },
+ {
+  "fichier": "assets/icones/vies-desirees/Life_of_Advancement.png",
+  "nom_fichier_wiki": "Life_of_Advancement.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Life_of_Advancement.png",
+  "taille": [
+   860,
+   1428
+  ]
+ },
+ {
+  "fichier": "assets/icones/vies-desirees/Life_of_Adventure.png",
+  "nom_fichier_wiki": "Life_of_Adventure.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Life_of_Adventure.png",
+  "taille": [
+   865,
+   1428
+  ]
+ },
+ {
+  "fichier": "assets/icones/vies-desirees/Life_of_Contribution.png",
+  "nom_fichier_wiki": "Life_of_Contribution.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Life_of_Contribution.png",
+  "taille": [
+   860,
+   1428
+  ]
+ },
+ {
+  "fichier": "assets/icones/vies-desirees/Life_of_Creativity.png",
+  "nom_fichier_wiki": "Life_of_Creativity.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Life_of_Creativity.png",
+  "taille": [
+   860,
+   1428
+  ]
+ },
+ {
+  "fichier": "assets/icones/vies-desirees/Life_of_Excitement.png",
+  "nom_fichier_wiki": "Life_of_Excitement.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Life_of_Excitement.png",
+  "taille": [
+   824,
+   1426
+  ]
+ },
+ {
+  "fichier": "assets/icones/vies-desirees/Life_of_Familial_Devotion.png",
+  "nom_fichier_wiki": "Life_of_Familial_Devotion.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Life_of_Familial_Devotion.png",
+  "taille": [
+   824,
+   1426
+  ]
+ },
+ {
+  "fichier": "assets/icones/vies-desirees/Life_of_Freedom.png",
+  "nom_fichier_wiki": "Life_of_Freedom.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Life_of_Freedom.png",
+  "taille": [
+   860,
+   1428
+  ]
+ },
+ {
+  "fichier": "assets/icones/vies-desirees/Life_of_Harmony.png",
+  "nom_fichier_wiki": "Life_of_Harmony.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Life_of_Harmony.png",
+  "taille": [
+   824,
+   1426
+  ]
+ },
+ {
+  "fichier": "assets/icones/vies-desirees/Life_of_Respectability.png",
+  "nom_fichier_wiki": "Life_of_Respectability.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Life_of_Respectability.png",
+  "taille": [
+   824,
+   1426
+  ]
+ },
+ {
+  "fichier": "assets/icones/vies-desirees/Life_of_Romance.png",
+  "nom_fichier_wiki": "Life_of_Romance.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Life_of_Romance.png",
+  "taille": [
+   824,
+   1426
+  ]
+ },
+ {
+  "fichier": "assets/icones/vies-desirees/Life_of_Self-Discovery.png",
+  "nom_fichier_wiki": "Life_of_Self-Discovery.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Life_of_Self-Discovery.png",
+  "taille": [
+   865,
+   1428
+  ]
+ },
+ {
+  "fichier": "assets/icones/vies-desirees/Life_of_Simplicity.png",
+  "nom_fichier_wiki": "Life_of_Simplicity.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Life_of_Simplicity.png",
+  "taille": [
+   860,
+   1428
+  ]
+ },
+ {
+  "fichier": "assets/icones/vies-desirees/Life_of_Stability.png",
+  "nom_fichier_wiki": "Life_of_Stability.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Life_of_Stability.png",
+  "taille": [
+   824,
+   1426
+  ]
+ },
+ {
+  "fichier": "assets/icones/vies-desirees/Life_of_Tranquility.png",
+  "nom_fichier_wiki": "Life_of_Tranquility.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Life_of_Tranquility.png",
+  "taille": [
+   860,
+   1428
+  ]
+ },
+ {
+  "fichier": "assets/icones/vies-desirees/Life_of_Wisdom.png",
+  "nom_fichier_wiki": "Life_of_Wisdom.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Life_of_Wisdom.png",
+  "taille": [
+   860,
+   1428
+  ]
+ },
+ {
+  "fichier": "assets/icones/besoins/Needs_Bathroom.png",
+  "nom_fichier_wiki": "Needs_Bathroom.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Needs_Bathroom.png",
+  "taille": [
+   54,
+   55
+  ]
+ },
+ {
+  "fichier": "assets/icones/besoins/Needs_Energy.png",
+  "nom_fichier_wiki": "Needs_Energy.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Needs_Energy.png",
+  "taille": [
+   54,
+   55
+  ]
+ },
+ {
+  "fichier": "assets/icones/besoins/Needs_Fun.png",
+  "nom_fichier_wiki": "Needs_Fun.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Needs_Fun.png",
+  "taille": [
+   54,
+   55
+  ]
+ },
+ {
+  "fichier": "assets/icones/besoins/Needs_Hunger.png",
+  "nom_fichier_wiki": "Needs_Hunger.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Needs_Hunger.png",
+  "taille": [
+   54,
+   55
+  ]
+ },
+ {
+  "fichier": "assets/icones/besoins/Needs_Hygiene.png",
+  "nom_fichier_wiki": "Needs_Hygiene.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Needs_Hygiene.png",
+  "taille": [
+   54,
+   55
+  ]
+ },
+ {
+  "fichier": "assets/icones/besoins/Needs_Recognition.png",
+  "nom_fichier_wiki": "Needs_Recognition.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Needs_Recognition.png",
+  "taille": [
+   54,
+   55
+  ]
+ },
+ {
+  "fichier": "assets/icones/besoins/Needs_Sleep.png",
+  "nom_fichier_wiki": "Needs_Sleep.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Needs_Sleep.png",
+  "taille": [
+   54,
+   55
+  ]
+ },
+ {
+  "fichier": "assets/icones/besoins/Needs_Social.png",
+  "nom_fichier_wiki": "Needs_Social.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Needs_Social.png",
+  "taille": [
+   54,
+   55
+  ]
+ },
+ {
+  "fichier": "assets/icones/preferences/Pref_Animals.png",
+  "nom_fichier_wiki": "Pref_Animals.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Pref_Animals.png",
+  "taille": [
+   45,
+   44
+  ]
+ },
+ {
+  "fichier": "assets/icones/preferences/Pref_Appreciating_Art.png",
+  "nom_fichier_wiki": "Pref_Appreciating_Art.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Pref_Appreciating_Art.png",
+  "taille": [
+   45,
+   44
+  ]
+ },
+ {
+  "fichier": "assets/icones/preferences/Pref_Art_Books.png",
+  "nom_fichier_wiki": "Pref_Art_Books.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Pref_Art_Books.png",
+  "taille": [
+   45,
+   44
+  ]
+ },
+ {
+  "fichier": "assets/icones/preferences/Pref_Ball_Sports.png",
+  "nom_fichier_wiki": "Pref_Ball_Sports.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Pref_Ball_Sports.png",
+  "taille": [
+   45,
+   44
+  ]
+ },
+ {
+  "fichier": "assets/icones/preferences/Pref_Bathing.png",
+  "nom_fichier_wiki": "Pref_Bathing.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Pref_Bathing.png",
+  "taille": [
+   45,
+   44
+  ]
+ },
+ {
+  "fichier": "assets/icones/preferences/Pref_Boxing.png",
+  "nom_fichier_wiki": "Pref_Boxing.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Pref_Boxing.png",
+  "taille": [
+   45,
+   44
+  ]
+ },
+ {
+  "fichier": "assets/icones/preferences/Pref_Cake.png",
+  "nom_fichier_wiki": "Pref_Cake.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Pref_Cake.png",
+  "taille": [
+   45,
+   44
+  ]
+ },
+ {
+  "fichier": "assets/icones/preferences/Pref_Cleaning.png",
+  "nom_fichier_wiki": "Pref_Cleaning.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Pref_Cleaning.png",
+  "taille": [
+   45,
+   44
+  ]
+ },
+ {
+  "fichier": "assets/icones/preferences/Pref_Coffee.png",
+  "nom_fichier_wiki": "Pref_Coffee.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Pref_Coffee.png",
+  "taille": [
+   45,
+   44
+  ]
+ },
+ {
+  "fichier": "assets/icones/preferences/Pref_Cooking.png",
+  "nom_fichier_wiki": "Pref_Cooking.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Pref_Cooking.png",
+  "taille": [
+   45,
+   44
+  ]
+ },
+ {
+  "fichier": "assets/icones/preferences/Pref_Dancing.png",
+  "nom_fichier_wiki": "Pref_Dancing.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Pref_Dancing.png",
+  "taille": [
+   45,
+   44
+  ]
+ },
+ {
+  "fichier": "assets/icones/preferences/Pref_Drums.png",
+  "nom_fichier_wiki": "Pref_Drums.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Pref_Drums.png",
+  "taille": [
+   45,
+   44
+  ]
+ },
+ {
+  "fichier": "assets/icones/preferences/Pref_Fast_Food.png",
+  "nom_fichier_wiki": "Pref_Fast_Food.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Pref_Fast_Food.png",
+  "taille": [
+   45,
+   44
+  ]
+ },
+ {
+  "fichier": "assets/icones/preferences/Pref_Gaming.png",
+  "nom_fichier_wiki": "Pref_Gaming.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Pref_Gaming.png",
+  "taille": [
+   45,
+   44
+  ]
+ },
+ {
+  "fichier": "assets/icones/preferences/Pref_Guitar.png",
+  "nom_fichier_wiki": "Pref_Guitar.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Pref_Guitar.png",
+  "taille": [
+   45,
+   44
+  ]
+ },
+ {
+  "fichier": "assets/icones/preferences/Pref_Health_Books.png",
+  "nom_fichier_wiki": "Pref_Health_Books.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Pref_Health_Books.png",
+  "taille": [
+   45,
+   44
+  ]
+ },
+ {
+  "fichier": "assets/icones/preferences/Pref_Jogging.png",
+  "nom_fichier_wiki": "Pref_Jogging.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Pref_Jogging.png",
+  "taille": [
+   45,
+   44
+  ]
+ },
+ {
+  "fichier": "assets/icones/preferences/Pref_Laundry.png",
+  "nom_fichier_wiki": "Pref_Laundry.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Pref_Laundry.png",
+  "taille": [
+   45,
+   44
+  ]
+ },
+ {
+  "fichier": "assets/icones/preferences/Pref_Meat.png",
+  "nom_fichier_wiki": "Pref_Meat.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Pref_Meat.png",
+  "taille": [
+   45,
+   44
+  ]
+ },
+ {
+  "fichier": "assets/icones/preferences/Pref_Novels.png",
+  "nom_fichier_wiki": "Pref_Novels.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Pref_Novels.png",
+  "taille": [
+   45,
+   44
+  ]
+ },
+ {
+  "fichier": "assets/icones/preferences/Pref_Painting.png",
+  "nom_fichier_wiki": "Pref_Painting.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Pref_Painting.png",
+  "taille": [
+   45,
+   44
+  ]
+ },
+ {
+  "fichier": "assets/icones/preferences/Pref_Piano.png",
+  "nom_fichier_wiki": "Pref_Piano.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Pref_Piano.png",
+  "taille": [
+   45,
+   44
+  ]
+ },
+ {
+  "fichier": "assets/icones/preferences/Pref_Plants.png",
+  "nom_fichier_wiki": "Pref_Plants.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Pref_Plants.png",
+  "taille": [
+   45,
+   44
+  ]
+ },
+ {
+  "fichier": "assets/icones/preferences/Pref_Repair_Work.png",
+  "nom_fichier_wiki": "Pref_Repair_Work.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Pref_Repair_Work.png",
+  "taille": [
+   45,
+   44
+  ]
+ },
+ {
+  "fichier": "assets/icones/preferences/Pref_Self-Help_Books.png",
+  "nom_fichier_wiki": "Pref_Self-Help_Books.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Pref_Self-Help_Books.png",
+  "taille": [
+   45,
+   44
+  ]
+ },
+ {
+  "fichier": "assets/icones/preferences/Pref_Singing.png",
+  "nom_fichier_wiki": "Pref_Singing.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Pref_Singing.png",
+  "taille": [
+   45,
+   44
+  ]
+ },
+ {
+  "fichier": "assets/icones/preferences/Pref_Spicy_Food.png",
+  "nom_fichier_wiki": "Pref_Spicy_Food.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Pref_Spicy_Food.png",
+  "taille": [
+   45,
+   44
+  ]
+ },
+ {
+  "fichier": "assets/icones/preferences/Pref_Street_Food.png",
+  "nom_fichier_wiki": "Pref_Street_Food.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Pref_Street_Food.png",
+  "taille": [
+   45,
+   44
+  ]
+ },
+ {
+  "fichier": "assets/icones/preferences/Pref_Strenght_Training.png",
+  "nom_fichier_wiki": "Pref_Strenght_Training.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Pref_Strenght_Training.png",
+  "taille": [
+   45,
+   44
+  ]
+ },
+ {
+  "fichier": "assets/icones/preferences/Pref_Swimming.png",
+  "nom_fichier_wiki": "Pref_Swimming.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Pref_Swimming.png",
+  "taille": [
+   45,
+   44
+  ]
+ },
+ {
+  "fichier": "assets/icones/preferences/Pref_Taking_Photos.png",
+  "nom_fichier_wiki": "Pref_Taking_Photos.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Pref_Taking_Photos.png",
+  "taille": [
+   45,
+   44
+  ]
+ },
+ {
+  "fichier": "assets/icones/preferences/Pref_Vegetables.png",
+  "nom_fichier_wiki": "Pref_Vegetables.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Pref_Vegetables.png",
+  "taille": [
+   45,
+   44
+  ]
+ },
+ {
+  "fichier": "assets/icones/preferences/Pref_Washing_Cars.png",
+  "nom_fichier_wiki": "Pref_Washing_Cars.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Pref_Washing_Cars.png",
+  "taille": [
+   45,
+   44
+  ]
+ },
+ {
+  "fichier": "assets/icones/preferences/Pref_Yoga.png",
+  "nom_fichier_wiki": "Pref_Yoga.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Pref_Yoga.png",
+  "taille": [
+   45,
+   44
+  ]
+ },
+ {
+  "fichier": "assets/icones/competences/Skill_Aquatic_Adaptability.png",
+  "nom_fichier_wiki": "Skill_Aquatic_Adaptability.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Skill_Aquatic_Adaptability.png",
+  "taille": [
+   56,
+   56
+  ]
+ },
+ {
+  "fichier": "assets/icones/competences/Skill_Art.png",
+  "nom_fichier_wiki": "Skill_Art.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Skill_Art.png",
+  "taille": [
+   56,
+   56
+  ]
+ },
+ {
+  "fichier": "assets/icones/competences/Skill_Charm.png",
+  "nom_fichier_wiki": "Skill_Charm.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Skill_Charm.png",
+  "taille": [
+   56,
+   56
+  ]
+ },
+ {
+  "fichier": "assets/icones/competences/Skill_Coffee_Craft.png",
+  "nom_fichier_wiki": "Skill_Coffee_Craft.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Skill_Coffee_Craft.png",
+  "taille": [
+   56,
+   56
+  ]
+ },
+ {
+  "fichier": "assets/icones/competences/Skill_Cognitive_Development.png",
+  "nom_fichier_wiki": "Skill_Cognitive_Development.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Skill_Cognitive_Development.png",
+  "taille": [
+   56,
+   56
+  ]
+ },
+ {
+  "fichier": "assets/icones/competences/Skill_Collecting.png",
+  "nom_fichier_wiki": "Skill_Collecting.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Skill_Collecting.png",
+  "taille": [
+   56,
+   56
+  ]
+ },
+ {
+  "fichier": "assets/icones/competences/Skill_Cooking.png",
+  "nom_fichier_wiki": "Skill_Cooking.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Skill_Cooking.png",
+  "taille": [
+   56,
+   56
+  ]
+ },
+ {
+  "fichier": "assets/icones/competences/Skill_Creativity.png",
+  "nom_fichier_wiki": "Skill_Creativity.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Skill_Creativity.png",
+  "taille": [
+   56,
+   56
+  ]
+ },
+ {
+  "fichier": "assets/icones/competences/Skill_Critical_Thinking.png",
+  "nom_fichier_wiki": "Skill_Critical_Thinking.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Skill_Critical_Thinking.png",
+  "taille": [
+   56,
+   56
+  ]
+ },
+ {
+  "fichier": "assets/icones/competences/Skill_Curious_Mind.png",
+  "nom_fichier_wiki": "Skill_Curious_Mind.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Skill_Curious_Mind.png",
+  "taille": [
+   56,
+   56
+  ]
+ },
+ {
+  "fichier": "assets/icones/competences/Skill_Emotional_Development.png",
+  "nom_fichier_wiki": "Skill_Emotional_Development.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Skill_Emotional_Development.png",
+  "taille": [
+   56,
+   56
+  ]
+ },
+ {
+  "fichier": "assets/icones/competences/Skill_Fishing.png",
+  "nom_fichier_wiki": "Skill_Fishing.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Skill_Fishing.png",
+  "taille": [
+   56,
+   56
+  ]
+ },
+ {
+  "fichier": "assets/icones/competences/Skill_Fitness.png",
+  "nom_fichier_wiki": "Skill_Fitness.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Skill_Fitness.png",
+  "taille": [
+   56,
+   56
+  ]
+ },
+ {
+  "fichier": "assets/icones/competences/Skill_Gardening.png",
+  "nom_fichier_wiki": "Skill_Gardening.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Skill_Gardening.png",
+  "taille": [
+   56,
+   56
+  ]
+ },
+ {
+  "fichier": "assets/icones/competences/Skill_Handiwork.png",
+  "nom_fichier_wiki": "Skill_Handiwork.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Skill_Handiwork.png",
+  "taille": [
+   56,
+   56
+  ]
+ },
+ {
+  "fichier": "assets/icones/competences/Skill_Housework.png",
+  "nom_fichier_wiki": "Skill_Housework.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Skill_Housework.png",
+  "taille": [
+   56,
+   56
+  ]
+ },
+ {
+  "fichier": "assets/icones/competences/Skill_Instrument.png",
+  "nom_fichier_wiki": "Skill_Instrument.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Skill_Instrument.png",
+  "taille": [
+   56,
+   56
+  ]
+ },
+ {
+  "fichier": "assets/icones/competences/Skill_Language_Development.png",
+  "nom_fichier_wiki": "Skill_Language_Development.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Skill_Language_Development.png",
+  "taille": [
+   56,
+   56
+  ]
+ },
+ {
+  "fichier": "assets/icones/competences/Skill_Media_Production.png",
+  "nom_fichier_wiki": "Skill_Media_Production.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Skill_Media_Production.png",
+  "taille": [
+   56,
+   56
+  ]
+ },
+ {
+  "fichier": "assets/icones/competences/Skill_Motor_Development.png",
+  "nom_fichier_wiki": "Skill_Motor_Development.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Skill_Motor_Development.png",
+  "taille": [
+   56,
+   56
+  ]
+ },
+ {
+  "fichier": "assets/icones/competences/Skill_Performance.png",
+  "nom_fichier_wiki": "Skill_Performance.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Skill_Performance.png",
+  "taille": [
+   56,
+   56
+  ]
+ },
+ {
+  "fichier": "assets/icones/competences/Skill_Physical_Development.png",
+  "nom_fichier_wiki": "Skill_Physical_Development.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Skill_Physical_Development.png",
+  "taille": [
+   56,
+   56
+  ]
+ },
+ {
+  "fichier": "assets/icones/competences/Skill_Programming.png",
+  "nom_fichier_wiki": "Skill_Programming.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Skill_Programming.png",
+  "taille": [
+   56,
+   56
+  ]
+ },
+ {
+  "fichier": "assets/icones/competences/Skill_Responsibility.png",
+  "nom_fichier_wiki": "Skill_Responsibility.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Skill_Responsibility.png",
+  "taille": [
+   56,
+   56
+  ]
+ },
+ {
+  "fichier": "assets/icones/competences/Skill_Rhetoric.png",
+  "nom_fichier_wiki": "Skill_Rhetoric.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Skill_Rhetoric.png",
+  "taille": [
+   56,
+   56
+  ]
+ },
+ {
+  "fichier": "assets/icones/competences/Skill_Social.png",
+  "nom_fichier_wiki": "Skill_Social.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Skill_Social.png",
+  "taille": [
+   56,
+   56
+  ]
+ },
+ {
+  "fichier": "assets/icones/competences/Skill_Swimming.png",
+  "nom_fichier_wiki": "Skill_Swimming.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Skill_Swimming.png",
+  "taille": [
+   56,
+   56
+  ]
+ },
+ {
+  "fichier": "assets/icones/traits/Trait_Adventurer.png",
+  "nom_fichier_wiki": "Trait_Adventurer.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Trait_Adventurer.png",
+  "taille": [
+   126,
+   215
+  ]
+ },
+ {
+  "fichier": "assets/icones/traits/Trait_Authoritarian.png",
+  "nom_fichier_wiki": "Trait_Authoritarian.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Trait_Authoritarian.png",
+  "taille": [
+   126,
+   215
+  ]
+ },
+ {
+  "fichier": "assets/icones/traits/Trait_Charmer.png",
+  "nom_fichier_wiki": "Trait_Charmer.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Trait_Charmer.png",
+  "taille": [
+   126,
+   215
+  ]
+ },
+ {
+  "fichier": "assets/icones/traits/Trait_Collaborator.png",
+  "nom_fichier_wiki": "Trait_Collaborator.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Trait_Collaborator.png",
+  "taille": [
+   126,
+   215
+  ]
+ },
+ {
+  "fichier": "assets/icones/traits/Trait_Dreamer.png",
+  "nom_fichier_wiki": "Trait_Dreamer.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Trait_Dreamer.png",
+  "taille": [
+   126,
+   215
+  ]
+ },
+ {
+  "fichier": "assets/icones/traits/Trait_Entertainer.png",
+  "nom_fichier_wiki": "Trait_Entertainer.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Trait_Entertainer.png",
+  "taille": [
+   126,
+   215
+  ]
+ },
+ {
+  "fichier": "assets/icones/traits/Trait_Explorer.png",
+  "nom_fichier_wiki": "Trait_Explorer.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Trait_Explorer.png",
+  "taille": [
+   126,
+   215
+  ]
+ },
+ {
+  "fichier": "assets/icones/traits/Trait_Go-Getter.png",
+  "nom_fichier_wiki": "Trait_Go-Getter.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Trait_Go-Getter.png",
+  "taille": [
+   126,
+   215
+  ]
+ },
+ {
+  "fichier": "assets/icones/traits/Trait_Individualist.png",
+  "nom_fichier_wiki": "Trait_Individualist.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Trait_Individualist.png",
+  "taille": [
+   126,
+   215
+  ]
+ },
+ {
+  "fichier": "assets/icones/traits/Trait_Leader.png",
+  "nom_fichier_wiki": "Trait_Leader.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Trait_Leader.png",
+  "taille": [
+   126,
+   215
+  ]
+ },
+ {
+  "fichier": "assets/icones/traits/Trait_Mediator.png",
+  "nom_fichier_wiki": "Trait_Mediator.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Trait_Mediator.png",
+  "taille": [
+   126,
+   215
+  ]
+ },
+ {
+  "fichier": "assets/icones/traits/Trait_Perfectionist.png",
+  "nom_fichier_wiki": "Trait_Perfectionist.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Trait_Perfectionist.png",
+  "taille": [
+   126,
+   215
+  ]
+ },
+ {
+  "fichier": "assets/icones/traits/Trait_Scholar.png",
+  "nom_fichier_wiki": "Trait_Scholar.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Trait_Scholar.png",
+  "taille": [
+   126,
+   215
+  ]
+ },
+ {
+  "fichier": "assets/icones/traits/Trait_Sentinel.png",
+  "nom_fichier_wiki": "Trait_Sentinel.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Trait_Sentinel.png",
+  "taille": [
+   126,
+   215
+  ]
+ },
+ {
+  "fichier": "assets/icones/traits/Trait_Social_Activist.png",
+  "nom_fichier_wiki": "Trait_Social_Activist.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Trait_Social_Activist.png",
+  "taille": [
+   126,
+   215
+  ]
+ },
+ {
+  "fichier": "assets/icones/traits/Trait_Socialite.png",
+  "nom_fichier_wiki": "Trait_Socialite.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Trait_Socialite.png",
+  "taille": [
+   126,
+   215
+  ]
+ },
+ {
+  "fichier": "assets/icones/traits/Trait_Visionary.png",
+  "nom_fichier_wiki": "Trait_Visionary.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Trait_Visionary.png",
+  "taille": [
+   126,
+   215
+  ]
+ },
+ {
+  "fichier": "assets/icones/traits/Trait_Volunteer.png",
+  "nom_fichier_wiki": "Trait_Volunteer.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Trait_Volunteer.png",
+  "taille": [
+   126,
+   215
+  ]
+ },
+ {
+  "fichier": "assets/icones/desirs/Urge_Arcade.png",
+  "nom_fichier_wiki": "Urge_Arcade.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Urge_Arcade.png",
+  "taille": [
+   55,
+   52
+  ]
+ },
+ {
+  "fichier": "assets/icones/desirs/Urge_Bathtub.png",
+  "nom_fichier_wiki": "Urge_Bathtub.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Urge_Bathtub.png",
+  "taille": [
+   55,
+   52
+  ]
+ },
+ {
+  "fichier": "assets/icones/desirs/Urge_Bibimbap.png",
+  "nom_fichier_wiki": "Urge_Bibimbap.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Urge_Bibimbap.png",
+  "taille": [
+   55,
+   52
+  ]
+ },
+ {
+  "fichier": "assets/icones/desirs/Urge_Catch.png",
+  "nom_fichier_wiki": "Urge_Catch.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Urge_Catch.png",
+  "taille": [
+   55,
+   52
+  ]
+ },
+ {
+  "fichier": "assets/icones/desirs/Urge_Chees.png",
+  "nom_fichier_wiki": "Urge_Chees.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Urge_Chees.png",
+  "taille": [
+   55,
+   52
+  ]
+ },
+ {
+  "fichier": "assets/icones/desirs/Urge_Clean.png",
+  "nom_fichier_wiki": "Urge_Clean.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Urge_Clean.png",
+  "taille": [
+   55,
+   52
+  ]
+ },
+ {
+  "fichier": "assets/icones/desirs/Urge_Clothes.png",
+  "nom_fichier_wiki": "Urge_Clothes.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Urge_Clothes.png",
+  "taille": [
+   55,
+   52
+  ]
+ },
+ {
+  "fichier": "assets/icones/desirs/Urge_Cook.png",
+  "nom_fichier_wiki": "Urge_Cook.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Urge_Cook.png",
+  "taille": [
+   55,
+   52
+  ]
+ },
+ {
+  "fichier": "assets/icones/desirs/Urge_Doodle.png",
+  "nom_fichier_wiki": "Urge_Doodle.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Urge_Doodle.png",
+  "taille": [
+   55,
+   52
+  ]
+ },
+ {
+  "fichier": "assets/icones/desirs/Urge_Doodle2.png",
+  "nom_fichier_wiki": "Urge_Doodle2.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Urge_Doodle2.png",
+  "taille": [
+   55,
+   52
+  ]
+ },
+ {
+  "fichier": "assets/icones/desirs/Urge_Fire.png",
+  "nom_fichier_wiki": "Urge_Fire.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Urge_Fire.png",
+  "taille": [
+   55,
+   52
+  ]
+ },
+ {
+  "fichier": "assets/icones/desirs/Urge_Fish.png",
+  "nom_fichier_wiki": "Urge_Fish.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Urge_Fish.png",
+  "taille": [
+   55,
+   52
+  ]
+ },
+ {
+  "fichier": "assets/icones/desirs/Urge_Friends.png",
+  "nom_fichier_wiki": "Urge_Friends.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Urge_Friends.png",
+  "taille": [
+   55,
+   52
+  ]
+ },
+ {
+  "fichier": "assets/icones/desirs/Urge_Games.png",
+  "nom_fichier_wiki": "Urge_Games.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Urge_Games.png",
+  "taille": [
+   55,
+   52
+  ]
+ },
+ {
+  "fichier": "assets/icones/desirs/Urge_Health.png",
+  "nom_fichier_wiki": "Urge_Health.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Urge_Health.png",
+  "taille": [
+   55,
+   52
+  ]
+ },
+ {
+  "fichier": "assets/icones/desirs/Urge_Job.png",
+  "nom_fichier_wiki": "Urge_Job.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Urge_Job.png",
+  "taille": [
+   55,
+   52
+  ]
+ },
+ {
+  "fichier": "assets/icones/desirs/Urge_Joke.png",
+  "nom_fichier_wiki": "Urge_Joke.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Urge_Joke.png",
+  "taille": [
+   55,
+   52
+  ]
+ },
+ {
+  "fichier": "assets/icones/desirs/Urge_Logic.png",
+  "nom_fichier_wiki": "Urge_Logic.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Urge_Logic.png",
+  "taille": [
+   55,
+   52
+  ]
+ },
+ {
+  "fichier": "assets/icones/desirs/Urge_Love.png",
+  "nom_fichier_wiki": "Urge_Love.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Urge_Love.png",
+  "taille": [
+   55,
+   52
+  ]
+ },
+ {
+  "fichier": "assets/icones/desirs/Urge_Mirrow.png",
+  "nom_fichier_wiki": "Urge_Mirrow.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Urge_Mirrow.png",
+  "taille": [
+   55,
+   52
+  ]
+ },
+ {
+  "fichier": "assets/icones/desirs/Urge_Music.png",
+  "nom_fichier_wiki": "Urge_Music.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Urge_Music.png",
+  "taille": [
+   55,
+   52
+  ]
+ },
+ {
+  "fichier": "assets/icones/desirs/Urge_Newspaper.png",
+  "nom_fichier_wiki": "Urge_Newspaper.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Urge_Newspaper.png",
+  "taille": [
+   55,
+   52
+  ]
+ },
+ {
+  "fichier": "assets/icones/desirs/Urge_Paint.png",
+  "nom_fichier_wiki": "Urge_Paint.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Urge_Paint.png",
+  "taille": [
+   55,
+   52
+  ]
+ },
+ {
+  "fichier": "assets/icones/desirs/Urge_Photo.png",
+  "nom_fichier_wiki": "Urge_Photo.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Urge_Photo.png",
+  "taille": [
+   55,
+   52
+  ]
+ },
+ {
+  "fichier": "assets/icones/desirs/Urge_Punching.png",
+  "nom_fichier_wiki": "Urge_Punching.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Urge_Punching.png",
+  "taille": [
+   55,
+   52
+  ]
+ },
+ {
+  "fichier": "assets/icones/desirs/Urge_Purchase.png",
+  "nom_fichier_wiki": "Urge_Purchase.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Urge_Purchase.png",
+  "taille": [
+   55,
+   52
+  ]
+ },
+ {
+  "fichier": "assets/icones/desirs/Urge_Read.png",
+  "nom_fichier_wiki": "Urge_Read.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Urge_Read.png",
+  "taille": [
+   55,
+   52
+  ]
+ },
+ {
+  "fichier": "assets/icones/desirs/Urge_Refresher.png",
+  "nom_fichier_wiki": "Urge_Refresher.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Urge_Refresher.png",
+  "taille": [
+   55,
+   52
+  ]
+ },
+ {
+  "fichier": "assets/icones/desirs/Urge_Resort.png",
+  "nom_fichier_wiki": "Urge_Resort.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Urge_Resort.png",
+  "taille": [
+   55,
+   52
+  ]
+ },
+ {
+  "fichier": "assets/icones/desirs/Urge_Rest.png",
+  "nom_fichier_wiki": "Urge_Rest.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Urge_Rest.png",
+  "taille": [
+   55,
+   52
+  ]
+ },
+ {
+  "fichier": "assets/icones/desirs/Urge_Scooter.png",
+  "nom_fichier_wiki": "Urge_Scooter.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Urge_Scooter.png",
+  "taille": [
+   55,
+   52
+  ]
+ },
+ {
+  "fichier": "assets/icones/desirs/Urge_Singing.png",
+  "nom_fichier_wiki": "Urge_Singing.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Urge_Singing.png",
+  "taille": [
+   55,
+   52
+  ]
+ },
+ {
+  "fichier": "assets/icones/desirs/Urge_Smartphone.png",
+  "nom_fichier_wiki": "Urge_Smartphone.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Urge_Smartphone.png",
+  "taille": [
+   55,
+   52
+  ]
+ },
+ {
+  "fichier": "assets/icones/desirs/Urge_Stretch.png",
+  "nom_fichier_wiki": "Urge_Stretch.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Urge_Stretch.png",
+  "taille": [
+   55,
+   52
+  ]
+ },
+ {
+  "fichier": "assets/icones/desirs/Urge_Teeth.png",
+  "nom_fichier_wiki": "Urge_Teeth.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Urge_Teeth.png",
+  "taille": [
+   55,
+   52
+  ]
+ },
+ {
+  "fichier": "assets/icones/desirs/Urge_Training.png",
+  "nom_fichier_wiki": "Urge_Training.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Urge_Training.png",
+  "taille": [
+   55,
+   52
+  ]
+ },
+ {
+  "fichier": "assets/icones/desirs/Urge_Wash.png",
+  "nom_fichier_wiki": "Urge_Wash.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Urge_Wash.png",
+  "taille": [
+   55,
+   52
+  ]
+ },
+ {
+  "fichier": "assets/icones/desirs/Urge_Water.png",
+  "nom_fichier_wiki": "Urge_Water.png",
+  "source": "https://inzoi.fandom.com/wiki/File:Urge_Water.png",
+  "taille": [
+   55,
+   52
+  ]
+ }
+]
