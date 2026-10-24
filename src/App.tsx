@@ -1,20 +1,34 @@
 import { useEffect, useMemo, useState } from 'react'
 import type { Session } from '@supabase/supabase-js'
-import { ArrowLeft, CloudArrowUp, CloudCheck, CloudWarning, DownloadSimple, HardDrives, MagnifyingGlass, Plus, SignOut, Trash, UploadSimple, X } from '@phosphor-icons/react'
+import { ArrowLeft, Desktop, Moon, Sun, CloudArrowUp, CloudCheck, CloudWarning, DownloadSimple, HardDrives, MagnifyingGlass, Plus, SignOut, Trash, UploadSimple, X } from '@phosphor-icons/react'
 import { type Donnees, type Foyer, type Statut, importerImage, liste, nomComplet, normaliser, nouveauZoi, trouver, uid, useDonnees } from './donnees'
 import { REFERENTIELS, type CleRef, urlIconeFichier } from './referentiels'
 import { supabase } from './cloud'
 import { FicheZoi } from './components/FicheZoi'
+import { Calendrier, CarteRelations, Chronique, Dynastie, ImportJeu, Memorial, SaisieExpress, Statistiques } from './components/Vues'
 import { Avatar, BoutonIcone, Champ, Confirmer, DonneesCtx, EnTete, Icone, Modale, Panneau, Photo, Selecteur, Vide, urlMarque, useCtx } from './components/ui'
 
 type Page = { nom: 'accueil' } | { nom: 'foyers' } | { nom: 'foyer'; id: string } | { nom: 'zois' } | { nom: 'zoi'; id: string; retour: Page } | { nom: 'referentiels' } | { nom: 'reglages' }
+  | { nom: 'calendrier' } | { nom: 'chronique' } | { nom: 'memorial' } | { nom: 'reseau' } | { nom: 'stats' } | { nom: 'jeu' }
 
-const NAV: { nom: Page['nom']; libelle: string; icone: string }[] = [
-  { nom: 'accueil', libelle: 'Accueil', icone: 'desirs/Urge_Resort.png' },
-  { nom: 'foyers', libelle: 'Familles', icone: 'desirs/Urge_Friends.png' },
-  { nom: 'zois', libelle: 'Zois', icone: 'caracteristiques/Characteristic_Cheerful.png' },
-  { nom: 'referentiels', libelle: 'Référentiels', icone: 'desirs/Urge_Read.png' },
-  { nom: 'reglages', libelle: 'Réglages', icone: 'desirs/Urge_Smartphone.png' },
+const NAV: { section: string; pages: { nom: Page['nom']; libelle: string; icone: string }[] }[] = [
+  { section: 'Mes Zois', pages: [
+    { nom: 'accueil', libelle: 'Accueil', icone: 'desirs/Urge_Resort.png' },
+    { nom: 'foyers', libelle: 'Familles', icone: 'desirs/Urge_Friends.png' },
+    { nom: 'zois', libelle: 'Zois', icone: 'caracteristiques/Characteristic_Cheerful.png' },
+    { nom: 'reseau', libelle: 'Relations', icone: 'desirs/Urge_Love.png' },
+  ] },
+  { section: 'Histoire', pages: [
+    { nom: 'calendrier', libelle: 'Calendrier', icone: 'desirs/Urge_Newspaper.png' },
+    { nom: 'chronique', libelle: 'Chronique', icone: 'desirs/Urge_Doodle.png' },
+    { nom: 'memorial', libelle: 'Mémorial', icone: 'desirs/Urge_Rest.png' },
+  ] },
+  { section: 'Outils', pages: [
+    { nom: 'stats', libelle: 'Statistiques', icone: 'desirs/Urge_Logic.png' },
+    { nom: 'jeu', libelle: 'Import du jeu', icone: 'desirs/Urge_Games.png' },
+    { nom: 'referentiels', libelle: 'Référentiels', icone: 'desirs/Urge_Read.png' },
+    { nom: 'reglages', libelle: 'Réglages', icone: 'desirs/Urge_Smartphone.png' },
+  ] },
 ]
 
 const STATUT: Record<Statut, { libelle: string; Icone: typeof CloudCheck }> = {
@@ -28,6 +42,11 @@ export default function App() {
   const { donnees, maj, remplacer, session, statut } = useDonnees()
   const [page, setPage] = useState<Page>({ nom: 'accueil' })
   const [palette, setPalette] = useState(false)
+  const theme = donnees?.reglages?.theme ?? 'systeme'
+  useEffect(() => {
+    if (theme === 'systeme') document.documentElement.removeAttribute('data-theme')
+    else document.documentElement.setAttribute('data-theme', theme === 'sombre' ? 'dark' : 'light')
+  }, [theme])
 
   useEffect(() => {
     const raccourci = (e: KeyboardEvent) => {
@@ -67,10 +86,15 @@ export default function App() {
             <MagnifyingGlass size={16} weight="bold" /><span>Rechercher</span><kbd>{navigator.platform.includes('Mac') ? '⌘' : 'Ctrl'} K</kbd>
           </button>
           <nav>
-            {NAV.map((n) => (
-              <button key={n.nom} className={'nav' + (actif === n.nom ? ' nav-actif' : '')} onClick={() => setPage({ nom: n.nom } as Page)}>
-                <img src={urlIconeFichier('assets/icones/' + n.icone)} alt="" />{n.libelle}
-              </button>
+            {NAV.map((g) => (
+              <div key={g.section} className="nav-section">
+                <span className="nav-titre">{g.section}</span>
+                {g.pages.map((n) => (
+                  <button key={n.nom} className={'nav' + (actif === n.nom ? ' nav-actif' : '')} onClick={() => setPage({ nom: n.nom } as Page)}>
+                    <img src={urlIconeFichier('assets/icones/' + n.icone)} alt="" />{n.libelle}
+                  </button>
+                ))}
+              </div>
             ))}
           </nav>
           <button className="btn btn-accent btn-bloc" onClick={() => creerZoi()}><Plus size={18} weight="bold" />Nouveau Zoi</button>
@@ -85,6 +109,12 @@ export default function App() {
             {page.nom === 'zoi' && <FicheZoi id={page.id} ouvrir={ouvrirZoi} fermer={() => setPage(page.retour)} />}
             {page.nom === 'referentiels' && <Referentiels />}
             {page.nom === 'reglages' && <Reglages remplacer={remplacer} session={session} />}
+            {page.nom === 'calendrier' && <Calendrier ouvrirZoi={ouvrirZoi} />}
+            {page.nom === 'chronique' && <Chronique ouvrirZoi={ouvrirZoi} />}
+            {page.nom === 'memorial' && <Memorial ouvrirZoi={ouvrirZoi} />}
+            {page.nom === 'reseau' && <CarteRelations ouvrirZoi={ouvrirZoi} />}
+            {page.nom === 'stats' && <Statistiques />}
+            {page.nom === 'jeu' && <ImportJeu ouvrirZoi={ouvrirZoi} />}
           </div>
         </main>
         {palette && <Palette fermer={() => setPalette(false)} ouvrirZoi={ouvrirZoi} ouvrirFoyer={(id) => setPage({ nom: 'foyer', id })} />}
@@ -147,7 +177,7 @@ function CarteZoi({ id, ouvrir }: { id: string; ouvrir: (id: string) => void }) 
 }
 
 function Accueil({ ouvrirZoi, ouvrirFoyer, creerFoyer, creerZoi }: { ouvrirZoi: (id: string) => void; ouvrirFoyer: (id: string) => void; creerFoyer: () => void; creerZoi: () => void }) {
-  const { d } = useCtx()
+  const { d, maj } = useCtx()
   const projets = d.zois.flatMap((z) => z.projets.filter((p) => p.statut !== 'fait').map((p) => ({ z, p })))
   const ambitions = d.zois.flatMap((z) => z.ambitions.map((a) => ({ z, a, ref: trouver(d, 'ambitions', a.ambition) })))
   const heure = new Date().getHours()
@@ -176,6 +206,10 @@ function Accueil({ ouvrirZoi, ouvrirFoyer, creerFoyer, creerZoi }: { ouvrirZoi: 
   return (
     <div className="pile">
       <EnTete titre={heure < 18 ? 'Bonjour' : 'Bonsoir'} sousTitre="Voici où en sont tes Zois." />
+      {Date.now() - (d.reglages?.dernierExport ?? d.zois[0]?.cree ?? Date.now()) > 7 * 864e5 && (
+        <div className="bandeau">Ta dernière sauvegarde de secours date de plus d'une semaine. <button className="btn btn-doux btn-petit" onClick={() => exporterDonnees(d, maj)}><DownloadSimple size={14} weight="bold" />Exporter maintenant</button></div>
+      )}
+      <SaisieExpress />
       <div className="stats">
         {stats.map((s) => (
           <div key={s.l} className="stat">
@@ -282,6 +316,7 @@ function DetailFoyer({ id, ouvrirZoi, creerZoi, retour }: { id: string; ouvrirZo
           </div>
         </Panneau>
       </div>
+      <Dynastie foyerId={id} ouvrirZoi={ouvrirZoi} />
       {suppr && (
         <Confirmer message={`Supprimer la famille « ${f.nom || 'sans nom'} » ? Ses Zois sont conservés, sans foyer.`} onNon={() => setSuppr(false)}
           onOui={() => { maj((d) => ({ ...d, foyers: d.foyers.filter((x) => x.id !== id), zois: d.zois.map((z) => (z.foyerId === id ? { ...z, foyerId: undefined } : z)) })); retour() }} />
@@ -322,8 +357,9 @@ function Referentiels() {
   const [cle, setCle] = useState<CleRef>('traits')
   const [nouveau, setNouveau] = useState('')
   const [q, setQ] = useState('')
+  const [aVerifier, setAVerifier] = useState(false)
   const ref = REFERENTIELS[cle]
-  const elements = useMemo(() => liste(d, cle).filter((e) => e.nom.toLowerCase().includes(q.toLowerCase())), [d, cle, q])
+  const elements = useMemo(() => liste(d, cle).filter((e) => e.nom.toLowerCase().includes(q.toLowerCase()) && (!aVerifier || e.fr_verifie === false)), [d, cle, q, aVerifier])
   const perso = d.refPerso[cle] ?? { ajouts: [], icones: {} }
   const setPerso = (p: typeof perso) => maj((d) => ({ ...d, refPerso: { ...d.refPerso, [cle]: p } }))
 
@@ -344,6 +380,10 @@ function Referentiels() {
               <MagnifyingGlass size={18} weight="bold" />
               <input placeholder="Filtrer…" value={q} onChange={(e) => setQ(e.target.value)} />
             </label>
+            <div className="segment">
+              <button className={!aVerifier ? 'actif' : ''} onClick={() => setAVerifier(false)}>Tout</button>
+              <button className={aVerifier ? 'actif' : ''} onClick={() => setAVerifier(true)}>À vérifier ({liste(d, cle).filter((e) => e.fr_verifie === false).length})</button>
+            </div>
             <form className="ligne" onSubmit={(e) => {
               e.preventDefault()
               if (!nouveau.trim()) return
@@ -364,7 +404,11 @@ function Referentiels() {
                     if (fichier) setPerso({ ...perso, icones: { ...perso.icones, [e.id]: await importerImage(fichier, 160) } })
                   }} />
                 </label>
-                <span>{e.nom}{e.fr_verifie === false && <sup> *</sup>}<small>{e.nom_en}</small></span>
+                <span>
+                  <input className="ref-nom" value={e.nom} title="Corrige le libellé tel qu'il apparaît dans ton jeu"
+                    onChange={(ev) => setPerso({ ...perso, noms: { ...perso.noms, [e.id]: ev.target.value } })} />
+                  <small>{e.fr_verifie === false && <sup>* à vérifier · </sup>}{e.nom_en}</small>
+                </span>
                 {(e.perso || perso.icones[e.id]) && (
                   <BoutonIcone label={e.perso ? "Supprimer l'élément" : "Revenir à l'icône d'origine"} onClick={() => {
                     const { [e.id]: _, ...icones } = perso.icones
@@ -418,18 +462,20 @@ function Compte({ session }: { session: Session | null }) {
   )
 }
 
+function exporterDonnees(d: Donnees, maj: (f: (d: Donnees) => Donnees) => void) {
+  const a = document.createElement('a')
+  a.href = URL.createObjectURL(new Blob([JSON.stringify(d, null, 1)], { type: 'application/json' }))
+  a.download = `zoi-tracker-${new Date().toISOString().slice(0, 10)}.json`
+  a.click()
+  maj((d) => ({ ...d, reglages: { ...d.reglages, dernierExport: Date.now() } }))
+}
+
 function Reglages({ remplacer, session }: { remplacer: (d: Donnees) => void; session: Session | null }) {
-  const { d } = useCtx()
+  const { d, maj } = useCtx()
   const [message, setMessage] = useState('')
   const [reset, setReset] = useState(false)
 
-  const exporter = () => {
-    const a = document.createElement('a')
-    a.href = URL.createObjectURL(new Blob([JSON.stringify(d, null, 1)], { type: 'application/json' }))
-    a.download = `zoi-tracker-${new Date().toISOString().slice(0, 10)}.json`
-    a.click()
-    setMessage('Sauvegarde exportée.')
-  }
+  const exporter = () => { exporterDonnees(d, maj); setMessage('Sauvegarde exportée.') }
   const importer = async (brut: string | null) => {
     if (!brut) return
     try { remplacer(normaliser(JSON.parse(brut))); setMessage('Sauvegarde importée.') } catch { setMessage("Ce fichier n'est pas une sauvegarde Zoi Tracker valide.") }
@@ -439,6 +485,13 @@ function Reglages({ remplacer, session }: { remplacer: (d: Donnees) => void; ses
     <div className="pile reglages">
       <EnTete titre="Réglages" />
       <Panneau titre="Compte & synchronisation"><Compte session={session} /></Panneau>
+      <Panneau titre="Apparence">
+        <div className="segment">
+          {([['clair', 'Clair', Sun], ['sombre', 'Sombre', Moon], ['systeme', 'Comme le système', Desktop]] as const).map(([t, l, I]) => (
+            <button key={t} className={(d.reglages?.theme ?? 'systeme') === t ? 'actif' : ''} onClick={() => maj((d) => ({ ...d, reglages: { ...d.reglages, theme: t } }))}><I size={16} weight="bold" /> {l}</button>
+          ))}
+        </div>
+      </Panneau>
       <Panneau titre="Sauvegarde">
         <p className="texte-doux">Tes données sont enregistrées automatiquement dans ce navigateur (et dans ton compte si tu es connectée). Exporte-les de temps en temps pour garder une copie de secours.</p>
         <div className="actions actions-gauche">

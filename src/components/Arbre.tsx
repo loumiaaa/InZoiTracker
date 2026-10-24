@@ -4,13 +4,13 @@ import { type Donnees, type Zoi, nomComplet, nouveauZoi, trouver, uid } from '..
 import { inverseLien } from '../referentiels'
 import { Avatar, Modale, Vide, useCtx } from './ui'
 
-const PARENTS = ['parent', 'parent-biologique', 'parent-adoptif']
+export const PARENTS = ['parent', 'parent-biologique', 'parent-adoptif']
 const ENFANTS = ['enfant', 'enfant-adopte']
-const CONJOINTS = ['conjoint', 'marie', 'fiance', 'partenaire-amoureux']
+export const CONJOINTS = ['conjoint', 'marie', 'fiance', 'partenaire-amoureux']
 const FRATRIE = ['frere-soeur', 'demi-frere-soeur', 'jumeau']
 
 /** Ce qu'est `y` pour `x` (ex. « parent »), d'après les relations saisies. */
-function lienDe(d: Donnees, x: string, y: string): string | undefined {
+export function lienDe(d: Donnees, x: string, y: string): string | undefined {
   for (const r of d.relations) {
     if (r.a === x && r.b === y && r.lien) return r.lien
     if (r.b === x && r.a === y && r.lien) return inverseLien(r.lien)

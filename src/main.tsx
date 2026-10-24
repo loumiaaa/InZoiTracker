@@ -4,6 +4,7 @@ import 'pretendard/dist/web/variable/pretendardvariable.css'
 import './styles/tokens.css'
 import './styles/base.css'
 import './styles/app.css'
+import './styles/theme-sombre.css'
 import App from './App'
 
 createRoot(document.getElementById('root')!).render(

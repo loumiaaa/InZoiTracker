@@ -3,6 +3,7 @@ import { type Zoi, type Relation, type Projet, liste, nomComplet, nouveauZoi, tr
 import { JAUGES, REFERENTIELS, inverseLien, urlIconeFichier } from '../referentiels'
 import { ArrowLeft, FlowerLotus, Heart, TreeStructure, HeartBreak, Plus, Smiley, SmileyMeh, SmileySad, Trash, X } from '@phosphor-icons/react'
 import { Arbre } from './Arbre'
+import { PartagerZoi, compatibilite } from './Vues'
 import { Avatar, BoutonIcone, Champ, Confirmer, Icone, Modale, Onglets, Panneau, Photo, Selecteur, urlMarque, useCtx } from './ui'
 
 type Onglet = 'profil' | 'souvenirs' | 'ambitions' | 'preferences' | 'valeur' | 'carriere' | 'relations' | 'arbre' | 'vie' | 'futur'
@@ -44,6 +45,7 @@ export function FicheZoi({ id, ouvrir, fermer }: { id: string; ouvrir: (id: stri
             </button>
           ))}
           <BoutonIcone label="Ajouter un membre au foyer" className="btn-icone-plein" onClick={ajouterMembre}><Plus size={16} weight="bold" /></BoutonIcone>
+          <PartagerZoi z={z} />
           <BoutonIcone label="Supprimer ce Zoi" className="btn-icone-danger" onClick={() => setSuppression(true)}><Trash size={18} weight="bold" /></BoutonIcone>
         </div>
       </div>
@@ -118,7 +120,8 @@ function Profil({ z, set, voirArbre }: P & { voirArbre: () => void }) {
                 {d.foyers.map((f) => <option key={f.id} value={f.id}>{f.nom}</option>)}
               </select>
             </Champ>
-            <Champ label="Tranche d'âge"><Selecteur cle="etapes-de-vie" valeur={z.etapeDeVie} onChange={(etapeDeVie) => set({ etapeDeVie })} /></Champ>
+            <Champ label="Tranche d'âge"><Selecteur cle="etapes-de-vie" valeur={z.etapeDeVie} onChange={(etapeDeVie) => set({ etapeDeVie, etapeDepuisJour: z.foyerId ? d.foyers.find((f) => f.id === z.foyerId)?.jourActuel ?? 0 : undefined })} /></Champ>
+            {z.etapeDeVie && z.foyerId && <Champ label="Entrée dans l'étape (jour de jeu)"><input className="input" type="number" min={0} value={z.etapeDepuisJour ?? ''} placeholder={`Jour actuel : ${d.foyers.find((f) => f.id === z.foyerId)?.jourActuel ?? 0}`} onChange={(e) => set({ etapeDepuisJour: e.target.value === '' ? undefined : +e.target.value })} /></Champ>}
             <Champ label="Genre"><input className="input" value={z.genre ?? ''} onChange={(e) => set({ genre: e.target.value })} /></Champ>
             <Champ label="Anniversaire"><input className="input" value={z.anniversaire ?? ''} onChange={(e) => set({ anniversaire: e.target.value })} placeholder="Jour en jeu" /></Champ>
             <Champ label="Carrière"><span className="valeur">{carriere?.nom ?? 'Sans emploi'}</span></Champ>
@@ -448,10 +451,16 @@ function Relations({ z, ouvrir }: { z: Zoi; ouvrir: (id: string) => void }) {
         return (
           <Panneau key={r.id} className="relation">
             <button className="relation-zoi" onClick={() => ouvrir(autreId)}>
-              <Avatar src={autre?.portrait} nom={autre ? nomComplet(autre) : '?'} taille={52} />
+              <Avatar src={autre?.portrait} nom={autre ? nomComplet(autre) : '?'} taille={52} decede={autre?.decede} />
               <span>{autre ? nomComplet(autre) : 'Zoi supprimé'}</span>
             </button>
             <div className="relation-champs">
+              {autre && (() => { const c = compatibilite(d, z, autre); return (
+                <div className="compat" title={c.raisons.join('\n') || 'Renseigne préférences, valeurs et traits pour affiner'}>
+                  <span className="compat-jauge"><i style={{ width: `${c.score}%` }} /></span>
+                  <b>Compatibilité estimée {c.score} %</b>
+                  <small>{c.raisons.slice(0, 2).join(' · ') || 'Pas encore assez d’infos'}</small>
+                </div>) })()}
               <Champ label={`${autre?.prenom || 'Ce Zoi'} est… pour ${z.prenom || 'lui/elle'}`}>
                 <Selecteur cle="relations" filtre={filtreLien} valeur={lienVu} titre="Type de lien"
                   onChange={(l) => majRel(r.id, { lien: l && (r.a === z.id ? l : inverseLien(l)) })} />
@@ -545,7 +554,10 @@ function Futur({ z, set }: P) {
               {z.projets.filter((p) => p.statut === s.id).map((p) => (
                 <div key={p.id} className="projet">
                   <input className="input projet-titre" value={p.titre} onChange={(e) => mp(p.id, { titre: e.target.value })} />
-                  <input className="input input-mini" placeholder="Échéance (ex. avant Senior)" value={p.echeance ?? ''} onChange={(e) => mp(p.id, { echeance: e.target.value })} />
+                  <div className="ligne">
+                    <input className="input input-mini" placeholder="Échéance (ex. avant Senior)" value={p.echeance ?? ''} onChange={(e) => mp(p.id, { echeance: e.target.value })} />
+                    <input className="input input-mini" style={{ width: 90 }} type="number" placeholder="Jour n°" title="Jour de jeu de l'échéance (pour le calendrier)" value={p.echeanceJour ?? ''} onChange={(e) => mp(p.id, { echeanceJour: e.target.value === '' ? undefined : +e.target.value })} />
+                  </div>
                   <textarea className="input" rows={2} placeholder="Notes…" value={p.notes ?? ''} onChange={(e) => mp(p.id, { notes: e.target.value })} />
                   <div className="ligne">
                     <select className="input input-auto" value={p.statut} onChange={(e) => mp(p.id, { statut: e.target.value as Projet['statut'] })}>

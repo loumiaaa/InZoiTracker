@@ -22,5 +22,8 @@
 | entreprises | 3 visuels d'affaires | `Business_` |
 | etapes-de-vie / -alt | captures des tranches d'âge | `AgeGroup_` / `Age_` |
 | villes | 4 visuels | `City_` |
+| marque | Psycat (logo) et patte Kitty (états vides) | `Psycat_`, `Kitty_` |
 
 Si la joueuse remplace une icône depuis l'app, la nouvelle image est stockée dans ses données locales, pas ici.
+
+Les icônes `desirs`, `caracteristiques`, `preferences`, `emotions`, `competences`, `carrieres`, `vehicules` et `freelance` ont été détourées (fond gris uni rendu transparent).

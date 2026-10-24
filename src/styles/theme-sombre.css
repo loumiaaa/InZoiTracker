@@ -1,0 +1,96 @@
+/* Mode sombre : redéfinit les tokens sémantiques (même noms que tokens.css). */
+:root[data-theme='dark'] {
+  --color-bg-app: #15161C;
+  --color-surface-panel: rgba(36, 38, 48, 0.72);
+  --color-surface-glass: rgba(34, 36, 46, 0.66);
+  --color-surface-glass-strong: rgba(42, 44, 56, 0.86);
+  --color-surface-card: rgba(255, 255, 255, 0.05);
+  --color-surface-card-hover: rgba(255, 255, 255, 0.09);
+  --color-surface-inset: rgba(255, 255, 255, 0.06);
+  --color-surface-raised: #2C2E3A;
+  --color-surface-tab: #2C2E3A;
+  --color-surface-overlay: rgba(8, 9, 14, 0.6);
+  --color-surface-glass-solid: #22242E;
+  --color-surface-glass-strong-solid: #262833;
+  --color-surface-card-solid: #2A2C37;
+  --color-surface-inset-solid: #2F3140;
+  --color-text: #ECEDF3;
+  --color-text-secondary: #A9ABB8;
+  --color-text-placeholder: #7D7F8C;
+  --color-text-disabled: #5E606C;
+  --color-text-accent: #8EC6FA;
+  --color-text-on-accent: #0E2A4D;
+  --color-text-inverse: #15161C;
+  --color-text-link: #8EC6FA;
+  --color-accent-subtle: rgba(125, 187, 245, 0.14);
+  --color-accent-soft: rgba(125, 187, 245, 0.24);
+  --color-like-text: #F8C46A;
+  --color-dislike: #B7B2F0;
+  --color-memory-positive: rgba(90, 190, 140, 0.16);
+  --color-memory-negative: rgba(240, 110, 110, 0.16);
+  --color-success-text: #7FD6A6;
+  --color-danger-text: #FF9A9A;
+  --color-danger-subtle: rgba(240, 90, 90, 0.16);
+  --color-warning-text: #F5C26B;
+  --color-icon: #D6D8E2;
+  --color-icon-muted: #9496A4;
+  --color-border-glass: rgba(255, 255, 255, 0.08);
+  --color-border-subtle: rgba(255, 255, 255, 0.14);
+  --color-border-control: rgba(255, 255, 255, 0.16);
+  --color-track: rgba(255, 255, 255, 0.14);
+  --color-selection: rgba(125, 187, 245, 0.22);
+  --color-scrollbar-thumb: rgba(255, 255, 255, 0.18);
+  --gradient-app: radial-gradient(1200px 700px at 0% 0%, rgba(140, 120, 210, 0.18), transparent 60%), radial-gradient(1000px 700px at 100% 0%, rgba(100, 160, 230, 0.16), transparent 60%), radial-gradient(900px 600px at 100% 100%, rgba(230, 150, 120, 0.1), transparent 60%), #15161C;
+  --gradient-placeholder: linear-gradient(135deg, #2D2A44 0%, #233247 100%);
+  --shadow-glass: 0 8px 30px rgba(0, 0, 0, 0.35);
+  color-scheme: dark;
+}
+:root[data-theme='dark'] body { background: var(--color-bg-app); color: var(--color-text); }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']):not([data-theme='dark']) {
+  --color-bg-app: #15161C;
+  --color-surface-panel: rgba(36, 38, 48, 0.72);
+  --color-surface-glass: rgba(34, 36, 46, 0.66);
+  --color-surface-glass-strong: rgba(42, 44, 56, 0.86);
+  --color-surface-card: rgba(255, 255, 255, 0.05);
+  --color-surface-card-hover: rgba(255, 255, 255, 0.09);
+  --color-surface-inset: rgba(255, 255, 255, 0.06);
+  --color-surface-raised: #2C2E3A;
+  --color-surface-tab: #2C2E3A;
+  --color-surface-overlay: rgba(8, 9, 14, 0.6);
+  --color-surface-glass-solid: #22242E;
+  --color-surface-glass-strong-solid: #262833;
+  --color-surface-card-solid: #2A2C37;
+  --color-surface-inset-solid: #2F3140;
+  --color-text: #ECEDF3;
+  --color-text-secondary: #A9ABB8;
+  --color-text-placeholder: #7D7F8C;
+  --color-text-disabled: #5E606C;
+  --color-text-accent: #8EC6FA;
+  --color-text-on-accent: #0E2A4D;
+  --color-text-inverse: #15161C;
+  --color-text-link: #8EC6FA;
+  --color-accent-subtle: rgba(125, 187, 245, 0.14);
+  --color-accent-soft: rgba(125, 187, 245, 0.24);
+  --color-like-text: #F8C46A;
+  --color-dislike: #B7B2F0;
+  --color-memory-positive: rgba(90, 190, 140, 0.16);
+  --color-memory-negative: rgba(240, 110, 110, 0.16);
+  --color-success-text: #7FD6A6;
+  --color-danger-text: #FF9A9A;
+  --color-danger-subtle: rgba(240, 90, 90, 0.16);
+  --color-warning-text: #F5C26B;
+  --color-icon: #D6D8E2;
+  --color-icon-muted: #9496A4;
+  --color-border-glass: rgba(255, 255, 255, 0.08);
+  --color-border-subtle: rgba(255, 255, 255, 0.14);
+  --color-border-control: rgba(255, 255, 255, 0.16);
+  --color-track: rgba(255, 255, 255, 0.14);
+  --color-selection: rgba(125, 187, 245, 0.22);
+  --color-scrollbar-thumb: rgba(255, 255, 255, 0.18);
+  --gradient-app: radial-gradient(1200px 700px at 0% 0%, rgba(140, 120, 210, 0.18), transparent 60%), radial-gradient(1000px 700px at 100% 0%, rgba(100, 160, 230, 0.16), transparent 60%), radial-gradient(900px 600px at 100% 100%, rgba(230, 150, 120, 0.1), transparent 60%), #15161C;
+  --gradient-placeholder: linear-gradient(135deg, #2D2A44 0%, #233247 100%);
+  --shadow-glass: 0 8px 30px rgba(0, 0, 0, 0.35);
+  color-scheme: dark; }
+  :root:not([data-theme='light']) body { background: var(--color-bg-app); color: var(--color-text); }
+}

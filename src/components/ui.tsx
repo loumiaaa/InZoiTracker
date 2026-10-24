@@ -112,18 +112,33 @@ export function Photo({ src, onChange, ratio = '1', rond, libelle = 'Ajouter une
   { src?: string; onChange: (v?: string) => void; ratio?: string; rond?: boolean; libelle?: string; taille?: number }) {
   const input = useRef<HTMLInputElement>(null)
   const [envoi, setEnvoi] = useState(false)
+  const [survol, setSurvol] = useState(false)
+  const [depot, setDepot] = useState(false)
+  const prendre = async (f?: File | null) => {
+    if (!f || !f.type.startsWith('image/')) return
+    setEnvoi(true)
+    try { onChange(await importerImage(f, taille)) } finally { setEnvoi(false) }
+  }
+  // Coller une capture (Ctrl/Cmd + V) quand la souris survole l'emplacement.
+  useEffect(() => {
+    if (!survol) return
+    const coller = (e: ClipboardEvent) => {
+      const f = Array.from(e.clipboardData?.files ?? []).find((x) => x.type.startsWith('image/'))
+      if (f) { e.preventDefault(); prendre(f) }
+    }
+    window.addEventListener('paste', coller)
+    return () => window.removeEventListener('paste', coller)
+  })
   return (
-    <div className={'photo' + (rond ? ' photo-rond' : '') + (src ? '' : ' photo-vide') + (envoi ? ' photo-envoi' : '')} style={{ aspectRatio: ratio }}>
-      {src ? <img src={src} alt="" /> : <span className="photo-libelle"><Camera size={rond ? 22 : 26} weight="duotone" />{!rond && <span>{libelle}</span>}</span>}
+    <div className={'photo' + (rond ? ' photo-rond' : '') + (src ? '' : ' photo-vide') + (envoi ? ' photo-envoi' : '') + (depot ? ' photo-depot' : '')} style={{ aspectRatio: ratio }}
+      onMouseEnter={() => setSurvol(true)} onMouseLeave={() => setSurvol(false)}
+      onDragOver={(e) => { e.preventDefault(); setDepot(true) }} onDragLeave={() => setDepot(false)}
+      onDrop={(e) => { e.preventDefault(); setDepot(false); prendre(e.dataTransfer.files[0]) }}
+      title={`${libelle} — clique, glisse une image ou colle-la (Ctrl/Cmd + V)`}>
+      {src ? <img src={src} alt="" /> : <span className="photo-libelle"><Camera size={rond ? 22 : 26} weight="duotone" />{!rond && <span>{libelle}<br /><small>ou glisse / colle une capture</small></span>}</span>}
       <button type="button" className="photo-clic" onClick={() => input.current?.click()} aria-label={libelle} title={libelle} />
       {src && <button type="button" className="photo-retirer" onClick={() => onChange(undefined)} aria-label="Retirer la photo"><X size={14} weight="bold" /></button>}
-      <input ref={input} type="file" accept="image/*" hidden onChange={async (e) => {
-        const f = e.target.files?.[0]
-        e.target.value = ''
-        if (!f) return
-        setEnvoi(true)
-        try { onChange(await importerImage(f, taille)) } finally { setEnvoi(false) }
-      }} />
+      <input ref={input} type="file" accept="image/*" hidden onChange={(e) => { const f = e.target.files?.[0]; e.target.value = ''; prendre(f) }} />
     </div>
   )
 }
