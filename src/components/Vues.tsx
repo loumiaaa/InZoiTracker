@@ -437,25 +437,29 @@ export function ImportJeu({ ouvrirZoi }: { ouvrirZoi: (id: string) => void }) {
   const [choisie, setChoisie] = useState<Sauvegarde | null>(null)
   const [portrait, setPortrait] = useState<File | null>(null)
   const [analyse, setAnalyse] = useState<string>('')
+  const [structure, setStructure] = useState('')
   const url = useMemo(() => new Map<File, string>(), [])
   const apercu = (f: File) => { if (!url.has(f)) url.set(f, URL.createObjectURL(f)); return url.get(f)! }
 
   const lireDossier = (fichiers: FileList | null) => {
-    if (!fichiers) return
+    if (!fichiers || !fichiers.length) return
+    const tous = Array.from(fichiers)
+    // Une sauvegarde = un dossier de 1er niveau sous le dossier choisi (ou le dossier choisi lui-même).
+    const profondeurMax = Math.max(...tous.map((f) => f.webkitRelativePath.split('/').length))
     const parSave = new Map<string, Sauvegarde>()
-    for (const f of Array.from(fichiers)) {
+    for (const f of tous) {
       const parties = f.webkitRelativePath.split('/')
-      const iPortraits = parties.findIndex((p) => p.toLowerCase() === 'portraits')
-      const dossier = iPortraits > 0 ? parties.slice(0, iPortraits).join('/') : parties.slice(0, -1).join('/')
+      const dossier = profondeurMax > 2 && parties.length > 2 ? parties.slice(0, 2).join('/') : parties[0]
       const s = parSave.get(dossier) ?? { nom: dossier.split('/').pop() || dossier, date: 0, portraits: [], donnees: [] }
       const nom = f.name.toLowerCase()
-      if (iPortraits > 0 && /\.(png|jpe?g)$/.test(nom)) s.portraits.push(f)
-      else if (nom.endsWith('.thumbnail') || nom.startsWith('thumbnail')) s.miniature = f
-      else if (/\.b\d$/.test(nom) || nom.endsWith('.sav')) { s.donnees.push(f); s.date = Math.max(s.date, f.lastModified) }
+      if (nom.includes('thumbnail') || nom.startsWith('thumb')) s.miniature = f
+      else if (/\.(png|jpe?g|webp|bmp|gif)$/.test(nom)) s.portraits.push(f)
+      else if (/\.b\d+$/.test(nom) || /\.(sav|save|dat|json)$/.test(nom)) { s.donnees.push(f); s.date = Math.max(s.date, f.lastModified) }
       parSave.set(dossier, s)
     }
-    const liste = [...parSave.values()].filter((s) => s.portraits.length || s.donnees.length).sort((a, b) => b.date - a.date)
+    const liste = [...parSave.values()].sort((a, b) => b.date - a.date || b.portraits.length - a.portraits.length)
     setSaves(liste); setChoisie(liste[0] ?? null); setAnalyse('')
+    setStructure(decrireStructure(tous))
   }
 
   const attribuer = async (zoiId: string | null) => {
@@ -482,6 +486,12 @@ export function ImportJeu({ ouvrirZoi }: { ouvrirZoi: (id: string) => void }) {
           </label>
         </div>
       </Panneau>
+      {structure && (
+        <Panneau titre="Structure du dossier" action={<button className="btn btn-doux btn-petit" onClick={() => navigator.clipboard?.writeText(structure)}>Copier</button>}>
+          <p className="texte-doux">Ce que l'app voit dans ton dossier. Si les portraits n'apparaissent pas, fais une capture de ce panneau et envoie-la.</p>
+          <pre className="analyse">{structure}</pre>
+        </Panneau>
+      )}
       {saves.length > 0 && (
         <div className="segment">
           {saves.map((s) => <button key={s.nom} className={choisie === s ? 'actif' : ''} onClick={() => { setChoisie(s); setAnalyse('') }}>{s.nom}{s.date ? ` · ${new Date(s.date).toLocaleDateString('fr-FR')}` : ''}</button>)}
@@ -523,6 +533,23 @@ export function ImportJeu({ ouvrirZoi }: { ouvrirZoi: (id: string) => void }) {
       )}
     </div>
   )
+}
+
+/** Résumé lisible de l'arborescence : dossiers, nombre de fichiers par extension, exemples de noms. */
+function decrireStructure(fichiers: File[]): string {
+  const dossiers = new Map<string, { n: number; ext: Map<string, number>; exemples: string[]; taille: number }>()
+  for (const f of fichiers) {
+    const parties = f.webkitRelativePath.split('/')
+    const dossier = parties.slice(0, -1).join('/') || '(racine)'
+    const e = dossiers.get(dossier) ?? { n: 0, ext: new Map<string, number>(), exemples: [] as string[], taille: 0 }
+    const ext = f.name.includes('.') ? f.name.split('.').pop()!.toLowerCase() : '(sans extension)'
+    e.n++; e.taille += f.size; e.ext.set(ext, (e.ext.get(ext) ?? 0) + 1)
+    if (e.exemples.length < 4) e.exemples.push(f.name)
+    dossiers.set(dossier, e)
+  }
+  return ([`${fichiers.length} fichiers dans ${dossiers.size} dossiers`, ''] as string[]).concat(
+    [...dossiers].sort().slice(0, 60).map(([d, e]) => `${d}\n   ${e.n} fichiers · ${(e.taille / 1048576).toFixed(1)} Mo · ${[...e.ext].map(([x, n]) => `${n} .${x}`).join(', ')}\n   ex. : ${e.exemples.join(', ')}`),
+  ).join('\n')
 }
 
 /** Rapport d'analyse d'une sauvegarde : entropie (compression ?), en-tête, chaînes lisibles et noms connus retrouvés. */
