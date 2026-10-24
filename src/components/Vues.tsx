@@ -484,16 +484,16 @@ export function ImportJeu({ ouvrirZoi }: { ouvrirZoi: (id: string) => void }) {
 
   return (
     <div className="pile">
-      <EnTete titre="Import depuis le jeu" sousTitre="Choisis ton dossier de sauvegardes inZOI : l'app y retrouve tes parties et les portraits de tes Zois." />
+      <EnTete titre="Import depuis le jeu" sousTitre="Choisis un dossier d'inZOI : « Creations » pour ne voir que les Zois que tu as créés, ou « SaveGames » pour tes parties." />
       <Panneau>
         <div className="import-aide">
           <FolderOpen size={40} weight="duotone" />
           <div>
-            <strong>Où est le dossier ?</strong>
-            <p className="texte-doux">Windows : <code>Documents\inZOI\SaveGames</code> · Mac (Steam) : <code>Documents/inZOI/SaveGames</code>. L'app lit les fichiers sans jamais les modifier, et rien n'est envoyé en ligne (sauf les portraits que tu attribues, si tu es connectée).</p>
+            <strong>Quel dossier choisir ?</strong>
+            <p className="texte-doux"><code>Documents/inZOI/Creations</code> : tes créations (le plus simple pour retrouver tes Zois) · <code>Documents/inZOI/SaveGames</code> : tes parties. L'app lit les fichiers sans jamais les modifier, et rien n'est envoyé en ligne (sauf les portraits que tu attribues, si tu es connectée).</p>
           </div>
           <label className="btn btn-accent">
-            <FolderOpen size={16} weight="bold" />Choisir le dossier SaveGames
+            <FolderOpen size={16} weight="bold" />Choisir un dossier
             <input type="file" hidden multiple {...({ webkitdirectory: '', directory: '' } as any)} onChange={(e) => lireDossier(e.target.files)} />
           </label>
         </div>
