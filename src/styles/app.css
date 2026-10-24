@@ -500,3 +500,8 @@ sup { color: var(--color-warning-text); }
 .ref-nom { width: 100%; border: 0; border-radius: var(--radius-xs); background: transparent; font: var(--font-label); color: var(--color-text); padding: 2px 4px; margin-left: -4px; }
 .ref-nom:hover { background: var(--color-surface-inset); }
 .ref-nom:focus { outline: none; background: var(--color-surface-raised); box-shadow: 0 0 0 2px var(--color-accent-subtle); }
+
+.portrait-jeu { position: relative; aspect-ratio: auto; display: flex; flex-direction: column; }
+.portrait-jeu img { aspect-ratio: 1; }
+.portrait-jeu small { padding: 2px 4px; font: var(--font-badge); color: var(--color-text-secondary); text-align: center; }
+.portrait-attribue { outline: 2px solid var(--color-accent-graphic); outline-offset: -2px; }

@@ -438,6 +438,17 @@ export function ImportJeu({ ouvrirZoi }: { ouvrirZoi: (id: string) => void }) {
   const [portrait, setPortrait] = useState<File | null>(null)
   const [analyse, setAnalyse] = useState<string>('')
   const [structure, setStructure] = useState('')
+  const [filtrePortraits, setFiltrePortraits] = useState<'session' | 'tous'>('session')
+  const [qPortrait, setQPortrait] = useState('')
+  const [taillePortrait, setTaillePortrait] = useState(110)
+  const [attribues, setAttribues] = useState(new Set<string>())
+  const portraitsVisibles = useMemo(() => {
+    if (!choisie) return []
+    const tries = [...choisie.portraits].sort((a, b) => b.lastModified - a.lastModified)
+    // « Dernière session » : portraits modifiés dans les 3 h précédant le plus récent.
+    const recent = tries[0]?.lastModified ?? 0
+    return tries.filter((f) => (filtrePortraits === 'tous' || recent - f.lastModified < 3 * 3600e3) && f.name.toLowerCase().includes(qPortrait.toLowerCase()))
+  }, [choisie, filtrePortraits, qPortrait])
   const url = useMemo(() => new Map<File, string>(), [])
   const apercu = (f: File) => { if (!url.has(f)) url.set(f, URL.createObjectURL(f)); return url.get(f)! }
 
@@ -464,6 +475,7 @@ export function ImportJeu({ ouvrirZoi }: { ouvrirZoi: (id: string) => void }) {
 
   const attribuer = async (zoiId: string | null) => {
     if (!portrait) return
+    setAttribues((s) => new Set(s).add(portrait.webkitRelativePath))
     const image = await importerImage(portrait, 400)
     if (zoiId) maj((d) => ({ ...d, zois: d.zois.map((z) => (z.id === zoiId ? { ...z, portrait: image } : z)) }))
     else { const n = nouveauZoi(); n.portrait = image; maj((d) => ({ ...d, zois: [...d.zois, n] })); ouvrirZoi(n.id) }
@@ -499,11 +511,26 @@ export function ImportJeu({ ouvrirZoi }: { ouvrirZoi: (id: string) => void }) {
       )}
       {choisie && (
         <div className="grille-2-1">
-          <Panneau titre={`Portraits · ${choisie.portraits.length}`}>
-            <p className="texte-doux">Clique sur un portrait pour l'attribuer à un Zoi.</p>
-            <div className="portraits-jeu">
-              {choisie.portraits.map((f) => (
-                <button key={f.name} className="portrait-jeu" onClick={() => setPortrait(f)} title={f.name}><img src={apercu(f)} alt="" /></button>
+          <Panneau titre={`Portraits · ${portraitsVisibles.length} / ${choisie.portraits.length}`}>
+            <p className="texte-doux">Les portraits de ta famille active sont mis à jour à chaque sauvegarde : ils apparaissent en premier. Clique sur un portrait pour l'attribuer.</p>
+            <div className="filtres">
+              <div className="segment">
+                <button className={filtrePortraits === 'session' ? 'actif' : ''} onClick={() => setFiltrePortraits('session')}>Dernière session</button>
+                <button className={filtrePortraits === 'tous' ? 'actif' : ''} onClick={() => setFiltrePortraits('tous')}>Tous</button>
+              </div>
+              <label className="recherche"><input placeholder="Nom de fichier…" value={qPortrait} onChange={(e) => setQPortrait(e.target.value)} /></label>
+              <div className="segment">
+                {[72, 110, 160].map((t) => <button key={t} className={taillePortrait === t ? 'actif' : ''} onClick={() => setTaillePortrait(t)}>{t === 72 ? 'S' : t === 110 ? 'M' : 'L'}</button>)}
+              </div>
+            </div>
+            <div className="portraits-jeu" style={{ gridTemplateColumns: `repeat(auto-fill, minmax(${taillePortrait}px, 1fr))` }}>
+              {portraitsVisibles.map((f) => (
+                <button key={f.webkitRelativePath} className={'portrait-jeu' + (attribues.has(f.webkitRelativePath) ? ' portrait-attribue' : '')} onClick={() => setPortrait(f)}
+                  title={`${f.name}\nModifié le ${new Date(f.lastModified).toLocaleString('fr-FR')}`}>
+                  <img src={apercu(f)} alt="" loading="lazy" />
+                  {attribues.has(f.webkitRelativePath) && <span className="choix-coche">✓</span>}
+                  <small>{new Date(f.lastModified).toLocaleString('fr-FR', { day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit' })}</small>
+                </button>
               ))}
             </div>
             {choisie.portraits.length === 0 && <p className="vide">Aucun portrait dans cette sauvegarde.</p>}
